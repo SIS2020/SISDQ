@@ -3,10 +3,11 @@
     <contextParameter comment="" name="EDW_Inbound_AdditionalParams" prompt="EDW_Inbound_AdditionalParams?" promptNeeded="false" repositoryContextId="_cQq0kA5YEeu2beRaOIvO-g" type="id_String" value=""/>
     <contextParameter comment="" name="EDW_Inbound_Database" prompt="EDW_Inbound_Database?" promptNeeded="false" repositoryContextId="_cQq0kA5YEeu2beRaOIvO-g" type="id_String" value="EDW-Inbound"/>
     <contextParameter comment="" name="EDW_Inbound_Login" prompt="EDW_Inbound_Login?" promptNeeded="false" repositoryContextId="_cQq0kA5YEeu2beRaOIvO-g" type="id_String" value="laytond"/>
-    <contextParameter comment="" name="EDW_Inbound_Password" prompt="EDW_Inbound_Password?" promptNeeded="false" repositoryContextId="_cQq0kA5YEeu2beRaOIvO-g" type="id_Password" value="enc:system.encryption.key.v1:osBMzAN1ig5wPLJLFQG50WlI7MAORTlwn8yRnhdGvPzhi4dW8pEAhA=="/>
+    <contextParameter comment="" name="EDW_Inbound_Password" prompt="EDW_Inbound_Password?" promptNeeded="false" repositoryContextId="_cQq0kA5YEeu2beRaOIvO-g" type="id_Password" value="enc:system.encryption.key.v1:04bb7MxoFwTZKhlCE1EeJkkKGYhWEkFXMJ6V8ZqgArAw7dyLzWZCTw=="/>
     <contextParameter comment="" name="EDW_Inbound_Port" prompt="EDW_Inbound_Port?" promptNeeded="false" repositoryContextId="_cQq0kA5YEeu2beRaOIvO-g" type="id_String" value="1433"/>
     <contextParameter comment="" name="EDW_Inbound_Schema" prompt="EDW_Inbound_Schema?" promptNeeded="false" repositoryContextId="_cQq0kA5YEeu2beRaOIvO-g" type="id_String" value=""/>
     <contextParameter comment="" name="EDW_Inbound_Server" prompt="EDW_Inbound_Server?" promptNeeded="false" repositoryContextId="_cQq0kA5YEeu2beRaOIvO-g" type="id_String" value="SDWDEV-1"/>
+    <contextParameter comment="" name="IDH" prompt="IDH?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:A7DrycIgus+iqT7IpLM1LgvIFqS2ZX+Ey8Dag+Il0A=="/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -50,7 +51,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:J+2BblmYcO1azVOcfsk6Yu2GOc1WmoFLgZWg9O02"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:4oSSGxfX2SRRXufmG4PnvVoRV/DIS5Jul2eSZdbF"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -85,7 +86,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:js/+NNbHmbv9wCEDAlgJqbUkziR4x4Al+z/NiA4q"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:vKtMamZJ4Qu6Bea62lQmLPVl1hFHWb5l8UJgjR/J"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -120,7 +121,7 @@
     <routinesParameter id="_blCnIApGEeuQj8iTNBbh7Q" name="TalendStringUtil"/>
     <routinesParameter id="_bk6EQApGEeuQj8iTNBbh7Q" name="TalendString"/>
   </parameters>
-  <node componentName="tMsgBox" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
+  <node componentName="tMsgBox" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMsgBox_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="TITLE" value="&quot;Talend Open Studio&quot;"/>
@@ -133,9 +134,9 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMsgBox_1"/>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="224">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = context.EDW_Inbound_Password;&#10;System.out.println(foo);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String foo = context.IDH;&#10;System.out.println(foo);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
@@ -152,13 +153,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ddb46018-2f60-401e-91b0-105f70498d82"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>98KaXN0dQhQCh6DF4+fImDE06tG8QNyzT3v2A1HSg/eSucdYSxB248+K0ajxl3qLzlQUsxWbgGa/&#13;
-stAcSqntNQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fcdbe30e-e02d-43a1-afbf-42d4a4759b7d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7uINTjpX1lbtfsCVK5pepLM9J/48pILKO0syR/yoqojWV4aCYl6ZVdfvnv5A+RRkFHzSVEDEc+dZ&#13;
-lVUOlqvhJw==</DigestValue></Reference></SignedInfo><SignatureValue>ApuJyhxJr8umEJsTLVmi70N0otlXWInirr7Intj82ffaY4UYzrwQ3xDs/Aw+hEYGj78Wi1oXHJ4A&#13;
-8XbPrBydZxfdimDgzPw5jlYKYFg0fC7mm58UYgvS546WhzEhWoAaW7TcwGbrFwZmIPBznTixpP2a&#13;
-uuWIMWFAikIC/QJ/BTS4Ya5BU3hz685IQYHIFRI71KLvtJSRuNkMz9fmAnhLOE+iQMvHCXrxhNrc&#13;
-rxC7mCyaX8KcOW/IBv5bfrIatyOiQpW1Q8I2DuUscqtcmC024rm/aLJFSy6qMWYdCNYlG5FJkng/&#13;
-y+jat9LMf7myb00m0o/gGFQjQgw1Ujba1CkmEw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6fdb9aa5-506d-438d-bd78-1f950223ce5e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OcTBErw2CUmPYhiZQpne2cxflO/SjFY6a/eT2Q5KgGmeJ3xrdQMEJwycikTPDIy3811Ij4lCRcSe&#13;
+LwmXToKEQQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_42b625de-a18e-4072-a0a1-106e0e0c6146"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1A2kB+wtmM8Ya5GplzqxcTtn0YuL5njjm14WWQEzWV8fWbgH6n4RRv5PbcEDpv5Ek/O41kclMBV+&#13;
+v/v65PmFdQ==</DigestValue></Reference></SignedInfo><SignatureValue>hRlTRq4l8wl4vCDHFc/TjrE2Q8s8jE/Td8Eh6OpBBJMjToON0e2B5+S56AkUOM3k7xqmRdSL9286&#13;
+7kB+pg3LFyV/ArOKbnj0Q19qiK9xEsHDnCzKmzZ3lFRBu7tln1s7KF+TWMDX679Nd4WC1i4PPnEP&#13;
+xtTCdsw7DPAE+Zm0zPEIVDDyuaOlng0B+JE3/JqP1Q1C+7cuMUBbkE+A+nSBF7jtKQ3SvxC4anPu&#13;
+rxxdiZSFTAnva+toWZeE4w6UpxbZHyZhPEKLRwVu3RvLKeYWa9e5o2btowUFrQIrkBFhGsG+cakO&#13;
+tO423oUciF0t0RdkLAdJkI2xbLK+hG1otEwwhg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -180,4 +181,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fcdbe30e-e02d-43a1-afbf-42d4a4759b7d" Target="#_ddb46018-2f60-401e-91b0-105f70498d82"><Timestamp>2020-10-14 20:06:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_42b625de-a18e-4072-a0a1-106e0e0c6146" Target="#_6fdb9aa5-506d-438d-bd78-1f950223ce5e"><Timestamp>2020-10-14 20:07:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
