@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
   <dataquality.rules:WhereRule xmi:id="_HGmg4fdqEeqx3smsKGeZnA" name="StudentGender" supplierDependency="_OLrQsvdrEeqx3smsKGeZnA" criticalityLevel="1" whereExpression="gender  in (select distinct gender from sisdba.ocas_ac)">
     <taggedValue xmi:id="_HGmg4vdqEeqx3smsKGeZnA" tag="Status" value="development"/>
     <taggedValue xmi:id="_HGmg4_dqEeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
@@ -10,7 +10,5 @@
     <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_HGmg6PdqEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_OLrQsvdrEeqx3smsKGeZnA" kind="Usage" supplier="_HGmg4fdqEeqx3smsKGeZnA">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/SisDBA/BR_StudentGender_0.1.ana#_Io3vcfdrEeqx3smsKGeZnA"/>
-  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_OLrQsvdrEeqx3smsKGeZnA" kind="Usage" supplier="_HGmg4fdqEeqx3smsKGeZnA"/>
 </xmi:XMI>

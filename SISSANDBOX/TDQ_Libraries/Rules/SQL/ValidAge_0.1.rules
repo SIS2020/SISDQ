@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
   <dataquality.rules:WhereRule xmi:id="_ODSTIfaOEeqx3smsKGeZnA" name="ValidAge" supplierDependency="_6kWb8PaSEeqx3smsKGeZnA" criticalityLevel="1" whereExpression="std_no in &#xD;&#xA;(&#x9;select s.std_no from &#xD;&#xA;&#x9;(&#xD;&#xA;&#x9;&#x9;select&#x9; std_no&#xD;&#xA;&#x9;&#x9;&#x9;, datediff(YY,date_of_birth, getdate()) -&#xD;&#xA;&#x9;&#x9;&#x9;case &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;when&#x9;dateadd(YY,DATEDIFF(YY,date_of_birth,getdate()),date_of_birth)> getdate() then 1&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;else 0&#xD;&#xA;&#x9;&#x9;&#x9;end as [AGE]&#xD;&#xA;&#x9;&#x9;from&#x9;sisdba.student &#xD;&#xA;&#x9;) s&#xD;&#xA;&#x9;where s.age  between 16 and 120 &#xD;&#xA;)">
     <taggedValue xmi:id="_ODSTIvaOEeqx3smsKGeZnA" tag="Status" value="development"/>
     <taggedValue xmi:id="_ODSTI_aOEeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
@@ -10,7 +10,5 @@
     <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_ODSTKPaOEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_6kWb8PaSEeqx3smsKGeZnA" kind="Usage" supplier="_ODSTIfaOEeqx3smsKGeZnA">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/SisDBA/BR_StudentDOB_0.1.ana#_1JD38faSEeqx3smsKGeZnA"/>
-  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_6kWb8PaSEeqx3smsKGeZnA" kind="Usage" supplier="_ODSTIfaOEeqx3smsKGeZnA"/>
 </xmi:XMI>

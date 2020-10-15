@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
   <dataquality.rules:WhereRule xmi:id="_67-B4PgrEeq-R7p6onjPag" name="HighSchoolCertification" supplierDependency="_I17bUPgsEeq-R7p6onjPag" criticalityLevel="1" whereExpression="IsNull(hs_cert,'')!=''">
     <taggedValue xmi:id="_67-B4fgrEeq-R7p6onjPag" tag="Status" value="development"/>
     <taggedValue xmi:id="_67-B4vgrEeq-R7p6onjPag" tag="Author" value="talend@talend.com"/>
@@ -10,7 +10,5 @@
     <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_67-B5_grEeq-R7p6onjPag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_I17bUPgsEeq-R7p6onjPag" kind="Usage" supplier="_67-B4PgrEeq-R7p6onjPag">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/SisDBA/BR_HighSchoolCertification_0.1.ana#_Fl8RQPgsEeq-R7p6onjPag"/>
-  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_I17bUPgsEeq-R7p6onjPag" kind="Usage" supplier="_67-B4PgrEeq-R7p6onjPag"/>
 </xmi:XMI>
