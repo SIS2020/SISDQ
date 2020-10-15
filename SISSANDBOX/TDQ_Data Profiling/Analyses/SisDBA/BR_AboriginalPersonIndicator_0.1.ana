@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_zYzNsfayEeqx3smsKGeZnA" name="BR_AboriginalPersonIndicator" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/AboriginalPersonIndicator_0.1.rules#_WHidoPazEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
+    <taggedValue xmi:id="_zYzNsvayEeqx3smsKGeZnA" tag="Status" value="development"/>
+    <taggedValue xmi:id="_zYzNs_ayEeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
+    <taggedValue xmi:id="_zYzNtPayEeqx3smsKGeZnA" tag="Purpose" value="DQ Business Rules"/>
+    <taggedValue xmi:id="_zYzNtfayEeqx3smsKGeZnA" tag="Description" value="A prefilled template for the Student table"/>
+    <taggedValue xmi:id="_zYzNtvayEeqx3smsKGeZnA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_YRBSofazEeqx3smsKGeZnA" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_YRBSo_azEeqx3smsKGeZnA" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_zYzNt_ayEeqx3smsKGeZnA">
+      <connection href="../../../metadata/connections/AlgonquinConn_0.1.item#_nqx-0Of1Eeqob_JMQxXZxQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+    </context>
+    <results xmi:id="_zYzNuPayEeqx3smsKGeZnA">
+      <resultMetadata xmi:id="_zYzNufayEeqx3smsKGeZnA" executionDate="2020-09-29T15:36:15.074-0400" executionDuration="3166" message="" executionNumber="4" lastRunOk="true" lastExecutionNumberOk="3"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_zYzNuvayEeqx3smsKGeZnA" count="1152941" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_YWTbSPazEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  WHERE (stat_in_canada in (1,2))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_YWF_4PazEeqx3smsKGeZnA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_YWF_4fazEeqx3smsKGeZnA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_YWF_4vazEeqx3smsKGeZnA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_YWF_4_azEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_YRBSovazEeqx3smsKGeZnA" count="1152941" computed="true" userCount="108349">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/AboriginalPersonIndicator_0.1.rules#_HH09EfazEeqx3smsKGeZnA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_YWTbSfazEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (stat_in_canada in (1,2)) AND (aborig_pers_ind in ('Y','N') )" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_YWTbQPazEeqx3smsKGeZnA" name="AboriginalPersonIndicator" criticalityLevel="1" whereExpression="aborig_pers_ind in ('Y'.'N') ">
+          <taggedValue xmi:id="_YWTbQfazEeqx3smsKGeZnA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_YWTbQvazEeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
+          <taggedValue xmi:id="_YWTbQ_azEeqx3smsKGeZnA" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_YWTbRPazEeqx3smsKGeZnA" tag="Description" value=""/>
+          <taggedValue xmi:id="_YWTbRfazEeqx3smsKGeZnA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_YWTbRvazEeqx3smsKGeZnA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_YWTbR_azEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_zYzNu_ayEeqx3smsKGeZnA" dataFilter="_YRKckPazEeqx3smsKGeZnA" analysisType="Table Analysis"/>
+    <contextType xmi:id="_YRBSoPazEeqx3smsKGeZnA" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_YRKckPazEeqx3smsKGeZnA" name="BR_AboriginalPersonIndicator">
+    <ranges xmi:id="_YRKckfazEeqx3smsKGeZnA">
+      <expressions xmi:id="_YRKckvazEeqx3smsKGeZnA">
+        <expression xsi:type="relational:TdExpression" xmi:id="_YRKck_azEeqx3smsKGeZnA" body="stat_in_canada in (1,2)" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
