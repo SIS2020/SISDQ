@@ -42,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ArVS6imvobWO8PTB+SK9cdS+l4T4HwmzWFKxGsdG"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:2NB9wsumgxbdSfDQg9/akQFf+hg22XAza+UWGfXA"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -77,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:GgWuBAisDr5LoajKUKwJme1wqKnpxnXHyZUZ6jVP"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ZQ/9kC5kXZ/gN1NT3vVrSGF4GzI/ueQuZy/aQ5+R"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -125,7 +125,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-Inbound&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;laytond&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JLApL4O6H7zKDFgYkNyd5B/0NpA1iwxL4Bewqg5JocnZSuLiqzBvnllA"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:GHKo7Y85GetHEGYSjfX1De2ESb/tcDx7aUk6Aec3MUQYdynUk1mw/WMZ"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_DhZxgApSEeuQj8iTNBbh7Q - area"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;area&quot;"/>
@@ -230,38 +230,6 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="50" offsetLabelY="37" posX="256" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_2"/>
-    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
-    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/laytond/Downloads/Talend-Studio-20200219_1130-V7.3.1/Talend-Studio-20200219_1130-V7.3.1/workspace/out.csv&quot;"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
-    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
-    <elementParameter field="CHECK" name="APPEND" value="false"/>
-    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
-    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
-    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
-    <elementParameter field="CHECK" name="CREATE" value="true"/>
-    <elementParameter field="CHECK" name="SPLIT" value="false"/>
-    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
-    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
-    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
-    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
-    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileOutputDelimited_2"/>
-  </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -275,7 +243,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-Inbound&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;laytond&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:87f+oL7AhfD0235jn+UUDw3LtirQRxMulctrHhCFJvVIYnuTkMD0fCjr"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6mtgDozHESjNzeQPLXV47Yd/VGkoBnd6Jqk15Xw9SM6tTDVV3UgD9g5s"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_DhZxgApSEeuQj8iTNBbh7Q - student"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;student&quot;"/>
@@ -623,17 +591,265 @@
       </column>
     </metadata>
   </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="50" offsetLabelY="37" posX="288" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_2"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/laytond/Downloads/Talend-Studio-20200219_1130-V7.3.1/Talend-Studio-20200219_1130-V7.3.1/workspace/student.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="student" name="tFileOutputDelimited_2">
+      <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="30" name="surname" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="15" name="first_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="15" name="second_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="5" name="pref_name" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="30" name="prev_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="5" name="title" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="1" name="gender" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="23" name="date_of_birth" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="1" name="over_19" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="5" name="stat_in_canada" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="3" name="mother_tongue" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="5" name="pref_lang" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="5" name="citizen_code" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="4" name="aboriginal_status" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="5" name="minority_group" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="10" name="bsid_code" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="10" name="ont_educ_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="1" name="hs_cert" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="1" name="deceased" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="1" name="correspondence" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="1" name="encumb_flag" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="5" name="basis_for_admis" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="10" name="ossd_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="1" name="ossd_to_be_rec" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="5" name="add_acad_info" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="5" name="admis_trans_stat" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="5" name="add_acad_info_to_follow" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="1" name="current_sec_sch_std" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="23" name="date_std_no_assig" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="1" name="mobil_challenged" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="1" name="addr_pref" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="23" name="gender_hist" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="1" name="trans_hist" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="30" name="u_surname" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="15" name="u_first_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="15" name="u_second_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="6" name="last_regd_prg_code" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="23" name="visa_expiry_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="1" name="visa_doc_on_file" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="10" name="ossc_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Interval"/>
+      </column>
+      <column comment="" key="false" length="1" name="ossc_to_be_rec" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="5" name="country_of_birth" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="1" name="first_gen_std_ind" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="2" name="oen_valid_code" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="8" name="oen_valid_date" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="30" name="legal_first_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="30" name="legal_second_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="30" name="u_legal_first_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="30" name="u_legal_second_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="20" name="national_id" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="1" name="aborig_pers_ind" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="30" name="aborig_pers_status" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+      <column comment="" key="false" length="30" name="alternate_name" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+        <additionalField key="Content Type" value="Nominal"/>
+      </column>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tFileOutputDelimited_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_2"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
@@ -642,13 +858,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_78f3f220-5e95-4331-879b-2e0eeb84fb06"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FwA/p00tB4EYPXot+TH9xfPAmYN+YL/jtLrtH6jD3PIB28pUSEZbs4xqFzMpU/lx3nO/CfA4U4/3&#13;
-kjUYXB0DpA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a061b891-d205-43cf-aa88-067beea4a98c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZzsIbyuK8OZJD0xHKcD0plLjFx07uCkHhLRSyyvnkaVFJAVgt3hU+HbR433whGG19BqmfMb3sOX0&#13;
-mu2GG3tx6Q==</DigestValue></Reference></SignedInfo><SignatureValue>TjVdMY+bpHKGBei8YnsPQV08cTXHCQAO4quEzCQWtzeCfSXh6fjNp0ec92QqPCxuR0apXw2Tn5Ax&#13;
-hciUqg+o9kPgFF4qdfAxYuO79zpAW/5YZNS0jQ2WynR2YzcHQlXEKeNutCxaa/sAI4auFkj8mWdO&#13;
-8ksyYxQ+gNDhmV/dPjIl/HJcTEq8f9HLlMh9BtLOu+C6ej3HEOHh6e8Lu6R8qNMHEabBkXpGh2Nl&#13;
-wmKjK0J7zW9x+tKcMMyjiL2wDRK293S1PAIF/zGucm688cZe2sMM5JrTmb4etn6CO8DjcEQhoCSD&#13;
-aKKi1Vk/Gnq663uYFHXudb52vFQjGcL/fqXjHA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b4afdc54-9a91-48fa-96e5-02f3b0a73f94"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DfPqpDYILuh5nUN2o1bonRqw1XyDQ8LmUeXcJYZVkwuwT0eq/NQuk3POPnLP+eaHJj3VXdA712EN&#13;
+ySkop7C5Bg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_be6080ed-5867-459d-9778-3886f3ef1b97"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+Fmnss9ME+HUJ3zV1TBcGnPGPW6t6eNl36kQf33tJ9UuPS3e72u3omLg0DwRAq/T1y3+gMxWnXn3&#13;
+h+255JGQCQ==</DigestValue></Reference></SignedInfo><SignatureValue>cr4THPBgbnINLwyuj9u1VFxOjGErFwjLxgpW8Bgd7fdBH0lgDp+Fq92HW6T2+zvtrsQfxRG+sekw&#13;
+ipwrAlXjx8Fg9xyEWr1vggcAuY8ByD98Eqy4+OIYKF+35gGXhwDdVKcPUKN5CUY6k5a0WlnTayFI&#13;
+IpadLCrCvLR66cjODQiH5kEoYUgYGJZsV+e0cMNrlJKJQ0RhGqNF1W+APX8DXMNzPfdca9eQTKFG&#13;
+V09JU869WdVlJHDrpbCUEjhh0HI1aMIafTGidEGtpuZnXhXditI5MhJJKATB8Pu8AGHIimDxKv/y&#13;
+XufPfYX9+5DCAWhd6k/z47LztooOsnp3/NgB/w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -670,4 +886,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a061b891-d205-43cf-aa88-067beea4a98c" Target="#_78f3f220-5e95-4331-879b-2e0eeb84fb06"><Timestamp>2020-10-15 15:35:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_be6080ed-5867-459d-9778-3886f3ef1b97" Target="#_b4afdc54-9a91-48fa-96e5-02f3b0a73f94"><Timestamp>2020-10-15 15:38:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
