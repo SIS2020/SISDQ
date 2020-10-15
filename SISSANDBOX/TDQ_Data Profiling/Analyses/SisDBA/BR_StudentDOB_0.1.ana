@@ -15,8 +15,8 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_1JD3-PaSEeqx3smsKGeZnA">
-      <resultMetadata xmi:id="_1JD3-faSEeqx3smsKGeZnA" executionDate="2020-09-29T12:18:19.987-0400" executionDuration="2931" message="" executionNumber="10" lastRunOk="true" lastExecutionNumberOk="9"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_7YHbMvaSEeqx3smsKGeZnA" count="1021248" computed="true">
+      <resultMetadata xmi:id="_1JD3-faSEeqx3smsKGeZnA" executionDate="2020-10-15T16:16:26.761-0400" executionDuration="3071" message="" executionNumber="11" lastRunOk="true" lastExecutionNumberOk="10"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_7YHbMvaSEeqx3smsKGeZnA" count="1022356" computed="true">
         <parameters xmi:id="_7Zbp0PaSEeqx3smsKGeZnA"/>
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -27,7 +27,7 @@
           <sqlGenericExpression xmi:id="_AGQlU_aTEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_7YHbM_aSEeqx3smsKGeZnA" count="1021248" computed="true" userCount="1020866">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_7YHbM_aSEeqx3smsKGeZnA" count="1022356" computed="true" userCount="1021982">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/ValidAge_0.1.rules#_ODSTIfaOEeqx3smsKGeZnA"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_AGZvSfaTEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (date_of_birth is not null) AND (std_no in &#xD;&#xA;(&#x9;select s.std_no from &#xD;&#xA;&#x9;(&#xD;&#xA;&#x9;&#x9;select&#x9; std_no&#xD;&#xA;&#x9;&#x9;&#x9;, datediff(YY,date_of_birth, getdate()) -&#xD;&#xA;&#x9;&#x9;&#x9;case &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;when&#x9;dateadd(YY,DATEDIFF(YY,date_of_birth,getdate()),date_of_birth)> getdate() then 1&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;else 0&#xD;&#xA;&#x9;&#x9;&#x9;end as [AGE]&#xD;&#xA;&#x9;&#x9;from&#x9;sisdba.student &#xD;&#xA;&#x9;) s&#xD;&#xA;&#x9;where s.age  between 16 and 120 &#xD;&#xA;))" language="Microsoft SQL Server"/>
@@ -41,10 +41,10 @@
           <sqlGenericExpression xmi:id="_AGZvR_aTEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_Pt1aQPdbEeqx3smsKGeZnA" count="1021248" computed="true" userCount="1021117">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_Pt1aQPdbEeqx3smsKGeZnA" count="1022356" computed="true" userCount="1022230">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/ValidBirthDate_0.1.rules#_FN3bcfdbEeqx3smsKGeZnA"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_P_6owPdbEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (date_of_birth is not null) AND (date_of_birth !='1970-01-01' and isDate(date_of_birth)=1 and date_of_birth &lt;getdate())" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_P_6owPdbEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (date_of_birth is not null) AND (date_of_birth !='1970-01-01' and isDate(date_of_birth)=1)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_P_xe0PdbEeqx3smsKGeZnA" name="ValidBirthDate" criticalityLevel="1" whereExpression="date_of_birth !='1970-01-01' and isDate(date_of_birth)=1">
           <taggedValue xmi:id="_P_xe0fdbEeqx3smsKGeZnA" tag="Status" value="development"/>
           <taggedValue xmi:id="_P_xe0vdbEeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
