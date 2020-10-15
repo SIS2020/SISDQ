@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_Jci04fa3Eeqx3smsKGeZnA" name="CurrentSecondaryStudent" supplierDependency="_Te7f0Pa3Eeqx3smsKGeZnA" criticalityLevel="1" whereExpression="current_sec_sch_std in ('Y','N')">
+    <taggedValue xmi:id="_Jci04va3Eeqx3smsKGeZnA" tag="Status" value="development"/>
+    <taggedValue xmi:id="_Jci04_a3Eeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
+    <taggedValue xmi:id="_Jci05Pa3Eeqx3smsKGeZnA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_Jci05fa3Eeqx3smsKGeZnA" tag="Description" value=""/>
+    <taggedValue xmi:id="_Jci05va3Eeqx3smsKGeZnA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_Jci05_a3Eeqx3smsKGeZnA" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_Jci06Pa3Eeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_Te7f0Pa3Eeqx3smsKGeZnA" kind="Usage" supplier="_Jci04fa3Eeqx3smsKGeZnA">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/SisDBA/BR_CurrentSecondaryStudent_0.1.ana#_GaPhgPa3Eeqx3smsKGeZnA"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>

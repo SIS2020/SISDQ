@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_EibhoPgzEeq-R7p6onjPag" name="BR_StudentCountryOfBirth" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
+    <taggedValue xmi:id="_EibhofgzEeq-R7p6onjPag" tag="Status" value="development"/>
+    <taggedValue xmi:id="_EibhovgzEeq-R7p6onjPag" tag="Author" value="talend@talend.com"/>
+    <taggedValue xmi:id="_Eibho_gzEeq-R7p6onjPag" tag="Purpose" value="DQ Business Rules"/>
+    <taggedValue xmi:id="_EibhpPgzEeq-R7p6onjPag" tag="Description" value="A prefilled template for the Student table"/>
+    <taggedValue xmi:id="_EibhpfgzEeq-R7p6onjPag" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_EibhpvgzEeq-R7p6onjPag" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_Eibhp_gzEeq-R7p6onjPag" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_EibhqPgzEeq-R7p6onjPag">
+      <connection href="../../../metadata/connections/AlgonquinConn_0.1.item#_nqx-0Of1Eeqob_JMQxXZxQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+    </context>
+    <results xmi:id="_EibhqfgzEeq-R7p6onjPag">
+      <resultMetadata xmi:id="_EibhqvgzEeq-R7p6onjPag" executionDate="2020-09-16T11:42:18.974-0400" executionDuration="647" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="3"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_Eibhq_gzEeq-R7p6onjPag" count="1285851" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_EibhrPgzEeq-R7p6onjPag" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_EibhrfgzEeq-R7p6onjPag" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_EibhrvgzEeq-R7p6onjPag" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_Eibhr_gzEeq-R7p6onjPag" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_EibhsPgzEeq-R7p6onjPag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_GW4h0PgzEeq-R7p6onjPag" count="1285851" computed="true" userCount="269373">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/StudentCountryOfBirth_0.1.rules#_8IWRQfgyEeq-R7p6onjPag"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GlNRsPgzEeq-R7p6onjPag" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (isNull(country_of_birth,'')!='')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_GlHLEPgzEeq-R7p6onjPag" name="StudentCountryOfBirth" criticalityLevel="1" whereExpression="isNull(s.country_of_birth,'')">
+          <taggedValue xmi:id="_GlHLEfgzEeq-R7p6onjPag" tag="Status" value="development"/>
+          <taggedValue xmi:id="_GlHLEvgzEeq-R7p6onjPag" tag="Author" value="talend@talend.com"/>
+          <taggedValue xmi:id="_GlHLE_gzEeq-R7p6onjPag" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_GlHLFPgzEeq-R7p6onjPag" tag="Description" value="Students should be between the ages of 16 to 120 "/>
+          <taggedValue xmi:id="_GlHLFfgzEeq-R7p6onjPag" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_GlHLFvgzEeq-R7p6onjPag" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_GlHLF_gzEeq-R7p6onjPag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_Eibhu_gzEeq-R7p6onjPag" dataFilter="_EibhvfgzEeq-R7p6onjPag" analysisType="Table Analysis"/>
+    <contextType xmi:id="_EibhvPgzEeq-R7p6onjPag" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_EibhvfgzEeq-R7p6onjPag" name="BR_StudentCountryOfBirth">
+    <ranges xmi:id="_EibhvvgzEeq-R7p6onjPag">
+      <expressions xmi:id="_Eibhv_gzEeq-R7p6onjPag">
+        <expression xsi:type="relational:TdExpression" xmi:id="_EibhwPgzEeq-R7p6onjPag" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

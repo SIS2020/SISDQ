@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_7IzRMfawEeqx3smsKGeZnA" name="BR_StudentNumberAssignedDate" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/StudentNumberDateAssignedValid_0.1.rules#_A0MtwPaxEeqx3smsKGeZnA"/>
+    <taggedValue xmi:id="_7IzRMvawEeqx3smsKGeZnA" tag="Status" value="development"/>
+    <taggedValue xmi:id="_7IzRM_awEeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
+    <taggedValue xmi:id="_7IzRNPawEeqx3smsKGeZnA" tag="Purpose" value="DQ Business Rules"/>
+    <taggedValue xmi:id="_7IzRNfawEeqx3smsKGeZnA" tag="Description" value="Date values are valid. "/>
+    <taggedValue xmi:id="_7IzRNvawEeqx3smsKGeZnA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="__I_JIfawEeqx3smsKGeZnA" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="__I_JIvawEeqx3smsKGeZnA" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_7IzRN_awEeqx3smsKGeZnA">
+      <connection href="../../../metadata/connections/AlgonquinConn_0.1.item#_nqx-0Of1Eeqob_JMQxXZxQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+    </context>
+    <results xmi:id="_7IzROPawEeqx3smsKGeZnA">
+      <resultMetadata xmi:id="_7IzROfawEeqx3smsKGeZnA" executionDate="2020-09-29T14:49:54.496-0400" executionDuration="1834" message="" executionNumber="4" lastRunOk="true" lastExecutionNumberOk="3"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_7IzROvawEeqx3smsKGeZnA" count="1286576" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_BIQ5SPaxEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_BIHvUPaxEeqx3smsKGeZnA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_BIHvUfaxEeqx3smsKGeZnA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_BIHvUvaxEeqx3smsKGeZnA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_BIHvU_axEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_BCtq4PaxEeqx3smsKGeZnA" count="1286576" computed="true" userCount="1286576">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/StudentNumberDateAssignedValid_0.1.rules#_PWiLQfawEeqx3smsKGeZnA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_BIQ5SfaxEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE ( isDate(date_std_no_assig)=1)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_BIQ5QPaxEeqx3smsKGeZnA" name="StudentNumberDateAssignedValid" criticalityLevel="1" whereExpression=" isDate(s.date_std_no_assig)=1">
+          <taggedValue xmi:id="_BIQ5QfaxEeqx3smsKGeZnA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_BIQ5QvaxEeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
+          <taggedValue xmi:id="_BIQ5Q_axEeqx3smsKGeZnA" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_BIQ5RPaxEeqx3smsKGeZnA" tag="Description" value="Ontario students require OEN number"/>
+          <taggedValue xmi:id="_BIQ5RfaxEeqx3smsKGeZnA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_BIQ5RvaxEeqx3smsKGeZnA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_BIQ5R_axEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_7IzRO_awEeqx3smsKGeZnA" dataFilter="__I_JI_awEeqx3smsKGeZnA" analysisType="Table Analysis"/>
+    <contextType xmi:id="__I_JIPawEeqx3smsKGeZnA" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="__I_JI_awEeqx3smsKGeZnA" name="BR_StudentNumberAssignedDate">
+    <ranges xmi:id="__I_JJPawEeqx3smsKGeZnA">
+      <expressions xmi:id="__I_JJfawEeqx3smsKGeZnA">
+        <expression xsi:type="relational:TdExpression" xmi:id="__I_JJvawEeqx3smsKGeZnA" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
