@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_BpzSMPg0Eeq-R7p6onjPag" name="StudentBSIDCode" supplierDependency="_VRCXgPg0Eeq-R7p6onjPag" criticalityLevel="1" whereExpression="isNull(bsid_code,'')!=''">
+    <taggedValue xmi:id="_BpzSMfg0Eeq-R7p6onjPag" tag="Status" value="development"/>
+    <taggedValue xmi:id="_BpzSMvg0Eeq-R7p6onjPag" tag="Author" value="talend@talend.com"/>
+    <taggedValue xmi:id="_BpzSM_g0Eeq-R7p6onjPag" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_BpzSNPg0Eeq-R7p6onjPag" tag="Description" value="Students should be between the ages of 16 to 120 "/>
+    <taggedValue xmi:id="_BpzSNfg0Eeq-R7p6onjPag" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_BpzSNvg0Eeq-R7p6onjPag" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_BpzSN_g0Eeq-R7p6onjPag" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_VRCXgPg0Eeq-R7p6onjPag" kind="Usage" supplier="_BpzSMPg0Eeq-R7p6onjPag">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/SisDBA/BR_StudentBSIDCode_0.1.ana#_TfQ34fg0Eeq-R7p6onjPag"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>
