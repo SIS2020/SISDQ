@@ -5,8 +5,8 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_EmailAddress_0.1.rules#_giJbEw-8EeuDXaq6WQCs8A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_giTMEw-8EeuDXaq6WQCs8A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_QFT4YA_AEeuDXaq6WQCs8A"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_eASwEw_BEeuDXaq6WQCs8A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_gicWAw-8EeuDXaq6WQCs8A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_EmailAddress_0.1.rules#_giTMFw-8EeuDXaq6WQCs8A"/>
     <taggedValue xmi:id="_Kb-Dkg-7EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_Kb-Dkw-7EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_Kb-DlA-7EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rule Analysis"/>
@@ -19,7 +19,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T11:11:21.006-0400" executionDuration="2023" message="Query not executed for indicator: &quot;DQ2_StudentEmail_StudentNumber&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  student_email  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  student  ON (student_email.&quot;std_no&quot;=student.&quot;std_no&quot;)  WHERE (student_email is null). Exception: Invalid column name 'student_email'." executionNumber="13" lastExecutionNumberOk="9"/>
+      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T13:38:49.437-0400" executionDuration="353" message="Query not executed for indicator: &quot;DQ2_StudentEmail_EmailAddress&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (se.college=1 and se.email like '%@algonquinlive.com'). Exception: The multi-part identifier &quot;se.college&quot; could not be bound." executionNumber="14" lastExecutionNumberOk="9"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_QqiFUA_AEeuDXaq6WQCs8A" count="635647" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -30,36 +30,18 @@
           <sqlGenericExpression xmi:id="_RIAEcw_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_QqiFUQ_AEeuDXaq6WQCs8A" count="635647" computed="true" userCount="635635">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ceYE0A_WEeurTKvbeg04dQ" count="635647">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_irbtsQ-6EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RINf0Q_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (std_no in (select std_no from sisdba.student))" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_RIJ1cA_AEeuDXaq6WQCs8A" name="DQ1_StudentEmail_StudentNumber" criticalityLevel="1" whereExpression="where std_no not in (select std_no from sisdba.student)">
-          <taggedValue xmi:id="_RIJ1cQ_AEeuDXaq6WQCs8A" tag="Status" value="development"/>
-          <taggedValue xmi:id="_RIJ1cg_AEeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_RIJ1cw_AEeuDXaq6WQCs8A" tag="Purpose" value="DQ Profiling"/>
-          <taggedValue xmi:id="_RIJ1dA_AEeuDXaq6WQCs8A" tag="Description" value="Integrity Rule. Student number should exist in the Student table. "/>
-          <taggedValue xmi:id="_RIJ1dQ_AEeuDXaq6WQCs8A" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_RIJ1dg_AEeuDXaq6WQCs8A" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_RIJ1dw_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_eAI_Ew_BEeuDXaq6WQCs8A" count="635635">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_QFA6QQ-8EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_2RTc4Q_BEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  student_email  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  student  ON (student_email.&quot;std_no&quot;=student.&quot;std_no&quot;)  WHERE (student_email is null)" language="Microsoft SQL Server"/>
-        <joinConditions xmi:id="_FmAWAQ_CEeuDXaq6WQCs8A" operator="=" tableAliasA="s" tableAliasB="se" columnAliasA="std_no" columnAliasB="std_no">
-          <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_GDuTMOf2Eeqob_JMQxXZxQ"/>
-          <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_37AicA-9EeuDXaq6WQCs8A"/>
-        </joinConditions>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_2QC4oA_BEeuDXaq6WQCs8A" name="DQ2_StudentEmail_StudentNumber" criticalityLevel="1" whereExpression="student_email is null">
-          <taggedValue xmi:id="_2QC4oQ_BEeuDXaq6WQCs8A" tag="Status" value="development"/>
-          <taggedValue xmi:id="_2QC4og_BEeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_2QC4ow_BEeuDXaq6WQCs8A" tag="Purpose" value=""/>
-          <taggedValue xmi:id="_2QC4pA_BEeuDXaq6WQCs8A" tag="Description" value="A Title is a person's preferred prefix in correspondence such as Mr, Ms., Mrs. or Miss.&#xD;&#xA;&#xD;&#xA;Rule: cannot be any value not in the v_person_title lookup table"/>
-          <taggedValue xmi:id="_2QC4pQ_BEeuDXaq6WQCs8A" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_2QC4pg_BEeuDXaq6WQCs8A" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_2QC4pw_BEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_EmailAddress_0.1.rules#_eH7bYQ-8EeuDXaq6WQCs8A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_cymoYA_WEeurTKvbeg04dQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (se.college=1 and se.email like '%@algonquinlive.com')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_cyVioA_WEeurTKvbeg04dQ" name="DQ2_StudentEmail_EmailAddress" criticalityLevel="1" whereExpression="se.college=1 and se.email like '%@algonquinlive.com'">
+          <taggedValue xmi:id="_cyVioQ_WEeurTKvbeg04dQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_cyViog_WEeurTKvbeg04dQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_cyViow_WEeurTKvbeg04dQ" tag="Purpose" value="DQ Business Rules"/>
+          <taggedValue xmi:id="_cyVipA_WEeurTKvbeg04dQ" tag="Description" value="Email is valid if the email has 'AlgonquinLive.com' as a domain when the CollegeEmail indicator is set to 1"/>
+          <taggedValue xmi:id="_cyVipQ_WEeurTKvbeg04dQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_cyVipg_WEeurTKvbeg04dQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_cyVipw_WEeurTKvbeg04dQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
