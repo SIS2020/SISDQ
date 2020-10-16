@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_Kb-DkQ-7EeuDXaq6WQCs8A" name="Student_Email" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
     <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_EmailAddress_0.1.rules#_giJbEw-8EeuDXaq6WQCs8A"/>
@@ -17,14 +17,30 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T10:56:06.175-0400" executionDuration="445" message="Query not executed for indicator: &quot;DQ1_StudentEmail_StudentNumber&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (std_no is notnull). Exception: Incorrect syntax near 'notnull'." executionNumber="9" lastExecutionNumberOk="8"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_QqiFUA_AEeuDXaq6WQCs8A">
+      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T11:00:02.253-0400" executionDuration="349" message="Query not executed for indicator: &quot;DQ1_StudentEmail_StudentNumber&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (where std_no not in (select std_no from sisdba.student)). Exception: Incorrect syntax near the keyword 'where'." executionNumber="10" lastExecutionNumberOk="8"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_QqiFUA_AEeuDXaq6WQCs8A" count="635647" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RINf0A_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_RIAEcA_AEeuDXaq6WQCs8A" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_RIAEcQ_AEeuDXaq6WQCs8A" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_RIAEcg_AEeuDXaq6WQCs8A" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_RIAEcw_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_QqiFUQ_AEeuDXaq6WQCs8A">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_QqiFUQ_AEeuDXaq6WQCs8A" count="635647">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_irbtsQ-6EeuDXaq6WQCs8A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RINf0Q_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (where std_no not in (select std_no from sisdba.student))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_RIJ1cA_AEeuDXaq6WQCs8A" name="DQ1_StudentEmail_StudentNumber" criticalityLevel="1" whereExpression="where std_no not in (select std_no from sisdba.student)">
+          <taggedValue xmi:id="_RIJ1cQ_AEeuDXaq6WQCs8A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_RIJ1cg_AEeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_RIJ1cw_AEeuDXaq6WQCs8A" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_RIJ1dA_AEeuDXaq6WQCs8A" tag="Description" value="Integrity Rule. Student number should exist in the Student table. "/>
+          <taggedValue xmi:id="_RIJ1dQ_AEeuDXaq6WQCs8A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_RIJ1dg_AEeuDXaq6WQCs8A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_RIJ1dw_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
     </results>
     <parameters xmi:id="_Kb-Dog-7EeuDXaq6WQCs8A" dataFilter="_Kb-DpA-7EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
