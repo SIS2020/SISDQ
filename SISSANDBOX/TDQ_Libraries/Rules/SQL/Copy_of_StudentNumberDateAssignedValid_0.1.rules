@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_72wYkQ-4EeuDXaq6WQCs8A" name="Copy_of_StudentNumberDateAssignedValid" criticalityLevel="1" whereExpression=" isDate(date_std_no_assig)=1">
+  <taggedValue xmi:id="_72wYkg-4EeuDXaq6WQCs8A" tag="Status" value="development"/>
+  <taggedValue xmi:id="_72wYkw-4EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
+  <taggedValue xmi:id="_72wYlA-4EeuDXaq6WQCs8A" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_72wYlQ-4EeuDXaq6WQCs8A" tag="Description" value="Ontario students require OEN number"/>
+  <taggedValue xmi:id="_72wYlg-4EeuDXaq6WQCs8A" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_72wYlw-4EeuDXaq6WQCs8A" tag="Validation_Status" value="true"/>
+  <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+  <sqlGenericExpression xmi:id="_72wYmA-4EeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+</dataquality.rules:WhereRule>
