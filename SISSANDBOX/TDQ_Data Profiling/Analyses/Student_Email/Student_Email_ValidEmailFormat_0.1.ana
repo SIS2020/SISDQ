@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <dataquality.analysis:Analysis xmi:id="_wbk8cQ-9EeuDXaq6WQCs8A" name="Student_Email_Table" creationDate="2020-10-16T10:42:03.831-0400" defaultContext="Default">
+  <dataquality.analysis:Analysis xmi:id="_wbk8cQ-9EeuDXaq6WQCs8A" name="Student_Email_ValidEmailFormat" creationDate="2020-10-16T10:42:03.831-0400" defaultContext="Default">
     <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
     <clientDependency href="../../../TDQ_Libraries/Patterns/Regex/internet/Email_Address_0.1.pattern#_KNn-Mg--EeuDXaq6WQCs8A"/>
     <taggedValue xmi:id="_wbk8cg-9EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_wbk8cw-9EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
-    <taggedValue xmi:id="_wbk8dA-9EeuDXaq6WQCs8A" tag="Purpose" value="Analysis of the columns of the student email table"/>
-    <taggedValue xmi:id="_wbk8dQ-9EeuDXaq6WQCs8A" tag="Description" value=""/>
+    <taggedValue xmi:id="_wbk8dA-9EeuDXaq6WQCs8A" tag="Purpose" value="Analysis of the email column of the student_Email table "/>
+    <taggedValue xmi:id="_wbk8dQ-9EeuDXaq6WQCs8A" tag="Description" value="Used to validate that the email address has a valid format. "/>
     <taggedValue xmi:id="_wbk8dg-9EeuDXaq6WQCs8A" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_KNeNMQ--EeuDXaq6WQCs8A" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_KNeNMg--EeuDXaq6WQCs8A" tag="PREVIEW_ROW_NUMBER" value="50"/>
@@ -31,7 +31,7 @@
     <parameters xmi:id="_wbk8eg-9EeuDXaq6WQCs8A" dataFilter="_KNn-Mw--EeuDXaq6WQCs8A" analysisType="Multiple Column Analysis" executionLanguage="Java"/>
     <contextType xmi:id="_KNeNMA--EeuDXaq6WQCs8A" confirmationNeeded="false" name="Default"/>
   </dataquality.analysis:Analysis>
-  <dataquality.domain:Domain xmi:id="_KNn-Mw--EeuDXaq6WQCs8A" name="Student_Email_Table">
+  <dataquality.domain:Domain xmi:id="_KNn-Mw--EeuDXaq6WQCs8A" name="Student_Email_ValidEmailFormat">
     <ranges xmi:id="_KNn-NA--EeuDXaq6WQCs8A">
       <expressions xmi:id="_KNn-NQ--EeuDXaq6WQCs8A">
         <expression xsi:type="relational:TdExpression" xmi:id="_KNn-Ng--EeuDXaq6WQCs8A" body="" language="SQL"/>
