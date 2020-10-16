@@ -17,7 +17,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T11:00:02.253-0400" executionDuration="349" message="Query not executed for indicator: &quot;DQ1_StudentEmail_StudentNumber&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (where std_no not in (select std_no from sisdba.student)). Exception: Incorrect syntax near the keyword 'where'." executionNumber="10" lastExecutionNumberOk="8"/>
+      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T11:00:25.613-0400" executionDuration="397" message="Query not executed for indicator: &quot;DQ1_StudentEmail_StudentNumber&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (where std_no in (select std_no from sisdba.student)). Exception: Incorrect syntax near the keyword 'where'." executionNumber="11" lastExecutionNumberOk="8"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_QqiFUA_AEeuDXaq6WQCs8A" count="635647" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -31,7 +31,7 @@
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_QqiFUQ_AEeuDXaq6WQCs8A" count="635647">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_irbtsQ-6EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RINf0Q_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (where std_no not in (select std_no from sisdba.student))" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RINf0Q_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (where std_no in (select std_no from sisdba.student))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_RIJ1cA_AEeuDXaq6WQCs8A" name="DQ1_StudentEmail_StudentNumber" criticalityLevel="1" whereExpression="where std_no not in (select std_no from sisdba.student)">
           <taggedValue xmi:id="_RIJ1cQ_AEeuDXaq6WQCs8A" tag="Status" value="development"/>
           <taggedValue xmi:id="_RIJ1cg_AEeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
