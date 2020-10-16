@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_coNVEQ-8EeuDXaq6WQCs8A" name="DQ1_StudentEmail_EmailAddress" criticalityLevel="1" whereExpression="1=1">
+  <taggedValue xmi:id="_coNVEg-8EeuDXaq6WQCs8A" tag="Status" value="development"/>
+  <taggedValue xmi:id="_coNVEw-8EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
+  <taggedValue xmi:id="_coNVFA-8EeuDXaq6WQCs8A" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_coNVFQ-8EeuDXaq6WQCs8A" tag="Description" value="A Title is a person's preferred prefix in correspondence such as Mr, Ms., Mrs. or Miss.&#xD;&#xA;&#xD;&#xA;Rule: cannot be any value not in the v_person_title lookup table"/>
+  <taggedValue xmi:id="_coNVFg-8EeuDXaq6WQCs8A" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_coNVFw-8EeuDXaq6WQCs8A" tag="Validation_Status" value="true"/>
+  <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+  <sqlGenericExpression xmi:id="_coNVGA-8EeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+</dataquality.rules:WhereRule>
