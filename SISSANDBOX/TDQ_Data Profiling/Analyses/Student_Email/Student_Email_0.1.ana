@@ -8,6 +8,7 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_gicWAw-8EeuDXaq6WQCs8A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_EmailAddress_0.1.rules#_giTMFw-8EeuDXaq6WQCs8A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_EmailAddress_0.1.rules#_gGmTQA_XEeurTKvbeg04dQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_PreferredEmailIndicator_0.1.rules#_giJbFw-8EeuDXaq6WQCs8A"/>
     <taggedValue xmi:id="_Kb-Dkg-7EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_Kb-Dkw-7EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_Kb-DlA-7EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rule Analysis"/>
@@ -20,7 +21,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T13:48:39.532-0400" executionDuration="544" message="" executionNumber="18" lastRunOk="true" lastExecutionNumberOk="13"/>
+      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T13:52:07.122-0400" executionDuration="684" message="" executionNumber="19" lastRunOk="true" lastExecutionNumberOk="14"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_QqiFUA_AEeuDXaq6WQCs8A" count="57064" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -43,6 +44,20 @@
           <taggedValue xmi:id="_cyVipQ_WEeurTKvbeg04dQ" tag="Version" value="0.1"/>
           <taggedValue xmi:id="_cyVipg_WEeurTKvbeg04dQ" tag="Validation_Status" value="true"/>
           <sqlGenericExpression xmi:id="_cyVipw_WEeurTKvbeg04dQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_TdoyMA_YEeurTKvbeg04dQ" count="57064" computed="true" userCount="57064">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_PreferredEmailIndicator_0.1.rules#_Zc6dwQ-8EeuDXaq6WQCs8A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Tp2CMA_YEeurTKvbeg04dQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (college=1) AND (1=1)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_TpwioA_YEeurTKvbeg04dQ" name="DQ1_StudentEmail_PreferredEmailIndicator" criticalityLevel="1" whereExpression="1=1">
+          <taggedValue xmi:id="_TpwioQ_YEeurTKvbeg04dQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_Tpwiog_YEeurTKvbeg04dQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_Tpwiow_YEeurTKvbeg04dQ" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_TpwipA_YEeurTKvbeg04dQ" tag="Description" value="A Title is a person's preferred prefix in correspondence such as Mr, Ms., Mrs. or Miss.&#xD;&#xA;&#xD;&#xA;Rule: cannot be any value not in the v_person_title lookup table"/>
+          <taggedValue xmi:id="_TpwipQ_YEeurTKvbeg04dQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_Tpwipg_YEeurTKvbeg04dQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_Tpwipw_YEeurTKvbeg04dQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
