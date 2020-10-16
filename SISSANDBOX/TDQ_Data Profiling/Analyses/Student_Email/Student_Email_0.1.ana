@@ -25,7 +25,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T14:49:18.741-0400" executionDuration="1402" message="" executionNumber="24" lastRunOk="true" lastExecutionNumberOk="19"/>
+      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T14:49:45.843-0400" executionDuration="3060" message="" executionNumber="25" lastRunOk="true" lastExecutionNumberOk="20"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_QqiFUA_AEeuDXaq6WQCs8A" count="635647" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -78,9 +78,23 @@
           <sqlGenericExpression xmi:id="_EWkahw_aEeurTKvbeg04dQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_WtkYQA_gEeurTKvbeg04dQ">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_WtkYQA_gEeurTKvbeg04dQ" count="635635" computed="true" userCount="635635">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_QFA6QQ-8EeuDXaq6WQCs8A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_XCxzQQ_gEeurTKvbeg04dQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  se  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  s  ON (se.&quot;std_no&quot;=s.&quot;std_no&quot;)  WHERE (1=1)" language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_XX0PIA_gEeurTKvbeg04dQ" operator="=" tableAliasA="s" tableAliasB="se" columnAliasA="std_no" columnAliasB="std_no">
+          <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_GDuTMOf2Eeqob_JMQxXZxQ"/>
+          <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_37AicA-9EeuDXaq6WQCs8A"/>
+        </joinConditions>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_XCqegA_gEeurTKvbeg04dQ" name="DQ2_StudentEmail_StudentNumber" criticalityLevel="1" whereExpression="1=1">
+          <taggedValue xmi:id="_XCqegQ_gEeurTKvbeg04dQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_XCqegg_gEeurTKvbeg04dQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_XCqegw_gEeurTKvbeg04dQ" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_XCqehA_gEeurTKvbeg04dQ" tag="Description" value="Students should have at least one email address"/>
+          <taggedValue xmi:id="_XCqehQ_gEeurTKvbeg04dQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_XCqehg_gEeurTKvbeg04dQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_XCqehw_gEeurTKvbeg04dQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
     </results>
     <parameters xmi:id="_Kb-Dog-7EeuDXaq6WQCs8A" dataFilter="_Kb-DpA-7EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
