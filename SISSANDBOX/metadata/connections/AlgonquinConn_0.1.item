@@ -619,7 +619,28 @@
         </feature>
       </ownedElement>
       <ownedElement id="_EWShS-f2Eeqob_JMQxXZxQ" label="student_bus_phone" name="student_bus_phone" tableType="TABLE" xmi:id="_EWSiTOf2Eeqob_JMQxXZxQ" xsi:type="relational:TdTable"/>
-      <ownedElement id="_EWShTOf2Eeqob_JMQxXZxQ" label="student_email" name="student_email" tableType="TABLE" xmi:id="_EWSiTef2Eeqob_JMQxXZxQ" xsi:type="relational:TdTable"/>
+      <ownedElement id="_EWShTOf2Eeqob_JMQxXZxQ" label="student_email" name="student_email" tableType="TABLE" xmi:id="_EWSiTef2Eeqob_JMQxXZxQ" xsi:type="relational:TdTable">
+        <feature label="std_no" length="10" name="std_no" sourceType="INT" talendType="id_Integer" xmi:id="_37AicA-9EeuDXaq6WQCs8A" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_37AicQ-9EeuDXaq6WQCs8A"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_37Aicg-9EeuDXaq6WQCs8A" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_37Aicw-9EeuDXaq6WQCs8A"/>
+        </feature>
+        <feature label="college" length="5" name="college" sourceType="SMALLINT" talendType="id_Short" xmi:id="_37AidA-9EeuDXaq6WQCs8A" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_37AidQ-9EeuDXaq6WQCs8A"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_37Aidg-9EeuDXaq6WQCs8A" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_37Aidw-9EeuDXaq6WQCs8A"/>
+        </feature>
+        <feature label="pref" length="5" name="pref" sourceType="SMALLINT" talendType="id_Short" xmi:id="_37AieA-9EeuDXaq6WQCs8A" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_37AieQ-9EeuDXaq6WQCs8A"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_37Aieg-9EeuDXaq6WQCs8A" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_37Aiew-9EeuDXaq6WQCs8A"/>
+        </feature>
+        <feature label="email" length="50" name="email" sourceType="VARCHAR" talendType="id_String" xmi:id="_37AifA-9EeuDXaq6WQCs8A" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_37AifQ-9EeuDXaq6WQCs8A"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_37Aifg-9EeuDXaq6WQCs8A" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="NVARCHAR" nullable="columnNullable" xmi:id="_37Aifw-9EeuDXaq6WQCs8A"/>
+        </feature>
+      </ownedElement>
       <ownedElement id="_EWShTef2Eeqob_JMQxXZxQ" label="student_fees_optout" name="student_fees_optout" tableType="TABLE" xmi:id="_EWSiTuf2Eeqob_JMQxXZxQ" xsi:type="relational:TdTable"/>
       <ownedElement id="_EWShTuf2Eeqob_JMQxXZxQ" label="student_hist" name="student_hist" tableType="TABLE" xmi:id="_EWSiT-f2Eeqob_JMQxXZxQ" xsi:type="relational:TdTable"/>
       <ownedElement id="_EWShT-f2Eeqob_JMQxXZxQ" label="student_merge_history" name="student_merge_history" tableType="TABLE" xmi:id="_EWSiUOf2Eeqob_JMQxXZxQ" xsi:type="relational:TdTable"/>
@@ -2175,13 +2196,13 @@
     <client href="../../TDQ_Data Profiling/Analyses/Student_Address/Student_Address_0.1.ana#_os2vgA-4EeuDXaq6WQCs8A" xsi:type="dataquality.analysis:Analysis"/>
     <client href="../../TDQ_Data Profiling/Analyses/Student_Email/Student_Email_0.1.ana#_Kb-DkQ-7EeuDXaq6WQCs8A" xsi:type="dataquality.analysis:Analysis"/>
   </orgomg.cwm.objectmodel.core:Dependency>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5b20cb58-0a1a-428a-b1ed-bb5ade6958dc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZUmSaXrRmlCjwf2cB4abaROtoFmIzUj80utfINo9dvjbSNHZ01FntGnnvfDHox7OWY4vJLJESDWD&#13;
-85TQD39m+w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4148990a-fcd2-4c2d-8a7b-080c3b5724d4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yKGuorRnrnwUFI5d37WxPCcfclWIzRNgWToWjufSOMGp1as0ZaXinjkxI8F2EFAAyB6nDrkiNP5a&#13;
-aKSGdxSa8w==</DigestValue></Reference></SignedInfo><SignatureValue>UcfCDGoKP7+CoCGbwdwYLsNSXj0iwvImUxMlLUJNDq6X0KsLgkO1Upvh7hnD+McL/W0lY8sL8os+&#13;
-K3PjzezU4QWVbKr5VR6Xka/xmNC/6SLkBO1LIzUJ6hA47CIlOmB9r9YLM6cvnykPWD5NwmY1ZvYe&#13;
-8n3EhJnbtgfxtyzHZMj3r6zAbAVPcj2HZ9cHnA7WqIVc7UzSh8OJGS4ufoEfCwwvKX+LgTf2WxCi&#13;
-ofDHLVj6Povfxd+16j5jH6X8w1nUz5kuy0OlFNeHNf2qwatsKYPlMRzZHDr3EqfJTaUSmu3r6nvZ&#13;
-Z+nb7H6Gp7DAxmJLyXzzkyttfsO7RMo1aBuI8Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_585a3eaa-ad4f-4f83-9fe0-c25578460061"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>f6hQnPUvIpQh4gas7CIQg3zo4wjRBmCDoEEMa8Y96b/ff/fifVLdu9s+5Y67jCkug+CkQHtICjri&#13;
+d8KM4ZRoKg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fbee74d1-1d76-485d-9ef0-23f9724a5aa1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TLO/5U8E9EqFCXaxm+4/J7/K2XFb/+0m7BJoBv2RafipQBCkNS5ju5z3Smjnb5/xRgH0iecpvibT&#13;
+vH2vIXbLFw==</DigestValue></Reference></SignedInfo><SignatureValue>Ij/79VmPwZ/CubHfI3665etwXdtCfIpAz9n+A204KF0rOZgDLtH5fupU29/j/ll0ZoPsvHPxifm6&#13;
+B0tP/zqQwax4AVpERy3fCKeKgibqpRZhBaAYKdTmNcdM8OQCCmqCrjxGvyML7WkRyDRq1cQ/oEky&#13;
+RhI774R+rLQSXDh8FBVjYTAosJeTKfEDnFJ55DgcO7rYQ9ycVOU8xnZ9ZCeEtOhhROSb0NuzcZIQ&#13;
+9cH0vg/ba5jvS/qQu66KmITb4LUCE3AKWq2d0o7Q3Den4CE3RQfzXGsH4HkV9Vae7yZgV+zahDH8&#13;
+jle5rQPLBn2C2tX6yv3QarLmJMK1Rj2+aZ50QQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2203,4 +2224,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4148990a-fcd2-4c2d-8a7b-080c3b5724d4" Target="#_5b20cb58-0a1a-428a-b1ed-bb5ade6958dc"><Timestamp>2020-10-16 14:38:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fbee74d1-1d76-485d-9ef0-23f9724a5aa1" Target="#_585a3eaa-ad4f-4f83-9fe0-c25578460061"><Timestamp>2020-10-16 14:42:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
