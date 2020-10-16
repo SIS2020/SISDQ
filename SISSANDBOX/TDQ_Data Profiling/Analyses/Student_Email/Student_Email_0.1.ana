@@ -48,7 +48,7 @@
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_QFA6QQ-8EeuDXaq6WQCs8A"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_2RTc4Q_BEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  student_email  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  student  ON (student_email.&quot;std_no&quot;=student.&quot;std_no&quot;)  WHERE (student_email is null)" language="Microsoft SQL Server"/>
-        <joinConditions xmi:id="_2kDZwA_BEeuDXaq6WQCs8A" operator="=" tableAliasA="student" tableAliasB="student_email" columnAliasA="std_no" columnAliasB="std_no">
+        <joinConditions xmi:id="_7tk4UQ_BEeuDXaq6WQCs8A" operator="=" tableAliasA="student" tableAliasB="student_email" columnAliasA="std_no" columnAliasB="std_no">
           <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_GDuTMOf2Eeqob_JMQxXZxQ"/>
           <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_37AicA-9EeuDXaq6WQCs8A"/>
         </joinConditions>
