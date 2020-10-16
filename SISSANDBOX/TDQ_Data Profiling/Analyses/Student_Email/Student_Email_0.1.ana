@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_Kb-DkQ-7EeuDXaq6WQCs8A" name="Student_Email" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
     <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_CollegeEmailIndicator_0.1.rules#_gh_qEA-8EeuDXaq6WQCs8A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_EmailAddress_0.1.rules#_giJbEw-8EeuDXaq6WQCs8A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_PreferredEmailIndicator_0.1.rules#_giJbFw-8EeuDXaq6WQCs8A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_giTMEw-8EeuDXaq6WQCs8A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_EmailAddress_0.1.rules#_giTMFw-8EeuDXaq6WQCs8A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_gicWAw-8EeuDXaq6WQCs8A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_EmailAddress_0.1.rules#_Nmudcw-9EeuDXaq6WQCs8A"/>
     <taggedValue xmi:id="_Kb-Dkg-7EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_Kb-Dkw-7EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_Kb-DlA-7EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rule Analysis"/>
@@ -24,6 +31,30 @@
           <taggedValue xmi:id="_Kb-DoA-7EeuDXaq6WQCs8A" tag="Purpose" value="evaluates the number of records"/>
           <sqlGenericExpression xmi:id="_Kb-DoQ-7EeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_NmbigA-9EeuDXaq6WQCs8A">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_CollegeEmailIndicator_0.1.rules#_Q5JF4Q-8EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_NmbigQ-9EeuDXaq6WQCs8A">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_EmailAddress_0.1.rules#_coNVEQ-8EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_Nmbigg-9EeuDXaq6WQCs8A">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_PreferredEmailIndicator_0.1.rules#_Zc6dwQ-8EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_Nmbigw-9EeuDXaq6WQCs8A">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_irbtsQ-6EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_NmbihA-9EeuDXaq6WQCs8A">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_EmailAddress_0.1.rules#_eH7bYQ-8EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_NmbihQ-9EeuDXaq6WQCs8A">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_QFA6QQ-8EeuDXaq6WQCs8A"/>
       </indicators>
     </results>
     <parameters xmi:id="_Kb-Dog-7EeuDXaq6WQCs8A" dataFilter="_Kb-DpA-7EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
