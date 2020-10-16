@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_eH7bYQ-8EeuDXaq6WQCs8A" name="DQ2_StudentEmail_EmailAddress" supplierDependency="_giTMFw-8EeuDXaq6WQCs8A" criticalityLevel="1" whereExpression="1=1">
+  <dataquality.rules:WhereRule xmi:id="_eH7bYQ-8EeuDXaq6WQCs8A" name="DQ2_StudentEmail_EmailAddress" supplierDependency="_giTMFw-8EeuDXaq6WQCs8A" criticalityLevel="1" whereExpression="se.college=1 and se.email like '%@algonquinlive.com'">
     <taggedValue xmi:id="_eH7bYg-8EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_eH7bYw-8EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
-    <taggedValue xmi:id="_eH7bZA-8EeuDXaq6WQCs8A" tag="Purpose" value=""/>
-    <taggedValue xmi:id="_eH7bZQ-8EeuDXaq6WQCs8A" tag="Description" value="A Title is a person's preferred prefix in correspondence such as Mr, Ms., Mrs. or Miss.&#xD;&#xA;&#xD;&#xA;Rule: cannot be any value not in the v_person_title lookup table"/>
+    <taggedValue xmi:id="_eH7bZA-8EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rules"/>
+    <taggedValue xmi:id="_eH7bZQ-8EeuDXaq6WQCs8A" tag="Description" value="Email is valid if the email has 'AlgonquinLive.com' as a domain when the CollegeEmail indicator is set to 1"/>
     <taggedValue xmi:id="_eH7bZg-8EeuDXaq6WQCs8A" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_eH7bZw-8EeuDXaq6WQCs8A" tag="Validation_Status" value="true"/>
     <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
