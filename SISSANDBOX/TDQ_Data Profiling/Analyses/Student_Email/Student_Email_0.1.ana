@@ -19,7 +19,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T11:00:40.233-0400" executionDuration="1113" message="" executionNumber="12" lastRunOk="true" lastExecutionNumberOk="9"/>
+      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-10-16T11:11:21.006-0400" executionDuration="2023" message="Query not executed for indicator: &quot;DQ2_StudentEmail_StudentNumber&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  student_email  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  student  ON (student_email.&quot;std_no&quot;=student.&quot;std_no&quot;)  WHERE (student_email is null). Exception: Invalid column name 'student_email'." executionNumber="13" lastExecutionNumberOk="9"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_QqiFUA_AEeuDXaq6WQCs8A" count="635647" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -44,9 +44,23 @@
           <sqlGenericExpression xmi:id="_RIJ1dw_AEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_eAI_Ew_BEeuDXaq6WQCs8A">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_eAI_Ew_BEeuDXaq6WQCs8A" count="635635">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_QFA6QQ-8EeuDXaq6WQCs8A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_2RTc4Q_BEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  student_email  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  student  ON (student_email.&quot;std_no&quot;=student.&quot;std_no&quot;)  WHERE (student_email is null)" language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_2kDZwA_BEeuDXaq6WQCs8A" operator="=" tableAliasA="student" tableAliasB="student_email" columnAliasA="std_no" columnAliasB="std_no">
+          <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_GDuTMOf2Eeqob_JMQxXZxQ"/>
+          <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_37AicA-9EeuDXaq6WQCs8A"/>
+        </joinConditions>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_2QC4oA_BEeuDXaq6WQCs8A" name="DQ2_StudentEmail_StudentNumber" criticalityLevel="1" whereExpression="student_email is null">
+          <taggedValue xmi:id="_2QC4oQ_BEeuDXaq6WQCs8A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_2QC4og_BEeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_2QC4ow_BEeuDXaq6WQCs8A" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_2QC4pA_BEeuDXaq6WQCs8A" tag="Description" value="A Title is a person's preferred prefix in correspondence such as Mr, Ms., Mrs. or Miss.&#xD;&#xA;&#xD;&#xA;Rule: cannot be any value not in the v_person_title lookup table"/>
+          <taggedValue xmi:id="_2QC4pQ_BEeuDXaq6WQCs8A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_2QC4pg_BEeuDXaq6WQCs8A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_2QC4pw_BEeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
     </results>
     <parameters xmi:id="_Kb-Dog-7EeuDXaq6WQCs8A" dataFilter="_Kb-DpA-7EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
