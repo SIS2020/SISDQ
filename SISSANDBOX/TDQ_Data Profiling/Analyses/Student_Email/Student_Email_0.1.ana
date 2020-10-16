@@ -11,6 +11,8 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_PreferredEmailIndicator_0.1.rules#_giJbFw-8EeuDXaq6WQCs8A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_PreferredEmailIndicator_0.1.rules#_WUMIkQ_YEeurTKvbeg04dQ"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_eASwEw_BEeuDXaq6WQCs8A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_WfjKYA_gEeurTKvbeg04dQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ1_StudentEmail_StudentNumber_0.1.rules#_Wt0P4A_gEeurTKvbeg04dQ"/>
     <taggedValue xmi:id="_Kb-Dkg-7EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_Kb-Dkw-7EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_Kb-DlA-7EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rule Analysis"/>
@@ -75,6 +77,10 @@
           <taggedValue xmi:id="_EWkahg_aEeurTKvbeg04dQ" tag="Validation_Status" value="true"/>
           <sqlGenericExpression xmi:id="_EWkahw_aEeurTKvbeg04dQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_WtkYQA_gEeurTKvbeg04dQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/DQ2_StudentEmail_StudentNumber_0.1.rules#_QFA6QQ-8EeuDXaq6WQCs8A"/>
       </indicators>
     </results>
     <parameters xmi:id="_Kb-Dog-7EeuDXaq6WQCs8A" dataFilter="_Kb-DpA-7EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
