@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_wbk8cQ-9EeuDXaq6WQCs8A" name="Student_Email_Table" creationDate="2020-10-16T10:42:03.831-0400">
-  <taggedValue xmi:id="_wbk8cg-9EeuDXaq6WQCs8A" tag="Status" value="development"/>
-  <taggedValue xmi:id="_wbk8cw-9EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
-  <taggedValue xmi:id="_wbk8dA-9EeuDXaq6WQCs8A" tag="Purpose" value="Analysis of the columns of the student email table"/>
-  <taggedValue xmi:id="_wbk8dQ-9EeuDXaq6WQCs8A" tag="Description"/>
-  <taggedValue xmi:id="_wbk8dg-9EeuDXaq6WQCs8A" tag="Version" value="0.1"/>
-  <context xmi:id="_wbk8dw-9EeuDXaq6WQCs8A"/>
-  <results xmi:id="_wbk8eA-9EeuDXaq6WQCs8A">
-    <resultMetadata xmi:id="_wbk8eQ-9EeuDXaq6WQCs8A"/>
-  </results>
-  <parameters xmi:id="_wbk8eg-9EeuDXaq6WQCs8A" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_wbk8cQ-9EeuDXaq6WQCs8A" name="Student_Email_Table" creationDate="2020-10-16T10:42:03.831-0400" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
+    <clientDependency href="../../../TDQ_Libraries/Patterns/Regex/internet/Email_Address_0.1.pattern#_KNn-Mg--EeuDXaq6WQCs8A"/>
+    <taggedValue xmi:id="_wbk8cg-9EeuDXaq6WQCs8A" tag="Status" value="development"/>
+    <taggedValue xmi:id="_wbk8cw-9EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_wbk8dA-9EeuDXaq6WQCs8A" tag="Purpose" value="Analysis of the columns of the student email table"/>
+    <taggedValue xmi:id="_wbk8dQ-9EeuDXaq6WQCs8A" tag="Description" value=""/>
+    <taggedValue xmi:id="_wbk8dg-9EeuDXaq6WQCs8A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_KNeNMQ--EeuDXaq6WQCs8A" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_KNeNMg--EeuDXaq6WQCs8A" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_KNeNMw--EeuDXaq6WQCs8A" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_KNeNOA--EeuDXaq6WQCs8A" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_wbk8dw-9EeuDXaq6WQCs8A">
+      <connection href="../../../metadata/connections/AlgonquinConn_0.1.item#_nqx-0Of1Eeqob_JMQxXZxQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_37AifA-9EeuDXaq6WQCs8A"/>
+    </context>
+    <results xmi:id="_wbk8eA-9EeuDXaq6WQCs8A">
+      <resultMetadata xmi:id="_wbk8eQ-9EeuDXaq6WQCs8A" executionDate="2020-10-16T10:44:58.327-0400" message="Unsupported use of regular expressions on this database. Remove all Pattern indicators from this analysis, please." executionNumber="1"/>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_KNeNNA--EeuDXaq6WQCs8A" name="Email Address">
+        <parameters xmi:id="_KNeNNQ--EeuDXaq6WQCs8A">
+          <dataValidDomain xmi:id="_KNeNNg--EeuDXaq6WQCs8A">
+            <patterns href="../../../TDQ_Libraries/Patterns/Regex/internet/Email_Address_0.1.pattern#_rC5TcD4XEd24WPpU35gV1A"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_37AifA-9EeuDXaq6WQCs8A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+    </results>
+    <parameters xmi:id="_wbk8eg-9EeuDXaq6WQCs8A" dataFilter="_KNn-Mw--EeuDXaq6WQCs8A" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_KNeNMA--EeuDXaq6WQCs8A" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_KNn-Mw--EeuDXaq6WQCs8A" name="Student_Email_Table">
+    <ranges xmi:id="_KNn-NA--EeuDXaq6WQCs8A">
+      <expressions xmi:id="_KNn-NQ--EeuDXaq6WQCs8A">
+        <expression xsi:type="relational:TdExpression" xmi:id="_KNn-Ng--EeuDXaq6WQCs8A" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
