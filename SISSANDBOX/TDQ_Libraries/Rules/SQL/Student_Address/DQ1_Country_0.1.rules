@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_N36VEBIjEeucK-9f6NjiJg" name="DQ1_Country" criticalityLevel="1" whereExpression="1=1">
+  <taggedValue xmi:id="_N36VERIjEeucK-9f6NjiJg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_N36VEhIjEeucK-9f6NjiJg" tag="Author" value="hossiei@algonquincollege.com"/>
+  <taggedValue xmi:id="_N36VExIjEeucK-9f6NjiJg" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_N36VFBIjEeucK-9f6NjiJg" tag="Description" value="Integrity Rule. Student Number is a foreign key, and should exist in student table as a domestic student"/>
+  <taggedValue xmi:id="_N36VFRIjEeucK-9f6NjiJg" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_N36VFhIjEeucK-9f6NjiJg" tag="Validation_Status" value="true"/>
+  <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+  <sqlGenericExpression xmi:id="_N36VFxIjEeucK-9f6NjiJg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+</dataquality.rules:WhereRule>
