@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_os2vgA-4EeuDXaq6WQCs8A" name="Student_Address" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
     <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_AddressStreetNumber_0.1.rules#_UUUX0BIjEeucK-9f6NjiJg"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_Country_0.1.rules#_UUiaQBIjEeucK-9f6NjiJg"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_HomeOrLocalAddressIndicator_0.1.rules#_UUq9IBIjEeucK-9f6NjiJg"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_StudentAddress_PhoneNumber_AreaCode_0.1.rules#_UUyR4BIjEeucK-9f6NjiJg"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_Student_Address_Std_No_0.1.rules#_UU4_kBIjEeucK-9f6NjiJg"/>
     <taggedValue xmi:id="_os2vgQ-4EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_os2vgg-4EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_os2vgw-4EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rules"/>
@@ -18,6 +23,26 @@
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_asV-IA_kEeurTKvbeg04dQ">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1ABIjEeucK-9f6NjiJg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_AddressStreetNumber_0.1.rules#_u4lcgQ-5EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1ARIjEeucK-9f6NjiJg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_Country_0.1.rules#_N36VEBIjEeucK-9f6NjiJg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1AhIjEeucK-9f6NjiJg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_HomeOrLocalAddressIndicator_0.1.rules#_vZhmYQ-5EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1AxIjEeucK-9f6NjiJg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_StudentAddress_PhoneNumber_AreaCode_0.1.rules#_o51v4A_qEeurTKvbeg04dQ"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1BBIjEeucK-9f6NjiJg">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_Student_Address_Std_No_0.1.rules#_72wYkQ-4EeuDXaq6WQCs8A"/>
       </indicators>
     </results>
     <parameters xmi:id="_os2vmw-4EeuDXaq6WQCs8A" dataFilter="_os2vnQ-4EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
