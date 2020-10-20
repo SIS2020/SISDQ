@@ -2,6 +2,22 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_lzDV8RLbEeuzBt1AHG1VvA" name="StudentSummary" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/DQ2_StudentNumber_0.1.rules#_SOBlMBLdEeuzBt1AHG1VvA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/MatureStudent_0.1.rules#_EHiaoPddEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SecondName_0.1.rules#_0rdjsPaXEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/StudentGender_0.1.rules#_OLrQsvdrEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Surname_0.1.rules#_x3I3YPaWEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/AboriginalPersonIndicator_0.1.rules#_WHidoPazEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/AboriginalPersonStatus_0.1.rules#_mA7Q0Pa2Eeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/InternationStudentVisaDocOnFile_0.1.rules#_k-KwIvayEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/InternationStudentVisaExpiryDate_0.1.rules#__hkLwPaxEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/OENOntarioStudents_0.1.rules#_lw7u8PdkEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/StudentAboriginalStatus_0.1.rules#_1FhIwPdjEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/StudentAddressPreference_0.1.rules#_-9kgAPg0Eeq-R7p6onjPag"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/StudentCitizenCode_0.1.rules#_20wjsPdhEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/StudentEncumberanceFlag_Grad_0.1.rules#_8j2vYvavEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/StudentNumberDateAssignedValid_0.1.rules#_A0MtwPaxEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/DQ2_StudentNumber_0.1.rules#_-Hw6MBLfEeumsLKXanqxLQ"/>
     <taggedValue xmi:id="_lzDV8hLbEeuzBt1AHG1VvA" tag="Status" value="development"/>
     <taggedValue xmi:id="_lzDV8xLbEeuzBt1AHG1VvA" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_lzDV9BLbEeuzBt1AHG1VvA" tag="Purpose" value="DQ Business Rules"/>
@@ -38,6 +54,62 @@
           <taggedValue xmi:id="_b-YsBhLdEeuzBt1AHG1VvA" tag="Validation_Status" value="true"/>
           <sqlGenericExpression xmi:id="_b-YsBxLdEeuzBt1AHG1VvA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQsBLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/MatureStudent_0.1.rules#_M99RsPatEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQsRLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/SecondName_0.1.rules#_rKPFEfaXEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQshLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/StudentGender_0.1.rules#_HGmg4fdqEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQsxLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Surname_0.1.rules#_gIHQ4PaWEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQtBLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/AboriginalPersonIndicator_0.1.rules#_HH09EfazEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQtRLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/AboriginalPersonStatus_0.1.rules#_o3ZPAfazEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQthLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/InternationStudentVisaDocOnFile_0.1.rules#_cfi-AfayEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQtxLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/InternationStudentVisaExpiryDate_0.1.rules#_5dZp4faxEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQuBLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/OENOntarioStudents_0.1.rules#_uIHJcfatEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQuRLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/StudentAboriginalStatus_0.1.rules#_zIATMfdjEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQuhLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/StudentAddressPreference_0.1.rules#_a-DB0fgtEeq-R7p6onjPag"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQuxLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/StudentCitizenCode_0.1.rules#_blPeYPdhEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQvBLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/StudentEncumberanceFlag_Grad_0.1.rules#_GpPgcfavEeqx3smsKGeZnA"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_-HiQvRLfEeumsLKXanqxLQ">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/StudentNumberDateAssignedValid_0.1.rules#_PWiLQfawEeqx3smsKGeZnA"/>
       </indicators>
     </results>
     <parameters xmi:id="_lzDWDBLbEeuzBt1AHG1VvA" dataFilter="_lzDWDhLbEeuzBt1AHG1VvA" analysisType="Table Analysis"/>
