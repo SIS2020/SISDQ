@@ -14,8 +14,8 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_SzgKyvaXEeqx3smsKGeZnA">
-      <resultMetadata xmi:id="_SzgKy_aXEeqx3smsKGeZnA" executionDate="2020-10-15T16:14:54.594-0400" executionDuration="622" message="" executionNumber="8" lastRunOk="true" lastExecutionNumberOk="8"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_SzgKzPaXEeqx3smsKGeZnA" count="1287679" computed="true">
+      <resultMetadata xmi:id="_SzgKy_aXEeqx3smsKGeZnA" executionDate="2020-10-20T09:24:26.243-0400" executionDuration="902" message="" executionNumber="9" lastRunOk="true" lastExecutionNumberOk="9"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_SzgKzPaXEeqx3smsKGeZnA" count="1287996" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_SzgKzfaXEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot; " language="Microsoft SQL Server"/>
@@ -25,7 +25,7 @@
           <sqlGenericExpression xmi:id="_SzgK0faXEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ggjwoPaXEeqx3smsKGeZnA" count="1287679" computed="true" userCount="1287344">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ggjwoPaXEeqx3smsKGeZnA" count="1287996" computed="true" userCount="1287661">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/FirstName_0.1.rules#_bWdDQPaXEeqx3smsKGeZnA"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_glIHkPaXEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (isNull(first_name,'')!='' AND len(first_name) >0)" language="Microsoft SQL Server"/>
