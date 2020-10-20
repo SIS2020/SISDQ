@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_PQL7ERLdEeuzBt1AHG1VvA" name="DQ2_StudentNumber" criticalityLevel="1" whereExpression="title in (select distinct code from sisdba.v_person_title)">
-  <taggedValue xmi:id="_PQL7EhLdEeuzBt1AHG1VvA" tag="Status" value="development"/>
-  <taggedValue xmi:id="_PQL7ExLdEeuzBt1AHG1VvA" tag="Author" value="hossiei@algonquincollege.com"/>
-  <taggedValue xmi:id="_PQL7FBLdEeuzBt1AHG1VvA" tag="Purpose" value=""/>
-  <taggedValue xmi:id="_PQL7FRLdEeuzBt1AHG1VvA" tag="Description" value="A Title is a person's preferred prefix in correspondence such as Mr, Ms., Mrs. or Miss.&#xD;&#xA;&#xD;&#xA;Rule: cannot be any value not in the v_person_title lookup table"/>
-  <taggedValue xmi:id="_PQL7FhLdEeuzBt1AHG1VvA" tag="Version" value="0.1"/>
-  <taggedValue xmi:id="_PQL7FxLdEeuzBt1AHG1VvA" tag="Validation_Status" value="true"/>
-  <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
-  <sqlGenericExpression xmi:id="_PQL7GBLdEeuzBt1AHG1VvA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-</dataquality.rules:WhereRule>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_PQL7ERLdEeuzBt1AHG1VvA" name="DQ2_StudentNumber" supplierDependency="_SOBlMBLdEeuzBt1AHG1VvA" criticalityLevel="1" whereExpression="&#xD;&#xA;WHERE (concat(first_name, second_name,surname, date_of_birth, citizen_code, ont_educ_no)  IN&#xD;&#xA;(&#x9;SELECT inQry.ConcatPK --, inQry.DuplicateCount&#xD;&#xA;&#x9;FROM &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;SELECT&#x9;&#x9;concat(m.first_name, m.second_name, m.surname, m.date_of_birth, m.citizen_code, ont_educ_no) as ConcatPK,  COUNT(*) as DuplicateCount&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FROM&#x9;&#x9;sisdba.student  m &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;GROUP BY&#x9;concat(m.first_name, m.second_name, m.surname, m.date_of_birth, m.citizen_code, ont_educ_no)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;HAVING COUNT(*) > 1&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) inQry&#xD;&#xA;))">
+    <taggedValue xmi:id="_PQL7EhLdEeuzBt1AHG1VvA" tag="Status" value="development"/>
+    <taggedValue xmi:id="_PQL7ExLdEeuzBt1AHG1VvA" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_PQL7FBLdEeuzBt1AHG1VvA" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_PQL7FRLdEeuzBt1AHG1VvA" tag="Description" value="Students with multiple student numbers"/>
+    <taggedValue xmi:id="_PQL7FhLdEeuzBt1AHG1VvA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_PQL7FxLdEeuzBt1AHG1VvA" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_PQL7GBLdEeuzBt1AHG1VvA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_SOBlMBLdEeuzBt1AHG1VvA" kind="Usage" supplier="_PQL7ERLdEeuzBt1AHG1VvA">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_lzDV8RLbEeuzBt1AHG1VvA"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>
