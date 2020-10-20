@@ -8,19 +8,19 @@
   <taggedValue xmi:id="_p4mdxBLVEeuzBt1AHG1VvA" tag="Description" value=""/>
   <taggedValue xmi:id="_p4mdxRLVEeuzBt1AHG1VvA" tag="Version" value="0.1"/>
   <taggedValue xmi:id="_p4mdxhLVEeuzBt1AHG1VvA" tag="OutputFolder" value="C:\Users\hossiei\Documents\Profiling\Reports"/>
-  <taggedValue xmi:id="_p4mdxxLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DBTYPE" value="Microsoft SQL Server"/>
-  <taggedValue xmi:id="_p4mdyBLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DBVERSION" value="JTDS"/>
-  <taggedValue xmi:id="_p4mdyRLVEeuzBt1AHG1VvA" tag="REP_DBINFO_HOST" value="SDWDEV-1"/>
-  <taggedValue xmi:id="_p4mdyhLVEeuzBt1AHG1VvA" tag="REP_DBINFO_PORT" value="1433"/>
+  <taggedValue xmi:id="_p4mdxxLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DBTYPE" value="MySQL"/>
+  <taggedValue xmi:id="_p4mdyBLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DBVERSION" value="MYSQL_8"/>
+  <taggedValue xmi:id="_p4mdyRLVEeuzBt1AHG1VvA" tag="REP_DBINFO_HOST" value="localhost"/>
+  <taggedValue xmi:id="_p4mdyhLVEeuzBt1AHG1VvA" tag="REP_DBINFO_PORT" value="3306"/>
   <taggedValue xmi:id="_p4mdyxLVEeuzBt1AHG1VvA" tag="REP_DBINFO_WAREHOUSE" value=""/>
-  <taggedValue xmi:id="_p4mdzBLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DBNAME" value="EDW-INBOUND"/>
-  <taggedValue xmi:id="_p4mdzRLVEeuzBt1AHG1VvA" tag="REP_DBINFO_SCHEMA" value="dbo"/>
-  <taggedValue xmi:id="_p4mdzhLVEeuzBt1AHG1VvA" tag="REP_DBINFO_USER" value="hossiei"/>
-  <taggedValue xmi:id="_p4mdzxLVEeuzBt1AHG1VvA" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:1peHBhla/6oEmZOOADwPRUOpon9xfubdh09vs2+z5scCXlr/MFD1OQ=="/>
-  <taggedValue xmi:id="_p4md0BLVEeuzBt1AHG1VvA" tag="REP_DBINFO_PARAMETER" value=""/>
-  <taggedValue xmi:id="_p4md0RLVEeuzBt1AHG1VvA" tag="REP_DBINFO_URL" value="jdbc:jtds:sqlserver://SDWDEV-1:1433/EDW-INBOUND;"/>
-  <taggedValue xmi:id="_p4md0hLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DRIVER" value="net.sourceforge.jtds.jdbc.Driver"/>
-  <taggedValue xmi:id="_p4md0xLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DIALECT" value="org.hibernate.dialect.SQLServerDialect"/>
+  <taggedValue xmi:id="_p4mdzBLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DBNAME" value="talend_dq"/>
+  <taggedValue xmi:id="_p4mdzRLVEeuzBt1AHG1VvA" tag="REP_DBINFO_SCHEMA" value=""/>
+  <taggedValue xmi:id="_p4mdzhLVEeuzBt1AHG1VvA" tag="REP_DBINFO_USER" value=""/>
+  <taggedValue xmi:id="_p4mdzxLVEeuzBt1AHG1VvA" tag="REP_DBINFO_PASSWORD" value="enc:system.encryption.key.v1:2rTSJBj555IzIjixxgNDXipLgq5M8QQr4s2pCA=="/>
+  <taggedValue xmi:id="_p4md0BLVEeuzBt1AHG1VvA" tag="REP_DBINFO_PARAMETER" value="characterEncoding=UTF8"/>
+  <taggedValue xmi:id="_p4md0RLVEeuzBt1AHG1VvA" tag="REP_DBINFO_URL" value="jdbc:mysql://localhost:3306/talend_dq?characterEncoding=UTF8"/>
+  <taggedValue xmi:id="_p4md0hLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DRIVER" value="com.mysql.cj.jdbc.Driver"/>
+  <taggedValue xmi:id="_p4md0xLVEeuzBt1AHG1VvA" tag="REP_DBINFO_DIALECT" value="org.hibernate.dialect.MySQLDialect"/>
   <taggedValue xmi:id="_p4md1BLVEeuzBt1AHG1VvA" tag="REP_PASSWORD_CONTEXT" value="false"/>
   <taggedValue xmi:id="_3TgHMBLWEeuzBt1AHG1VvA" tag="OutputFileName" value="SISDBA_Student"/>
   <taggedValue xmi:id="_3TgHMRLWEeuzBt1AHG1VvA" tag="Single output" value="false"/>
@@ -32,10 +32,10 @@
       <expression xsi:type="relational:TdExpression" xmi:id="_3TgHNhLWEeuzBt1AHG1VvA" body="Creation Date"/>
     </formula>
   </presentationParams>
-  <analysisMap xmi:id="_3TgHORLWEeuzBt1AHG1VvA" mustRefresh="true" reportType="Basic">
+  <analysisMap xmi:id="_3TgHORLWEeuzBt1AHG1VvA" mustRefresh="true" reportType="Evolution">
     <analysis href="../Analyses/Student/BR_FirstName_0.1.ana#_SzgKwfaXEeqx3smsKGeZnA"/>
   </analysisMap>
-  <analysisMap xmi:id="_3TgHOhLWEeuzBt1AHG1VvA" mustRefresh="true" reportType="Basic">
+  <analysisMap xmi:id="_3TgHOhLWEeuzBt1AHG1VvA" mustRefresh="true" reportType="Evolution">
     <analysis href="../Analyses/Student/BR_Surname_0.1.ana#_v2cyAfaWEeqx3smsKGeZnA"/>
   </analysisMap>
   <context xmi:id="_3TgHNxLWEeuzBt1AHG1VvA" confirmationNeeded="false" name="Default"/>
