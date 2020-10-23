@@ -44,7 +44,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:AL/f9/wH4sCwYA96X2cwABzJFWE9/HKLDvIdcTLM"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:NcSKfulZPCfdrR50Lqy+aCanIylBXD0ndBOpq3eK"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -79,7 +79,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:YCeZCmODW02WOn4WuM2OJ+mz8a5MLsxl3Ugahzhq"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:RWfYzgtV0BNRl0HpjSspmDY1xAySIf/+wuxqMYkG"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -127,13 +127,13 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-Inbound&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;laytond&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:kHJDPgK/znU8zbZrhfIyp+jnsfsxy99zZEsIdMmXrgwDCK7KpsZVJqek"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:tAk3Ko8qKQZnBonVOPadCOZULXEuWayhEUjdLOGV+HZWg+mBfPLcmvM7"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;student&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT student.std_no,&#10;&#9;&#9;student.surname,&#10;&#9;&#9;student.first_name,&#10;&#9;&#9;student.second_name,&#10;&#9;&#9;student.pref_name,&#10;&#9;&#9;student.prev_name,&#10;&#9;&#9;student.title,&#10;&#9;&#9;student.gender,&#10;&#9;&#9;student.date_of_birth,&#10;&#9;&#9;student.over_19,&#10;&#9;&#9;student.stat_in_canada,&#10;&#9;&#9;student.mother_tongue,&#10;&#9;&#9;student.pref_lang,&#10;&#9;&#9;student.citizen_code,&#10;&#9;&#9;student.aboriginal_status,&#10;&#9;&#9;student.minority_group,&#10;&#9;&#9;student.bsid_code,&#10;&#9;&#9;student.ont_educ_no,&#10;&#9;&#9;student.hs_cert,&#10;&#9;&#9;student.deceased,&#10;&#9;&#9;student.correspondence,&#10;&#9;&#9;student.encumb_flag,&#10;&#9;&#9;student.basis_for_admis,&#10;&#9;&#9;student.ossd_issue_date,&#10;&#9;&#9;student.ossd_to_be_rec,&#10;&#9;&#9;student.add_acad_info,&#10;&#9;&#9;student.admis_trans_stat,&#10;&#9;&#9;student.add_acad_info_to_follow,&#10;&#9;&#9;student.current_sec_sch_std,&#10;&#9;&#9;student.date_std_no_assig,&#10;&#9;&#9;student.mobil_challenged,&#10;&#9;&#9;student.addr_pref,&#10;&#9;&#9;student.gender_hist,&#10;&#9;&#9;student.trans_hist,&#10;&#9;&#9;student.u_surname,&#10;&#9;&#9;student.u_first_name,&#10;&#9;&#9;student.u_second_name,&#10;&#9;&#9;student.last_regd_prg_code,&#10;&#9;&#9;student.visa_expiry_date,&#10;&#9;&#9;student.visa_doc_on_file,&#10;&#9;&#9;student.ossc_issue_date,&#10;&#9;&#9;student.ossc_to_be_rec,&#10;&#9;&#9;student.country_of_birth,&#10;&#9;&#9;student.first_gen_std_ind,&#10;&#9;&#9;student.oen_valid_code,&#10;&#9;&#9;student.oen_valid_date,&#10;&#9;&#9;student.legal_first_name,&#10;&#9;&#9;student.legal_second_name,&#10;&#9;&#9;student.u_legal_first_name,&#10;&#9;&#9;student.u_legal_second_name,&#10;&#9;&#9;student.national_id,&#10;&#9;&#9;student.aborig_pers_ind,&#10;&#9;&#9;student.aborig_pers_status,&#10;&#9;&#9;student.alternate_name&#10;FROM&#9;sisdba.student&#13;&#10;WHERE date_std_no_assig &gt; '2020-01-01' and date_std_no_assig &lt; '9999-01-01' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT student.std_no,&#10;&#9;&#9;student.surname,&#10;&#9;&#9;student.first_name,&#10;&#9;&#9;student.second_name,&#10;&#9;&#9;student.pref_name,&#10;&#9;&#9;student.prev_name,&#10;&#9;&#9;student.title,&#10;&#9;&#9;student.gender,&#10;&#9;&#9;student.date_of_birth,&#10;&#9;&#9;student.over_19,&#10;&#9;&#9;student.stat_in_canada,&#10;&#9;&#9;student.mother_tongue,&#10;&#9;&#9;student.pref_lang,&#10;&#9;&#9;student.citizen_code,&#10;&#9;&#9;student.aboriginal_status,&#10;&#9;&#9;student.minority_group,&#10;&#9;&#9;student.bsid_code,&#10;&#9;&#9;student.ont_educ_no,&#10;&#9;&#9;student.hs_cert,&#10;&#9;&#9;student.deceased,&#10;&#9;&#9;student.correspondence,&#10;&#9;&#9;student.encumb_flag,&#10;&#9;&#9;student.basis_for_admis,&#10;&#9;&#9;student.ossd_issue_date,&#10;&#9;&#9;student.ossd_to_be_rec,&#10;&#9;&#9;student.add_acad_info,&#10;&#9;&#9;student.admis_trans_stat,&#10;&#9;&#9;student.add_acad_info_to_follow,&#10;&#9;&#9;student.current_sec_sch_std,&#10;&#9;&#9;student.date_std_no_assig,&#10;&#9;&#9;student.mobil_challenged,&#10;&#9;&#9;student.addr_pref,&#10;&#9;&#9;student.gender_hist,&#10;&#9;&#9;student.trans_hist,&#10;&#9;&#9;student.u_surname,&#10;&#9;&#9;student.u_first_name,&#10;&#9;&#9;student.u_second_name,&#10;&#9;&#9;student.last_regd_prg_code,&#10;&#9;&#9;student.visa_expiry_date,&#10;&#9;&#9;student.visa_doc_on_file,&#10;&#9;&#9;student.ossc_issue_date,&#10;&#9;&#9;student.ossc_to_be_rec,&#10;&#9;&#9;student.country_of_birth,&#10;&#9;&#9;student.first_gen_std_ind,&#10;&#9;&#9;student.oen_valid_code,&#10;&#9;&#9;student.oen_valid_date,&#10;&#9;&#9;student.legal_first_name,&#10;&#9;&#9;student.legal_second_name,&#10;&#9;&#9;student.u_legal_first_name,&#10;&#9;&#9;student.u_legal_second_name,&#10;&#9;&#9;student.national_id,&#10;&#9;&#9;student.aborig_pers_ind,&#10;&#9;&#9;student.aborig_pers_status,&#10;&#9;&#9;student.alternate_name&#10;FROM&#9;sisdba.student&#13;&#10;WHERE date_std_no_assig &gt; '2015-01-01' and date_std_no_assig &lt; '9999-01-01' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -598,7 +598,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-Inbound&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;laytond&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:NVJ9YTxMC6XoeJQTVkt8k3ueGuRqBu6QukVzncXt0MItIfD2UbmK7pdF"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Q+uRcC1o0WXuP8ySJoOrX6SMcZd0yc30DkbYWtvBBdpQHV/MGtPvOanl"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_DhZxgApSEeuQj8iTNBbh7Q - student_email"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;student_email&quot;"/>
@@ -650,7 +650,7 @@
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="APPEND" value="false"/>
     <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
     <elementParameter field="CHECK" name="COMPRESS" value="false"/>
@@ -709,13 +709,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_aeb0eb84-1528-4428-a0a2-ec0d2a0448c6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sdQtUu6Yu29/sXfpfRKQ6A2ha5ZxRWHYMroFzaHsp0wyvcNS2MOJkV7ZoqLca+mE+jnzg6two4lg&#13;
-V8w43hKVDg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0e2fc328-8031-4b38-946d-14f9a58a4ba7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>m5e0j1RVwoyFymxZhRMiPTjpWHJ3gSsFJ1GtEUN44CUL1us1azA31+5+gw4R9bw6Ler4aNEY60k0&#13;
-6sWDv1GqnA==</DigestValue></Reference></SignedInfo><SignatureValue>AmfqilmdyAoLY1YeoFMjBFBoFFTfmutglSBnkUArWE3TWweyy1xmIxYdK3uu+kP/rGg8s44hYsRO&#13;
-HZLv/2scN9dl3nkPwFiZkB39outaMjdTJ0m7gdXeilLUYE789v5FWIykkV80pU07svc5J8PGozuF&#13;
-jQ6XRIWHpvTcyq4w1BPum4AHJawH6W3iVcso3BVV5UhyxBDNNnMuDIu1L6vAHWvuOzvkQjkx/KGO&#13;
-svv2nqHww3QF1CO3g/X3bBHIypcBrH03Z+DOALBG2Nrwl8FB7dzdIZH9u4z31dGK3tkz5zPRspEJ&#13;
-deYKAoyHEMSLymiY0IL/NeX7rcd7OWizdxy2tQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_10f0e0a6-4e7d-439c-b870-bdda01768790"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bfuS0ZZei4MEb9yb70Hxmt6JDcunCZy3F3b8VigOUNYcRl2R2AKPMKRmyxJBTS3cU4oZm9mBTjA7&#13;
+tmMG2WUjOw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f1d04025-0df0-472e-95ae-3fa5b596f544"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/ZZNW5Mhtxq8KRqizZH5QxImTMu0F/ZGbizmR+VNtfKFagZE7OMup7XdRo4CAs66QRb5t1bz1Jj1&#13;
+RtjAEKMu5Q==</DigestValue></Reference></SignedInfo><SignatureValue>ckDAazQ9Mv9d1a4Khznd4vJUhulI3ySP6fMdvdFC3YHA3TkLAKUb4kjZLjtyH1TfkHKUALMsiLks&#13;
+BlBx6iVGIrcjp8QiYLf2+K3nCiVd+ibfiQo5uvnutTudWkT9raTNv0lnQ8HCWUnQNdTrw23kaTac&#13;
+juI8HFLQf6JR4k4b8b03M5PYLV5nj29QTZaw2hxBBQzMWm/bfTZcaz9U79nVS1C1wk2Wu/i0oyAf&#13;
+/IzBkQuLGK/D6wHBf9vjNcEJRN0oYsBgFhP7boX5MAwwnlc0YyWijMllqcuOe4GoTuYTME6Ba89l&#13;
+rTdGImlLzJcz8lzqujF5vYpgAQiMJznLBa5I0Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -737,4 +737,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0e2fc328-8031-4b38-946d-14f9a58a4ba7" Target="#_aeb0eb84-1528-4428-a0a2-ec0d2a0448c6"><Timestamp>2020-10-23 20:42:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f1d04025-0df0-472e-95ae-3fa5b596f544" Target="#_10f0e0a6-4e7d-439c-b870-bdda01768790"><Timestamp>2020-10-23 20:45:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
