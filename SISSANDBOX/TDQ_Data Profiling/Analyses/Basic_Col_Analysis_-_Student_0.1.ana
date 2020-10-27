@@ -1,13 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_xCfuABh6Eeug86sngJlibA" name="Basic Col Analysis - Student" creationDate="2020-10-27T13:35:12.072-0400">
-  <taggedValue xmi:id="_xCfuARh6Eeug86sngJlibA" tag="Status" value="development"/>
-  <taggedValue xmi:id="_xCfuAhh6Eeug86sngJlibA" tag="Author" value="laytond@algonquincollege.com"/>
-  <taggedValue xmi:id="_xCfuAxh6Eeug86sngJlibA" tag="Purpose"/>
-  <taggedValue xmi:id="_xCfuBBh6Eeug86sngJlibA" tag="Description"/>
-  <taggedValue xmi:id="_xCfuBRh6Eeug86sngJlibA" tag="Version" value="0.1"/>
-  <context xmi:id="_xCfuBhh6Eeug86sngJlibA"/>
-  <results xmi:id="_xCfuBxh6Eeug86sngJlibA">
-    <resultMetadata xmi:id="_xCfuCBh6Eeug86sngJlibA"/>
-  </results>
-  <parameters xmi:id="_xCfuCRh6Eeug86sngJlibA" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_xCfuABh6Eeug86sngJlibA" name="Basic Col Analysis - Student" creationDate="2020-10-27T13:35:12.072-0400" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/EDW-Inbound_0.1.item#_BnoS0ApaEeuQj8iTNBbh7Q"/>
+    <taggedValue xmi:id="_xCfuARh6Eeug86sngJlibA" tag="Status" value="development"/>
+    <taggedValue xmi:id="_xCfuAhh6Eeug86sngJlibA" tag="Author" value="laytond@algonquincollege.com"/>
+    <taggedValue xmi:id="_xCfuAxh6Eeug86sngJlibA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_xCfuBBh6Eeug86sngJlibA" tag="Description" value=""/>
+    <taggedValue xmi:id="_xCfuBRh6Eeug86sngJlibA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_IbAFgRh7Eeug86sngJlibA" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_IbAskBh7Eeug86sngJlibA" tag="PREVIEW_ROW_NUMBER" value="100"/>
+    <taggedValue xmi:id="_IbAskRh7Eeug86sngJlibA" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_IbJPcBh7Eeug86sngJlibA" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_xCfuBhh6Eeug86sngJlibA">
+      <connection href="../../metadata/connections/EDW-Inbound_0.1.item#_33ockApSEeuQj8iTNBbh7Q"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/EDW-Inbound_0.1.item#_9hE74QpTEeuQj8iTNBbh7Q"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/EDW-Inbound_0.1.item#_9hE7_QpTEeuQj8iTNBbh7Q"/>
+    </context>
+    <results xmi:id="_xCfuBxh6Eeug86sngJlibA">
+      <resultMetadata xmi:id="_xCfuCBh6Eeug86sngJlibA" executionDate="2020-10-27T13:39:45.527-0400" executionDuration="5157" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_Za1DsBh7Eeug86sngJlibA" count="1328871" computed="true">
+        <parameters xmi:id="_Za1DsRh7Eeug86sngJlibA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/EDW-Inbound_0.1.item#_9hE74QpTEeuQj8iTNBbh7Q"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ZyNo8Bh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM &quot;EDW-Inbound&quot;.&quot;sisdba&quot;.&quot;student_address&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_ZxYigBh7Eeug86sngJlibA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_ZxYigRh7Eeug86sngJlibA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_ZxYighh7Eeug86sngJlibA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_ZxYigxh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_Za1Dshh7Eeug86sngJlibA" count="1328871" computed="true">
+        <parameters xmi:id="_Za1Dsxh7Eeug86sngJlibA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/EDW-Inbound_0.1.item#_9hE74QpTEeuQj8iTNBbh7Q"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ZyNo8hh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM &quot;EDW-Inbound&quot;.&quot;sisdba&quot;.&quot;student_address&quot; WHERE &quot;std_no&quot; IS NULL " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_ZxiTgBh7Eeug86sngJlibA" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_ZxiTgRh7Eeug86sngJlibA" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_ZxiTghh7Eeug86sngJlibA" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_ZxiTgxh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_Za1DtBh7Eeug86sngJlibA" count="1328871" computed="true" uniqueValueCount="1248243">
+        <parameters xmi:id="_Za1DtRh7Eeug86sngJlibA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/EDW-Inbound_0.1.item#_9hE74QpTEeuQj8iTNBbh7Q"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ZyNo8xh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM (SELECT &quot;std_no&quot;, COUNT(*) mycount FROM &quot;EDW-Inbound&quot;.&quot;sisdba&quot;.&quot;student_address&quot;  GROUP BY &quot;std_no&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_ZxpoQBh7Eeug86sngJlibA" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_ZxpoQRh7Eeug86sngJlibA" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_ZxpoQhh7Eeug86sngJlibA" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_ZxpoQxh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_ZxpoRBh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_ZxpoRRh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_ZxpoRhh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_ZxpoRxh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_ZxpoSBh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_ZxpoSRh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:FrequencyIndicator" xmi:id="_Za4uEBh7Eeug86sngJlibA" count="1328871" computed="true" distinctValueCount="3" valueToFreq="ACED0005737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C77080000001000000003740001207372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B0200007870000000000007308C740001597371007E00030000000000034BC67400014E7371007E0003000000000009CA9578">
+        <parameters xmi:id="_Za4uERh7Eeug86sngJlibA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/EDW-Inbound_0.1.item#_9hE7_QpTEeuQj8iTNBbh7Q"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Advanced Statistics/Frequency_Table_0.1.definition#_ccIR4hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ZyNo9Bh7Eeug86sngJlibA" body="SELECT TOP 10  &quot;incor_address&quot;, COUNT(*) c FROM &quot;EDW-Inbound&quot;.&quot;sisdba&quot;.&quot;student_address&quot; t  GROUP BY &quot;incor_address&quot; ORDER BY c DESC" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_Zxvu4Bh7Eeug86sngJlibA" name="Frequency Table" label="Frequency Table">
+          <taggedValue xmi:id="_Zxvu4Rh7Eeug86sngJlibA" tag="Description" value="counts the number of records for each distinct record"/>
+          <taggedValue xmi:id="_Zxvu4hh7Eeug86sngJlibA" tag="Purpose" value="evaluates the most frequent records"/>
+          <sqlGenericExpression xmi:id="_Zxvu4xh7Eeug86sngJlibA" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="SQL"/>
+          <sqlGenericExpression xmi:id="_Zxvu5Bh7Eeug86sngJlibA" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_Zxvu5Rh7Eeug86sngJlibA" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_Zxvu5hh7Eeug86sngJlibA" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY COUNT(*) DESC" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_Zxvu5xh7Eeug86sngJlibA" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="DB2"/>
+          <sqlGenericExpression xmi:id="_Zxvu6Bh7Eeug86sngJlibA" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> ORDER BY c DESC" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_Zxvu6Rh7Eeug86sngJlibA" body="SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__GROUP_BY_ALIAS__%> ORDER BY c DESC" language="Informix"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_Za4uEhh7Eeug86sngJlibA" count="1328871" computed="true">
+        <parameters xmi:id="_Za4uExh7Eeug86sngJlibA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/EDW-Inbound_0.1.item#_9hE7_QpTEeuQj8iTNBbh7Q"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ZyNo8Rh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM &quot;EDW-Inbound&quot;.&quot;sisdba&quot;.&quot;student_address&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_Zx2ckBh7Eeug86sngJlibA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_Zx2ckRh7Eeug86sngJlibA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_Zx2ckhh7Eeug86sngJlibA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_Zx2ckxh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_Za4uFBh7Eeug86sngJlibA" count="1328871" computed="true">
+        <parameters xmi:id="_Za4uFRh7Eeug86sngJlibA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/EDW-Inbound_0.1.item#_9hE7_QpTEeuQj8iTNBbh7Q"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ZyNo9Rh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM &quot;EDW-Inbound&quot;.&quot;sisdba&quot;.&quot;student_address&quot; WHERE &quot;incor_address&quot; IS NULL " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_Zx8jMBh7Eeug86sngJlibA" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_Zx8jMRh7Eeug86sngJlibA" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_Zx8jMhh7Eeug86sngJlibA" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_Zx8jMxh7Eeug86sngJlibA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_Za4uFhh7Eeug86sngJlibA" count="1328871" computed="true" blankCount="471180">
+        <parameters xmi:id="_Za4uFxh7Eeug86sngJlibA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/EDW-Inbound_0.1.item#_9hE7_QpTEeuQj8iTNBbh7Q"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ZyNo9hh7Eeug86sngJlibA" body="SELECT COUNT(&quot;incor_address&quot;) FROM &quot;EDW-Inbound&quot;.&quot;sisdba&quot;.&quot;student_address&quot;  WHERE LTRIM(RTRIM(&quot;incor_address&quot;)) = '' " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_ZyDQ4Bh7Eeug86sngJlibA" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_ZyDQ4Rh7Eeug86sngJlibA" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_ZyDQ4hh7Eeug86sngJlibA" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_ZyDQ4xh7Eeug86sngJlibA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_ZyDQ5Bh7Eeug86sngJlibA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_ZyDQ5Rh7Eeug86sngJlibA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_ZyDQ5hh7Eeug86sngJlibA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_ZyDQ5xh7Eeug86sngJlibA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_xCfuCRh6Eeug86sngJlibA" dataFilter="_IbJ2gBh7Eeug86sngJlibA" analysisType="Multiple Column Analysis" sampleDataShowWay="n random rows"/>
+    <contextType xmi:id="_IbAFgBh7Eeug86sngJlibA" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_IbJ2gBh7Eeug86sngJlibA" name="Basic Col Analysis - Student">
+    <ranges xmi:id="_IbJ2gRh7Eeug86sngJlibA">
+      <expressions xmi:id="_IbJ2ghh7Eeug86sngJlibA">
+        <expression xsi:type="relational:TdExpression" xmi:id="_IbJ2gxh7Eeug86sngJlibA" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
