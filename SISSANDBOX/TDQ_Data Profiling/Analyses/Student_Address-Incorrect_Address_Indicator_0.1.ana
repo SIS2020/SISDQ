@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <dataquality.analysis:Analysis xmi:id="_xCfuABh6Eeug86sngJlibA" name="Student Address-Incorrect Address Indicator" creationDate="2020-10-27T13:35:12.072-0400" defaultContext="Default">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_xCfuABh6Eeug86sngJlibA" name="Student Address-Incorrect Address Indicator" supplierDependency="_KZnBABlcEeuAKtVt7Ld1EQ" creationDate="2020-10-27T13:35:12.072-0400" defaultContext="Default">
     <clientDependency href="../../metadata/connections/EDW-Inbound_0.1.item#_BnoS0ApaEeuQj8iTNBbh7Q"/>
     <taggedValue xmi:id="_xCfuARh6Eeug86sngJlibA" tag="Status" value="development"/>
     <taggedValue xmi:id="_xCfuAhh6Eeug86sngJlibA" tag="Author" value="laytond@algonquincollege.com"/>
@@ -133,4 +133,7 @@
       </expressions>
     </ranges>
   </dataquality.domain:Domain>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_KZnBABlcEeuAKtVt7Ld1EQ" kind="Usage" supplier="_xCfuABh6Eeug86sngJlibA">
+    <client xsi:type="dataquality.reports:TdReport" href="../Reports/Student_Address-Incorrect_Address_Indicator_0.1.rep#_KZGDoBlcEeuAKtVt7Ld1EQ"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
