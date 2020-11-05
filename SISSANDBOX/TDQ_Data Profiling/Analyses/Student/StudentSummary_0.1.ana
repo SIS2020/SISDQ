@@ -4,8 +4,8 @@
     <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0001_0.1.rules#_EkKlUB32Eeu08-Q-yIawhQ"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0002_0.1.rules#_oKSrEB4IEeu9BtIm8nagog"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0003_0.1.rules#__PAucB4JEeu9BtIm8nagog"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0004_0.1.rules#_E0mPMB4QEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0003_0.1.rules#__PAucB4JEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0004_0.1.rules#_E0mPMB4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0005_0.1.rules#_E0uyEB4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0006_0.1.rules#_E02t4B4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0007_0.1.rules#_E1BtAB4QEeu9BtIm8nagog"/>
@@ -64,7 +64,7 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_qUgI4h8FEeukpM_ACLlX9g" count="1289202" computed="true" userCount="1289109">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0003_0.1.rules#_gIHQ4PaWEeqx3smsKGeZnA"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0003_0.1.rules#_gIHQ4PaWEeqx3smsKGeZnA"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_qnjnyx8FEeukpM_ACLlX9g" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (rtrim(ltrim(surname)) like '[a-zA-Z]%')" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_qnJ_IB8FEeukpM_ACLlX9g" name="SIS-DQ0003" criticalityLevel="1" whereExpression="rtrim(ltrim(surname)) like '[a-zA-Z]%'">
           <taggedValue xmi:id="_qnJ_IR8FEeukpM_ACLlX9g" tag="Status" value="development"/>
@@ -78,7 +78,7 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_qUgI4x8FEeukpM_ACLlX9g" count="1289202" computed="true" userCount="1288846">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0004_0.1.rules#_lnd7QBkhEeuza6n6POUH7Q"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0004_0.1.rules#_lnd7QBkhEeuza6n6POUH7Q"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_qnjnzB8FEeukpM_ACLlX9g" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (rtrim(ltrim(first_name)) like '[a-zA-Z]%')" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_qnJ_KB8FEeukpM_ACLlX9g" name="SIS-DQ0004" criticalityLevel="1" whereExpression="rtrim(ltrim(first_name)) like '[a-zA-Z]%'">
           <taggedValue xmi:id="_qnJ_KR8FEeukpM_ACLlX9g" tag="Status" value="development"/>
