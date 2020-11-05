@@ -42,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:M7seeuJ1ta1iJeVkrscxmr27OvC3x6Fpa0IZWbQY"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:844SDXB0/hc9etbrRPQ34mePY2L/+nLP7TwLvfZa"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -77,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:MmnNkIj8f6M1L36cEDn9CJi2ULHjypZMha/LxOYL"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:izbYSGl/53E2l/FN3nueOCgufq8vA7CgFvrfXLqJ"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -112,619 +112,7 @@
     <routinesParameter id="_blCnIApGEeuQj8iTNBbh7Q" name="TalendStringUtil"/>
     <routinesParameter id="_bk6EQApGEeuQj8iTNBbh7Q" name="TalendString"/>
   </parameters>
-  <node componentName="tMSSqlValidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBValidRows_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="VALIDATION_TYPE" value="DQ_RULE"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-INBOUND&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;sisdba&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:buFKUwem2LDjGvC5s3WLRnEdWfZUcSFOsk5L8Oath36lPBabWYOIZ0Fl"/>
-    <elementParameter field="DBTABLE" name="TABLE" show="false" value="&quot;student&quot;"/>
-    <elementParameter field="TEXT" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DQRULES_LIST" show="false" value="SIS-DQ0001"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;&#13;&#10;USE [EDW-INBOUND]&#13;&#10;&#13;&#10;&#13;&#10;SELECT top 1000  * &#10;FROM&#9;sisdba.student &#10;WHERE&#13;&#10;&#13;&#10;std_no in&#13;&#10;(&#13;&#10;&#9;SELECT vs.std_no  FROM [DQ].[dbo].[vStudent] vs group by vs.std_no having count(*)=1&#13;&#10;)&#13;&#10;&#13;&#10;&quot;"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="COLUMN_LIST" name="ANALYZED_COLUMN" show="false" value="std_no"/>
-    <elementParameter field="CHECK" name="CUSTOM_PATTERN" show="false" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="PATTERN_LIST" show="false" value=""/>
-    <elementParameter field="TEXT" name="DQ_PATTERN" show="false" value="&quot;'[A-Z0-9._%-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,4}'&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="std_no"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="surname"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="first_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="second_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pref_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="prev_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="title"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="gender"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="date_of_birth"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="over_19"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="stat_in_canada"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="mother_tongue"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pref_lang"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="citizen_code"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="aboriginal_status"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="minority_group"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="bsid_code"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ont_educ_no"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="hs_cert"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="deceased"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="correspondence"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="encumb_flag"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="basis_for_admis"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ossd_issue_date"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ossd_to_be_rec"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="add_acad_info"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="admis_trans_stat"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="add_acad_info_to_follow"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="current_sec_sch_std"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="date_std_no_assig"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="mobil_challenged"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="addr_pref"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="gender_hist"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="trans_hist"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="u_surname"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="u_first_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="u_second_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="last_regd_prg_code"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="visa_expiry_date"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="visa_doc_on_file"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ossc_issue_date"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ossc_to_be_rec"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="country_of_birth"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="first_gen_std_ind"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="oen_valid_code"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="oen_valid_date"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="legal_first_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="legal_second_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="u_legal_first_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="u_legal_second_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="national_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="aborig_pers_ind"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="aborig_pers_status"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="alternate_name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="student" name="tDBValidRows_1">
-      <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="30" name="surname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="15" name="first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="15" name="second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="pref_name" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="30" name="prev_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="title" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="gender" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="23" name="date_of_birth" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="over_19" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="stat_in_canada" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="3" name="mother_tongue" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="pref_lang" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="5" name="citizen_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4" name="aboriginal_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="minority_group" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="10" name="bsid_code" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="10" name="ont_educ_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="hs_cert" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="deceased" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="correspondence" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="encumb_flag" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="basis_for_admis" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="10" name="ossd_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="ossd_to_be_rec" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="add_acad_info" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="5" name="admis_trans_stat" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="5" name="add_acad_info_to_follow" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="current_sec_sch_std" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="23" name="date_std_no_assig" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="mobil_challenged" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="addr_pref" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="23" name="gender_hist" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="trans_hist" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="u_surname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="15" name="u_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="15" name="u_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="6" name="last_regd_prg_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="23" name="visa_expiry_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="visa_doc_on_file" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="10" name="ossc_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="ossc_to_be_rec" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="country_of_birth" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="first_gen_std_ind" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="2" name="oen_valid_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="8" name="oen_valid_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="legal_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="legal_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="u_legal_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="u_legal_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="20" name="national_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="aborig_pers_ind" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="aborig_pers_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="alternate_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-    </metadata>
-  </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
-    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/hossiei/workspaceDQ/ValidRows.csv&quot;"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
-    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="APPEND" value="false"/>
-    <elementParameter field="CHECK" name="INCLUDEHEADER" value="false"/>
-    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
-    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
-    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
-    <elementParameter field="CHECK" name="CREATE" value="true"/>
-    <elementParameter field="CHECK" name="SPLIT" value="false"/>
-    <elementParameter field="TEXT" name="SPLIT_EVERY" show="false" value="1000"/>
-    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
-    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
-    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
-    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="student" name="tFileOutputDelimited_1">
-      <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="30" name="surname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="15" name="first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="15" name="second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="pref_name" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="30" name="prev_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="title" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="gender" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="23" name="date_of_birth" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="over_19" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="stat_in_canada" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="3" name="mother_tongue" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="pref_lang" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="5" name="citizen_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="4" name="aboriginal_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="minority_group" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="10" name="bsid_code" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="10" name="ont_educ_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="hs_cert" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="deceased" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="correspondence" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="encumb_flag" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="basis_for_admis" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="10" name="ossd_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="ossd_to_be_rec" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="add_acad_info" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="5" name="admis_trans_stat" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="5" name="add_acad_info_to_follow" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="current_sec_sch_std" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="23" name="date_std_no_assig" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="mobil_challenged" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="addr_pref" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="23" name="gender_hist" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="trans_hist" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="u_surname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="15" name="u_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="15" name="u_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="6" name="last_regd_prg_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="23" name="visa_expiry_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="visa_doc_on_file" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="10" name="ossc_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Interval"/>
-      </column>
-      <column comment="" key="false" length="1" name="ossc_to_be_rec" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="5" name="country_of_birth" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="first_gen_std_ind" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="2" name="oen_valid_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="8" name="oen_valid_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="legal_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="legal_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="u_legal_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="u_legal_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="20" name="national_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="1" name="aborig_pers_ind" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="aborig_pers_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-      <column comment="" key="false" length="30" name="alternate_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-        <additionalField key="Content Type" value="Nominal"/>
-      </column>
-    </metadata>
-  </node>
-  <node componentName="tMSSqlValidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="256">
+  <node componentName="tMSSqlValidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBValidRows_2"/>
     <elementParameter field="CLOSED_LIST" name="VALIDATION_TYPE" value="DQ_RULE"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -736,7 +124,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;sisdba&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:prXdXI5WiAstkIl4nW60CZ4qcNbEx+2S8Qi4L1sCJffgqRwjBurSJf6F"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:V76wzLeLDWLa/zVmcLlIOwW5QQx8vVQ5G6+v48aoAIjtXlOL/Nxa5seo"/>
     <elementParameter field="DBTABLE" name="TABLE" show="false" value="&quot;student&quot;"/>
     <elementParameter field="TEXT" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DQRULES_LIST" show="false" value="SIS-DQ0001"/>
@@ -1085,7 +473,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="256">
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -1096,7 +484,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;DQ&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:IYi5bzjfbnxNFI0sFJvzH9H2FFRDtbHKchZoX/5D7tPaGinpMHgIdi8F"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:iZ9udAwKz6nfPCJ3FLuP+K03inRowaDiHvw7UoqKJy+9M6Bv9QxwhdT0"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;SIS_DQ0001_ValidRows&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_CREATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1564,32 +952,22 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBValidRows_1" offsetLabelX="0" offsetLabelY="0" source="tDBValidRows_1" target="tFileOutputDelimited_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBValidRows_2" offsetLabelX="0" offsetLabelY="0" source="tDBValidRows_2" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBValidRows_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBValidRows_2"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cf8ca3bd-7f88-4f00-9304-52fb492d0a49"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3KjRbQ4YTLeyFgyVNxq2lslCZ6XFhBVpQYNe8Ja6Sc8YucaHN6NYZELND7kBEysZZBuxdXp/fUM4
-reQAHKHCMA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_97d7c886-c0c9-432b-8e00-ef90620cea21"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>S9Mr4aAIUW65gwPNX3hjTgcCWA7w/+zqz4uZ+nMrWImDnF+RUErEkXjiSqKRwp3VSB3nDOFbvi1E
-obVbv2UD3Q==</DigestValue></Reference></SignedInfo><SignatureValue>g9s8IZZACyRUk5vS90u0PZg1jl46hX8ZYcVEGQ0fGFPKBWZRMRMCpixPHzn6wAktrGspGpDa7udy
-RmMfzAQNQLu+MV1TE/ECvPOzNdWKZiI+Gb8/1L8L4he1ubx2KCfgpPNtuzNcLFDvRkuR/0siPuM4
-uIPCfCG025BX9rAUPDiBhi3EWjEFtoRtWwcv4Tgz0f1EVerwRqUOIBf3r/VLnJm+fsVS6LkPhoOF
-sfnsUYVz6z9bcsU1GdLKXO9rHJGuxly52VqRACWjKdoNJamdt696F5r3ODlrhw+CFuSgu1K+S+7V
-HUAijBWK7EBCb+pRbraCtCls3iSxyiID73a86A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5f528425-b4b4-4618-bab7-0772d1907d06"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cNdBwrHntJcNN8yGzwqkYqtQbD6ybvmiLbB+wPrlbfZIYiF7Bvjz72hUqhptz+NzrzQXSS8d4SoA
+haerhjaP3A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_34302825-41f4-45c7-840a-e1eddf014c70"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LuCV0YcODlZP54FxJseAvsyu55NV4Wu+lUSaQHAi1HIwaBW0k0o8hd4aCy+pxicVgiPse7HJMuBN
+tvUAuKAWRg==</DigestValue></Reference></SignedInfo><SignatureValue>HsHGGAg/qaB/qimmfpwhVkVYT81HSOfkMxEnRv9utar6aE1UOQ5nFXRR50IHI3PJs6XKe+5mhKta
+IG1/uB/B0x++MXb81DgQ8FRsNdCq9GMrspaiv6MZXxzBGNsBywqRGZj6X/oPmdefy6afBkj3b5vo
+VXWbzvplUggiOO48I1MT2xHbdnk2S9Krko9Sj4iE/XG2AYjjE+gJ/8b0BLhoLV4kQ49cQEaTLhxY
+dSYH3a5miazkZYkelU5tkx6tdbbwxxLNzB7DmInQ7JSJslW7fxAotwgLmQSzJznoMBK5i/Sca0lT
+o5CmAoRkuZotRlMzH4LLAmKHvt7kPC+kevJLVA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -1611,4 +989,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_97d7c886-c0c9-432b-8e00-ef90620cea21" Target="#_cf8ca3bd-7f88-4f00-9304-52fb492d0a49"><Timestamp>2020-11-05 18:59:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_34302825-41f4-45c7-840a-e1eddf014c70" Target="#_5f528425-b4b4-4618-bab7-0772d1907d06"><Timestamp>2020-11-05 19:00:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
