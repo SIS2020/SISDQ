@@ -8,7 +8,7 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0004_0.1.rules#_E0mPMB4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0005_0.1.rules#_E0uyEB4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0006_0.1.rules#_E02t4B4QEeu9BtIm8nagog"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0007_0.1.rules#_E1BtAB4QEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0007_0.1.rules#_E1BtAB4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0008_0.1.rules#_Sz5E8vaaEeqx3smsKGeZnA"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0009_0.1.rules#_Jd58oB4QEeu9BtIm8nagog"/>
     <taggedValue xmi:id="_wg9gkh8EEeukpM_ACLlX9g" tag="Status" value="development"/>
@@ -120,7 +120,7 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_qUgI5h8FEeukpM_ACLlX9g" count="1289202" computed="true" userCount="1288845">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0007_0.1.rules#_EyiocB4KEeu9BtIm8nagog"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0007_0.1.rules#_EyiocB4KEeu9BtIm8nagog"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_qnjnzx8FEeukpM_ACLlX9g" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (pref_name =1 and rtrim(ltrim(first_name)) like '[a-zA-Z]%'&#xD;&#xA;OR&#xD;&#xA;pref_name =2 and rtrim(ltrim(second_name)) like '[a-zA-Z]%')" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_qnc6EB8FEeukpM_ACLlX9g" name="SIS-DQ0007" criticalityLevel="1" whereExpression="pref_name =1 and rtrim(ltrim(first_name)) like '[a-zA-Z]%'&#xD;&#xA;OR&#xD;&#xA;pref_name =2 and rtrim(ltrim(second_name)) like '[a-zA-Z]%'">
           <taggedValue xmi:id="_qnc6ER8FEeukpM_ACLlX9g" tag="Status" value="development"/>
