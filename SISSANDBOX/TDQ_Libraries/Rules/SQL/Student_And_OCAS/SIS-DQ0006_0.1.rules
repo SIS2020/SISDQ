@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_92Lm0faXEeqx3smsKGeZnA" name="SIS-DQ0006" supplierDependency="_E02t4B4QEeu9BtIm8nagog" criticalityLevel="1" whereExpression="pref_name in (1,2)&#xD;&#xA;">
+  <dataquality.rules:WhereRule xmi:id="_92Lm0faXEeqx3smsKGeZnA" name="SIS-DQ0006" criticalityLevel="1" whereExpression="pref_name in (1,2)&#xD;&#xA;">
     <taggedValue xmi:id="_92Lm0vaXEeqx3smsKGeZnA" tag="Status" value="development"/>
     <taggedValue xmi:id="_92Lm0_aXEeqx3smsKGeZnA" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_92Lm1PaXEeqx3smsKGeZnA" tag="Purpose" value=""/>
     <taggedValue xmi:id="_92Lm1faXEeqx3smsKGeZnA" tag="Description" value="Preffered name should be 1 (First Name) or 2 (Second Name)"/>
     <taggedValue xmi:id="_92Lm1vaXEeqx3smsKGeZnA" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_92Lm1_aXEeqx3smsKGeZnA" tag="Validation_Status" value="true"/>
-    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_92Lm2PaXEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_E02t4B4QEeu9BtIm8nagog" kind="Usage" supplier="_92Lm0faXEeqx3smsKGeZnA">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_E02t4B4QEeu9BtIm8nagog" kind="Usage">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
