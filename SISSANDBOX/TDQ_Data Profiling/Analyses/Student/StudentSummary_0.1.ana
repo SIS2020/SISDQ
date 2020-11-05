@@ -10,7 +10,7 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0006_0.1.rules#_E02t4B4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0007_0.1.rules#_E1BtAB4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0008_0.1.rules#_Sz5E8vaaEeqx3smsKGeZnA"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0009_0.1.rules#_Jd58oB4QEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0009_0.1.rules#_Jd58oB4QEeu9BtIm8nagog"/>
     <taggedValue xmi:id="_wg9gkh8EEeukpM_ACLlX9g" tag="Status" value="development"/>
     <taggedValue xmi:id="_wg9gkx8EEeukpM_ACLlX9g" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_wg9glB8EEeukpM_ACLlX9g" tag="Purpose" value="DQ Profiling"/>
@@ -148,7 +148,7 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_qUgI6B8FEeukpM_ACLlX9g" count="1289202" computed="true" userCount="122182">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0009_0.1.rules#_H5HwIR4QEeu9BtIm8nagog"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0009_0.1.rules#_H5HwIR4QEeu9BtIm8nagog"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_qnjn0R8FEeukpM_ACLlX9g" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (len(prev_name) >1)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_qnjnwB8FEeukpM_ACLlX9g" name="SIS-DQ0009" criticalityLevel="1" whereExpression="len(prev_name) >1">
           <taggedValue xmi:id="_qnjnwR8FEeukpM_ACLlX9g" tag="Status" value="development"/>
