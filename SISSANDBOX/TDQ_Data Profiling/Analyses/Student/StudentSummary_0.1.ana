@@ -6,7 +6,7 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0002_0.1.rules#_oKSrEB4IEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0003_0.1.rules#__PAucB4JEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0004_0.1.rules#_E0mPMB4QEeu9BtIm8nagog"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0005_0.1.rules#_E0uyEB4QEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0005_0.1.rules#_E0uyEB4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0006_0.1.rules#_E02t4B4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0007_0.1.rules#_E1BtAB4QEeu9BtIm8nagog"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0008_0.1.rules#_Sz5E8vaaEeqx3smsKGeZnA"/>
@@ -92,7 +92,7 @@
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_qUgI5B8FEeukpM_ACLlX9g" count="1289202" computed="true" userCount="1289033">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/SIS-DQ0005_0.1.rules#_rKPFEfaXEeqx3smsKGeZnA"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0005_0.1.rules#_rKPFEfaXEeqx3smsKGeZnA"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_qnjnzR8FEeukpM_ACLlX9g" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (rtrim(ltrim(second_name)) like '[a-zA-Z]%' OR  isNull(second_name,'')='')" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_qnTJEB8FEeukpM_ACLlX9g" name="SIS-DQ0005" criticalityLevel="1" whereExpression="rtrim(ltrim(second_name)) like '[a-zA-Z]%' OR  isNull(second_name,'')=''">
           <taggedValue xmi:id="_qnTJER8FEeukpM_ACLlX9g" tag="Status" value="development"/>
