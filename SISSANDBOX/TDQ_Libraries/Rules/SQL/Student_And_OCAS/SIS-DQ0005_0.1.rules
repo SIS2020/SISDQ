@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_rKPFEfaXEeqx3smsKGeZnA" name="SIS-DQ0005" criticalityLevel="1" whereExpression="rtrim(ltrim(second_name)) like '[a-zA-Z]%' OR  isNull(second_name,'')=''">
+  <dataquality.rules:WhereRule xmi:id="_rKPFEfaXEeqx3smsKGeZnA" name="SIS-DQ0005" supplierDependency="_DK5xkx-REeudbvAJU1jpDQ" criticalityLevel="1" whereExpression="rtrim(ltrim(second_name)) like '[a-zA-Z]%' OR  isNull(second_name,'')=''">
     <taggedValue xmi:id="_rKPFEvaXEeqx3smsKGeZnA" tag="Status" value="development"/>
     <taggedValue xmi:id="_rKPFE_aXEeqx3smsKGeZnA" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_rKPFFPaXEeqx3smsKGeZnA" tag="Purpose" value="DQ Profiling"/>
@@ -11,6 +11,9 @@
     <sqlGenericExpression xmi:id="_rKPFGPaXEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_E0uyEB4QEeu9BtIm8nagog" kind="Usage">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_DK5xkx-REeudbvAJU1jpDQ" kind="Usage" supplier="_rKPFEfaXEeqx3smsKGeZnA">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_EyiocB4KEeu9BtIm8nagog" name="SIS-DQ0007" criticalityLevel="1" whereExpression="pref_name =1 and rtrim(ltrim(first_name)) like '[a-zA-Z]%'&#xD;&#xA;OR&#xD;&#xA;pref_name =2 and rtrim(ltrim(second_name)) like '[a-zA-Z]%'">
+  <dataquality.rules:WhereRule xmi:id="_EyiocB4KEeu9BtIm8nagog" name="SIS-DQ0007" supplierDependency="_DLMsgx-REeudbvAJU1jpDQ" criticalityLevel="1" whereExpression="pref_name =1 and rtrim(ltrim(first_name)) like '[a-zA-Z]%'&#xD;&#xA;OR&#xD;&#xA;pref_name =2 and rtrim(ltrim(second_name)) like '[a-zA-Z]%'">
     <taggedValue xmi:id="_EyiocR4KEeu9BtIm8nagog" tag="Status" value="development"/>
     <taggedValue xmi:id="_Eyioch4KEeu9BtIm8nagog" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_Eyiocx4KEeu9BtIm8nagog" tag="Purpose" value=""/>
@@ -11,6 +11,9 @@
     <sqlGenericExpression xmi:id="_Eyiodx4KEeu9BtIm8nagog" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_E1BtAB4QEeu9BtIm8nagog" kind="Usage">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_DLMsgx-REeudbvAJU1jpDQ" kind="Usage" supplier="_EyiocB4KEeu9BtIm8nagog">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
