@@ -8,16 +8,14 @@
     <taggedValue xmi:id="_FVc9lR-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_FVc9lh-REeudbvAJU1jpDQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_FVc9lx-REeudbvAJU1jpDQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
-    <context xmi:id="_FVc9mB-REeudbvAJU1jpDQ">
-      <connection href="../../../metadata/connections/DQ_0.1.item#_4Hv00ApVEeuQj8iTNBbh7Q"/>
-    </context>
+    <context xmi:id="_FVc9mB-REeudbvAJU1jpDQ"/>
     <results xmi:id="_FVc9mR-REeudbvAJU1jpDQ">
       <resultMetadata xmi:id="_FVc9mh-REeudbvAJU1jpDQ" executionDate="2020-11-05T13:01:36.685-0500" executionDuration="7557" message="Query not executed for indicator: &quot;SIS-DQ0002&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE ( uniqueID is null). Exception: Invalid column name 'uniqueID'." executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
     </results>
     <parameters xmi:id="_FVc98R-REeudbvAJU1jpDQ" dataFilter="_FVc98x-REeudbvAJU1jpDQ" analysisType="Table Analysis"/>
     <contextType xmi:id="_FVc98h-REeudbvAJU1jpDQ" confirmationNeeded="false" name="Default"/>
   </dataquality.analysis:Analysis>
-  <dataquality.domain:Domain xmi:id="_FVc98x-REeudbvAJU1jpDQ" name="Analysis Data Filter">
+  <dataquality.domain:Domain xmi:id="_FVc98x-REeudbvAJU1jpDQ" name="StudentSummaryDQ">
     <ranges xmi:id="_FVc99B-REeudbvAJU1jpDQ">
       <expressions xmi:id="_FVc99R-REeudbvAJU1jpDQ">
         <expression xsi:type="relational:TdExpression" xmi:id="_FVc99h-REeudbvAJU1jpDQ" body="" language="SQL"/>
