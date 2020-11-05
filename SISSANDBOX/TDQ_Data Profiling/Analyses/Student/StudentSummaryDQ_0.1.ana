@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_FVc9kB-REeudbvAJU1jpDQ" name="StudentSummaryDQ" creationDate="2020-11-04T20:18:06.090-0500" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0001_0.1.rules#_EkKlUB32Eeu08-Q-yIawhQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0002_0.1.rules#_oKSrEB4IEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0003_0.1.rules#__PAucB4JEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0004_0.1.rules#_E0mPMB4QEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0005_0.1.rules#_E0uyEB4QEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0006_0.1.rules#_E02t4B4QEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0007_0.1.rules#_E1BtAB4QEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0008_0.1.rules#_Sz5E8vaaEeqx3smsKGeZnA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0009_0.1.rules#_Jd58oB4QEeu9BtIm8nagog"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0001_0.1.rules#_DKilMB-REeudbvAJU1jpDQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0003_0.1.rules#_DKwAkB-REeudbvAJU1jpDQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0004_0.1.rules#_DKwAlB-REeudbvAJU1jpDQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0005_0.1.rules#_DK5xkx-REeudbvAJU1jpDQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0006_0.1.rules#_DLC7gx-REeudbvAJU1jpDQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0007_0.1.rules#_DLMsgx-REeudbvAJU1jpDQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0008_0.1.rules#_DLV2cx-REeudbvAJU1jpDQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0009_0.1.rules#_DLj44B-REeudbvAJU1jpDQ"/>
+    <taggedValue xmi:id="_FVc9kR-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_FVc9kh-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_FVc9kx-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_FVc9lB-REeudbvAJU1jpDQ" tag="Description" value="Listing of all the business rules applied to the SISDBA.Student table"/>
+    <taggedValue xmi:id="_FVc9lR-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_FVc9lh-REeudbvAJU1jpDQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_FVc9lx-REeudbvAJU1jpDQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_FVc9mB-REeudbvAJU1jpDQ">
+      <connection href="../../../metadata/connections/AlgonquinConn_0.1.item#_nqx-0Of1Eeqob_JMQxXZxQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+    </context>
+    <results xmi:id="_FVc9mR-REeudbvAJU1jpDQ">
+      <resultMetadata xmi:id="_FVc9mh-REeudbvAJU1jpDQ" executionDate="2020-11-05T13:01:36.685-0500" executionDuration="7557" message="Query not executed for indicator: &quot;SIS-DQ0002&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE ( uniqueID is null). Exception: Invalid column name 'uniqueID'." executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_FVc9mx-REeudbvAJU1jpDQ" count="1289334" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_FVc9nB-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_FVc9nR-REeudbvAJU1jpDQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_FVc9nh-REeudbvAJU1jpDQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_FVc9nx-REeudbvAJU1jpDQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_FVc9oB-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_FVc9oR-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="1289334">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0001_0.1.rules#_0HaksBLhEeumsLKXanqxLQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_FVc9oh-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (-- This will return all the rows where the student number only exists once in the student table. )&#xD;&#xA;&#xD;&#xA;std_no in&#xD;&#xA;(&#xD;&#xA;&#x9;SELECT vs.std_no  FROM [DQ].[dbo].[vStudent] vs group by vs.std_no having count(*)=1&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_FVc9ox-REeudbvAJU1jpDQ" name="SIS-DQ0001" criticalityLevel="1" whereExpression="-- This will return all the rows where the student number only exists once in the student table. )&#xD;&#xA;&#xD;&#xA;std_no in&#xD;&#xA;(&#xD;&#xA;&#x9;SELECT vs.std_no  FROM [DQ].[dbo].[vStudent] vs group by vs.std_no having count(*)=1&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;">
+          <taggedValue xmi:id="_FVc9pB-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_FVc9pR-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_FVc9ph-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_FVc9px-REeudbvAJU1jpDQ" tag="Description" value="Each student has a Unique Student Number."/>
+          <taggedValue xmi:id="_FVc9qB-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_FVc9qR-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_FVc9qh-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_FVc9qx-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="1289241">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0003_0.1.rules#_gIHQ4PaWEeqx3smsKGeZnA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_FVc9rB-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (rtrim(ltrim(surname)) like '[a-zA-Z]%')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_FVc9rR-REeudbvAJU1jpDQ" name="SIS-DQ0003" criticalityLevel="1" whereExpression="rtrim(ltrim(surname)) like '[a-zA-Z]%'">
+          <taggedValue xmi:id="_FVc9rh-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_FVc9rx-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_FVc9sB-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_FVc9sR-REeudbvAJU1jpDQ" tag="Description" value="Student Surname. Valid Surname is required to identify a person. Surname shold not be empty or have special characters."/>
+          <taggedValue xmi:id="_FVc9sh-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_FVc9sx-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_FVc9tB-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_FVc9tR-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="1288978">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0004_0.1.rules#_lnd7QBkhEeuza6n6POUH7Q"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_FVc9th-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (rtrim(ltrim(first_name)) like '[a-zA-Z]%')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_FVc9tx-REeudbvAJU1jpDQ" name="SIS-DQ0004" criticalityLevel="1" whereExpression="rtrim(ltrim(first_name)) like '[a-zA-Z]%'">
+          <taggedValue xmi:id="_FVc9uB-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_FVc9uR-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_FVc9uh-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_FVc9ux-REeudbvAJU1jpDQ" tag="Description" value="Valid Given Name is required to identify a person. Given name should not be empty or have special characters."/>
+          <taggedValue xmi:id="_FVc9vB-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_FVc9vR-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_FVc9vh-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_FVc9vx-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="1289165">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0005_0.1.rules#_rKPFEfaXEeqx3smsKGeZnA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_FVc9wB-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (rtrim(ltrim(second_name)) like '[a-zA-Z]%' OR  isNull(second_name,'')='')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_FVc9wR-REeudbvAJU1jpDQ" name="SIS-DQ0005" criticalityLevel="1" whereExpression="rtrim(ltrim(second_name)) like '[a-zA-Z]%' OR  isNull(second_name,'')=''">
+          <taggedValue xmi:id="_FVc9wh-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_FVc9wx-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_FVc9xB-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_FVc9xR-REeudbvAJU1jpDQ" tag="Description" value="Valid and Standard format (initials, or Full second  Name) is required to identify a person.Second name should have NULL in cases where field is blank or empty? Issue is searchability.Second name should not contains TAB or carriage returns"/>
+          <taggedValue xmi:id="_FVc9xh-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_FVc9xx-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_FVc9yB-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_FVc9yR-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="1289334">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0006_0.1.rules#_92Lm0faXEeqx3smsKGeZnA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_FVc9yh-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (pref_name in (1,2)&#xD;&#xA;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_FVc9yx-REeudbvAJU1jpDQ" name="SIS-DQ0006" criticalityLevel="1" whereExpression="pref_name in (1,2)&#xD;&#xA;">
+          <taggedValue xmi:id="_FVc9zB-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_FVc9zR-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_FVc9zh-REeudbvAJU1jpDQ" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_FVc9zx-REeudbvAJU1jpDQ" tag="Description" value="Preffered name should be 1 (First Name) or 2 (Second Name)"/>
+          <taggedValue xmi:id="_FVc90B-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_FVc90R-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_FVc90h-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_FVc90x-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="1288977">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0007_0.1.rules#_EyiocB4KEeu9BtIm8nagog"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_FVc91B-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (pref_name =1 and rtrim(ltrim(first_name)) like '[a-zA-Z]%'&#xD;&#xA;OR&#xD;&#xA;pref_name =2 and rtrim(ltrim(second_name)) like '[a-zA-Z]%')" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_FVc91R-REeudbvAJU1jpDQ" name="SIS-DQ0007" criticalityLevel="1" whereExpression="pref_name =1 and rtrim(ltrim(first_name)) like '[a-zA-Z]%'&#xD;&#xA;OR&#xD;&#xA;pref_name =2 and rtrim(ltrim(second_name)) like '[a-zA-Z]%'">
+          <taggedValue xmi:id="_FVc91h-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_FVc91x-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_FVc92B-REeudbvAJU1jpDQ" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_FVc92R-REeudbvAJU1jpDQ" tag="Description" value="Preferred Name should be valid name."/>
+          <taggedValue xmi:id="_FVc92h-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_FVc92x-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_FVc93B-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_FVc93R-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="122214">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0008_0.1.rules#_aNKOAfaZEeqx3smsKGeZnA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_FVc93h-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (rtrim(ltrim(prev_name)) like '[a-zA-Z]%' )" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_FVc93x-REeudbvAJU1jpDQ" name="SIS-DQ0008" criticalityLevel="1" whereExpression="rtrim(ltrim(prev_name)) like '[a-zA-Z]%' ">
+          <taggedValue xmi:id="_FVc94B-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_FVc94R-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_FVc94h-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_FVc94x-REeudbvAJU1jpDQ" tag="Description" value="Previous Name should be valid name."/>
+          <taggedValue xmi:id="_FVc95B-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_FVc95R-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_FVc95h-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_FVc95x-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="122202">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0009_0.1.rules#_H5HwIR4QEeu9BtIm8nagog"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_FVc96B-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (len(prev_name) >1)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_FVc96R-REeudbvAJU1jpDQ" name="SIS-DQ0009" criticalityLevel="1" whereExpression="len(prev_name) >1">
+          <taggedValue xmi:id="_FVc96h-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_FVc96x-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_FVc97B-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_FVc97R-REeudbvAJU1jpDQ" tag="Description" value="Previous Name should be valid name."/>
+          <taggedValue xmi:id="_FVc97h-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_FVc97x-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_FVc98B-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_FVc98R-REeudbvAJU1jpDQ" dataFilter="_FVc98x-REeudbvAJU1jpDQ" analysisType="Table Analysis"/>
+    <contextType xmi:id="_FVc98h-REeudbvAJU1jpDQ" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_FVc98x-REeudbvAJU1jpDQ" name="Analysis Data Filter">
+    <ranges xmi:id="_FVc99B-REeudbvAJU1jpDQ">
+      <expressions xmi:id="_FVc99R-REeudbvAJU1jpDQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_FVc99h-REeudbvAJU1jpDQ" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
