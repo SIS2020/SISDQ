@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_FVc9kB-REeudbvAJU1jpDQ" name="StudentSummaryDQ" creationDate="2020-11-04T20:18:06.090-0500" defaultContext="Default">
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0002_0.1.rules#_Z3mzAB-REeudbvAJU1jpDQ"/>
+    <clientDependency href="../../../metadata/connections/DQ_0.1.item#_aKjkMh-REeudbvAJU1jpDQ"/>
     <taggedValue xmi:id="_FVc9kR-REeudbvAJU1jpDQ" tag="Status" value="development"/>
     <taggedValue xmi:id="_FVc9kh-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_FVc9kx-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling"/>
@@ -8,9 +10,20 @@
     <taggedValue xmi:id="_FVc9lR-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_FVc9lh-REeudbvAJU1jpDQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_FVc9lx-REeudbvAJU1jpDQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
-    <context xmi:id="_FVc9mB-REeudbvAJU1jpDQ"/>
+    <context xmi:id="_FVc9mB-REeudbvAJU1jpDQ">
+      <connection href="../../../metadata/connections/DQ_0.1.item#_4Hv00ApVEeuQj8iTNBbh7Q"/>
+      <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YEh-REeudbvAJU1jpDQ"/>
+    </context>
     <results xmi:id="_FVc9mR-REeudbvAJU1jpDQ">
       <resultMetadata xmi:id="_FVc9mh-REeudbvAJU1jpDQ" executionDate="2020-11-05T13:01:36.685-0500" executionDuration="7557" message="Query not executed for indicator: &quot;SIS-DQ0002&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE ( uniqueID is null). Exception: Invalid column name 'uniqueID'." executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_aKjkMB-REeudbvAJU1jpDQ">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YEh-REeudbvAJU1jpDQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_aKjkMR-REeudbvAJU1jpDQ">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YEh-REeudbvAJU1jpDQ"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0002_0.1.rules#_PQL7ERLdEeuzBt1AHG1VvA"/>
+      </indicators>
     </results>
     <parameters xmi:id="_FVc98R-REeudbvAJU1jpDQ" dataFilter="_FVc98x-REeudbvAJU1jpDQ" analysisType="Table Analysis"/>
     <contextType xmi:id="_FVc98h-REeudbvAJU1jpDQ" confirmationNeeded="false" name="Default"/>
