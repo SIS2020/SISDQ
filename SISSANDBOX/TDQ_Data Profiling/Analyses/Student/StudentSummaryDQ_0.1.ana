@@ -3,6 +3,7 @@
   <dataquality.analysis:Analysis xmi:id="_FVc9kB-REeudbvAJU1jpDQ" name="StudentSummaryDQ" creationDate="2020-11-04T20:18:06.090-0500" defaultContext="Default">
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0002_0.1.rules#_Z3mzAB-REeudbvAJU1jpDQ"/>
     <clientDependency href="../../../metadata/connections/DQ_0.1.item#_aKjkMh-REeudbvAJU1jpDQ"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0002_0.1.rules#_qWTaEB-REeudbvAJU1jpDQ"/>
     <taggedValue xmi:id="_FVc9kR-REeudbvAJU1jpDQ" tag="Status" value="development"/>
     <taggedValue xmi:id="_FVc9kh-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_FVc9kx-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling"/>
@@ -12,32 +13,32 @@
     <taggedValue xmi:id="_FVc9lx-REeudbvAJU1jpDQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <context xmi:id="_FVc9mB-REeudbvAJU1jpDQ">
       <connection href="../../../metadata/connections/DQ_0.1.item#_4Hv00ApVEeuQj8iTNBbh7Q"/>
-      <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YEh-REeudbvAJU1jpDQ"/>
+      <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YER-REeudbvAJU1jpDQ"/>
     </context>
     <results xmi:id="_FVc9mR-REeudbvAJU1jpDQ">
-      <resultMetadata xmi:id="_FVc9mh-REeudbvAJU1jpDQ" executionDate="2020-11-05T13:04:57.522-0500" executionDuration="423" message="Query not executed for indicator: &quot;SIS-DQ0002&quot; SQL query: SELECT COUNT(*) FROM &quot;DQ &quot;.&quot;dbo&quot;.&quot;vStudent&quot;   WHERE ( uniqueID is null). Exception: Invalid column name 'uniqueID'." executionNumber="3" lastExecutionNumberOk="2"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_aKjkMB-REeudbvAJU1jpDQ" count="1289334" computed="true">
-        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YEh-REeudbvAJU1jpDQ"/>
+      <resultMetadata xmi:id="_FVc9mh-REeudbvAJU1jpDQ" executionDate="2020-11-05T13:06:46.469-0500" executionDuration="8535" message="" executionNumber="4" lastRunOk="true" lastExecutionNumberOk="3"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_qlQcEB-REeudbvAJU1jpDQ" count="1289334" computed="true">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YER-REeudbvAJU1jpDQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ahIRIB-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;DQ &quot;.&quot;dbo&quot;.&quot;vStudent&quot; " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_ag0vIB-REeudbvAJU1jpDQ" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_ag0vIR-REeudbvAJU1jpDQ" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_ag0vIh-REeudbvAJU1jpDQ" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_ag0vIx-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_qwI2YB-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;DQ &quot;.&quot;dbo&quot;.&quot;vSIS_DQ0002&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_qv3woB-REeudbvAJU1jpDQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_qv3woR-REeudbvAJU1jpDQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_qv3woh-REeudbvAJU1jpDQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_qv3wox-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_aKjkMR-REeudbvAJU1jpDQ" count="1289334">
-        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YEh-REeudbvAJU1jpDQ"/>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_qlQcER-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="1220644">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YER-REeudbvAJU1jpDQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0002_0.1.rules#_PQL7ERLdEeuzBt1AHG1VvA"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_ahIRIR-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;DQ &quot;.&quot;dbo&quot;.&quot;vStudent&quot;   WHERE ( uniqueID is null)" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_ahAVUB-REeudbvAJU1jpDQ" name="SIS-DQ0002" criticalityLevel="1" whereExpression=" uniqueID is null">
-          <taggedValue xmi:id="_ahAVUR-REeudbvAJU1jpDQ" tag="Status" value="development"/>
-          <taggedValue xmi:id="_ahAVUh-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_ahAVUx-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling "/>
-          <taggedValue xmi:id="_ahAVVB-REeudbvAJU1jpDQ" tag="Description" value="A student number should uniquely identify a person.&#xD;&#xA;&#xD;&#xA; (concat(first_name, second_name,surname, date_of_birth, citizen_code, ont_educ_no) NOT IN&#xD;&#xA;(&#x9;SELECT inQry.ConcatPK --, inQry.DuplicateCount&#xD;&#xA;&#x9;FROM &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;SELECT&#x9;&#x9;concat(m.first_name, m.second_name, m.surname, m.date_of_birth, m.citizen_code, ont_educ_no) as ConcatPK,  COUNT(*) as DuplicateCount&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FROM&#x9;&#x9;sisdba.student  m &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;GROUP BY&#x9;concat(m.first_name, m.second_name, m.surname, m.date_of_birth, m.citizen_code, ont_educ_no)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;HAVING COUNT(*) > 1&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) inQry&#xD;&#xA;))"/>
-          <taggedValue xmi:id="_ahAVVR-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_ahAVVh-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_ahAVVx-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_qwI2YR-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;DQ &quot;.&quot;dbo&quot;.&quot;vSIS_DQ0002&quot;   WHERE ( uniqueID is null)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_qv-eUB-REeudbvAJU1jpDQ" name="SIS-DQ0002" criticalityLevel="1" whereExpression=" uniqueID is null">
+          <taggedValue xmi:id="_qv-eUR-REeudbvAJU1jpDQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_qv-eUh-REeudbvAJU1jpDQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_qv-eUx-REeudbvAJU1jpDQ" tag="Purpose" value="DQ Profiling "/>
+          <taggedValue xmi:id="_qv-eVB-REeudbvAJU1jpDQ" tag="Description" value="A student number should uniquely identify a person.&#xD;&#xA;&#xD;&#xA; (concat(first_name, second_name,surname, date_of_birth, citizen_code, ont_educ_no) NOT IN&#xD;&#xA;(&#x9;SELECT inQry.ConcatPK --, inQry.DuplicateCount&#xD;&#xA;&#x9;FROM &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;SELECT&#x9;&#x9;concat(m.first_name, m.second_name, m.surname, m.date_of_birth, m.citizen_code, ont_educ_no) as ConcatPK,  COUNT(*) as DuplicateCount&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FROM&#x9;&#x9;sisdba.student  m &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;GROUP BY&#x9;concat(m.first_name, m.second_name, m.surname, m.date_of_birth, m.citizen_code, ont_educ_no)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;HAVING COUNT(*) > 1&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) inQry&#xD;&#xA;))"/>
+          <taggedValue xmi:id="_qv-eVR-REeudbvAJU1jpDQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_qv-eVh-REeudbvAJU1jpDQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_qv-eVx-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
