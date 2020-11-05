@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_TAiA4B35Eeu08-Q-yIawhQ" name="SIS-DQ0027" supplierDependency="_VPKmMB36Eeu08-Q-yIawhQ" criticalityLevel="1" whereExpression="encumb_flag in ('Y',N')&#xD;&#xA;">
+    <taggedValue xmi:id="_TAiA4R35Eeu08-Q-yIawhQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_TAiA4h35Eeu08-Q-yIawhQ" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_TAiA4x35Eeu08-Q-yIawhQ" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_TAiA5B35Eeu08-Q-yIawhQ" tag="Description" value="A registered student's encumberance flag should be Y or N"/>
+    <taggedValue xmi:id="_TAiA5R35Eeu08-Q-yIawhQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_TAiA5h35Eeu08-Q-yIawhQ" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_TAiA5x35Eeu08-Q-yIawhQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_VPKmMB36Eeu08-Q-yIawhQ" kind="Usage" supplier="_TAiA4B35Eeu08-Q-yIawhQ"/>
+</xmi:XMI>

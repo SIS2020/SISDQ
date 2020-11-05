@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_GpPgcfavEeqx3smsKGeZnA" name="SIS-DQ0028" supplierDependency="_8j2vYvavEeqx3smsKGeZnA" criticalityLevel="1" whereExpression="encumb_flag in ('N')&#xD;&#xA;and std_no in &#xD;&#xA;(&#xD;&#xA;&#x9;select std_no from  sisdba.student_status s where s.status in (800,810,820,830)&#xD;&#xA;) ">
+    <taggedValue xmi:id="_GpPgcvavEeqx3smsKGeZnA" tag="Status" value="development"/>
+    <taggedValue xmi:id="_GpPgc_avEeqx3smsKGeZnA" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_GpPgdPavEeqx3smsKGeZnA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_GpPgdfavEeqx3smsKGeZnA" tag="Description" value="A graduated student (student status = 800,810,820,830) encumberance flag should be N"/>
+    <taggedValue xmi:id="_GpPgdvavEeqx3smsKGeZnA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_GpPgd_avEeqx3smsKGeZnA" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_GpPgePavEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_8j2vYvavEeqx3smsKGeZnA" kind="Usage" supplier="_GpPgcfavEeqx3smsKGeZnA"/>
+</xmi:XMI>

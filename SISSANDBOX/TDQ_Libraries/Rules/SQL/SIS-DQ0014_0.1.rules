@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_nKg40B33Eeu08-Q-yIawhQ" name="SIS-DQ0014" supplierDependency="_wTl9MB33Eeu08-Q-yIawhQ" criticalityLevel="1" whereExpression="stat_in_canada in (0,1,2,3,4,5,6,7,8,9,10,11,12,13) ">
+    <taggedValue xmi:id="_nKg40R33Eeu08-Q-yIawhQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_nKg40h33Eeu08-Q-yIawhQ" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_nKg40x33Eeu08-Q-yIawhQ" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_nKg41B33Eeu08-Q-yIawhQ" tag="Description" value="Valid Status in Canada Code"/>
+    <taggedValue xmi:id="_nKg41R33Eeu08-Q-yIawhQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_nKg41h33Eeu08-Q-yIawhQ" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_nKg41x33Eeu08-Q-yIawhQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_wTl9MB33Eeu08-Q-yIawhQ" kind="Usage" supplier="_nKg40B33Eeu08-Q-yIawhQ"/>
+</xmi:XMI>

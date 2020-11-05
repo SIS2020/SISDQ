@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_PQL7ERLdEeuzBt1AHG1VvA" name="SIS-DQ0002" supplierDependency="_oKSrEB4IEeu9BtIm8nagog" criticalityLevel="1" whereExpression=" uniqueID is null">
+    <taggedValue xmi:id="_PQL7EhLdEeuzBt1AHG1VvA" tag="Status" value="development"/>
+    <taggedValue xmi:id="_PQL7ExLdEeuzBt1AHG1VvA" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_PQL7FBLdEeuzBt1AHG1VvA" tag="Purpose" value="DQ Profiling "/>
+    <taggedValue xmi:id="_PQL7FRLdEeuzBt1AHG1VvA" tag="Description" value="A student number should uniquely identify a person.&#xD;&#xA;&#xD;&#xA; (concat(first_name, second_name,surname, date_of_birth, citizen_code, ont_educ_no) NOT IN&#xD;&#xA;(&#x9;SELECT inQry.ConcatPK --, inQry.DuplicateCount&#xD;&#xA;&#x9;FROM &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;SELECT&#x9;&#x9;concat(m.first_name, m.second_name, m.surname, m.date_of_birth, m.citizen_code, ont_educ_no) as ConcatPK,  COUNT(*) as DuplicateCount&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;FROM&#x9;&#x9;sisdba.student  m &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;GROUP BY&#x9;concat(m.first_name, m.second_name, m.surname, m.date_of_birth, m.citizen_code, ont_educ_no)&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;HAVING COUNT(*) > 1&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;) inQry&#xD;&#xA;))"/>
+    <taggedValue xmi:id="_PQL7FhLdEeuzBt1AHG1VvA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_PQL7FxLdEeuzBt1AHG1VvA" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_PQL7GBLdEeuzBt1AHG1VvA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_oKSrEB4IEeu9BtIm8nagog" kind="Usage" supplier="_PQL7ERLdEeuzBt1AHG1VvA"/>
+</xmi:XMI>

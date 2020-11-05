@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_0HaksBLhEeumsLKXanqxLQ" name="SIS-DQ0001" supplierDependency="_EkKlUB32Eeu08-Q-yIawhQ" criticalityLevel="1" whereExpression="-- This will return all the rows where the student number only exists once in the student table. )&#xD;&#xA;&#xD;&#xA;std_no in&#xD;&#xA;(&#xD;&#xA;&#x9;SELECT vs.std_no  FROM [DQ].[dbo].[vStudent] vs group by vs.std_no having count(*)=1&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;">
+    <taggedValue xmi:id="_0HaksRLhEeumsLKXanqxLQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_0HakshLhEeumsLKXanqxLQ" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_0HaksxLhEeumsLKXanqxLQ" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_0HaktBLhEeumsLKXanqxLQ" tag="Description" value="Each student has a Unique Student Number."/>
+    <taggedValue xmi:id="_0HaktRLhEeumsLKXanqxLQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_0HakthLhEeumsLKXanqxLQ" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_0HaktxLhEeumsLKXanqxLQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_EkKlUB32Eeu08-Q-yIawhQ" kind="Usage" supplier="_0HaksBLhEeumsLKXanqxLQ"/>
+</xmi:XMI>

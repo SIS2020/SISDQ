@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_EbkioR35Eeu08-Q-yIawhQ" name="SIS-DQ0025" supplierDependency="_VO8jwB36Eeu08-Q-yIawhQ" criticalityLevel="1" whereExpression="1=1">
+    <taggedValue xmi:id="_Ebkioh35Eeu08-Q-yIawhQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_Ebkiox35Eeu08-Q-yIawhQ" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_EbkipB35Eeu08-Q-yIawhQ" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_EbkipR35Eeu08-Q-yIawhQ" tag="Description" value="For students that have an Ontario Education number the OEN number is Unique"/>
+    <taggedValue xmi:id="_Ebkiph35Eeu08-Q-yIawhQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_Ebkipx35Eeu08-Q-yIawhQ" tag="Validation_Status" value="true"/>
+    <categories href="../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_EbkiqB35Eeu08-Q-yIawhQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_VO8jwB36Eeu08-Q-yIawhQ" kind="Usage" supplier="_EbkioR35Eeu08-Q-yIawhQ"/>
+</xmi:XMI>
