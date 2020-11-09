@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_os2vgA-4EeuDXaq6WQCs8A" name="student_address" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
-    <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_AddressStreetNumber_0.1.rules#_UUUX0BIjEeucK-9f6NjiJg"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_Country_0.1.rules#_UUiaQBIjEeucK-9f6NjiJg"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_HomeOrLocalAddressIndicator_0.1.rules#_UUq9IBIjEeucK-9f6NjiJg"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_StudentAddress_PhoneNumber_AreaCode_0.1.rules#_UUyR4BIjEeucK-9f6NjiJg"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_Student_Address_Std_No_0.1.rules#_UU4_kBIjEeucK-9f6NjiJg"/>
     <taggedValue xmi:id="_os2vgQ-4EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_os2vgg-4EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_os2vgw-4EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rules"/>
@@ -14,92 +8,9 @@
     <taggedValue xmi:id="_os2vhQ-4EeuDXaq6WQCs8A" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_os2vhg-4EeuDXaq6WQCs8A" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_os2vhw-4EeuDXaq6WQCs8A" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
-    <context xmi:id="_os2viA-4EeuDXaq6WQCs8A">
-      <connection href="../../../metadata/connections/AlgonquinConn_0.1.item#_nqx-0Of1Eeqob_JMQxXZxQ"/>
-      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
-    </context>
+    <context xmi:id="_os2viA-4EeuDXaq6WQCs8A"/>
     <results xmi:id="_os2viQ-4EeuDXaq6WQCs8A">
       <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-10-19T15:37:07.321-0400" executionDuration="1339" message="" executionNumber="10" lastRunOk="true" lastExecutionNumberOk="10"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_asV-IA_kEeurTKvbeg04dQ" count="1328165" computed="true">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RnjegBJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_address&quot; " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_Rm7zcBJCEeukNOeNyrLuYg" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_Rm7zcRJCEeukNOeNyrLuYg" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_Rm7zchJCEeukNOeNyrLuYg" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_Rm7zcxJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1ABIjEeucK-9f6NjiJg" count="1328165" computed="true" userCount="1328165">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_AddressStreetNumber_0.1.rules#_u4lcgQ-5EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RnjegRJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_address&quot;   WHERE (1=1)" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_RnJO0BJCEeukNOeNyrLuYg" name="DQ1_AddressStreetNumber" criticalityLevel="1" whereExpression="1=1">
-          <taggedValue xmi:id="_RnJO0RJCEeukNOeNyrLuYg" tag="Status" value="development"/>
-          <taggedValue xmi:id="_RnJO0hJCEeukNOeNyrLuYg" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_RnJO0xJCEeukNOeNyrLuYg" tag="Purpose" value=""/>
-          <taggedValue xmi:id="_RnJO1BJCEeukNOeNyrLuYg" tag="Description" value="Integrity Rule. Student Number is a foreign key, and should exist in student table as a domestic student"/>
-          <taggedValue xmi:id="_RnJO1RJCEeukNOeNyrLuYg" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_RnJO1hJCEeukNOeNyrLuYg" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_RnJO1xJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1ARIjEeucK-9f6NjiJg" count="1328165" computed="true" userCount="1328165">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_Country_0.1.rules#_N36VEBIjEeucK-9f6NjiJg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RnjeghJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_address&quot;   WHERE (1=1)" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_RnOHUBJCEeukNOeNyrLuYg" name="DQ1_Country" criticalityLevel="1" whereExpression="1=1">
-          <taggedValue xmi:id="_RnOHURJCEeukNOeNyrLuYg" tag="Status" value="development"/>
-          <taggedValue xmi:id="_RnOHUhJCEeukNOeNyrLuYg" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_RnOHUxJCEeukNOeNyrLuYg" tag="Purpose" value=""/>
-          <taggedValue xmi:id="_RnOHVBJCEeukNOeNyrLuYg" tag="Description" value="Integrity Rule. Student Number is a foreign key, and should exist in student table as a domestic student"/>
-          <taggedValue xmi:id="_RnOHVRJCEeukNOeNyrLuYg" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_RnOHVhJCEeukNOeNyrLuYg" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_RnOHVxJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1AhIjEeucK-9f6NjiJg" count="1328165" computed="true" userCount="1328165">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_HomeOrLocalAddressIndicator_0.1.rules#_vZhmYQ-5EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RnjegxJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_address&quot;   WHERE (1=1)" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_RnS_0BJCEeukNOeNyrLuYg" name="DQ1_HomeOrLocalAddressIndicator" criticalityLevel="1" whereExpression="1=1">
-          <taggedValue xmi:id="_RnS_0RJCEeukNOeNyrLuYg" tag="Status" value="development"/>
-          <taggedValue xmi:id="_RnS_0hJCEeukNOeNyrLuYg" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_RnS_0xJCEeukNOeNyrLuYg" tag="Purpose" value=""/>
-          <taggedValue xmi:id="_RnS_1BJCEeukNOeNyrLuYg" tag="Description" value=""/>
-          <taggedValue xmi:id="_RnS_1RJCEeukNOeNyrLuYg" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_RnS_1hJCEeukNOeNyrLuYg" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_RnS_1xJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1AxIjEeucK-9f6NjiJg" count="1328165" computed="true" userCount="1328165">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_StudentAddress_PhoneNumber_AreaCode_0.1.rules#_o51v4A_qEeurTKvbeg04dQ"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RnjehBJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_address&quot;   WHERE (1=1)" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_RnXRQBJCEeukNOeNyrLuYg" name="DQ1_StudentAddress_PhoneNumber_AreaCode" criticalityLevel="1" whereExpression="1=1">
-          <taggedValue xmi:id="_RnXRQRJCEeukNOeNyrLuYg" tag="Status" value="development"/>
-          <taggedValue xmi:id="_RnXRQhJCEeukNOeNyrLuYg" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_RnXRQxJCEeukNOeNyrLuYg" tag="Purpose" value=""/>
-          <taggedValue xmi:id="_RnXRRBJCEeukNOeNyrLuYg" tag="Description" value="Integrity Rule. Student Number is a foreign key, and should exist in student table as a domestic student"/>
-          <taggedValue xmi:id="_RnXRRRJCEeukNOeNyrLuYg" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_RnXRRhJCEeukNOeNyrLuYg" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_RnXRRxJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_U3v1BBIjEeucK-9f6NjiJg" count="1328165" computed="true" userCount="1328165">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSuf2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/DQ1_Student_Address_Std_No_0.1.rules#_72wYkQ-4EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_RnjehRJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_address&quot;   WHERE (1=1)" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_RnbisBJCEeukNOeNyrLuYg" name="DQ1_Student_Address_Std_No" criticalityLevel="1" whereExpression="1=1">
-          <taggedValue xmi:id="_RnbisRJCEeukNOeNyrLuYg" tag="Status" value="development"/>
-          <taggedValue xmi:id="_RnbishJCEeukNOeNyrLuYg" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_RnbisxJCEeukNOeNyrLuYg" tag="Purpose" value="DQ Profiling"/>
-          <taggedValue xmi:id="_RnbitBJCEeukNOeNyrLuYg" tag="Description" value="Integrity rule student number is foreign key and should exist in student table as domestic student.&#xD;&#xA;"/>
-          <taggedValue xmi:id="_RnbitRJCEeukNOeNyrLuYg" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_RnbithJCEeukNOeNyrLuYg" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_RnbitxJCEeukNOeNyrLuYg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
     </results>
     <parameters xmi:id="_os2vmw-4EeuDXaq6WQCs8A" dataFilter="_os2vnQ-4EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
     <contextType xmi:id="_os2vnA-4EeuDXaq6WQCs8A" confirmationNeeded="false" name="Default"/>
