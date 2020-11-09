@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_Zc6dwQ-8EeuDXaq6WQCs8A" name="SIS-DQ0055" criticalityLevel="1" whereExpression="pref in (1,0)">
+  <dataquality.rules:WhereRule xmi:id="_Zc6dwQ-8EeuDXaq6WQCs8A" name="SIS-DQ0055" supplierDependency="_G3n9ECLVEeuBe6upk5al4A" criticalityLevel="1" whereExpression="pref in (1,0)">
     <taggedValue xmi:id="_Zc6dwg-8EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_Zc6dww-8EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_Zc6dxA-8EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rules"/>
@@ -13,6 +13,9 @@
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_giJbFw-8EeuDXaq6WQCs8A" kind="Usage"/>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_WUMIkQ_YEeurTKvbeg04dQ" kind="Usage"/>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_pUX0MCLMEeuBe6upk5al4A" kind="Usage">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student_Email/Student_Email_0.1.ana#_Kb-DkQ-7EeuDXaq6WQCs8A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_G3n9ECLVEeuBe6upk5al4A" kind="Usage" supplier="_Zc6dwQ-8EeuDXaq6WQCs8A">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student_Email/Student_Email_0.1.ana#_Kb-DkQ-7EeuDXaq6WQCs8A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
