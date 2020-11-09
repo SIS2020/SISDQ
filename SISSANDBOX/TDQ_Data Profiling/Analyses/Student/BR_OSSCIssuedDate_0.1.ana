@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_QxA-sfbQEeqx3smsKGeZnA" name="BR_OSSCIssuedDate" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
-    <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
     <taggedValue xmi:id="_QxA-svbQEeqx3smsKGeZnA" tag="Status" value="development"/>
     <taggedValue xmi:id="_QxA-s_bQEeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
     <taggedValue xmi:id="_QxA-tPbQEeqx3smsKGeZnA" tag="Purpose" value="DQ Business Rules"/>
@@ -9,36 +8,9 @@
     <taggedValue xmi:id="_QxA-tvbQEeqx3smsKGeZnA" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_QxA-t_bQEeqx3smsKGeZnA" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_QxA-uPbQEeqx3smsKGeZnA" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
-    <context xmi:id="_QxA-ufbQEeqx3smsKGeZnA">
-      <connection href="../../../metadata/connections/AlgonquinConn_0.1.item#_nqx-0Of1Eeqob_JMQxXZxQ"/>
-      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
-    </context>
+    <context xmi:id="_QxA-ufbQEeqx3smsKGeZnA"/>
     <results xmi:id="_QxA-uvbQEeqx3smsKGeZnA">
       <resultMetadata xmi:id="_QxA-u_bQEeqx3smsKGeZnA" executionDate="2020-09-14T17:22:28.654-0400" executionDuration="2013" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="3"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_QxA-vPbQEeqx3smsKGeZnA" count="1285632" computed="true">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_QxA-vfbQEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot; " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_QxA-vvbQEeqx3smsKGeZnA" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_QxA-v_bQEeqx3smsKGeZnA" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_QxA-wPbQEeqx3smsKGeZnA" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_QxA-wfbQEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_VcZvwPbQEeqx3smsKGeZnA" count="1285632" computed="true" userCount="11">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/OSSCIssuedDate_0.1.rules#_LA1IwfbQEeqx3smsKGeZnA"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_VljrwPbQEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (isDate(ossc_issue_date )=1)" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_VlidoPbQEeqx3smsKGeZnA" name="OSSCIssuedDate" criticalityLevel="1" whereExpression="ossc_issue_date in ('Y','N')&#xD;&#xA;">
-          <taggedValue xmi:id="_VlidofbQEeqx3smsKGeZnA" tag="Status" value="development"/>
-          <taggedValue xmi:id="_VlidovbQEeqx3smsKGeZnA" tag="Author" value="talend@talend.com"/>
-          <taggedValue xmi:id="_Vlido_bQEeqx3smsKGeZnA" tag="Purpose" value=""/>
-          <taggedValue xmi:id="_VlidpPbQEeqx3smsKGeZnA" tag="Description" value=""/>
-          <taggedValue xmi:id="_VlidpfbQEeqx3smsKGeZnA" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_VlidpvbQEeqx3smsKGeZnA" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_Vlidp_bQEeqx3smsKGeZnA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
     </results>
     <parameters xmi:id="_QxA-zPbQEeqx3smsKGeZnA" dataFilter="_QxA-zvbQEeqx3smsKGeZnA" analysisType="Table Analysis"/>
     <contextType xmi:id="_QxA-zfbQEeqx3smsKGeZnA" confirmationNeeded="false" name="Default"/>
