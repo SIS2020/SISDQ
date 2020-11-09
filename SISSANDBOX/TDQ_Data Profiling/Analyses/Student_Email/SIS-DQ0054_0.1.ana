@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_eh0PkCLXEeuBe6upk5al4A" name="SIS-DQ0054" creationDate="2020-11-09T17:04:02.695-0500">
-  <taggedValue xmi:id="_eh0PkSLXEeuBe6upk5al4A" tag="Status" value="development"/>
-  <taggedValue xmi:id="_eh0PkiLXEeuBe6upk5al4A" tag="Author" value="hossiei@algonquincollege.com"/>
-  <taggedValue xmi:id="_eh0PkyLXEeuBe6upk5al4A" tag="Purpose" value="DQ Profiling"/>
-  <taggedValue xmi:id="_eh0PlCLXEeuBe6upk5al4A" tag="Description" value="Valid email format"/>
-  <taggedValue xmi:id="_eh0PlSLXEeuBe6upk5al4A" tag="Version" value="0.1"/>
-  <context xmi:id="_eh0PliLXEeuBe6upk5al4A"/>
-  <results xmi:id="_eh0PlyLXEeuBe6upk5al4A">
-    <resultMetadata xmi:id="_eh0PmCLXEeuBe6upk5al4A"/>
-  </results>
-  <parameters xmi:id="_eh0PmSLXEeuBe6upk5al4A" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_eh0PkCLXEeuBe6upk5al4A" name="SIS-DQ0054" creationDate="2020-11-09T17:04:02.695-0500" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/ConnectionDQ_0.1.item#_3zwg0iLKEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Patterns/SQL/internet/Email_Gmail_from_Google_0.1.pattern#_vOPJkiLXEeuBe6upk5al4A"/>
+    <taggedValue xmi:id="_eh0PkSLXEeuBe6upk5al4A" tag="Status" value="development"/>
+    <taggedValue xmi:id="_eh0PkiLXEeuBe6upk5al4A" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_eh0PkyLXEeuBe6upk5al4A" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_eh0PlCLXEeuBe6upk5al4A" tag="Description" value="Valid email format"/>
+    <taggedValue xmi:id="_eh0PlSLXEeuBe6upk5al4A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_vOFYkSLXEeuBe6upk5al4A" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_vOFYkiLXEeuBe6upk5al4A" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_vOFYkyLXEeuBe6upk5al4A" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_vOFYmSLXEeuBe6upk5al4A" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_eh0PliLXEeuBe6upk5al4A">
+      <connection href="../../../metadata/connections/ConnectionDQ_0.1.item#_QnLJcB-REeudbvAJU1jpDQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_mkl0MCLMEeuBe6upk5al4A"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_mkl0PCLMEeuBe6upk5al4A"/>
+    </context>
+    <results xmi:id="_eh0PlyLXEeuBe6upk5al4A">
+      <resultMetadata xmi:id="_eh0PmCLXEeuBe6upk5al4A"/>
+      <indicators xsi:type="dataquality.indicators:SqlPatternMatchingIndicator" xmi:id="_vOFYlSLXEeuBe6upk5al4A" name="Email Gmail from Google">
+        <parameters xmi:id="_vOFYliLXEeuBe6upk5al4A">
+          <dataValidDomain xmi:id="_vOFYlyLXEeuBe6upk5al4A">
+            <patterns href="../../../TDQ_Libraries/Patterns/SQL/internet/Email_Gmail_from_Google_0.1.pattern#_5tDp8LoaEd2CVq07lsaT2w"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_mkl0PCLMEeuBe6upk5al4A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/SQL_Pattern_Matching_0.1.definition#_Z4vXcERgEd2RSqFSgXiIfA"/>
+      </indicators>
+    </results>
+    <parameters xmi:id="_eh0PmSLXEeuBe6upk5al4A" dataFilter="_vOPJkyLXEeuBe6upk5al4A" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_vOFYkCLXEeuBe6upk5al4A" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_vOPJkyLXEeuBe6upk5al4A" name="SIS-DQ0054">
+    <ranges xmi:id="_vOPJlCLXEeuBe6upk5al4A">
+      <expressions xmi:id="_vOPJlSLXEeuBe6upk5al4A">
+        <expression xsi:type="relational:TdExpression" xmi:id="_vOPJliLXEeuBe6upk5al4A" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
