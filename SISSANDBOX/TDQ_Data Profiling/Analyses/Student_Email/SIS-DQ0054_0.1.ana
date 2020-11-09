@@ -14,12 +14,11 @@
     <taggedValue xmi:id="_vOFYmSLXEeuBe6upk5al4A" tag="Is Use Sample Data" value="false"/>
     <context xmi:id="_eh0PliLXEeuBe6upk5al4A">
       <connection href="../../../metadata/connections/ConnectionDQ_0.1.item#_QnLJcB-REeudbvAJU1jpDQ"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_mkl0MCLMEeuBe6upk5al4A"/>
       <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_mkl0PCLMEeuBe6upk5al4A"/>
     </context>
     <results xmi:id="_eh0PlyLXEeuBe6upk5al4A">
-      <resultMetadata xmi:id="_eh0PmCLXEeuBe6upk5al4A"/>
-      <indicators xsi:type="dataquality.indicators:SqlPatternMatchingIndicator" xmi:id="_vOFYlSLXEeuBe6upk5al4A" name="Email Gmail from Google">
+      <resultMetadata xmi:id="_eh0PmCLXEeuBe6upk5al4A" executionDate="2020-11-09T17:07:17.347-0500" executionDuration="1668" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:SqlPatternMatchingIndicator" xmi:id="_vOFYlSLXEeuBe6upk5al4A" name="Email Gmail from Google" count="637999" computed="true" matchingValueCount="173341" notMatchingValueCount="464658">
         <parameters xmi:id="_vOFYliLXEeuBe6upk5al4A">
           <dataValidDomain xmi:id="_vOFYlyLXEeuBe6upk5al4A">
             <patterns href="../../../TDQ_Libraries/Patterns/SQL/internet/Email_Gmail_from_Google_0.1.pattern#_5tDp8LoaEd2CVq07lsaT2w"/>
@@ -27,6 +26,7 @@
         </parameters>
         <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_mkl0PCLMEeuBe6upk5al4A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/SQL_Pattern_Matching_0.1.definition#_Z4vXcERgEd2RSqFSgXiIfA"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_7iJyQCLXEeuBe6upk5al4A" body="SELECT COUNT(CASE WHEN &quot;email&quot; LIKE '%@gmail.com' THEN 1 END), COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Email&quot; " language="Microsoft SQL Server"/>
       </indicators>
     </results>
     <parameters xmi:id="_eh0PmSLXEeuBe6upk5al4A" dataFilter="_vOPJkyLXEeuBe6upk5al4A" analysisType="Multiple Column Analysis"/>
