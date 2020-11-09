@@ -32,7 +32,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_fYPb6iLEEeuYIM18Y9_V8A">
-      <resultMetadata xmi:id="_fYPb6yLEEeuYIM18Y9_V8A" executionDate="2020-11-09T14:54:24.836-0500" executionDuration="2764" message="" executionNumber="8" lastRunOk="true" lastExecutionNumberOk="8"/>
+      <resultMetadata xmi:id="_fYPb6yLEEeuYIM18Y9_V8A" executionDate="2020-11-09T15:18:35.971-0500" executionDuration="1182" message="Query not executed for indicator: &quot;SIS-DQ0050&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  se  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  s  ON (se.&quot;std_no&quot;=s.&quot;std_no&quot;)  WHERE (std_no in (select std_no from sisdba.student)). Exception: Ambiguous column name 'std_no'." executionNumber="9" lastExecutionNumberOk="8"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_BNrsUCLFEeuYIM18Y9_V8A" count="637999" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -43,10 +43,14 @@
           <sqlGenericExpression xmi:id="_BX1t4yLFEeuYIM18Y9_V8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_BNrsUSLFEeuYIM18Y9_V8A" count="637999" computed="true" userCount="637987">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_BNrsUSLFEeuYIM18Y9_V8A" count="637987" computed="true" userCount="637987">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0050_0.1.rules#_irbtsQ-6EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_BYB7ISLFEeuYIM18Y9_V8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;   WHERE (std_no in (select std_no from sisdba.student))" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_BYB7ISLFEeuYIM18Y9_V8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  se  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  s  ON (se.&quot;std_no&quot;=s.&quot;std_no&quot;)  WHERE (std_no in (select std_no from sisdba.student))" language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_v8IIICLIEeuYIM18Y9_V8A" operator="=" tableAliasA="s" tableAliasB="se" columnAliasA="std_no" columnAliasB="std_no">
+          <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_GDuTMOf2Eeqob_JMQxXZxQ"/>
+          <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_37AicA-9EeuDXaq6WQCs8A"/>
+        </joinConditions>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_BX8bkCLFEeuYIM18Y9_V8A" name="SIS-DQ0050" criticalityLevel="1" whereExpression="std_no in (select std_no from sisdba.student)">
           <taggedValue xmi:id="_BX8bkSLFEeuYIM18Y9_V8A" tag="Status" value="development"/>
           <taggedValue xmi:id="_BX8bkiLFEeuYIM18Y9_V8A" tag="Author" value="hossiei@algonquincollege.com"/>
@@ -55,21 +59,6 @@
           <taggedValue xmi:id="_BX8blSLFEeuYIM18Y9_V8A" tag="Version" value="0.1"/>
           <taggedValue xmi:id="_BX8bliLFEeuYIM18Y9_V8A" tag="Validation_Status" value="true"/>
           <sqlGenericExpression xmi:id="_BX8blyLFEeuYIM18Y9_V8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_K7E-sCLFEeuYIM18Y9_V8A" count="637987" computed="true" userCount="637987">
-        <parameters xmi:id="_TknnYCLFEeuYIM18Y9_V8A"/>
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiTef2Eeqob_JMQxXZxQ"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS_DQ0051_0.1.rules#_QFA6QQ-8EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_LF3SYSLFEeuYIM18Y9_V8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  se  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  s  ON (se.&quot;std_no&quot;=s.&quot;std_no&quot;)  WHERE (1=1)" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_LFyZ4CLFEeuYIM18Y9_V8A" name="SIS_DQ0051" criticalityLevel="1" whereExpression="1=1">
-          <taggedValue xmi:id="_LFyZ4SLFEeuYIM18Y9_V8A" tag="Status" value="development"/>
-          <taggedValue xmi:id="_LFyZ4iLFEeuYIM18Y9_V8A" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_LFyZ4yLFEeuYIM18Y9_V8A" tag="Purpose" value="DQ Profiling"/>
-          <taggedValue xmi:id="_LFyZ5CLFEeuYIM18Y9_V8A" tag="Description" value="Students should have at least one email address ?"/>
-          <taggedValue xmi:id="_LFyZ5SLFEeuYIM18Y9_V8A" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_LFyZ5iLFEeuYIM18Y9_V8A" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_LFyZ5yLFEeuYIM18Y9_V8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
