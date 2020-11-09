@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_QFA6QQ-8EeuDXaq6WQCs8A" name="SIS_DQ0051" criticalityLevel="1" whereExpression="1=1">
+  <dataquality.rules:WhereRule xmi:id="_QFA6QQ-8EeuDXaq6WQCs8A" name="SIS_DQ0051" supplierDependency="_rc3xwCLMEeuBe6upk5al4A" criticalityLevel="1" whereExpression="1=1">
     <taggedValue xmi:id="_QFA6Qg-8EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_QFA6Qw-8EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_QFA6RA-8EeuDXaq6WQCs8A" tag="Purpose" value="DQ Profiling"/>
@@ -10,17 +10,11 @@
     <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_QFA6SA-8EeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_gicWAw-8EeuDXaq6WQCs8A" kind="Usage">
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_gicWAw-8EeuDXaq6WQCs8A" kind="Usage"/>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_WfjKYA_gEeurTKvbeg04dQ" kind="Usage"/>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_AbTIsA_jEeurTKvbeg04dQ" kind="Usage"/>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_otf7EyLEEeuYIM18Y9_V8A" kind="Usage"/>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_rc3xwCLMEeuBe6upk5al4A" kind="Usage" supplier="_QFA6QQ-8EeuDXaq6WQCs8A">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student_Email/Student_Email_0.1.ana#_Kb-DkQ-7EeuDXaq6WQCs8A"/>
-  </orgomg.cwm.objectmodel.core:Dependency>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_WfjKYA_gEeurTKvbeg04dQ" kind="Usage">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student_Email/Student_Email_0.1.ana#_Kb-DkQ-7EeuDXaq6WQCs8A"/>
-  </orgomg.cwm.objectmodel.core:Dependency>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_AbTIsA_jEeurTKvbeg04dQ" kind="Usage">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student_Email/Student_Email_0.1.ana#_Kb-DkQ-7EeuDXaq6WQCs8A"/>
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentEmail_0.1.ana#_fYPb4SLEEeuYIM18Y9_V8A"/>
-  </orgomg.cwm.objectmodel.core:Dependency>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_otf7EyLEEeuYIM18Y9_V8A" kind="Usage">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentEmail_0.1.ana#_fYPb4SLEEeuYIM18Y9_V8A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
