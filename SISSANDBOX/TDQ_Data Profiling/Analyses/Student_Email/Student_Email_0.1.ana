@@ -5,6 +5,8 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS_DQ0051_0.1.rules#_oqP08CLTEeuBe6upk5al4A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0050_0.1.rules#_vZnMwCLPEeuBe6upk5al4A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS_DQ0051_0.1.rules#_BUWXNSLUEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0052_0.1.rules#_fsglQCLQEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0050_0.1.rules#_HprhkyLUEeuBe6upk5al4A"/>
     <taggedValue xmi:id="_Kb-Dkg-7EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_Kb-Dkw-7EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_Kb-DlA-7EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rule Analysis"/>
@@ -18,7 +20,7 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-11-09T16:39:19.107-0500" executionDuration="2731" message="" executionNumber="35" lastRunOk="true" lastExecutionNumberOk="26"/>
+      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-11-09T16:40:01.700-0500" executionDuration="2835" message="" executionNumber="36" lastRunOk="true" lastExecutionNumberOk="27"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_9SN-gCLTEeuBe6upk5al4A" count="1346428" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_4glbgyLTEeuBe6upk5al4A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -65,6 +67,20 @@
           <taggedValue xmi:id="_BdHRpSLUEeuBe6upk5al4A" tag="Version" value="0.1"/>
           <taggedValue xmi:id="_BdHRpiLUEeuBe6upk5al4A" tag="Validation_Status" value="true"/>
           <sqlGenericExpression xmi:id="_BdHRpyLUEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_HpeGMCLUEeuBe6upk5al4A" count="1346428" computed="true" userCount="139910">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0052_0.1.rules#_Q5JF4Q-8EeuDXaq6WQCs8A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_HzZeQCLUEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Email&quot;   WHERE (pref in (1.0))" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_HzVM0CLUEeuBe6upk5al4A" name="SIS-DQ0052" criticalityLevel="1" whereExpression="pref in (1.0)">
+          <taggedValue xmi:id="_HzVM0SLUEeuBe6upk5al4A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_HzVM0iLUEeuBe6upk5al4A" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_HzVM0yLUEeuBe6upk5al4A" tag="Purpose" value="DQ Business Rules"/>
+          <taggedValue xmi:id="_HzVM1CLUEeuBe6upk5al4A" tag="Description" value="Preferred Email Indicator is valid if in (1.0)"/>
+          <taggedValue xmi:id="_HzVM1SLUEeuBe6upk5al4A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_HzVM1iLUEeuBe6upk5al4A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_HzVM1yLUEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
