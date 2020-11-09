@@ -15,7 +15,7 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg100iLKEeuBe6upk5al4A"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-11-09T15:33:51.862-0500" executionDuration="1116" message="Query not executed for indicator: &quot;SIS-DQ0050&quot; SQL query: SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0050&quot;   WHERE (where student.std_no is not null). Exception: Incorrect syntax near the keyword 'where'." executionNumber="27" lastExecutionNumberOk="21"/>
+      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-11-09T15:34:07.659-0500" executionDuration="1065" message="Query not executed for indicator: &quot;SIS-DQ0050&quot; SQL query: SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0050&quot;   WHERE (student.std_no is not null). Exception: The multi-part identifier &quot;student.std_no&quot; could not be bound." executionNumber="28" lastExecutionNumberOk="21"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_3zwg0CLKEeuBe6upk5al4A" count="637999" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg100iLKEeuBe6upk5al4A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -29,7 +29,7 @@
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_3zwg0SLKEeuBe6upk5al4A" count="637999">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg100iLKEeuBe6upk5al4A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0050_0.1.rules#_irbtsQ-6EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_4QITwSLKEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0050&quot;   WHERE (where student.std_no is not null)" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_4QITwSLKEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0050&quot;   WHERE (student.std_no is not null)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_4QBmECLKEeuBe6upk5al4A" name="SIS-DQ0050" criticalityLevel="1" whereExpression="where student.std_no is not null">
           <taggedValue xmi:id="_4QBmESLKEeuBe6upk5al4A" tag="Status" value="development"/>
           <taggedValue xmi:id="_4QBmEiLKEeuBe6upk5al4A" tag="Author" value="hossiei@algonquincollege.com"/>
