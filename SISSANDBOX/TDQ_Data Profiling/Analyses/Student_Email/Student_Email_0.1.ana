@@ -14,6 +14,9 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0053_0.1.rules#_G3UbECLVEeuBe6upk5al4A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0052_0.1.rules#_BY84cCLWEeuBe6upk5al4A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0054_0.1.rules#_G3eMECLVEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0055_0.1.rules#_G3n9ECLVEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/Copy_of_SIS-DQ0053_0.1.rules#_uoYf8CLWEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0054_0.1.rules#_uxqXwCLWEeuBe6upk5al4A"/>
     <taggedValue xmi:id="_Kb-Dkg-7EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_Kb-Dkw-7EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_Kb-DlA-7EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rule Analysis"/>
@@ -94,6 +97,14 @@
           <taggedValue xmi:id="_aINnhiLWEeuBe6upk5al4A" tag="Validation_Status" value="true"/>
           <sqlGenericExpression xmi:id="_aINnhyLWEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_uxFI8CLWEeuBe6upk5al4A">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0055_0.1.rules#_Zc6dwQ-8EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_uxFI8SLWEeuBe6upk5al4A">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/Copy_of_SIS-DQ0053_0.1.rules#_FcQV0CLWEeuBe6upk5al4A"/>
       </indicators>
     </results>
     <parameters xmi:id="_Kb-Dog-7EeuDXaq6WQCs8A" dataFilter="_Kb-DpA-7EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
