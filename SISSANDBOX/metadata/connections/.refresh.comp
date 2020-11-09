@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_gJMwACLKEeuBe6upk5al4A" name="AlgonquinConn" supplierDependency="_gJMwDiLKEeuBe6upk5al4A" id="_vkTxwOfzEeqob_JMQxXZxQ" label="AlgonquinConn" dataPackage="_gJMwDyLKEeuBe6upk5al4A" DatabaseType="Microsoft SQL Server" DriverClass="net.sourceforge.jtds.jdbc.Driver" URL="jdbc:jtds:sqlserver://SDWDEV-1:1433/EDW-INBOUND;" dbVersionString="JTDS" Port="1433" Username="hossiei" Password="enc:system.encryption.key.v1:KJWRkf2uNExxZH5fhy2AQ2b6vwCuDSVrojGnd8BkLXcl7yLKPei7tA==" ServerName="SDWDEV-1" DatasourceName="" FileFieldName="" SID="EDW-INBOUND" SqlSynthax="SQL_92" StringQuote="" NullChar="" DbmsId="id_MSSQL" ProductId="SQL_SERVER" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_gJMwASLKEeuBe6upk5al4A" tag="Is Conn Need Reload" value="true"/>
+    <taggedValue xmi:id="_gJMwAiLKEeuBe6upk5al4A" tag="package filter" value=""/>
+    <taggedValue xmi:id="_gJMwAyLKEeuBe6upk5al4A" tag="Status" value=""/>
+    <taggedValue xmi:id="_gJMwBCLKEeuBe6upk5al4A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_gJMwBSLKEeuBe6upk5al4A" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_gJMwBiLKEeuBe6upk5al4A" tag="Description" value=""/>
+    <taggedValue xmi:id="_gJMwByLKEeuBe6upk5al4A" tag="Author" value=""/>
+    <taggedValue xmi:id="_gJMwCCLKEeuBe6upk5al4A" tag="otherParameter"/>
+    <taggedValue xmi:id="_gJMwCSLKEeuBe6upk5al4A" tag="DB ProductName" value="Microsoft SQL Server"/>
+    <taggedValue xmi:id="_gJMwCiLKEeuBe6upk5al4A" tag="DB ProductVersion" value="14.00.2027"/>
+    <taggedValue xmi:id="_gJMwCyLKEeuBe6upk5al4A" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_gJMwDCLKEeuBe6upk5al4A" key="CONN_PARA_KEY_USERNAME" value="hossiei"/>
+    <parameters xmi:id="_gJMwDSLKEeuBe6upk5al4A" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_gJMwDiLKEeuBe6upk5al4A" kind="Usage" supplier="_gJMwACLKEeuBe6upk5al4A"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_gJMwDyLKEeuBe6upk5al4A" name="EDW-INBOUND" dataManager="_gJMwACLKEeuBe6upk5al4A">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwECLKEeuBe6upk5al4A" name="AD"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwESLKEeuBe6upk5al4A" name="blackboard"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwEiLKEeuBe6upk5al4A" name="bookware"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwEyLKEeuBe6upk5al4A" name="brightspace"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwFCLKEeuBe6upk5al4A" name="CCOL"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwFSLKEeuBe6upk5al4A" name="cognos"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwFiLKEeuBe6upk5al4A" name="db_accessadmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwFyLKEeuBe6upk5al4A" name="db_backupoperator"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwGCLKEeuBe6upk5al4A" name="db_datareader"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwGSLKEeuBe6upk5al4A" name="db_datawriter"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwGiLKEeuBe6upk5al4A" name="db_ddladmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwGyLKEeuBe6upk5al4A" name="db_denydatareader"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwHCLKEeuBe6upk5al4A" name="db_denydatawriter"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwHSLKEeuBe6upk5al4A" name="db_owner"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwHiLKEeuBe6upk5al4A" name="db_securityadmin"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwHyLKEeuBe6upk5al4A" name="dbo"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwICLKEeuBe6upk5al4A" name="edwdba"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwISLKEeuBe6upk5al4A" name="etext"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwIiLKEeuBe6upk5al4A" name="guest"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwIyLKEeuBe6upk5al4A" name="informatica"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwJCLKEeuBe6upk5al4A" name="INFORMATION_SCHEMA"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwJSLKEeuBe6upk5al4A" name="kivuto"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwJiLKEeuBe6upk5al4A" name="lyceum"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwJyLKEeuBe6upk5al4A" name="o365"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwKCLKEeuBe6upk5al4A" name="parkdb"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwKSLKEeuBe6upk5al4A" name="ps"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwKiLKEeuBe6upk5al4A" name="registrar"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwKyLKEeuBe6upk5al4A" name="sharepoint"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwLCLKEeuBe6upk5al4A" name="sipsdba"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwLSLKEeuBe6upk5al4A" name="sisdba"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwLiLKEeuBe6upk5al4A" name="sys"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_gJMwLyLKEeuBe6upk5al4A" name="workday"/>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>
