@@ -5,6 +5,11 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0050_0.1.rules#_pTmYICLMEeuBe6upk5al4A"/>
     <clientDependency href="../../../metadata/connections/ConnectionDQ_0.1.item#_3zwg0iLKEeuBe6upk5al4A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0050_0.1.rules#_vZnMwCLPEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0052_0.1.rules#_pTzzgCLMEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0053_0.1.rules#_pT-yoCLMEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0054_0.1.rules#_pUH8kCLMEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0055_0.1.rules#_pUX0MCLMEeuBe6upk5al4A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS_DQ0051_0.1.rules#_rc3xwCLMEeuBe6upk5al4A"/>
     <taggedValue xmi:id="_Kb-Dkg-7EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_Kb-Dkw-7EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_Kb-DlA-7EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rule Analysis"/>
@@ -15,7 +20,6 @@
     <context xmi:id="_Kb-DmQ-7EeuDXaq6WQCs8A">
       <connection href="../../../metadata/connections/ConnectionDQ_0.1.item#_QnLJcB-REeudbvAJU1jpDQ"/>
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
-      <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg100yLKEeuBe6upk5al4A"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
       <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-11-09T16:07:29.112-0500" executionDuration="1276" message="" executionNumber="30" lastRunOk="true" lastExecutionNumberOk="23"/>
@@ -43,9 +47,25 @@
           <sqlGenericExpression xmi:id="_k1_dByLPEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_vZhGICLPEeuBe6upk5al4A">
-        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg100yLKEeuBe6upk5al4A"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_GFu_YCLQEeuBe6upk5al4A">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0052_0.1.rules#_Q5JF4Q-8EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_GFu_YSLQEeuBe6upk5al4A">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0053_0.1.rules#_eH7bYQ-8EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_GFu_YiLQEeuBe6upk5al4A">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0054_0.1.rules#_CrEs0SLEEeuYIM18Y9_V8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_GFu_YyLQEeuBe6upk5al4A">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0055_0.1.rules#_Zc6dwQ-8EeuDXaq6WQCs8A"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_GFu_ZCLQEeuBe6upk5al4A">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS_DQ0051_0.1.rules#_QFA6QQ-8EeuDXaq6WQCs8A"/>
       </indicators>
     </results>
     <parameters xmi:id="_Kb-Dog-7EeuDXaq6WQCs8A" dataFilter="_Kb-DpA-7EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
