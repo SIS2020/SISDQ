@@ -31,7 +31,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
     </context>
     <results xmi:id="_fYPb6iLEEeuYIM18Y9_V8A">
-      <resultMetadata xmi:id="_fYPb6yLEEeuYIM18Y9_V8A" executionDate="2020-11-09T14:48:54.197-0500" executionDuration="2663" message="Query not executed for indicator: &quot;SIS-DQ0055&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (pref in (1.0)). Exception: Invalid column name 'pref'." executionNumber="4" lastRunOk="true" lastExecutionNumberOk="4"/>
+      <resultMetadata xmi:id="_fYPb6yLEEeuYIM18Y9_V8A" executionDate="2020-11-09T14:49:11.734-0500" executionDuration="2297" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="5"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_fYPb7CLEEeuYIM18Y9_V8A" count="1289531" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -60,7 +60,7 @@
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_EWSiSef2Eeqob_JMQxXZxQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS_DQ0051_0.1.rules#_QFA6QQ-8EeuDXaq6WQCs8A"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_mRImViLEEeuYIM18Y9_V8A" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  s  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  se  ON (s.&quot;std_no&quot;=se.&quot;std_no&quot;)  WHERE (1=1)" language="Microsoft SQL Server"/>
-        <joinConditions xmi:id="_oB6ncCLEEeuYIM18Y9_V8A" operator="=" tableAliasA="s" tableAliasB="se" columnAliasA="std_no" columnAliasB="std_no">
+        <joinConditions xmi:id="_pGtFQCLEEeuYIM18Y9_V8A" operator="=" tableAliasA="s" tableAliasB="se" columnAliasA="std_no" columnAliasB="std_no">
           <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_GDuTMOf2Eeqob_JMQxXZxQ"/>
           <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/AlgonquinConn_0.1.item#_37AicA-9EeuDXaq6WQCs8A"/>
         </joinConditions>
