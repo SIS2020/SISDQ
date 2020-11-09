@@ -25,7 +25,7 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
     </context>
     <results xmi:id="_Kb-Dmg-7EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-11-09T16:53:38.567-0500" executionDuration="1444" message="" executionNumber="46" lastRunOk="true" lastExecutionNumberOk="37"/>
+      <resultMetadata xmi:id="_Kb-Dmw-7EeuDXaq6WQCs8A" executionDate="2020-11-09T16:54:22.329-0500" executionDuration="1312" message="" executionNumber="47" lastRunOk="true" lastExecutionNumberOk="38"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_BUWXMCLUEeuBe6upk5al4A" count="637999" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -64,10 +64,10 @@
           <sqlGenericExpression xmi:id="_--g2VyLVEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_BYwrMCLWEeuBe6upk5al4A" count="637999" computed="true" userCount="57620">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_BYwrMCLWEeuBe6upk5al4A" count="637999" computed="true" userCount="637999">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_pg101CLKEeuBe6upk5al4A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Email/SIS-DQ0053_0.1.rules#_eH7bYQ-8EeuDXaq6WQCs8A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_BhqIgCLWEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Email&quot;   WHERE (email like '%@algonquinlive.com' and college=1)" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_BhqIgCLWEeuBe6upk5al4A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Email&quot;   WHERE (pref in (1,0))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_BhizwCLWEeuBe6upk5al4A" name="SIS-DQ0053" criticalityLevel="1" whereExpression="email like '%@algonquinlive.com' and college=1">
           <taggedValue xmi:id="_BhizwSLWEeuBe6upk5al4A" tag="Status" value="development"/>
           <taggedValue xmi:id="_BhizwiLWEeuBe6upk5al4A" tag="Author" value="hossiei@algonquincollege.com"/>
