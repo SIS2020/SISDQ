@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_irbtsQ-6EeuDXaq6WQCs8A" name="SIS-DQ0050" supplierDependency="_pTmYICLMEeuBe6upk5al4A" criticalityLevel="1" whereExpression="student.std_no is not null">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.rules:WhereRule xmi:id="_irbtsQ-6EeuDXaq6WQCs8A" name="SIS-DQ0050" supplierDependency="_pTmYICLMEeuBe6upk5al4A" criticalityLevel="1" whereExpression="1=1">
     <taggedValue xmi:id="_irbtsg-6EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_irbtsw-6EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_irbttA-6EeuDXaq6WQCs8A" tag="Purpose" value="DQ Profiling"/>
@@ -9,6 +9,10 @@
     <taggedValue xmi:id="_irbttw-6EeuDXaq6WQCs8A" tag="Validation_Status" value="true"/>
     <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_irbtuA-6EeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+    <joins xmi:id="_bBeEYCLOEeuBe6upk5al4A" operator="=" tableAliasA="vStudent_Email" tableAliasB="vStudent" columnAliasA="std_no" columnAliasB="std_no">
+      <colA xsi:type="relational:TdColumn" href="../../../../metadata/connections/ConnectionDQ_0.1.item#_mkl0MCLMEeuBe6upk5al4A"/>
+      <colB xsi:type="relational:TdColumn" href="../../../../metadata/connections/ConnectionDQ_0.1.item#_mZbGACLMEeuBe6upk5al4A"/>
+    </joins>
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_giTMEw-8EeuDXaq6WQCs8A" kind="Usage"/>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_QFT4YA_AEeuDXaq6WQCs8A" kind="Usage"/>
