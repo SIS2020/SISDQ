@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_os2vgA-4EeuDXaq6WQCs8A" name="student_address" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0037_0.1.rules#_W1vLECOPEeuaYvKeg9gs_A"/>
+    <clientDependency href="../../../metadata/connections/ConnectionDQ_0.1.item#_3zwg0iLKEeuBe6upk5al4A"/>
     <taggedValue xmi:id="_os2vgQ-4EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_os2vgg-4EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_os2vgw-4EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rules"/>
@@ -8,9 +10,20 @@
     <taggedValue xmi:id="_os2vhQ-4EeuDXaq6WQCs8A" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_os2vhg-4EeuDXaq6WQCs8A" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_os2vhw-4EeuDXaq6WQCs8A" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
-    <context xmi:id="_os2viA-4EeuDXaq6WQCs8A"/>
+    <context xmi:id="_os2viA-4EeuDXaq6WQCs8A">
+      <connection href="../../../metadata/connections/ConnectionDQ_0.1.item#_QnLJcB-REeudbvAJU1jpDQ"/>
+      <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_NXwQ5SOTEeuaYvKeg9gs_A"/>
+    </context>
     <results xmi:id="_os2viQ-4EeuDXaq6WQCs8A">
       <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-11-10T15:21:31.514-0500" executionDuration="1824" message="" executionNumber="12" lastRunOk="true" lastExecutionNumberOk="12"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_R-kD8COTEeuaYvKeg9gs_A">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_NXwQ5SOTEeuaYvKeg9gs_A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_R-kD8SOTEeuaYvKeg9gs_A">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_NXwQ5SOTEeuaYvKeg9gs_A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0037_0.1.rules#_WfwwgSOOEeuaYvKeg9gs_A"/>
+      </indicators>
     </results>
     <parameters xmi:id="_os2vmw-4EeuDXaq6WQCs8A" dataFilter="_os2vnQ-4EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
     <contextType xmi:id="_os2vnA-4EeuDXaq6WQCs8A" confirmationNeeded="false" name="Default"/>
