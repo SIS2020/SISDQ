@@ -29,7 +29,7 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
     </context>
     <results xmi:id="_akgseiObEeuaYvKeg9gs_A">
-      <resultMetadata xmi:id="_akgseyObEeuaYvKeg9gs_A" executionDate="2020-11-10T16:42:37.569-0500" executionDuration="10706" message="Query not executed for indicator: &quot;SIS-DQ0045&quot; SQL query: SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;--This can be run from here, as long as criteria is that invalid results = cases where Incorrect Address Indicator is not Yes or No). Exception: Incorrect syntax near '1'." executionNumber="21" lastRunOk="true" lastExecutionNumberOk="20"/>
+      <resultMetadata xmi:id="_akgseyObEeuaYvKeg9gs_A" executionDate="2020-11-10T16:43:42.137-0500" executionDuration="11562" message="Query not executed for indicator: &quot;SIS-DQ0041&quot; SQL query: SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;--Note: this will require Talend job to match against valid City table. ). Exception: Incorrect syntax near '1'." executionNumber="22" lastRunOk="true" lastExecutionNumberOk="21"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_akgsjCObEeuaYvKeg9gs_A" count="1215573" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -44,7 +44,7 @@
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_aNeYYSOOEeuaYvKeg9gs_A"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_akgskyObEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;  s  JOIN  &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Address_AggString_HomeLocal&quot;  va  ON (s.&quot;std_no&quot;=va.&quot;std_no&quot;)  WHERE (va.HomeLocal_AGG ='H,L' or va.HomeLocal_AGG='H' or va.HomeLocal_AGG='L,H' &#xD;&#xA;)" language="Microsoft SQL Server"/>
-        <joinConditions xmi:id="_sDVB0SOdEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="va" columnAliasA="std_no" columnAliasB="std_no">
+        <joinConditions xmi:id="_zpb3kCOdEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="va" columnAliasA="std_no" columnAliasB="std_no">
           <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_SvSSECOaEeuaYvKeg9gs_A"/>
           <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_TbNj8COaEeuaYvKeg9gs_A"/>
         </joinConditions>
@@ -100,10 +100,10 @@
           <sqlGenericExpression xmi:id="_Y0gchyOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaQiOcEeuaYvKeg9gs_A" count="1215573">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaQiOcEeuaYvKeg9gs_A" count="1215573" computed="true" userCount="1215573">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0042_0.1.rules#_AXEeQSOSEeuaYvKeg9gs_A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph4yOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;--Note: this can be run as business rule,but it's probably better to run it as a Talend job. )" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph4yOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (--Note: this can be run as business rule,but it's probably better to run it as a Talend job. &#xD;&#xA;1=1&#xD;&#xA;)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Y0lVACOdEeuaYvKeg9gs_A" name="SIS-DQ0042" criticalityLevel="1" whereExpression="1=1&#xD;&#xA;&#xD;&#xA;--Note: this can be run as business rule,but it's probably better to run it as a Talend job. ">
           <taggedValue xmi:id="_Y0lVASOdEeuaYvKeg9gs_A" tag="Status" value="development"/>
           <taggedValue xmi:id="_Y0lVAiOdEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
@@ -114,11 +114,11 @@
           <sqlGenericExpression xmi:id="_Y0lVByOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaQyOcEeuaYvKeg9gs_A" count="1215573">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaQyOcEeuaYvKeg9gs_A" count="1215573" computed="true" userCount="1215573">
         <parameters xmi:id="_Z8KdkCOcEeuaYvKeg9gs_A"/>
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0043_0.1.rules#_N36VEBIjEeucK-9f6NjiJg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph5COdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;--Again, this can be run from here, but it's probably better to set it up as a Talend job. Will require a lookup table for valid countries. May want to ask Tom F/Dennis if there's a reference table in Genesis/Collibra for cities. )" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph5COdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (--Again, this can be run from here, but it's probably better to set it up as a Talend job. Will require a lookup table for valid countries. May want to ask Tom F/Dennis if there's a reference table in Genesis/Collibra for cities. &#xD;&#xA;1=1&#xD;&#xA;&#xD;&#xA;)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Y1pE8COdEeuaYvKeg9gs_A" name="SIS-DQ0043" criticalityLevel="1" whereExpression="1=1&#xD;&#xA;&#xD;&#xA;--Again, this can be run from here, but it's probably better to set it up as a Talend job. Will require a lookup table for valid countries. May want to ask Tom F/Dennis if there's a reference table in Genesis/Collibra for cities. ">
           <taggedValue xmi:id="_Y1pE8SOdEeuaYvKeg9gs_A" tag="Status" value="development"/>
           <taggedValue xmi:id="_Y1pE8iOdEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
@@ -129,10 +129,10 @@
           <sqlGenericExpression xmi:id="_Y1pE9yOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaRCOcEeuaYvKeg9gs_A" count="1215573">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaRCOcEeuaYvKeg9gs_A" count="1215573" computed="true" userCount="1215573">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0044_0.1.rules#_CgclkSOSEeuaYvKeg9gs_A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph5SOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;--This can be run from here, but only for US or Canadian postal codes. Should US also be excluded?)" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph5SOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (--This can be run from here, but only for US or Canadian postal codes. Should US also be excluded?&#xD;&#xA;1=1&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Y1y18COdEeuaYvKeg9gs_A" name="SIS-DQ0044" criticalityLevel="1" whereExpression="1=1&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;--This can be run from here, but only for US or Canadian postal codes. Should US also be excluded?">
           <taggedValue xmi:id="_Y1y18SOdEeuaYvKeg9gs_A" tag="Status" value="development"/>
           <taggedValue xmi:id="_Y1y18iOdEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
@@ -143,10 +143,10 @@
           <sqlGenericExpression xmi:id="_Y1y19yOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaRSOcEeuaYvKeg9gs_A" count="1215573">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaRSOcEeuaYvKeg9gs_A" count="1215573" computed="true" userCount="1215573">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0045_0.1.rules#_D4sK4COSEeuaYvKeg9gs_A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph5iOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;--This can be run from here, as long as criteria is that invalid results = cases where Incorrect Address Indicator is not Yes or No)" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph5iOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (--This can be run from here, as long as criteria is that invalid results = cases where Incorrect Address Indicator is not Yes or No&#xD;&#xA;&#xD;&#xA;1=1&#xD;&#xA;&#xD;&#xA;)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Y17_4COdEeuaYvKeg9gs_A" name="SIS-DQ0045" criticalityLevel="1" whereExpression="1=1&#xD;&#xA;&#xD;&#xA;--This can be run from here, as long as criteria is that invalid results = cases where Incorrect Address Indicator is not Yes or No">
           <taggedValue xmi:id="_Y17_4SOdEeuaYvKeg9gs_A" tag="Status" value="development"/>
           <taggedValue xmi:id="_Y17_4iOdEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
