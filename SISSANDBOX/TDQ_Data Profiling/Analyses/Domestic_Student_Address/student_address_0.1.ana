@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_os2vgA-4EeuDXaq6WQCs8A" name="student_address" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0037_0.1.rules#_W1vLECOPEeuaYvKeg9gs_A"/>
     <clientDependency href="../../../metadata/connections/ConnectionDQ_0.1.item#_3zwg0iLKEeuBe6upk5al4A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_YwR6QCOREeuaYvKeg9gs_A"/>
-    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0037_0.1.rules#_eZ6GICOaEeuaYvKeg9gs_A"/>
     <taggedValue xmi:id="_os2vgQ-4EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_os2vgg-4EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_os2vgw-4EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rules"/>
@@ -27,20 +26,6 @@
           <taggedValue xmi:id="_SToVASOTEeuaYvKeg9gs_A" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_SToVAiOTEeuaYvKeg9gs_A" tag="Purpose" value="evaluates the number of records"/>
           <sqlGenericExpression xmi:id="_SToVAyOTEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_R-kD8SOTEeuaYvKeg9gs_A" count="1330096" computed="true" userCount="1330077">
-        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_NXwQ5SOTEeuaYvKeg9gs_A"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0037_0.1.rules#_WfwwgSOOEeuaYvKeg9gs_A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_STxe8SOTEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Address&quot;   WHERE ( std_no in (select std_no from vStudent)&#xD;&#xA;)" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_STtNgCOTEeuaYvKeg9gs_A" name="SIS-DQ0037" criticalityLevel="1" whereExpression=" std_no in (select std_no from vStudent)&#xD;&#xA;">
-          <taggedValue xmi:id="_STtNgSOTEeuaYvKeg9gs_A" tag="Status" value="development"/>
-          <taggedValue xmi:id="_STtNgiOTEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
-          <taggedValue xmi:id="_STtNgyOTEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
-          <taggedValue xmi:id="_STtNhCOTEeuaYvKeg9gs_A" tag="Description" value="Integrity rule student number is foreign key and should exist in student table as domestic student."/>
-          <taggedValue xmi:id="_STtNhSOTEeuaYvKeg9gs_A" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_STtNhiOTEeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_STtNhyOTEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_eZz_gCOaEeuaYvKeg9gs_A">
