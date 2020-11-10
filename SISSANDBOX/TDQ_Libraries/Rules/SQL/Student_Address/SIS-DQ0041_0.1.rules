@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_u1CK4COREeuaYvKeg9gs_A" name="SIS-DQ0041" criticalityLevel="1" whereExpression="1=1">
-  <taggedValue xmi:id="_u1CK4SOREeuaYvKeg9gs_A" tag="Status" value="development"/>
-  <taggedValue xmi:id="_u1CK4iOREeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
-  <taggedValue xmi:id="_u1CK4yOREeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
-  <taggedValue xmi:id="_u1CK5COREeuaYvKeg9gs_A" tag="Description" value="valid city"/>
-  <taggedValue xmi:id="_u1CK5SOREeuaYvKeg9gs_A" tag="Version" value="0.1"/>
-  <taggedValue xmi:id="_u1CK5iOREeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
-  <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
-  <sqlGenericExpression xmi:id="_u1CK5yOREeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-</dataquality.rules:WhereRule>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+  <dataquality.rules:WhereRule xmi:id="_u1CK4COREeuaYvKeg9gs_A" name="SIS-DQ0041" supplierDependency="_6otBsCObEeuaYvKeg9gs_A" criticalityLevel="1" whereExpression="1=1&#xD;&#xA;&#xD;&#xA;--Note: this will require Talend job to match against valid City table. ">
+    <taggedValue xmi:id="_u1CK4SOREeuaYvKeg9gs_A" tag="Status" value="development"/>
+    <taggedValue xmi:id="_u1CK4iOREeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
+    <taggedValue xmi:id="_u1CK4yOREeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_u1CK5COREeuaYvKeg9gs_A" tag="Description" value="valid city"/>
+    <taggedValue xmi:id="_u1CK5SOREeuaYvKeg9gs_A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_u1CK5iOREeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
+    <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+    <sqlGenericExpression xmi:id="_u1CK5yOREeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+  </dataquality.rules:WhereRule>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_6otBsCObEeuaYvKeg9gs_A" kind="Usage" supplier="_u1CK4COREeuaYvKeg9gs_A">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/Student_Address_Domestic_0.1.ana#_akgscSObEeuaYvKeg9gs_A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+</xmi:XMI>
