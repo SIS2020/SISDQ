@@ -16,8 +16,8 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YER-REeudbvAJU1jpDQ"/>
     </context>
     <results xmi:id="_FVc9mR-REeudbvAJU1jpDQ">
-      <resultMetadata xmi:id="_FVc9mh-REeudbvAJU1jpDQ" executionDate="2020-11-05T13:06:46.469-0500" executionDuration="8535" message="" executionNumber="4" lastRunOk="true" lastExecutionNumberOk="3"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_qlQcEB-REeudbvAJU1jpDQ" count="1289334" computed="true">
+      <resultMetadata xmi:id="_FVc9mh-REeudbvAJU1jpDQ" executionDate="2020-11-10T16:49:15.804-0500" executionDuration="8577" message="" executionNumber="5" lastRunOk="true" lastExecutionNumberOk="4"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_qlQcEB-REeudbvAJU1jpDQ" count="1289690" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YER-REeudbvAJU1jpDQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_qwI2YB-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;DQ &quot;.&quot;dbo&quot;.&quot;vSIS_DQ0002&quot; " language="Microsoft SQL Server"/>
@@ -27,7 +27,7 @@
           <sqlGenericExpression xmi:id="_qv3wox-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_qlQcER-REeudbvAJU1jpDQ" count="1289334" computed="true" userCount="1220644">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_qlQcER-REeudbvAJU1jpDQ" count="1289690" computed="true" userCount="1220998">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/DQ_0.1.item#_W44YER-REeudbvAJU1jpDQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0002_0.1.rules#_PQL7ERLdEeuzBt1AHG1VvA"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_qwI2YR-REeudbvAJU1jpDQ" body="SELECT COUNT(*) FROM &quot;DQ &quot;.&quot;dbo&quot;.&quot;vSIS_DQ0002&quot;   WHERE ( uniqueID is null)" language="Microsoft SQL Server"/>
