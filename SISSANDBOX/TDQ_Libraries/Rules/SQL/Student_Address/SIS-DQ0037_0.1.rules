@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_WfwwgSOOEeuaYvKeg9gs_A" name="SIS-DQ0037" criticalityLevel="1" whereExpression="1=1">
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_WfwwgSOOEeuaYvKeg9gs_A" name="SIS-DQ0037" criticalityLevel="1" whereExpression="std_no not in (select std_no from sisdba.student)&#xD;&#xA;">
   <taggedValue xmi:id="_WfwwgiOOEeuaYvKeg9gs_A" tag="Status" value="development"/>
   <taggedValue xmi:id="_WfwwgyOOEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
   <taggedValue xmi:id="_WfwwhCOOEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
