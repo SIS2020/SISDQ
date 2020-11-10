@@ -17,7 +17,7 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
     </context>
     <results xmi:id="_os2viQ-4EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-11-10T16:22:30.257-0500" executionDuration="2898" message="Query not executed for indicator: &quot;SIS-DQ0038&quot; SQL query: SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;  s  JOIN  &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Address_AggString_HomeLocal&quot;  vg  ON (s.&quot;std_no&quot;=vg.&quot;std_no&quot;)  WHERE (va.HomeLocal_AGG ='H,L' or va.HomeLocal_AGG='H' or va.HomeLocal_AGG='L,H' &#xD;&#xA;). Exception: The multi-part identifier &quot;va.HomeLocal_AGG&quot; could not be bound." executionNumber="14" lastExecutionNumberOk="13"/>
+      <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-11-10T16:23:13.685-0500" executionDuration="8720" message="" executionNumber="15" lastRunOk="true" lastExecutionNumberOk="14"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_R-kD8COTEeuaYvKeg9gs_A" count="1330096" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_NXwQ5SOTEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -38,11 +38,11 @@
           <sqlGenericExpression xmi:id="_1ug1EyOaEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_eZz_gSOaEeuaYvKeg9gs_A" count="1215573">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_eZz_gSOaEeuaYvKeg9gs_A" count="1215573" computed="true" userCount="1215573">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_aNeYYSOOEeuaYvKeg9gs_A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_1uqmEiOaEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;  s  JOIN  &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Address_AggString_HomeLocal&quot;  vg  ON (s.&quot;std_no&quot;=vg.&quot;std_no&quot;)  WHERE (va.HomeLocal_AGG ='H,L' or va.HomeLocal_AGG='H' or va.HomeLocal_AGG='L,H' &#xD;&#xA;)" language="Microsoft SQL Server"/>
-        <joinConditions xmi:id="_3qojgSOaEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="vg" columnAliasA="std_no" columnAliasB="std_no">
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_1uqmEiOaEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;  s  JOIN  &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Address_AggString_HomeLocal&quot;  va  ON (s.&quot;std_no&quot;=va.&quot;std_no&quot;)  WHERE (va.HomeLocal_AGG ='H,L' or va.HomeLocal_AGG='H' or va.HomeLocal_AGG='L,H' &#xD;&#xA;)" language="Microsoft SQL Server"/>
+        <joinConditions xmi:id="_8oK0gCOaEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="va" columnAliasA="std_no" columnAliasB="std_no">
           <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_SvSSECOaEeuaYvKeg9gs_A"/>
           <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_TbNj8COaEeuaYvKeg9gs_A"/>
         </joinConditions>
