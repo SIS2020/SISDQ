@@ -4,6 +4,8 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0037_0.1.rules#_W1vLECOPEeuaYvKeg9gs_A"/>
     <clientDependency href="../../../metadata/connections/ConnectionDQ_0.1.item#_3zwg0iLKEeuBe6upk5al4A"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_YwR6QCOREeuaYvKeg9gs_A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0037_0.1.rules#_eZ6GICOaEeuaYvKeg9gs_A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_E1bw5iObEeuaYvKeg9gs_A"/>
     <taggedValue xmi:id="_os2vgQ-4EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_os2vgg-4EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_os2vgw-4EeuDXaq6WQCs8A" tag="Purpose" value="DQ Business Rules"/>
@@ -17,7 +19,7 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
     </context>
     <results xmi:id="_os2viQ-4EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-11-10T16:23:13.685-0500" executionDuration="8720" message="" executionNumber="15" lastRunOk="true" lastExecutionNumberOk="14"/>
+      <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-11-10T16:24:12.638-0500" executionDuration="10365" message="" executionNumber="16" lastRunOk="true" lastExecutionNumberOk="15"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_R-kD8COTEeuaYvKeg9gs_A" count="1330096" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_NXwQ5SOTEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -26,6 +28,20 @@
           <taggedValue xmi:id="_SToVASOTEeuaYvKeg9gs_A" tag="Description" value="counts the number of rows"/>
           <taggedValue xmi:id="_SToVAiOTEeuaYvKeg9gs_A" tag="Purpose" value="evaluates the number of records"/>
           <sqlGenericExpression xmi:id="_SToVAyOTEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_E1R_4CObEeuaYvKeg9gs_A" count="1330096" computed="true" userCount="1330077">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_NXwQ5SOTEeuaYvKeg9gs_A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0037_0.1.rules#_WfwwgSOOEeuaYvKeg9gs_A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_E_C_4CObEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Address&quot;   WHERE ( std_no in (select std_no from vStudent)&#xD;&#xA;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_E-4AwCObEeuaYvKeg9gs_A" name="SIS-DQ0037" criticalityLevel="1" whereExpression=" std_no in (select std_no from vStudent)&#xD;&#xA;">
+          <taggedValue xmi:id="_E-4AwSObEeuaYvKeg9gs_A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_E-4AwiObEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_E-4AwyObEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_E-4AxCObEeuaYvKeg9gs_A" tag="Description" value="Integrity rule student number is foreign key and should exist in student table as domestic student."/>
+          <taggedValue xmi:id="_E-4AxSObEeuaYvKeg9gs_A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_E-4AxiObEeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_E-4AxyObEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_eZz_gCOaEeuaYvKeg9gs_A" count="1215573" computed="true">
@@ -42,7 +58,7 @@
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_aNeYYSOOEeuaYvKeg9gs_A"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_1uqmEiOaEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;  s  JOIN  &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Address_AggString_HomeLocal&quot;  va  ON (s.&quot;std_no&quot;=va.&quot;std_no&quot;)  WHERE (va.HomeLocal_AGG ='H,L' or va.HomeLocal_AGG='H' or va.HomeLocal_AGG='L,H' &#xD;&#xA;)" language="Microsoft SQL Server"/>
-        <joinConditions xmi:id="_8oK0gCOaEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="va" columnAliasA="std_no" columnAliasB="std_no">
+        <joinConditions xmi:id="_FnYLMCObEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="va" columnAliasA="std_no" columnAliasB="std_no">
           <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_SvSSECOaEeuaYvKeg9gs_A"/>
           <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_TbNj8COaEeuaYvKeg9gs_A"/>
         </joinConditions>
@@ -54,6 +70,20 @@
           <taggedValue xmi:id="_1um7tSOaEeuaYvKeg9gs_A" tag="Version" value="0.1"/>
           <taggedValue xmi:id="_1um7tiOaEeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
           <sqlGenericExpression xmi:id="_1um7tyOaEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_E1R_4SObEeuaYvKeg9gs_A" count="1330096" computed="true" userCount="1215573">
+        <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0039_0.1.rules#_vZhmYQ-5EeuDXaq6WQCs8A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_E_Dm8CObEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_E-85QCObEeuaYvKeg9gs_A" name="SIS-DQ0039" criticalityLevel="1" whereExpression="1=1">
+          <taggedValue xmi:id="_E-85QSObEeuaYvKeg9gs_A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_E-85QiObEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_E-85QyObEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_E-85RCObEeuaYvKeg9gs_A" tag="Description" value="valid Home or Local Indicator"/>
+          <taggedValue xmi:id="_E-85RSObEeuaYvKeg9gs_A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_E-85RiObEeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_E-85RyObEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>

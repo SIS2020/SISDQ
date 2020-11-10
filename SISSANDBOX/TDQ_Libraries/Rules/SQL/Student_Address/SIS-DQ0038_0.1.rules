@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <dataquality.rules:WhereRule xmi:id="_aNeYYSOOEeuaYvKeg9gs_A" name="SIS-DQ0038" criticalityLevel="1" whereExpression="va.HomeLocal_AGG ='H,L' or va.HomeLocal_AGG='H' or va.HomeLocal_AGG='L,H' &#xD;&#xA;">
+  <dataquality.rules:WhereRule xmi:id="_aNeYYSOOEeuaYvKeg9gs_A" name="SIS-DQ0038" supplierDependency="_E1bw5iObEeuaYvKeg9gs_A" criticalityLevel="1" whereExpression="va.HomeLocal_AGG ='H,L' or va.HomeLocal_AGG='H' or va.HomeLocal_AGG='L,H' &#xD;&#xA;">
     <taggedValue xmi:id="_aNeYYiOOEeuaYvKeg9gs_A" tag="Status" value="development"/>
     <taggedValue xmi:id="_aNeYYyOOEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_aNeYZCOOEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
@@ -15,6 +15,9 @@
     </joins>
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_YwR6QCOREeuaYvKeg9gs_A" kind="Usage">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/student_address_0.1.ana#_os2vgA-4EeuDXaq6WQCs8A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_E1bw5iObEeuaYvKeg9gs_A" kind="Usage" supplier="_aNeYYSOOEeuaYvKeg9gs_A">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/student_address_0.1.ana#_os2vgA-4EeuDXaq6WQCs8A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
