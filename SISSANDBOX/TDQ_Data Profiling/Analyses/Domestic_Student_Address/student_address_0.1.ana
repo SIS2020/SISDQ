@@ -16,7 +16,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgiOPEeuaYvKeg9gs_A"/>
     </context>
     <results xmi:id="_os2viQ-4EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-11-10T15:00:20.902-0500" executionDuration="11225" message="" executionNumber="11" lastRunOk="true" lastExecutionNumberOk="11"/>
+      <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-11-10T15:21:31.514-0500" executionDuration="1824" message="" executionNumber="12" lastRunOk="true" lastExecutionNumberOk="12"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_XBV-ICOPEeuaYvKeg9gs_A" count="1330096" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgiOPEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -40,10 +40,6 @@
           <taggedValue xmi:id="_XMoBFiOPEeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
           <sqlGenericExpression xmi:id="_XMoBFyOPEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_MptUkCOSEeuaYvKeg9gs_A">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgiOPEeuaYvKeg9gs_A"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_aNeYYSOOEeuaYvKeg9gs_A"/>
       </indicators>
     </results>
     <parameters xmi:id="_os2vmw-4EeuDXaq6WQCs8A" dataFilter="_os2vnQ-4EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
