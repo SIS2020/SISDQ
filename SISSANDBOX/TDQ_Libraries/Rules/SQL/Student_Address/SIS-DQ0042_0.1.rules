@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_AXEeQSOSEeuaYvKeg9gs_A" name="SIS-DQ0042" criticalityLevel="1" whereExpression="--Note: this can be run as business rule,but it's probably better to run it as a Talend job. &#xD;&#xA;1=1&#xD;&#xA;">
+  <dataquality.rules:WhereRule xmi:id="_AXEeQSOSEeuaYvKeg9gs_A" name="SIS-DQ0042" supplierDependency="_H0c_YyOeEeuaYvKeg9gs_A" criticalityLevel="1" whereExpression="--Note: this can be run as business rule,but it's probably better to run it as a Talend job. &#xD;&#xA;1=1&#xD;&#xA;">
     <taggedValue xmi:id="_AXEeQiOSEeuaYvKeg9gs_A" tag="Status" value="development"/>
     <taggedValue xmi:id="_AXEeQyOSEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_AXEeRCOSEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
@@ -12,5 +12,9 @@
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_6o0WcCObEeuaYvKeg9gs_A" kind="Usage">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/Student_Address_Domestic_0.1.ana#_akgscSObEeuaYvKeg9gs_A"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/Copy_of_Student_Address_Domestic_0.1.ana#_Hz_FUCOeEeuaYvKeg9gs_A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_H0c_YyOeEeuaYvKeg9gs_A" kind="Usage" supplier="_AXEeQSOSEeuaYvKeg9gs_A">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/Copy_of_Student_Address_Domestic_0.1.ana#_Hz_FUCOeEeuaYvKeg9gs_A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>

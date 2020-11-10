@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_K6LQoSOSEeuaYvKeg9gs_A" name="SIS-DQ0049" supplierDependency="_6pivMCObEeuaYvKeg9gs_A" criticalityLevel="1" whereExpression="1=1&#xD;&#xA;&#xD;&#xA;">
+  <dataquality.rules:WhereRule xmi:id="_K6LQoSOSEeuaYvKeg9gs_A" name="SIS-DQ0049" supplierDependency="_H1YMcyOeEeuaYvKeg9gs_A" criticalityLevel="1" whereExpression="1=1&#xD;&#xA;&#xD;&#xA;">
     <taggedValue xmi:id="_K6LQoiOSEeuaYvKeg9gs_A" tag="Status" value="development"/>
     <taggedValue xmi:id="_K6LQoyOSEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_K6LQpCOSEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
@@ -10,7 +10,11 @@
     <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_K6LQqCOSEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_6pivMCObEeuaYvKeg9gs_A" kind="Usage" supplier="_K6LQoSOSEeuaYvKeg9gs_A">
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_6pivMCObEeuaYvKeg9gs_A" kind="Usage">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/Student_Address_Domestic_0.1.ana#_akgscSObEeuaYvKeg9gs_A"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/Copy_of_Student_Address_Domestic_0.1.ana#_Hz_FUCOeEeuaYvKeg9gs_A"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_H1YMcyOeEeuaYvKeg9gs_A" kind="Usage" supplier="_K6LQoSOSEeuaYvKeg9gs_A">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/Copy_of_Student_Address_Domestic_0.1.ana#_Hz_FUCOeEeuaYvKeg9gs_A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
