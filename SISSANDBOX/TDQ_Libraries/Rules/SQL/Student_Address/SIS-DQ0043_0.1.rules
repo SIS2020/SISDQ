@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_N36VEBIjEeucK-9f6NjiJg" name="DQ1_Country" supplierDependency="_oKmdIB8FEeukpM_ACLlX9g" criticalityLevel="1" whereExpression="1=1">
+  <dataquality.rules:WhereRule xmi:id="_N36VEBIjEeucK-9f6NjiJg" name="SIS-DQ0043" supplierDependency="_oKmdIB8FEeukpM_ACLlX9g" criticalityLevel="1" whereExpression="1=1">
     <taggedValue xmi:id="_N36VERIjEeucK-9f6NjiJg" tag="Status" value="development"/>
     <taggedValue xmi:id="_N36VEhIjEeucK-9f6NjiJg" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_N36VExIjEeucK-9f6NjiJg" tag="Purpose" value="DQ Profiling"/>
-    <taggedValue xmi:id="_N36VFBIjEeucK-9f6NjiJg" tag="Description" value="Using the ISO 9000? standard for this. "/>
+    <taggedValue xmi:id="_N36VFBIjEeucK-9f6NjiJg" tag="Description" value="valid city"/>
     <taggedValue xmi:id="_N36VFRIjEeucK-9f6NjiJg" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_N36VFhIjEeucK-9f6NjiJg" tag="Validation_Status" value="true"/>
     <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_N36VFxIjEeucK-9f6NjiJg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_UUiaQBIjEeucK-9f6NjiJg" kind="Usage">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/Student_Address_0.1.ana#_os2vgA-4EeuDXaq6WQCs8A"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/student_address_0.1.ana#_os2vgA-4EeuDXaq6WQCs8A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_oKmdIB8FEeukpM_ACLlX9g" kind="Usage" supplier="_N36VEBIjEeucK-9f6NjiJg"/>
 </xmi:XMI>
