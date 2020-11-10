@@ -41,6 +41,10 @@
           <sqlGenericExpression xmi:id="_XMoBFyOPEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_MptUkCOSEeuaYvKeg9gs_A">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgiOPEeuaYvKeg9gs_A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_aNeYYSOOEeuaYvKeg9gs_A"/>
+      </indicators>
     </results>
     <parameters xmi:id="_os2vmw-4EeuDXaq6WQCs8A" dataFilter="_os2vnQ-4EeuDXaq6WQCs8A" analysisType="Table Analysis"/>
     <contextType xmi:id="_os2vnA-4EeuDXaq6WQCs8A" confirmationNeeded="false" name="Default"/>
