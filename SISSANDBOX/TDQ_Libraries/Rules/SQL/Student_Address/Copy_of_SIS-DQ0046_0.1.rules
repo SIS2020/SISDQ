@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_FBYRQCOSEeuaYvKeg9gs_A" name="Copy_of_SIS-DQ0046" criticalityLevel="1" whereExpression="1=1">
+  <taggedValue xmi:id="_FBYRQSOSEeuaYvKeg9gs_A" tag="Status" value="development"/>
+  <taggedValue xmi:id="_FBYRQiOSEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
+  <taggedValue xmi:id="_FBYRQyOSEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
+  <taggedValue xmi:id="_FBYRRCOSEeuaYvKeg9gs_A" tag="Description" value="valid city"/>
+  <taggedValue xmi:id="_FBYRRSOSEeuaYvKeg9gs_A" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_FBYRRiOSEeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
+  <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+  <sqlGenericExpression xmi:id="_FBYRRyOSEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+</dataquality.rules:WhereRule>
