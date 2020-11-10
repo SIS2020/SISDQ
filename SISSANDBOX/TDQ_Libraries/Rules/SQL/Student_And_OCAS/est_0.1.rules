@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:WhereRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_Yjq5QSOfEeuu94OjwV8eSQ" name="est" criticalityLevel="1" whereExpression="-- This will return all the rows where the student number only exists once in the student table. )&#xD;&#xA;&#xD;&#xA;std_no in&#xD;&#xA;(&#xD;&#xA;&#x9;SELECT vs.std_no  FROM [DQ].[dbo].[vStudent] vs group by vs.std_no having count(*)=1&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;">
+  <taggedValue xmi:id="_Yjq5QiOfEeuu94OjwV8eSQ" tag="Status" value="development"/>
+  <taggedValue xmi:id="_Yjq5QyOfEeuu94OjwV8eSQ" tag="Author" value="hossiei@algonquincollege.com"/>
+  <taggedValue xmi:id="_Yjq5RCOfEeuu94OjwV8eSQ" tag="Purpose" value="DQ Profiling"/>
+  <taggedValue xmi:id="_Yjq5RSOfEeuu94OjwV8eSQ" tag="Description" value="Each student has a Unique Student Number."/>
+  <taggedValue xmi:id="_Yjq5RiOfEeuu94OjwV8eSQ" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_Yjq5RyOfEeuu94OjwV8eSQ" tag="Validation_Status" value="true"/>
+  <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
+  <sqlGenericExpression xmi:id="_Yjq5SCOfEeuu94OjwV8eSQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+</dataquality.rules:WhereRule>
