@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_WfwwgSOOEeuaYvKeg9gs_A" name="SIS-DQ0037" supplierDependency="_W1vLECOPEeuaYvKeg9gs_A" criticalityLevel="1" whereExpression="std_no not in (select std_no from sisdba.student)&#xD;&#xA;">
+  <dataquality.rules:WhereRule xmi:id="_WfwwgSOOEeuaYvKeg9gs_A" name="SIS-DQ0037" supplierDependency="_W1vLECOPEeuaYvKeg9gs_A" criticalityLevel="1" whereExpression=" std_no in (select std_no from vStudent)&#xD;&#xA;">
     <taggedValue xmi:id="_WfwwgiOOEeuaYvKeg9gs_A" tag="Status" value="development"/>
     <taggedValue xmi:id="_WfwwgyOOEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_WfwwhCOOEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
