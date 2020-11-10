@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_vZhmYQ-5EeuDXaq6WQCs8A" name="DQ1_HomeOrLocalAddressIndicator" supplierDependency="_UUq9IBIjEeucK-9f6NjiJg" criticalityLevel="1" whereExpression="1=1">
+  <dataquality.rules:WhereRule xmi:id="_vZhmYQ-5EeuDXaq6WQCs8A" name="SIS-DQ0039" supplierDependency="_UUq9IBIjEeucK-9f6NjiJg" criticalityLevel="1" whereExpression="1=1">
     <taggedValue xmi:id="_vZhmYg-5EeuDXaq6WQCs8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_vZhmYw-5EeuDXaq6WQCs8A" tag="Author" value="hossiei@algonquincollege.com"/>
-    <taggedValue xmi:id="_vZhmZA-5EeuDXaq6WQCs8A" tag="Purpose" value=""/>
-    <taggedValue xmi:id="_vZhmZQ-5EeuDXaq6WQCs8A" tag="Description" value=""/>
+    <taggedValue xmi:id="_vZhmZA-5EeuDXaq6WQCs8A" tag="Purpose" value="DQ Profiling"/>
+    <taggedValue xmi:id="_vZhmZQ-5EeuDXaq6WQCs8A" tag="Description" value="valid Home or Local Indicator"/>
     <taggedValue xmi:id="_vZhmZg-5EeuDXaq6WQCs8A" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_vZhmZw-5EeuDXaq6WQCs8A" tag="Validation_Status" value="true"/>
     <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_vZhmaA-5EeuDXaq6WQCs8A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_UUq9IBIjEeucK-9f6NjiJg" kind="Usage" supplier="_vZhmYQ-5EeuDXaq6WQCs8A">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/Student_Address_0.1.ana#_os2vgA-4EeuDXaq6WQCs8A"/>
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/student_address_0.1.ana#_os2vgA-4EeuDXaq6WQCs8A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
