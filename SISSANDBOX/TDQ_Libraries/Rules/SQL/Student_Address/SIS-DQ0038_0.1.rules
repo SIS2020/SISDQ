@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.rules:WhereRule xmi:id="_aNeYYSOOEeuaYvKeg9gs_A" name="SIS-DQ0038" supplierDependency="_YwR6QCOREeuaYvKeg9gs_A" criticalityLevel="1" whereExpression="1=1">
     <taggedValue xmi:id="_aNeYYiOOEeuaYvKeg9gs_A" tag="Status" value="development"/>
     <taggedValue xmi:id="_aNeYYyOOEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
@@ -9,6 +9,10 @@
     <taggedValue xmi:id="_aNeYZyOOEeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
     <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_aNeYaCOOEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+    <joins xmi:id="_bHy1ICOaEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="vg" columnAliasA="std_no" columnAliasB="std_no">
+      <colA xsi:type="relational:TdColumn" href="../../../../metadata/connections/ConnectionDQ_0.1.item#_SvSSECOaEeuaYvKeg9gs_A"/>
+      <colB xsi:type="relational:TdColumn" href="../../../../metadata/connections/ConnectionDQ_0.1.item#_TbNj8COaEeuaYvKeg9gs_A"/>
+    </joins>
   </dataquality.rules:WhereRule>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_YwR6QCOREeuaYvKeg9gs_A" kind="Usage" supplier="_aNeYYSOOEeuaYvKeg9gs_A">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Domestic_Student_Address/student_address_0.1.ana#_os2vgA-4EeuDXaq6WQCs8A"/>
