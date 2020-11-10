@@ -19,7 +19,7 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
     </context>
     <results xmi:id="_os2viQ-4EeuDXaq6WQCs8A">
-      <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-11-10T16:24:12.638-0500" executionDuration="10365" message="" executionNumber="16" lastRunOk="true" lastExecutionNumberOk="15"/>
+      <resultMetadata xmi:id="_os2vig-4EeuDXaq6WQCs8A" executionDate="2020-11-10T16:25:11.544-0500" executionDuration="10326" message="" executionNumber="17" lastRunOk="true" lastExecutionNumberOk="16"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_R-kD8COTEeuaYvKeg9gs_A" count="1330096" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_NXwQ5SOTEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -58,7 +58,7 @@
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_aNeYYSOOEeuaYvKeg9gs_A"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_1uqmEiOaEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;  s  JOIN  &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Address_AggString_HomeLocal&quot;  va  ON (s.&quot;std_no&quot;=va.&quot;std_no&quot;)  WHERE (va.HomeLocal_AGG ='H,L' or va.HomeLocal_AGG='H' or va.HomeLocal_AGG='L,H' &#xD;&#xA;)" language="Microsoft SQL Server"/>
-        <joinConditions xmi:id="_FnYLMCObEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="va" columnAliasA="std_no" columnAliasB="std_no">
+        <joinConditions xmi:id="_OYsP0CObEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="va" columnAliasA="std_no" columnAliasB="std_no">
           <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_SvSSECOaEeuaYvKeg9gs_A"/>
           <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_TbNj8COaEeuaYvKeg9gs_A"/>
         </joinConditions>
