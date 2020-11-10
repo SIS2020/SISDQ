@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_Hz_FUCOeEeuaYvKeg9gs_A" name="Copy_of_Student_Address_Domestic" creationDate="2020-09-14T10:27:37.795-0400" defaultContext="Default">
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0037_0.1.rules#_W1vLECOPEeuaYvKeg9gs_A"/>
     <clientDependency href="../../../metadata/connections/ConnectionDQ_0.1.item#_3zwg0iLKEeuBe6upk5al4A"/>
@@ -28,7 +28,7 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
     </context>
     <results xmi:id="_Hz_FWSOeEeuaYvKeg9gs_A">
-      <resultMetadata xmi:id="_Hz_FWiOeEeuaYvKeg9gs_A" executionDate="2020-11-10T16:46:13.931-0500" executionDuration="8802" message="" executionNumber="25" lastRunOk="true" lastExecutionNumberOk="24"/>
+      <resultMetadata xmi:id="_Hz_FWiOeEeuaYvKeg9gs_A" executionDate="2020-11-10T16:47:13.143-0500" executionDuration="739" message="" executionNumber="26" lastRunOk="true" lastExecutionNumberOk="25"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_Hz_FWyOeEeuaYvKeg9gs_A" count="1215573" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -39,9 +39,19 @@
           <sqlGenericExpression xmi:id="_Hz_FYCOeEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_SYBEwCOeEeuaYvKeg9gs_A">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_SYBEwCOeEeuaYvKeg9gs_A" count="1215573" computed="true" userCount="1215573">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0049_0.1.rules#_K6LQoSOSEeuaYvKeg9gs_A"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_SskYcCOeEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Ssff8COeEeuaYvKeg9gs_A" name="SIS-DQ0049" criticalityLevel="1" whereExpression="1=1&#xD;&#xA;&#xD;&#xA;">
+          <taggedValue xmi:id="_Ssff8SOeEeuaYvKeg9gs_A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_Ssff8iOeEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_Ssff8yOeEeuaYvKeg9gs_A" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_Ssff9COeEeuaYvKeg9gs_A" tag="Description" value="valid phone number format if not 0"/>
+          <taggedValue xmi:id="_Ssff9SOeEeuaYvKeg9gs_A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_Ssff9iOeEeuaYvKeg9gs_A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_Ssff9yOeEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
       </indicators>
     </results>
     <parameters xmi:id="_Hz_F2yOeEeuaYvKeg9gs_A" dataFilter="_Hz_F3SOeEeuaYvKeg9gs_A" analysisType="Table Analysis"/>
