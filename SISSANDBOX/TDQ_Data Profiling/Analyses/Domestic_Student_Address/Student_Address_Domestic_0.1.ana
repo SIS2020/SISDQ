@@ -29,7 +29,7 @@
       <analysedElements xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
     </context>
     <results xmi:id="_akgseiObEeuaYvKeg9gs_A">
-      <resultMetadata xmi:id="_akgseyObEeuaYvKeg9gs_A" executionDate="2020-11-10T16:40:44.926-0500" executionDuration="9989" message="Query not executed for indicator: &quot;SIS-DQ0048&quot; SQL query: SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;--Can be run from here). Exception: Incorrect syntax near '1'." executionNumber="19" lastRunOk="true" lastExecutionNumberOk="18"/>
+      <resultMetadata xmi:id="_akgseyObEeuaYvKeg9gs_A" executionDate="2020-11-10T16:42:02.929-0500" executionDuration="10126" message="Query not executed for indicator: &quot;SIS-DQ0047&quot; SQL query: SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;--Can be run from here as long as valid area code is limited to North American codes). Exception: Incorrect syntax near '1'." executionNumber="20" lastRunOk="true" lastExecutionNumberOk="19"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_akgsjCObEeuaYvKeg9gs_A" count="1215573" computed="true">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -44,7 +44,7 @@
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0038_0.1.rules#_aNeYYSOOEeuaYvKeg9gs_A"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_akgskyObEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;  s  JOIN  &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Address_AggString_HomeLocal&quot;  va  ON (s.&quot;std_no&quot;=va.&quot;std_no&quot;)  WHERE (va.HomeLocal_AGG ='H,L' or va.HomeLocal_AGG='H' or va.HomeLocal_AGG='L,H' &#xD;&#xA;)" language="Microsoft SQL Server"/>
-        <joinConditions xmi:id="_e1nqYSOdEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="va" columnAliasA="std_no" columnAliasB="std_no">
+        <joinConditions xmi:id="_k3ma8COdEeuaYvKeg9gs_A" operator="=" tableAliasA="s" tableAliasB="va" columnAliasA="std_no" columnAliasB="std_no">
           <colA xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_SvSSECOaEeuaYvKeg9gs_A"/>
           <colB xsi:type="relational:TdColumn" href="../../../metadata/connections/ConnectionDQ_0.1.item#_TbNj8COaEeuaYvKeg9gs_A"/>
         </joinConditions>
@@ -185,10 +185,10 @@
           <sqlGenericExpression xmi:id="_Y2Fw5yOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaSCOcEeuaYvKeg9gs_A" count="1215573">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ZyWaSCOcEeuaYvKeg9gs_A" count="1215573" computed="true" userCount="1215573">
         <analyzedElement xsi:type="relational:TdView" href="../../../metadata/connections/ConnectionDQ_0.1.item#_PbjQdyOaEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_Address/SIS-DQ0048_0.1.rules#_JlWLsCOSEeuaYvKeg9gs_A"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph6SOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (1=1&#xD;&#xA;&#xD;&#xA;--Can be run from here)" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_Y2Ph6SOdEeuaYvKeg9gs_A" body="SELECT COUNT(*) FROM &quot;DQ&quot;.&quot;dbo&quot;.&quot;vStudent_Domestic&quot;   WHERE (--Can be run from here&#xD;&#xA;&#xD;&#xA;1=1)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_Y2Fw6COdEeuaYvKeg9gs_A" name="SIS-DQ0048" criticalityLevel="1" whereExpression="1=1&#xD;&#xA;&#xD;&#xA;--Can be run from here">
           <taggedValue xmi:id="_Y2Fw6SOdEeuaYvKeg9gs_A" tag="Status" value="development"/>
           <taggedValue xmi:id="_Y2Fw6iOdEeuaYvKeg9gs_A" tag="Author" value="hossiei@algonquincollege.com"/>
