@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_9puQ0B33Eeu08-Q-yIawhQ" name="SIS-DQ0017" supplierDependency="_fPPO4B34Eeu08-Q-yIawhQ" criticalityLevel="1" whereExpression="IsNull(mother_tongue,'') !=''">
+  <dataquality.rules:WhereRule xmi:id="_9puQ0B33Eeu08-Q-yIawhQ" name="SIS-DQ0017" supplierDependency="_nDNtwCQoEeu8TdwlHaP2EQ" criticalityLevel="1" whereExpression="IsNull(mother_tongue,'') !=''">
     <taggedValue xmi:id="_9puQ0R33Eeu08-Q-yIawhQ" tag="Status" value="development"/>
     <taggedValue xmi:id="_9puQ0h33Eeu08-Q-yIawhQ" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_9puQ0x33Eeu08-Q-yIawhQ" tag="Purpose" value="DQ Profiling"/>
@@ -10,7 +10,10 @@
     <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_9puQ1x33Eeu08-Q-yIawhQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_fPPO4B34Eeu08-Q-yIawhQ" kind="Usage" supplier="_9puQ0B33Eeu08-Q-yIawhQ">
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_fPPO4B34Eeu08-Q-yIawhQ" kind="Usage">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_nDNtwCQoEeu8TdwlHaP2EQ" kind="Usage" supplier="_9puQ0B33Eeu08-Q-yIawhQ">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
