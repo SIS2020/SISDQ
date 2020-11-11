@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
   <dataquality.rules:WhereRule xmi:id="_EbkioR35Eeu08-Q-yIawhQ" name="SIS-DQ0025" supplierDependency="_VO8jwB36Eeu08-Q-yIawhQ" criticalityLevel="1" whereExpression="1=1">
     <taggedValue xmi:id="_Ebkioh35Eeu08-Q-yIawhQ" tag="Status" value="development"/>
     <taggedValue xmi:id="_Ebkiox35Eeu08-Q-yIawhQ" tag="Author" value="hossiei@algonquincollege.com"/>
@@ -10,5 +10,7 @@
     <categories href="../../../.Talend.definition#_8i9eQBI5Ed6TWL6NwMMHzQ"/>
     <sqlGenericExpression xmi:id="_EbkiqB35Eeu08-Q-yIawhQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
   </dataquality.rules:WhereRule>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_VO8jwB36Eeu08-Q-yIawhQ" kind="Usage" supplier="_EbkioR35Eeu08-Q-yIawhQ"/>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_VO8jwB36Eeu08-Q-yIawhQ" kind="Usage" supplier="_EbkioR35Eeu08-Q-yIawhQ">
+    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
