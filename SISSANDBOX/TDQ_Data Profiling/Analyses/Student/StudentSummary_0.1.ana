@@ -42,7 +42,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgSOPEeuaYvKeg9gs_A"/>
     </context>
     <results xmi:id="_wg9gmB8EEeukpM_ACLlX9g">
-      <resultMetadata xmi:id="_wg9gmR8EEeukpM_ACLlX9g" executionDate="2020-11-11T09:15:15.198-0500" executionDuration="20451" message="Query not executed for indicator: &quot;SIS-DQ0027&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (encumb_flag in ('Y',N')&#xD;&#xA;). Exception: Invalid SQL statement or JDBC escape, terminating ''' not found." executionNumber="6" lastRunOk="true" lastExecutionNumberOk="6"/>
+      <resultMetadata xmi:id="_wg9gmR8EEeukpM_ACLlX9g" executionDate="2020-11-11T09:16:46.884-0500" executionDuration="17862" message="Query not executed for indicator: &quot;SIS-DQ0002&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE ( uniqueID is null). Exception: Invalid column name 'uniqueID'." executionNumber="7" lastRunOk="true" lastExecutionNumberOk="7"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_SYQhoCQoEeu8TdwlHaP2EQ" count="1289810" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgSOPEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -417,10 +417,10 @@
           <sqlGenericExpression xmi:id="_UZgAryQoEeu8TdwlHaP2EQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_SYQhuyQoEeu8TdwlHaP2EQ" count="1289810">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_SYQhuyQoEeu8TdwlHaP2EQ" count="1289810" computed="true" userCount="1289810">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgSOPEeuaYvKeg9gs_A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/SIS-DQ0027_0.1.rules#_TAiA4B35Eeu08-Q-yIawhQ"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_UaTR-yQoEeu8TdwlHaP2EQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (encumb_flag in ('Y',N')&#xD;&#xA;)" language="Microsoft SQL Server"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_UaTR-yQoEeu8TdwlHaP2EQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (1=1)" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_UZpKkCQoEeu8TdwlHaP2EQ" name="SIS-DQ0027" criticalityLevel="1" whereExpression="encumb_flag in ('Y',N')&#xD;&#xA;">
           <taggedValue xmi:id="_UZpKkSQoEeu8TdwlHaP2EQ" tag="Status" value="development"/>
           <taggedValue xmi:id="_UZpKkiQoEeu8TdwlHaP2EQ" tag="Author" value="hossiei@algonquincollege.com"/>
