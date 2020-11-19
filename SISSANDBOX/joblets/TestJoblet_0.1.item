@@ -45,7 +45,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:Xodjzc0l+8TCZF40CBXo1tJaPpp/xGj0m2iLLuIx"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:sEREzYNVFPfkcUPr6tQ4cbGnrhoAhezHNBb8Cxw3"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -81,12 +81,50 @@
       <routinesParameter id="_blCnIApGEeuQj8iTNBbh7Q" name="TalendStringUtil"/>
       <routinesParameter id="_bk6EQApGEeuQj8iTNBbh7Q" name="TalendString"/>
     </parameters>
+    <node componentName="tVerifyEmail" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tVerifyEmail_1"/>
+      <elementParameter field="PREV_COLUMN_LIST" name="EMAIL_COLUMN" value="DataQualityRule"/>
+      <elementParameter field="CHECK" name="USE_REGULAR_EXPRESSION" value="false"/>
+      <elementParameter field="TEXT" name="COMPLETE_REGEX" show="false" value="&quot;^(([^\\s\\p{Cntrl}\\(\\)&lt;&gt;@,;:'\\\\\\\&quot;\\.\\[\\]]|')+|(\\\&quot;[^\\\&quot;]*\\\&quot;))(\\.(([^\\s\\p{Cntrl}\\(\\)&lt;&gt;@,;:'\\\\\\\&quot;\\.\\[\\]]|')+|(\\\&quot;[^\\\&quot;]*\\\&quot;)))*@([\\p{L}\\p{M}0-9]([\\p{L}\\p{M}0-9\\-]{0,61}[\\p{L}\\p{M}0-9])?\\.)+[\\p{L}\\p{M}]{2,6}$&quot;"/>
+      <elementParameter field="RADIO" name="USE_REGEX" value="true"/>
+      <elementParameter field="RADIO" name="USE_SHORT" value="false"/>
+      <elementParameter field="RADIO" name="USE_COLUMN" value="false"/>
+      <elementParameter field="CHECK" name="CASE_SENSITIVE" value="true"/>
+      <elementParameter field="TEXT" name="LOCAL_REGEX_PART" value="&quot;^\\s*(([^\\s\\p{Cntrl}\\(\\)&lt;&gt;@,;:'\\\\\\\&quot;\\.\\[\\]]|')+|(\&quot;[^\&quot;]*\&quot;))(\\.(([^\\s\\p{Cntrl}\\(\\)&lt;&gt;@,;:'\\\\\\\&quot;\\.\\[\\]]|')+|(\&quot;[^\&quot;]*\&quot;)))*$&quot;"/>
+      <elementParameter field="TEXT" name="LOCAL_SHORT_PART" show="false" value="&quot;w[-_.]w&quot;"/>
+      <elementParameter field="PREV_COLUMN_LIST" name="COLUMN_FIRSTNAME" show="false" value="DataQualityRule"/>
+      <elementParameter field="TEXT" name="COLUMN_NFIRSTCHAR_FIRSTNAME" show="false" value="&quot;1&quot;"/>
+      <elementParameter field="TEXT" name="COLUMN_NLASTCHAR_FIRSTNAME" show="false" value="&quot;20&quot;"/>
+      <elementParameter field="PREV_COLUMN_LIST" name="COLUMN_LASTNAME" show="false" value="DataQualityRule"/>
+      <elementParameter field="TEXT" name="COLUMN_NFIRSTCHAR_LASTNAME" show="false" value="&quot;1&quot;"/>
+      <elementParameter field="TEXT" name="COLUMN_NLASTCHAR_LASTNAME" show="false" value="&quot;20&quot;"/>
+      <elementParameter field="TEXT" name="COLUMN_SEPARATOR" show="false" value="&quot;-&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="COLUMN_CASE_TYPE" show="false" value="L"/>
+      <elementParameter field="CHECK" name="SHOW_HELP" show="false" value="false"/>
+      <elementParameter field="LABEL" name="HELP_CONTENT" show="false" value=" &#10;    Syntax              Equivalent Regex                Description   &#10;    9                        [0-9]                                     adigit       &#10;    a                        [a-z]                                     a lowercased ascii letter    &#10;    A                       [A-Z]                                    an uppercased ascii letter   &#10;    w                       [a-z]+                                  one or more lowercased ascii letters &#10;    W                      [A-Z]+                                  one or more uppercased ascii letters&#10;    ?                        .                                            any character which valid in the email address&#10;    *                        .*                                          any string which valid in the email address&#10;    .                        \.                                           the period symbol &#10;    [-_+]                 [-_+]                                    any of the symbols listed between brackets   &#10;    &lt;pattern&gt;        pattern                                any standard regex can be placed inside angle brackets&#10;    "/>
+      <elementParameter field="CHECK" name="CHECK_TLDS" value="true"/>
+      <elementParameter field="TABLE" name="ADDITIONAL_TLDS"/>
+      <elementParameter field="RADIO" name="CHECK_BLACK_DOMAINS" value="true"/>
+      <elementParameter field="RADIO" name="CHECK_WHITE_DOMAINS" value="false"/>
+      <elementParameter field="TABLE" name="DOMAINS_LIST"/>
+      <elementParameter field="CHECK" name="CALL_BACK" value="false"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tVerifyEmail_1">
+        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="10" name="std_no" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="5" name="college" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="5" name="pref" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+        <column comment="" key="false" length="50" name="email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+        <column key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column key="false" length="31" name="SuggestedEmail" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
     <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="192">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
       <elementParameter field="EXTERNAL" name="MAP" value=""/>
       <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
       <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-      <elementParameter field="IMAGE" name="PREVIEW" value="_sfc6YCpyEeu3yYbjoOAVNA-tMap_1-PREVIEW.bmp"/>
+      <elementParameter field="IMAGE" name="PREVIEW" value="_c77FoCpzEeu3yYbjoOAVNA-tMap_1-PREVIEW.bmp"/>
       <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
       <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
       <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -127,7 +165,11 @@
         </inputTables>
       </nodeData>
     </node>
-    <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tMap_1">
+    <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tVerifyEmail_1">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    </connection>
+    <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tVerifyEmail_1" offsetLabelX="0" offsetLabelY="0" source="tVerifyEmail_1" target="tMap_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
     </connection>
@@ -140,7 +182,7 @@
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
-    <jobletNodes componentName="INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
+    <jobletNodes componentName="INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="352" posY="192">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1"/>
       <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
       <elementParameter field="CHECK" name="START" show="false" value="true"/>
@@ -180,13 +222,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_04a1193d-b367-471a-97c2-3e99a6852c04"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2vtGMCsXp6BSbgNR+S0Q/fjdwU2PeK++G/v5tsvVFz8FQ/Esc//GPf8NR8Hhp31bS4ItcK9sPRKD
-5CWl8QPpaw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f4c2cce0-2a2d-4d04-ba50-71c482562fb1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Y/JJ3Nm//XgMojwvoN5fZ1+3wp8NDWbg1Fzu9gGJTyzRRAGnVrhQhJhYsTLwD+AVbjGZ+X54sgaD
-ZcfpF/t6nA==</DigestValue></Reference></SignedInfo><SignatureValue>Pp45GhWWEqBwD7zAnKPZ6QC7nHUsV131ncJYwQKvrR6kGZkNi5ppS4B3M72gOuNBz26z+TOogFee
-UMSGa+enWa6gy8GwYfx2JPBSCjKXxtOrpAJHy2littnFvN8Wn9tv4FVIYrgiQ4kBOpMxC1hZjAUk
-vQfkRPkDVSn+gT5h4VGDLdccn8kpqBjw6FlQJjo/8dviWcvoIbcFHLIXF36p27pj9TEILm9kokdg
-wKyN53InILeYnZ7J1AglqyjoeFKQnJS0+WaDu+yGt7pUaYwAEQFw1Zt+uAYjiL0EIjFp3RM5fLcu
-H1I9kduWpNZDuBscHH7UL7dclKc8iX8OQhDKwQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5b9d67cd-c883-4a3e-8870-89fde8104ad8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TPjftNLurykDGqOUVIaCRE1Bft+IX6wsy0TDuSXNBNiCTvVQXHR7c7wSgB8LZDiIQ1bA0dIDOUon
+0kParO2V9A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c2b10dad-7b27-4a4d-a9af-9c519c4f8802"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LBMTpS+R6f5bJWvP/MbxPb3ehbndE4hOl5oRkRmSOmaxcAjjnYj/0fimrHtIFeaqAoZ85gK9wcX0
+1qAemoaVYg==</DigestValue></Reference></SignedInfo><SignatureValue>QQRk0VTen/8ha+Nqbly9t1aezdKtMwoni0busL7e6SEsB+nH4GXFOVqdvVEZzvndFKedNWk/xDBk
+P4acweZilZM5ZjO2+guQJOhUTC+FNpc/bNbDVzTug61bCktCW/X+MkHBopdjZR8/cHVqxdtocnPz
+QnHNu3719pJ2j0yvwMjkfgKxJyN8xBpGrtOLELHGnNKQ//epdpETA3pr4zk45dBWpahUffrIoYxe
+vfaPzH/nKCQNV+VJNQgdcWA7sJ47FuyjSXI2lG6COB7wH4Ur/fopmwvaCnKnH2ZDLbAvWyZPAO5q
+5rAGKr1hd+cJxpQZzmf+lYoHBdllbKM/XtDGYg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -208,4 +250,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f4c2cce0-2a2d-4d04-ba50-71c482562fb1" Target="#_04a1193d-b367-471a-97c2-3e99a6852c04"><Timestamp>2020-11-19 14:28:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c2b10dad-7b27-4a4d-a9af-9c519c4f8802" Target="#_5b9d67cd-c883-4a3e-8870-89fde8104ad8"><Timestamp>2020-11-19 14:29:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
