@@ -68,9 +68,19 @@
       <version>1.8.0</version>
     </dependency>
     <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.8.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>commons-logging-1.1</artifactId>
+      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -93,6 +103,11 @@
       <version>2.2.1</version>
     </dependency>
     <dependency>
+      <groupId>net.sourceforge.jtds</groupId>
+      <artifactId>jtds</artifactId>
+      <version>1.3.1-patch-20190523</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
       <version>2.12.1</version>
@@ -113,6 +128,11 @@
       <version>1.8.0</version>
     </dependency>
     <dependency>
+      <groupId>org.talend.dataquality</groupId>
+      <artifactId>org.talend.dataquality.email</artifactId>
+      <version>8.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>org.talend.dataquality.parser</artifactId>
       <version>7.3.1</version>
@@ -121,6 +141,11 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.25</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>talend_DB_mssqlUtil-1.3-20190523</artifactId>
+      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -133,34 +158,10 @@
       <version>7.3.1</version>
     </dependency>
     <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0050</artifactId>
+      <groupId>org.example.sissandbox.joblet</groupId>
+      <artifactId>TestJoblet</artifactId>
       <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0054</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0053</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0055</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0052</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0051</artifactId>
-      <version>0.1.0</version>
+      <type>pom</type>
     </dependency>
   </dependencies>
   <build>
