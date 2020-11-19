@@ -45,7 +45,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:4q4WxVehNCLQYOcz7F2glkwpP72vpAlkzCkiddPl"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:mCuMmGyP7i5X/zu5blp49PV6ZWQCj2qOaP+ztfZc"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -81,7 +81,210 @@
       <routinesParameter id="_blCnIApGEeuQj8iTNBbh7Q" name="TalendStringUtil"/>
       <routinesParameter id="_bk6EQApGEeuQj8iTNBbh7Q" name="TalendString"/>
     </parameters>
-    <node componentName="tVerifyEmail" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="448" posY="192">
+    <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="320">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+      <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+      <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+      <elementParameter field="TABLE" name="VALUES">
+        <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+        <elementValue elementRef="VALUE" value="jobName"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
+        <elementValue elementRef="VALUE" value="context.Description"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
+        <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInvalidRows_1_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE&quot;))"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="InvalidRowCount"/>
+        <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE&quot;))"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
+        <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInvalidRows_1_NB_LINE&quot;))"/>
+      </elementParameter>
+      <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+      <elementParameter field="TABLE" name="INTABLE" show="false"/>
+      <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+      <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+      <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+      <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tFixedFlowInput_1">
+        <column comment="" key="false" length="-1" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="320">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+      <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+      <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+      <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+      <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+      <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+      <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+      <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+      <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+      <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+      <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+      <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+      <elementParameter field="TABLE" name="LENGTHS" show="false">
+        <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+        <elementValue elementRef="LENGTH" value="10"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
+        <elementValue elementRef="LENGTH" value="10"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
+        <elementValue elementRef="LENGTH" value="10"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="InvalidRowCount"/>
+        <elementValue elementRef="LENGTH" value="10"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
+        <elementValue elementRef="LENGTH" value="10"/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+      <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tLogRow_1">
+        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="100" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="320">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+      <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="JTDS"/>
+      <elementParameter field="TEXT" name="HOST" show="false" value="&quot;SDWDEV-1&quot;"/>
+      <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
+      <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;results&quot;"/>
+      <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;DQ&quot;"/>
+      <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+      <elementParameter field="TEXT" name="USER" show="false" value="&quot;hossiei&quot;"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:7RTu74ardyyDiMpdVW5xz/0yp0sTDZMgb5VKfOKYH8HYW8Du+rFqBOl3"/>
+      <elementParameter field="DBTABLE" name="TABLE" value="&quot;DataQualityMetrics&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+      <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+      <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+      <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
+      <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="RecordCount"/>
+      <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+      <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+      <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
+      <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
+      <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+      <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+      <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+      <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false"/>
+      <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
+      <elementParameter field="TABLE" name="ADD_COLS"/>
+      <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+      <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+        <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+        <elementValue elementRef="UPDATE_KEY" value="false"/>
+        <elementValue elementRef="DELETE_KEY" value="false"/>
+        <elementValue elementRef="UPDATABLE" value="true"/>
+        <elementValue elementRef="INSERTABLE" value="true"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
+        <elementValue elementRef="UPDATE_KEY" value="false"/>
+        <elementValue elementRef="DELETE_KEY" value="false"/>
+        <elementValue elementRef="UPDATABLE" value="true"/>
+        <elementValue elementRef="INSERTABLE" value="true"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
+        <elementValue elementRef="UPDATE_KEY" value="false"/>
+        <elementValue elementRef="DELETE_KEY" value="false"/>
+        <elementValue elementRef="UPDATABLE" value="true"/>
+        <elementValue elementRef="INSERTABLE" value="true"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="InvalidRowCount"/>
+        <elementValue elementRef="UPDATE_KEY" value="false"/>
+        <elementValue elementRef="DELETE_KEY" value="false"/>
+        <elementValue elementRef="UPDATABLE" value="true"/>
+        <elementValue elementRef="INSERTABLE" value="true"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
+        <elementValue elementRef="UPDATE_KEY" value="false"/>
+        <elementValue elementRef="DELETE_KEY" value="false"/>
+        <elementValue elementRef="UPDATABLE" value="true"/>
+        <elementValue elementRef="INSERTABLE" value="true"/>
+      </elementParameter>
+      <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+      <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+      <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+      <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+      <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tDBOutput_2">
+        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="100" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      </metadata>
+      <metadata connector="REJECT" name="REJECT">
+        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="100" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+        <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+        <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+        <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tMSSqlInvalidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInvalidRows_1"/>
+      <elementParameter field="CLOSED_LIST" name="VALIDATION_TYPE" value="DQ_RULE"/>
+      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+      <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+      <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
+      <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+      <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-INBOUND&quot;"/>
+      <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;sisdba&quot;"/>
+      <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+      <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nodio+kZQUjrX+IJoGWuCbnMVyS7VBU3HsM9P30/Wg18rFUXn47f0Rmd"/>
+      <elementParameter field="DBTABLE" name="TABLE" show="false" value="&quot;student&quot;"/>
+      <elementParameter field="TEXT" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="DQRULES_LIST" show="false" value="SIS-DQ0001"/>
+      <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+      <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;&#13;&#10;&#9;&#9;select '&quot; + jobName + &quot;' as DataQualityRule, std_no, college, pref,email  from [Edw-Inbound].sisdba.student_email&#13;&#10;&#13;&#10;&#13;&#10;&quot;"/>
+      <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+      <elementParameter field="COLUMN_LIST" name="ANALYZED_COLUMN" show="false" value="DataQualityRule"/>
+      <elementParameter field="CHECK" name="CUSTOM_PATTERN" show="false" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="PATTERN_LIST" show="false" value=""/>
+      <elementParameter field="TEXT" name="DQ_PATTERN" show="false" value="&quot;'[A-Z0-9._%-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,4}'&quot;"/>
+      <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+      <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+      <elementParameter field="TABLE" name="TRIM_COLUMN">
+        <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="std_no"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="college"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="pref"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="email"/>
+        <elementValue elementRef="TRIM" value="false"/>
+      </elementParameter>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tDBInvalidRows_1">
+        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="10" name="std_no" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="5" name="college" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+        <column comment="" defaultValue="" key="false" length="5" name="pref" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+        <column comment="" key="false" length="50" name="email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tVerifyEmail" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="416" posY="192">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tVerifyEmail_1"/>
       <elementParameter field="PREV_COLUMN_LIST" name="EMAIL_COLUMN" value="email"/>
       <elementParameter field="CHECK" name="USE_REGULAR_EXPRESSION" value="false"/>
@@ -165,7 +368,7 @@
         </inputTables>
       </nodeData>
     </node>
-    <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="256">
+    <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="192">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
       <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
       <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
@@ -176,7 +379,7 @@
       <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;DQ&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
       <elementParameter field="TEXT" name="USER" show="false" value="&quot;hossiei&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:g9vUUKMiHypioZT9WYalQHd55eQlN/Szm/coz+1B84JlOMou3UbHCrtI"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:bNVOFZNpLe2+ciek46vETlOqapUCneqOl5+lpQWXoRA/3LZYIr3pe65D"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;Student_Email_InvalidRows&quot;"/>
       <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
       <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -263,158 +466,15 @@
         <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="416">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
-      <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
-      <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
-      <elementParameter field="TABLE" name="VALUES">
-        <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
-        <elementValue elementRef="VALUE" value="jobName"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
-        <elementValue elementRef="VALUE" value="context.Description"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
-        <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInvalidRows_1_NB_LINE&quot;))-((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE&quot;))"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="InvalidRowCount"/>
-        <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBOutput_1_NB_LINE&quot;))"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
-        <elementValue elementRef="VALUE" value="((Integer)globalMap.get(&quot;tDBInvalidRows_1_NB_LINE&quot;))"/>
-      </elementParameter>
-      <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
-      <elementParameter field="TABLE" name="INTABLE" show="false"/>
-      <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
-      <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-      <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
-      <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tFixedFlowInput_1">
-        <column comment="" key="false" length="-1" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      </metadata>
-    </node>
-    <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="416">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-      <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-      <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-      <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-      <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-      <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-      <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-      <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-      <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-      <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-      <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-      <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-      <elementParameter field="TABLE" name="LENGTHS" show="false">
-        <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
-        <elementValue elementRef="LENGTH" value="10"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
-        <elementValue elementRef="LENGTH" value="10"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
-        <elementValue elementRef="LENGTH" value="10"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="InvalidRowCount"/>
-        <elementValue elementRef="LENGTH" value="10"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
-        <elementValue elementRef="LENGTH" value="10"/>
-      </elementParameter>
-      <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-      <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tLogRow_1">
-        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="100" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      </metadata>
-    </node>
-    <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="416">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
-      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-      <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
-      <elementParameter field="CLOSED_LIST" name="DRIVER" show="false" value="JTDS"/>
-      <elementParameter field="TEXT" name="HOST" show="false" value="&quot;SDWDEV-1&quot;"/>
-      <elementParameter field="TEXT" name="PORT" show="false" value="&quot;1433&quot;"/>
-      <elementParameter field="TEXT" name="DB_SCHEMA" show="false" value="&quot;results&quot;"/>
-      <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;DQ&quot;"/>
-      <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
-      <elementParameter field="TEXT" name="USER" show="false" value="&quot;hossiei&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:YDNbcah4S5rEvSjnPMFRw1JFH6xt0aOvl/G/tGBgWAyM3GvRCX1XJ3Zr"/>
-      <elementParameter field="DBTABLE" name="TABLE" value="&quot;DataQualityMetrics&quot;"/>
-      <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
-      <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
-      <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-      <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
-      <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
-      <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="RecordCount"/>
-      <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
-      <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
-      <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
-      <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" show="false" value="false"/>
-      <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-      <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-      <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
-      <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false"/>
-      <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
-      <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-      <elementParameter field="TEXT" name="COMMIT_EVERY" show="false" value="10000"/>
-      <elementParameter field="TABLE" name="ADD_COLS"/>
-      <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-      <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-        <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
-        <elementValue elementRef="UPDATE_KEY" value="false"/>
-        <elementValue elementRef="DELETE_KEY" value="false"/>
-        <elementValue elementRef="UPDATABLE" value="true"/>
-        <elementValue elementRef="INSERTABLE" value="true"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
-        <elementValue elementRef="UPDATE_KEY" value="false"/>
-        <elementValue elementRef="DELETE_KEY" value="false"/>
-        <elementValue elementRef="UPDATABLE" value="true"/>
-        <elementValue elementRef="INSERTABLE" value="true"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
-        <elementValue elementRef="UPDATE_KEY" value="false"/>
-        <elementValue elementRef="DELETE_KEY" value="false"/>
-        <elementValue elementRef="UPDATABLE" value="true"/>
-        <elementValue elementRef="INSERTABLE" value="true"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="InvalidRowCount"/>
-        <elementValue elementRef="UPDATE_KEY" value="false"/>
-        <elementValue elementRef="DELETE_KEY" value="false"/>
-        <elementValue elementRef="UPDATABLE" value="true"/>
-        <elementValue elementRef="INSERTABLE" value="true"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
-        <elementValue elementRef="UPDATE_KEY" value="false"/>
-        <elementValue elementRef="DELETE_KEY" value="false"/>
-        <elementValue elementRef="UPDATABLE" value="true"/>
-        <elementValue elementRef="INSERTABLE" value="true"/>
-      </elementParameter>
-      <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
-      <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
-      <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
-      <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-      <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tDBOutput_2">
-        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="100" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      </metadata>
-      <metadata connector="REJECT" name="REJECT">
-        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="100" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-        <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-        <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      </metadata>
-    </node>
-    <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tVerifyEmail_1">
+    <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tLogRow_1">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+    </connection>
+    <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tDBOutput_2">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+    </connection>
+    <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInvalidRows_1" offsetLabelX="0" offsetLabelY="0" source="tDBInvalidRows_1" target="tVerifyEmail_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
     </connection>
@@ -429,50 +489,25 @@
     <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_1" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tFixedFlowInput_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
     </connection>
-    <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tLogRow_1">
-      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
-    </connection>
-    <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tDBOutput_2">
-      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
-    </connection>
-    <subjob>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_1"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-    </subjob>
     <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
-    <jobletNodes componentName="INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1"/>
-      <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-      <elementParameter field="CHECK" name="START" show="false" value="true"/>
-      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
-      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-      <elementParameter field="MEMO" name="COMMENT" value=""/>
-      <metadata connector="FLOW" name="INPUT_1">
-        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="10" name="std_no" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="5" name="college" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="5" name="pref" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-        <column comment="" key="false" length="50" name="email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      </metadata>
-    </jobletNodes>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInvalidRows_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d09bb697-8ece-4ce5-a0cb-4d8383b98871"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DLswnAY2zePNnFql4JCzN5JDM3znjpTedpsEAqw+uidmv0KBO0FyJsuvX+awKdrxjP9Z50aP2/tt
-agtHqYqQyA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8fb527ca-9f39-49ff-9c89-c624a2839356"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vtkGRwcbXX0mDRkgTey7YhPxHCY9Pk062sUQzolZLzb5+svoDBvgJjB70F06fnxcI1HMEKF10YVC
-zJxK7O6NVA==</DigestValue></Reference></SignedInfo><SignatureValue>ERaV/QHHXggmpaxyIWAwe26mgWuyGW4bwkDA77+qE0aY1gwousWhytnhrAyJvGLQR6tsYgomfpjj
-mCU3hnBu5RjxCWWZTbX8ZEOOhZjNaTc+6fKoupTo21Vk4z4Xl0e9/C46W2PgQXdf5jYfKg0UEE5D
-Ljh4CeLtvO0zCtV0feSU7TYF8q6cEfUFoIQCDbXwmqE0kHobgpwhI8LtU2lCz49kZrIzSHw/x1DN
-j/1p0Rs61uQmK3uZ0slsXsyZ79kc9mw7SizoXtrUSUhWaWhylK87lUwLH7jh5s07vPU4mZol/2Oe
-+6LpZmcSCnN6cPZroPfWUwPdMGOOw32qbqn5oQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7e0c500c-1afc-4b34-945f-180fa9d00a11"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZBm6zZIo9typY01eLph4ZpzyC6CQWtsYyK9cxfxLSFZ98PRMw7YhgDw1GjTw92PvStu1iJ3dId8i
+eVYyDdwexg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0b14343b-d3ec-4b05-ae4f-d3022bc73c76"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7CYVlCQ+bu74/OqefeOzUXmP2I6b7gQ+c+PCTFdLjwaDC7I3Jr+jsO/0VMRgxTePtRZsTfGsPv0j
+ZAHAEZFhvg==</DigestValue></Reference></SignedInfo><SignatureValue>EYWPm0zo5UxvBfJyLDa/0akty0HlYaQ8GcG2d5yVwMivKsDJHjH6OgwNAPpXfNoRRZchv32X4pUh
+laIyHLQJuQ/8k+46C/WnxkuQg22mDIidefn8oIRFPg+RgduiBlqK4pvLuqCoj0lzkqen0Opn/MPB
+uwRtJs3eRN+H2wcjw7n4mQrflEyYxZivxbwm8h6E5FurxUDJIZg8a5vcb/SUO2KSM8Qfa8FA6Ja+
+WRYczRtseHzsqSlbXcYxHfE3qZgIYCSbIvwG8n5pdGz2DMvdfEjrSmT1y/odEdywNn/Jo6fudB4A
+a/YpKaN83OmVQhcbpdJ6irjrljXcDxAwbu356Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -494,4 +529,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8fb527ca-9f39-49ff-9c89-c624a2839356" Target="#_d09bb697-8ece-4ce5-a0cb-4d8383b98871"><Timestamp>2020-11-19 15:08:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0b14343b-d3ec-4b05-ae4f-d3022bc73c76" Target="#_7e0c500c-1afc-4b34-945f-180fa9d00a11"><Timestamp>2020-11-19 15:09:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
