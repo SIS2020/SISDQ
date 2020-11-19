@@ -45,7 +45,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ZBvi67ZWo4J4BLcjRfX9fnGHTiCce2U+JO9V0SSJ"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:4/UFmMTk3ToUYg2MYjtqNqrDa1ysxsqNkQ67Y6y8"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -176,7 +176,7 @@
       <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;DQ&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
       <elementParameter field="TEXT" name="USER" show="false" value="&quot;hossiei&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Nfjzb/9iOrM+/ylOW6bYGEsz+MPbJHn1YcDnjIHKvbCHzJsGoVoNu2DD"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:kJ60OEqeEkv1lkk7SdfDqtjNcXRra+6M0GKsciCb1p3YFjjIExHBKYP6"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;Student_Email_InvalidRows&quot;"/>
       <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
       <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -341,7 +341,7 @@
       <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;DQ&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
       <elementParameter field="TEXT" name="USER" show="false" value="&quot;hossiei&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:+Z5u8KajOdv5Is+RxkTlbS23NAKoi29O4C6HfGWOTq62WIsMi7QLjZDd"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:rXnSlfXosyY3L9QRJwn3PrdAHhBkAzIxipots7FNRp6gDBYjEUE4nn4u"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;DataQualityMetrics&quot;"/>
       <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
       <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -426,10 +426,6 @@
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
     </connection>
-    <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tDBOutput_1" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="OUTPUT_1">
-      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
-    </connection>
     <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_1" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tFixedFlowInput_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
     </connection>
@@ -468,34 +464,15 @@
         <column comment="" key="false" length="50" name="email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       </metadata>
     </jobletNodes>
-    <jobletNodes componentName="OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="192">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUTPUT_1"/>
-      <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
-      <elementParameter field="CHECK" name="START" show="false" value="false"/>
-      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
-      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-      <elementParameter field="MEMO" name="COMMENT" value=""/>
-      <metadata connector="FLOW" name="OUTPUT_1">
-        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="10" name="std_no" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="5" name="college" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-        <column comment="" defaultValue="" key="false" length="5" name="pref" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
-        <column comment="" key="false" length="50" name="email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-        <column key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-        <column key="false" length="31" name="SuggestedEmail" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      </metadata>
-    </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_41322808-cb8b-4e1d-867a-e7909ff31210"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SgNBE3N0DMHDX5PnJSNlY/asNAeongynuD5yon6KCvOvgZRF0UHeJewb3NzN2TCBRBtA6zwQgpdY
-t3t18TEFFQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6af83c35-0b16-4159-8eb5-4a141129335a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ax0ds4VaRzleFfgYSkWvH/gZbkZ0Gw60GTxC+AvSQ9lvpypWnBn59JuegukvAeBztMgdYZJ2UWVS
-XXQDUT1ygw==</DigestValue></Reference></SignedInfo><SignatureValue>i1PN3udwAiCrGSo3kBmtjVPOvs2bLDi0wYDOQ3bm84ZguyahNut2ogWUykUdJBIQ7q8C2BY/YXI/
-DG4mrqJGRw2edI7vJKgSMmqrokLKdU3o0sMAqLDkP+g3p+4uGGhhHb18zd27RzgJJLafxCFflScr
-KAoF1wR1DxZVs0hOs+xr/u37FT9BheHmqD0XSfctQ+TV4Pu4c77T4Jr5oIcziOtZdJR5iloAG5Or
-faMgbpRCFX6e25c3F3yaX58Wy08fh4PKX+Hg8MUMsYgHXfW3SZuendf/KOUrRlPVhafTtDd/qnHL
-uERO1JNpouMtoIRcbKw7dTeuMtNbVi54hHVuTg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8abb4fe1-53ea-4b3b-bd0c-90f55da28708"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SUeCF88+fz+e5C03pEnTEr6ljb4EMhCWwtdx1YLt/KLxtKki1Q9ZmFZ4kkCqmDyIB6rvJZtOgW2z
+nJzJhYUEiA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f3823bf0-9859-4a04-8e48-26fb8ba3be1f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ggORd5d7Gvb1JLYL+I/kGmMFn0VPJKZJypIcuMZGcw1p5ZLjp+4EdcmYPpOaui8WvRahv1t31uuR
+lUIS27zoWQ==</DigestValue></Reference></SignedInfo><SignatureValue>FjmntHXyeZIpo7/q9GcPgJpFHe2Zzr30mMAf0oJhkEFwWt8jJpsgBSOydCfhZ6IBL9/aOrddSeu8
+HUNjlmairV9t+XkdwR612SSPPu4tpm4nn6kaRyjBLLhGZa8NeokACiZszK+ihQG5W6eonwVHP9h5
+vETWByzs7yvbO9tNsoOvhvH8xAvaDAtuMD9MXifldDl5rRK4z4Q7vtYMCZDId/EIuFeV1CEFdpvy
+/i3dvK+5EUgWgE9LjLV/VCSa3fQxIsm+WV+puD1hejRVqrxNNFIObPRTITjdpvrfSta/4S3jHiW2
+H85MQ98MiyBnZaEaLsdvt9dGsLrUsaGIWPy3mA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -517,4 +494,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6af83c35-0b16-4159-8eb5-4a141129335a" Target="#_41322808-cb8b-4e1d-867a-e7909ff31210"><Timestamp>2020-11-19 15:05:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f3823bf0-9859-4a04-8e48-26fb8ba3be1f" Target="#_8abb4fe1-53ea-4b3b-bd0c-90f55da28708"><Timestamp>2020-11-19 15:07:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
