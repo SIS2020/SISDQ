@@ -9,22 +9,22 @@
     <relativePath>../../../../../</relativePath>
   </parent>
   <groupId>org.example.sissandbox.job</groupId>
-  <artifactId>Main_Student_Email</artifactId>
-  <version>0.1.0</version>
-  <name>SISSANDBOX Main_Student_Email-0.1.0 (0.1,Job Designs)</name>
+  <artifactId>SIS_DQ0051</artifactId>
+  <version>0.2.0</version>
+  <name>SISSANDBOX SIS_DQ0051-0.2.0 (0.2,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
-    <talend.job.version>0.1</talend.job.version>
+    <talend.job.version>0.2</talend.job.version>
     <talend.project.name.lowercase>sissandbox</talend.project.name.lowercase>
     <talend.job.path>sissandbox</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>SISSANDBOX</talend.project.name>
     <talend.product.version>7.3.1.20200219_1130</talend.product.version>
-    <talend.job.finalName>main_student_email_0_1</talend.job.finalName>
+    <talend.job.finalName>sis_dq0051_0_2</talend.job.finalName>
     <talend.pigudf.groupid>org.example.sissandbox.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.sissandbox.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -33,8 +33,8 @@
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.job.name>Main_Student_Email</talend.job.name>
-    <talend.job.id>_owrdwChdEeuX5PTBHQks8Q</talend.job.id>
+    <talend.job.name>SIS_DQ0051</talend.job.name>
+    <talend.job.id>_YoxQ8ChbEeuX5PTBHQks8Q</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <talend.job.folder>dataqualitymetrics/student_email/</talend.job.folder>
     <talend.job.framework></talend.job.framework>
@@ -93,6 +93,11 @@
       <version>2.2.1</version>
     </dependency>
     <dependency>
+      <groupId>net.sourceforge.jtds</groupId>
+      <artifactId>jtds</artifactId>
+      <version>1.3.1-patch-20190523</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
       <version>2.12.1</version>
@@ -123,6 +128,16 @@
       <version>1.7.25</version>
     </dependency>
     <dependency>
+      <groupId>org.talend.components.lib</groupId>
+      <artifactId>talend_DB_mssqlUtil</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>talend_DB_mssqlUtil-1.3-20190523</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>talend_file_enhanced_20070724</artifactId>
       <version>6.0.0</version>
@@ -131,36 +146,6 @@
       <groupId>org.example.sissandbox.code</groupId>
       <artifactId>routines</artifactId>
       <version>7.3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0050</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0054</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0053</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0055</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0051</artifactId>
-      <version>0.2.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0052</artifactId>
-      <version>0.2.0</version>
     </dependency>
   </dependencies>
   <build>
