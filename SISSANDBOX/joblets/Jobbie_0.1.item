@@ -45,7 +45,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:vbhDLeTRQ+7gsDvVPjA7uSil/86QkcgDvU2UllOs"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:+3butjXx9wzMvqRkNqsQKO0WevfR4d3WAm3aEqij"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -81,7 +81,7 @@
       <routinesParameter id="_blCnIApGEeuQj8iTNBbh7Q" name="TalendStringUtil"/>
       <routinesParameter id="_bk6EQApGEeuQj8iTNBbh7Q" name="TalendString"/>
     </parameters>
-    <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="320">
+    <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="320">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
       <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
       <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
@@ -112,7 +112,7 @@
         <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="320">
+    <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
       <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
       <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -148,7 +148,7 @@
         <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="320">
+    <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="320">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
       <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
       <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
@@ -159,7 +159,7 @@
       <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;DQ&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
       <elementParameter field="TEXT" name="USER" show="false" value="&quot;hossiei&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:eiOQz7BSSUBDMGI6tEB/aunoAkBrQlKTePiuLg/pMO4Ab7akzKejwEKH"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:vkO/sd1FSnR2EaQsftq5gXUz3OSObJnyMl2rnNFn5sfYb7ZpLOFeidU2"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;DataQualityMetrics&quot;"/>
       <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
       <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -232,7 +232,7 @@
         <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tMSSqlInvalidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
+    <node componentName="tMSSqlInvalidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="192">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInvalidRows_1"/>
       <elementParameter field="CLOSED_LIST" name="VALIDATION_TYPE" value="DQ_RULE"/>
       <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -244,7 +244,7 @@
       <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;sisdba&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
       <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:RgYGI4U3S8ZJPAIzhKyki28SH8UMTrk+502Xgli2Gtw8g47CeUd7N5oj"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:f4KI4W+5fmgFrOsKvSUaNdVmgJBdQmQ3/mXMB1Br+msavHxAjkBPDIyg"/>
       <elementParameter field="DBTABLE" name="TABLE" show="false" value="&quot;student&quot;"/>
       <elementParameter field="TEXT" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
       <elementParameter field="CLOSED_LIST" name="DQRULES_LIST" show="false" value="SIS-DQ0001"/>
@@ -284,7 +284,7 @@
         <column comment="" key="false" length="50" name="email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tVerifyEmail" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="416" posY="192">
+    <node componentName="tVerifyEmail" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="512" posY="192">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tVerifyEmail_1"/>
       <elementParameter field="PREV_COLUMN_LIST" name="EMAIL_COLUMN" value="email"/>
       <elementParameter field="CHECK" name="USE_REGULAR_EXPRESSION" value="false"/>
@@ -322,7 +322,7 @@
         <column key="false" length="31" name="SuggestedEmail" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="192">
+    <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
       <elementParameter field="EXTERNAL" name="MAP" value=""/>
       <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -368,7 +368,7 @@
         </inputTables>
       </nodeData>
     </node>
-    <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="192">
+    <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="192">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
       <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
       <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
@@ -379,7 +379,7 @@
       <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;DQ&quot;"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
       <elementParameter field="TEXT" name="USER" show="false" value="&quot;hossiei&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:X+0G1gnxvq+GCKODEg986vf/a6LSzQOwRtyd6LKKmzmOl6JkEhuadShA"/>
+      <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:aB900DvBApm4Vd7sZWlM71GnHcP67/oU1hE+HNZecfAytySaj8oM4XJG"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;Student_Email_InvalidRows&quot;"/>
       <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
       <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -470,6 +470,9 @@
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
     </connection>
+    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="TRIGGER_OUTPUT_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+    </connection>
     <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tDBOutput_2">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
@@ -478,6 +481,9 @@
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
     </connection>
+    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInvalidRows_1" offsetLabelX="0" offsetLabelY="0" source="tDBInvalidRows_1" target="tFixedFlowInput_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+    </connection>
     <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tVerifyEmail_1" offsetLabelX="0" offsetLabelY="0" source="tVerifyEmail_1" target="tMap_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
@@ -485,9 +491,6 @@
     <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="row3" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
-    </connection>
-    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBOutput_1" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tFixedFlowInput_1">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
     </connection>
     <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="TRIGGER_INPUT_1" offsetLabelX="0" offsetLabelY="0" source="TRIGGER_INPUT_1" target="tDBInvalidRows_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
@@ -507,6 +510,11 @@
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="TRIGGER_OUTPUT_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
     <jobletNodes componentName="TRIGGER_INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192" trigger="true">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_INPUT_1"/>
       <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
@@ -516,15 +524,24 @@
       <elementParameter field="CHECK" name="INFORMATION" value="false"/>
       <elementParameter field="MEMO" name="COMMENT" value=""/>
     </jobletNodes>
+    <jobletNodes componentName="TRIGGER_OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="160" posY="320" trigger="true">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="TRIGGER_OUTPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+      <elementParameter field="CHECK" name="START" show="false" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+    </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5fc3c16e-3393-43ab-8c5e-8bc75acb11b6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JGad5g/3ksWUMrOy5C5aaWKIxwJb2Xsan4NGA3LJhr53UU4ee/RtdeKyK02ch7SUxEmgeQljUo2s
-j8D3/xV/Vg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b591b98c-a732-47b5-a883-f52100ff9de7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ob4iPWJ0ZvdTfBLELEfxc6tu3Jj7J6rJmil2yXTITa9lxyWthuGGeydRl0U8BG/0l7tvneczEKnO
-YWk6qQ2eCg==</DigestValue></Reference></SignedInfo><SignatureValue>dK2f+8i7JY5xRqxw9dFTDzP1XU/RH6C26uYtGdkhfptruL01PiNDt9QJ2X80JcCCA8VpweLSDCkz
-N529tdfSAzTrx2TAw3TwxgsyiDAYJVYRtL7T39iT4h5Ly0HRXo/rdnTuMcP9okydaSlXcBLtMl4/
-EfuOwEQTARwWs1qvzCeqjBryoro2PN40yRgarlWEDRWzpVK3Fo2NZH6N7UJeFZmjU0a9ptkU56HX
-hrJ7Ry4+j+IE3gxSgEyp0PkxIaZT9t0kQLnriM3U+KltWw4INHDXoLD9ZRnQv7UsYrtOdOcozJWk
-eegjuoV3yAmJAKzCXAqJeXeLIAOzkrILkENncg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_144c4985-69be-41c8-8af6-14a09f0772f6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UIJ3Oun/ZMD0tvWXzfsWDKpO4r+evUTEm/7KnI5TGHiu1oJYuPFcpB5G3jNobjsIj7LJN46u1Y9J
+W9fl1AuN4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_950ea4a4-d484-4aed-8b07-aa22e4ea03db"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hAH32/BZCUebki+qDR5kAD578iYia4+spAFDW8XUab+Riok/tZYaTeARNjq3x1g+ygFTO1lGsR8k
+UrwgWqQloQ==</DigestValue></Reference></SignedInfo><SignatureValue>JceoDvGH60leoXWfsUiQml/Eez2E71Pb8z1YrwSPvDic6/zxCWILTxMBjbETVHBN74jg7EU1OrDU
+GavStJHoackMuaYMZb6P5WAV3pIbv6/9MryY+b9sYeCP0P5uaK4Up8mNY+wTKiXlNiJi+AfqV7j7
+R7g8aI61hpAul9UL4mv8Go+xJM8kmbi6y6kCKwqV9BkRsaNCE13LZJnZYuK6JFtN6MUj9Kwt4Ltt
+SQ/CCBMYuyqKknjKFn+AmZLk/+1jVE5jnQWYl+pOUoEU/txUsQfLrZQpdpUin0s4GPyQo5kkSehu
+DHK1alezyz6pOaRLEzO+JM3qyYLIqjuyn6CJhQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -546,4 +563,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b591b98c-a732-47b5-a883-f52100ff9de7" Target="#_5fc3c16e-3393-43ab-8c5e-8bc75acb11b6"><Timestamp>2020-11-19 15:16:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_950ea4a4-d484-4aed-8b07-aa22e4ea03db" Target="#_144c4985-69be-41c8-8af6-14a09f0772f6"><Timestamp>2020-11-19 15:24:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
