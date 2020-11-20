@@ -45,7 +45,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:P8jXHc1S/905BCFoawyvI6xamLYwbTMI3P8E97ad"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:JjNC4Y0aJVFCStiNqf5xS8G6TyAJnlKqTg09So2N"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -94,13 +94,13 @@
       <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-INBOUND&quot;"/>
       <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AgPzMPpBinjZPixNf720gcMPKCu88MuA88IweLxLoLwaZnRofCvRQACU"/>
-      <elementParameter field="DBTABLE" name="TABLE" value="&quot;student&quot;"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:OCvBoYJbEpLigchrmO6cfLm657e04KqhB7RgxCd/BqLaSaraCaWhO10q"/>
+      <elementParameter field="DBTABLE" name="TABLE" value="&quot;student_address&quot;"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value="_vkTxwOfzEeqob_JMQxXZxQ - qry_SIS_DQ001_RowCount"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
       <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;&#9;select top 50000 s.* &#13;&#10;&#9;from sisdba.student_email s &#13;&#10;&#9;where s.std_no in (select std_no from  dq.results.Student_Email_InvalidRows where DataQualityRule='&quot;+ jobName + &quot;' )&#13;&#10;&#13;&#10;&quot;"/>
+      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;&#9;select top 50000 s.* &#13;&#10;&#9;from &#9;sisdba.student_address s &#13;&#10;&#9;where s.std_no in (select std_no from  dq.results.Student_Email_InvalidRows where DataQualityRule='&quot;+ jobName + &quot;' )&#13;&#10;&#13;&#10;&quot;"/>
       <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
       <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
       <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -112,25 +112,62 @@
       <elementParameter field="TABLE" name="TRIM_COLUMN">
         <elementValue elementRef="SCHEMA_COLUMN" value="std_no"/>
         <elementValue elementRef="TRIM" value="false"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="college"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="home_local"/>
         <elementValue elementRef="TRIM" value="false"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="pref"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="no_and_street"/>
         <elementValue elementRef="TRIM" value="false"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="email"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="prov_state_code"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="postal_zip_code"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="incor_address"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="area_code"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="phone_no"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="fax_no"/>
         <elementValue elementRef="TRIM" value="false"/>
       </elementParameter>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" label="student" name="tDBInput_1">
+      <metadata connector="FLOW" label="student_address" name="tDBInput_1">
         <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
           <additionalField key="Comment" value=""/>
         </column>
-        <column comment="" key="false" length="15" name="college" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_String" usefulColumn="true">
+        <column comment="" key="false" length="1" name="home_local" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
           <additionalField key="Comment" value=""/>
         </column>
-        <column comment="" key="false" length="5" name="pref" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <column comment="" key="false" length="50" name="no_and_street" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
           <additionalField key="Comment" value=""/>
         </column>
-        <column comment="" key="false" length="200" name="email" nullable="true" originalLength="200" pattern="" precision="-1" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="30" name="city" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="2" name="prov_state_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="20" name="country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="10" name="postal_zip_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="1" name="incor_address" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="5" name="area_code" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="10" name="phone_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="10" name="fax_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
       </metadata>
     </node>
     <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
@@ -152,15 +189,29 @@
       <elementParameter field="TABLE" name="AUTO_SZIE_SETTING">
         <elementValue elementRef="SCHEMA_COLUMN" value="std_no"/>
         <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="college"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="home_local"/>
         <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="pref"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="no_and_street"/>
         <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="email"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+        <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="prov_state_code"/>
+        <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+        <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="postal_zip_code"/>
+        <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="incor_address"/>
+        <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="area_code"/>
+        <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="phone_no"/>
+        <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="fax_no"/>
         <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
       </elementParameter>
       <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-      <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:oRUtwZxDSa7FU5J/sxy8Xn7Vq8juy9D35HcbGCvc"/>
+      <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:12SmDrPVUcgm2XwRmpEEF5QeixO4jsUFIVV5taqU"/>
       <elementParameter field="CHECK" name="CREATE" value="true"/>
       <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
       <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -173,17 +224,40 @@
       <elementParameter field="CHECK" name="RECALCULATE_FORMULA" show="false" value="false"/>
       <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" label="student" name="tFileOutputExcel_1">
+      <metadata connector="FLOW" label="student_address" name="tFileOutputExcel_1">
         <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
           <additionalField key="Comment" value=""/>
         </column>
-        <column comment="" key="false" length="15" name="college" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_String" usefulColumn="true">
+        <column comment="" key="false" length="1" name="home_local" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
           <additionalField key="Comment" value=""/>
         </column>
-        <column comment="" key="false" length="5" name="pref" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+        <column comment="" key="false" length="50" name="no_and_street" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
           <additionalField key="Comment" value=""/>
         </column>
-        <column comment="" key="false" length="200" name="email" nullable="true" originalLength="200" pattern="" precision="-1" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+        <column comment="" key="false" length="30" name="city" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="2" name="prov_state_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="20" name="country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="10" name="postal_zip_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="1" name="incor_address" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="5" name="area_code" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="10" name="phone_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="10" name="fax_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
       </metadata>
       <metadata connector="VALIDATION_REJECT" label="student" name="VALIDATION_REJECT">
         <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -401,13 +475,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9593eec2-ad91-4718-922a-fe1bc0e8a245"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wYr/GAVW6H0ci8pOdSUUszUtm6Ff6LZEjGcUeVMUxX6a62PZ8D84QrGMKa7IXChQhX7A7OVCO1iw
-Zt9ZjOg/oQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b7a7b6d4-4ac0-4559-a915-825bb3418f29"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1u2YBJP+BGi30l38wBYCc+ZpI3b0q179qHwF0FRK8L27GJgU9+B/TAzrffN88NrjJCZ3i+p9MNsA
-0Fa1Yex8fQ==</DigestValue></Reference></SignedInfo><SignatureValue>NSOYCpFnQY7LVFStSBT9rHJNZYpP++oDISZpM1+YtAukZumU4PVdyXIRpAyLztOmzeeYht649+y3
-TyoEIb3JhMZ3idVSVF+tE0z0kblX0yGIbwqCVGDAFVwIDGu4jHkBjWt8XEVyXxbB19Bns1LsDCb+
-C08FMH2f+3hpW9k4TtJ5eVLGUlOR/CWJZAlrHZQYxmRb87kUND+CxuRrZQg8Vw7Y33ZsZKbxWDQD
-YpLkmV1RZWasNH23atMxLqBBMcrNFjDuRzlX0dK2ripCBqqcjy5MIHmIB4wCO5rmLHonIL7gVJDv
-bokePS9DcU0/ieOmKtT7SBAxkz8JAsQ1xE4JwQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f2462c82-4604-4239-a8e9-9375ec5ebf5d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+GQIRto1wJQPj2gz4FaEmENFFisaukJHd3FnuqfrfREctiCHbcUDwHQmnaaSTy0W02admgyOwR36
+fwOiEB514w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_def4471c-1ead-49ed-9bca-8aa6f326f977"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MC0Fa0FkxE1sjgtVnhr34zowgI/Wubyn12uUsYArvQ+NxkMPJj+D8Y2/WHXvjtiDg6ISD/2io+Nn
+KcGCm/D5yg==</DigestValue></Reference></SignedInfo><SignatureValue>H5PZvBAc5v/wFk5lj6+OG7+jrFunPqXBPEBaZOuIQrHXc/y9X79mmPS4et6zbIeG3YbAmW4A7bPk
+sGhq4p4FLM8+rVOXJ3dsQ/MeD++H5dohx5cMRl7nzSCtoAo/MPUlxWuo3kxYTyC9wEE9M0S/2XbT
+WktEOp3NgjS9kzZh/7h0sXkUeZSWicUVmXW2xBiY3By4ZiytRDrb4eOyBrQSHrzeed2ZtvPLCSo5
+VGvxocNe75POiGPg8EU9kJVHQdfLG1WM7NrQq/x0z+LNQphFFZZsuB6U9TXYpoXBBuTuOWjOIqM1
+Xhah0fMxO1JTRmJncHVJd5DGXFNHETgMmuYM2g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -429,4 +503,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b7a7b6d4-4ac0-4559-a915-825bb3418f29" Target="#_9593eec2-ad91-4718-922a-fe1bc0e8a245"><Timestamp>2020-11-20 19:03:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_def4471c-1ead-49ed-9bca-8aa6f326f977" Target="#_f2462c82-4604-4239-a8e9-9375ec5ebf5d"><Timestamp>2020-11-20 19:08:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
