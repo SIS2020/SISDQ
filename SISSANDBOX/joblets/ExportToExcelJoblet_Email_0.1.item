@@ -45,7 +45,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:R5LVCDEBijb3yu0+2oTVli/U5RvtQaVLvllwN9jB"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:uMj7oyidetNaQ/nBS4a54av5DeciwP1JM8BqhEMY"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -94,7 +94,7 @@
       <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-INBOUND&quot;"/>
       <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JdEm+F+xw5kefiKnL2iHDIQ1I5rEqNr0f14sUoCF+81P7c5nn4C7JSUx"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SiD/UnQa6alqLWOXjJ0kbBdIE3DFQJxJYgne0jI+jmzURX+uVMQHYtqT"/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;student&quot;"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value="_vkTxwOfzEeqob_JMQxXZxQ - qry_SIS_DQ001_RowCount"/>
@@ -110,6 +110,8 @@
       <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
       <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
       <elementParameter field="TABLE" name="TRIM_COLUMN">
+        <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+        <elementValue elementRef="TRIM" value="false"/>
         <elementValue elementRef="SCHEMA_COLUMN" value="std_no"/>
         <elementValue elementRef="TRIM" value="false"/>
         <elementValue elementRef="SCHEMA_COLUMN" value="college"/>
@@ -121,6 +123,7 @@
       </elementParameter>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" label="student" name="tDBInput_1">
+        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
           <additionalField key="Comment" value=""/>
         </column>
@@ -150,6 +153,8 @@
       <elementParameter field="CLOSED_LIST" name="FONT" value=""/>
       <elementParameter field="CHECK" name="IS_ALL_AUTO_SZIE" value="false"/>
       <elementParameter field="TABLE" name="AUTO_SZIE_SETTING">
+        <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+        <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
         <elementValue elementRef="SCHEMA_COLUMN" value="std_no"/>
         <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
         <elementValue elementRef="SCHEMA_COLUMN" value="college"/>
@@ -160,7 +165,7 @@
         <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
       </elementParameter>
       <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-      <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:G8guWHZAMELAYCqxM48/ayWIfHL1S1Ql/1DXsY/U"/>
+      <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:1D1w/PSWpXcKpbBS/TlOnGb/sAvNpAPrpWJS7T4K"/>
       <elementParameter field="CHECK" name="CREATE" value="true"/>
       <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
       <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -174,6 +179,7 @@
       <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" label="student" name="tFileOutputExcel_1">
+        <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
         <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
           <additionalField key="Comment" value=""/>
         </column>
@@ -359,6 +365,9 @@
         <elementValue elementRef="TRACE_COLUMN" value="email"/>
         <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
         <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+        <elementValue elementRef="TRACE_COLUMN" value="DataQualityRule"/>
+        <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+        <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       </elementParameter>
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -401,13 +410,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b630fdae-6d9d-4ef0-95f3-37ace01e3dad"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PQ4p1/bdl+pdfLK2eYqIBUMsfNooDOy+2vC7nkd++EYKuzp5izUamuW7X47FXZiBktCoJxSCUHYx
-ZsUyqPIXtw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8dc82c9d-b69c-43ae-a470-111dc56426ed"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7coJB+Z8Q7gWdatRHDRVaj0hA288W6DjgvGGiXi8xsjYQN73vz8dsJebKcDcAMpo003eQ8YEK0jx
-ZqZLsA5/Fg==</DigestValue></Reference></SignedInfo><SignatureValue>GDnNeDbISbstTuA5auL42kFlpEemrmtjGyq9uROjIAG+hCyzgwCSthBMwf0iw/P6pjLDy7L6jTVu
-ykBWeZEiIIbiQhbB+HuCdLp8r/XZqls+OPlxink0m6tg97CUPW7yKmOfmggeVL2Mt3Jt8p5uzgHE
-E4gwxHBOHxA/98ZccOEA2ssSOsQsWXLeE8Wcuj+TC885UQ2M53T1ZUE7P1ABk1OX80E8VPm7X4s/
-5GZMmbPcN4Ze8rGnGZ9ZDWAGmy9Z50yJAxXYDvszUaQbnK2IzKuZO3TkWEfL86XRlBOgYEPV/cgf
-d++qZ/+JzkeS3JBkNd7cKpMpsssJxOXg+G8Y0g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fd00f7cf-c1ca-4ad9-865e-8cf536788c10"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hntZP+60QUmAJ96+p7cWMCHDaMsV6VDVQA04zAFCLA7DLWbw9FWDxvoGyj4pSZznIu3VjRookGiy
+VRtdeLwJew==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cdbc9c0b-b247-449e-b468-3b7ed5426561"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vgIRWLOKTq5GunmPQIVp6nye2AXd/+y/XLExczTS62zNL5BXCNyXURqGaowPNxLtfjy92Io6TsXk
+p6bd+WIHng==</DigestValue></Reference></SignedInfo><SignatureValue>PXe9Z06K90pIEwR11XZJ4vZInqhk0RmAYgpNf7leazAiOdXMZmzamCczo2pFKxvDgwd6uYpBfUBn
+E/wGgfjIys9/1hDOCXID1P5/qR396Cf4v1Cide1j/yPxNY5EWMJOJhPtKkXzMxpwudypCK7gd1kA
+RmYQ7ZnIQOvx4PUVWdRSwxpBrk75PpNV9iWQtncwpbJNmtRiz8vi0ufy351hUuPkhiqoylr1FQN9
+ANJARc1q1b5DLax7twlDbvJOZ9jvX9UcrXdSmNcAuEbyrAanqmwMx5IuO/1Mr4y5waWw5vHV1G8Y
+WhF0Td5RIpAGB9ogVRtWSWfeg8wnVY2/V/WlPw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -429,4 +438,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8dc82c9d-b69c-43ae-a470-111dc56426ed" Target="#_b630fdae-6d9d-4ef0-95f3-37ace01e3dad"><Timestamp>2020-11-21 02:05:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cdbc9c0b-b247-449e-b468-3b7ed5426561" Target="#_fd00f7cf-c1ca-4ad9-865e-8cf536788c10"><Timestamp>2020-11-21 02:07:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
