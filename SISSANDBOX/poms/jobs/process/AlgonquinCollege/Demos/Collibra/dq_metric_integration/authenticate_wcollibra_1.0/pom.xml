@@ -9,22 +9,22 @@
     <relativePath>../../../../../../../</relativePath>
   </parent>
   <groupId>org.example.sissandbox.job</groupId>
-  <artifactId>load_dq_metric</artifactId>
-  <version>0.1.0</version>
-  <name>SISSANDBOX load_dq_metric-0.1.0 (0.1,Job Designs)</name>
+  <artifactId>authenticate_wCollibra</artifactId>
+  <version>1.0.0</version>
+  <name>SISSANDBOX authenticate_wCollibra-1.0.0 (1.0,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
-    <talend.job.version>0.1</talend.job.version>
+    <talend.job.version>1.0</talend.job.version>
     <talend.project.name.lowercase>sissandbox</talend.project.name.lowercase>
     <talend.job.path>sissandbox</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>SISSANDBOX</talend.project.name>
     <talend.product.version>7.3.1.20200219_1130</talend.product.version>
-    <talend.job.finalName>load_dq_metric_0_1</talend.job.finalName>
+    <talend.job.finalName>authenticate_wcollibra_1_0</talend.job.finalName>
     <talend.pigudf.groupid>org.example.sissandbox.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.sissandbox.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -33,8 +33,8 @@
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.job.name>load_dq_metric</talend.job.name>
-    <talend.job.id>_TYCLQOL7EeqU7vXgrIZ40Q</talend.job.id>
+    <talend.job.name>authenticate_wCollibra</talend.job.name>
+    <talend.job.id>_NP2SwOMAEeqU7vXgrIZ40Q</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <talend.job.folder>algonquincollege/demos/collibra/dq_metric_integration/</talend.job.folder>
     <talend.job.framework></talend.job.framework>
@@ -46,11 +46,6 @@
       <groupId>net.minidev</groupId>
       <artifactId>accessors-smart</artifactId>
       <version>1.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>advancedPersistentLookupLib-1.2</artifactId>
-      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -235,11 +230,6 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>jboss-serialization</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>jettison-1.4.0</artifactId>
       <version>6.0.0</version>
     </dependency>
@@ -259,14 +249,14 @@
       <version>2.4.5-talend</version>
     </dependency>
     <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>json-path-2.1.0</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>net.minidev</groupId>
       <artifactId>json-smart</artifactId>
       <version>2.2.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-1.2-api</artifactId>
-      <version>2.12.1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -292,11 +282,6 @@
       <groupId>org.talend.daikon</groupId>
       <artifactId>logging-event-layout</artifactId>
       <version>1.8.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>mysql-connector-java-5.1.30-bin</artifactId>
-      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.neethi</groupId>
@@ -435,22 +420,7 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>staxon-1.2</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.components.lib</groupId>
-      <artifactId>thashfile</artifactId>
-      <version>3.1-20190910</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>trove</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
@@ -507,11 +477,6 @@
       <groupId>org.example.sissandbox.code</groupId>
       <artifactId>routines</artifactId>
       <version>7.3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>authenticate_wCollibra</artifactId>
-      <version>1.0.0</version>
     </dependency>
   </dependencies>
   <build>
