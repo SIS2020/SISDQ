@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmi:id="_hTC-MC2lEeusjYU9ACDYoA" name="Demo" creationDate="2020-11-23T11:04:09.200-0500">
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_hTC-MC2lEeusjYU9ACDYoA" name="Demo" creationDate="2020-11-23T11:04:09.200-0500" defaultContext="Default">
+  <clientDependency href="../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
   <taggedValue xmi:id="_hTC-MS2lEeusjYU9ACDYoA" tag="PREVIEW_ROW_NUMBER" value="10000"/>
   <taggedValue xmi:id="_hTC-Mi2lEeusjYU9ACDYoA" tag="Status" value="development"/>
   <taggedValue xmi:id="_hTC-My2lEeusjYU9ACDYoA" tag="Author" value="hossiei@algonquincollege.com"/>
   <taggedValue xmi:id="_hTC-NC2lEeusjYU9ACDYoA" tag="Purpose" value="Demo"/>
   <taggedValue xmi:id="_hTC-NS2lEeusjYU9ACDYoA" tag="Description" value="MOre demo"/>
   <taggedValue xmi:id="_hTC-Ni2lEeusjYU9ACDYoA" tag="Version" value="0.1"/>
-  <context xmi:id="_hTC-Ny2lEeusjYU9ACDYoA"/>
+  <taggedValue xmi:id="_iCI40C2lEeusjYU9ACDYoA" tag="TEMP_DATA_DIR" value=""/>
+  <taggedValue xmi:id="_iCI40S2lEeusjYU9ACDYoA" tag="MAX_BUFFER_SIZE" value="200000"/>
+  <taggedValue xmi:id="_iCI40i2lEeusjYU9ACDYoA" tag="STORE_ON_DISK" value="false"/>
+  <taggedValue xmi:id="_iOBYsS2lEeusjYU9ACDYoA" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+  <context xmi:id="_hTC-Ny2lEeusjYU9ACDYoA">
+    <connection href="../../metadata/connections/AlgonquinConn_0.1.item#_nqx-0Of1Eeqob_JMQxXZxQ"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/AlgonquinConn_0.1.item#_ZviPcCOfEeuu94OjwV8eSQ"/>
+  </context>
   <results xmi:id="_hTC-OC2lEeusjYU9ACDYoA">
     <resultMetadata xmi:id="_hTC-OS2lEeusjYU9ACDYoA"/>
     <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="_hTC-Oi2lEeusjYU9ACDYoA"/>
     <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="_hTC-Oy2lEeusjYU9ACDYoA">
-      <builtInMatchRuleDefinition xmi:id="_hTC-PC2lEeusjYU9ACDYoA"/>
+      <builtInMatchRuleDefinition xmi:id="_hTC-PC2lEeusjYU9ACDYoA">
+        <matchRules xmi:id="_h9LgUC2lEeusjYU9ACDYoA" name="Match Rule 1"/>
+      </builtInMatchRuleDefinition>
     </indicators>
   </results>
   <parameters xmi:id="_hTC-PS2lEeusjYU9ACDYoA" analysisType="Match Analysis"/>
+  <contextType xmi:id="_iOBYsC2lEeusjYU9ACDYoA" confirmationNeeded="false" name="Default"/>
 </dataquality.analysis:Analysis>
