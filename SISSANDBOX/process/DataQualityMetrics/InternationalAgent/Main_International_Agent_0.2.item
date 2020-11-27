@@ -49,7 +49,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:Lq48U4GIFi1v22d8gTiYboYFR0+l9AkxfNKunPpu"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:U6Ei3YwUnHXKgt3KWVVh1qjNE7bQsgbVsBA0hRHH"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -84,7 +84,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:rCHO8SihcwihfdSCght1o86r/Bn/WXFnFY2YtQiF"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:6SoYDDJAzi/xTnCZ+QZlRHVxD49TLuhqUlTt2aOK"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -191,89 +191,6 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_3"/>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
-    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
-    <elementParameter field="TABLE" name="VALUES" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="email"/>
-      <elementValue elementRef="VALUE" value=""/>
-    </elementParameter>
-    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
-    <elementParameter field="TABLE" name="INTABLE" show="false"/>
-    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
-    <elementParameter field="MEMO" name="INLINECONTENT" value="abc"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFixedFlowInput_1">
-      <column comment="" key="false" length="50" name="email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tVerifyEmail" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="480" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tVerifyEmail_1"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="EMAIL_COLUMN" value="email"/>
-    <elementParameter field="CHECK" name="USE_REGULAR_EXPRESSION" value="false"/>
-    <elementParameter field="TEXT" name="COMPLETE_REGEX" show="false" value="&quot;^(([^\\s\\p{Cntrl}\\(\\)&lt;&gt;@,;:'\\\\\\\&quot;\\.\\[\\]]|')+|(\\\&quot;[^\\\&quot;]*\\\&quot;))(\\.(([^\\s\\p{Cntrl}\\(\\)&lt;&gt;@,;:'\\\\\\\&quot;\\.\\[\\]]|')+|(\\\&quot;[^\\\&quot;]*\\\&quot;)))*@([\\p{L}\\p{M}0-9]([\\p{L}\\p{M}0-9\\-]{0,61}[\\p{L}\\p{M}0-9])?\\.)+[\\p{L}\\p{M}]{2,6}$&quot;"/>
-    <elementParameter field="RADIO" name="USE_REGEX" value="true"/>
-    <elementParameter field="RADIO" name="USE_SHORT" value="false"/>
-    <elementParameter field="RADIO" name="USE_COLUMN" value="false"/>
-    <elementParameter field="CHECK" name="CASE_SENSITIVE" value="true"/>
-    <elementParameter field="TEXT" name="LOCAL_REGEX_PART" value="&quot;^[abc]$&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SHORT_PART" show="false" value="&quot;w[-_.]w&quot;"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="COLUMN_FIRSTNAME" show="false" value="email"/>
-    <elementParameter field="TEXT" name="COLUMN_NFIRSTCHAR_FIRSTNAME" show="false" value="&quot;1&quot;"/>
-    <elementParameter field="TEXT" name="COLUMN_NLASTCHAR_FIRSTNAME" show="false" value="&quot;20&quot;"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="COLUMN_LASTNAME" show="false" value="email"/>
-    <elementParameter field="TEXT" name="COLUMN_NFIRSTCHAR_LASTNAME" show="false" value="&quot;1&quot;"/>
-    <elementParameter field="TEXT" name="COLUMN_NLASTCHAR_LASTNAME" show="false" value="&quot;20&quot;"/>
-    <elementParameter field="TEXT" name="COLUMN_SEPARATOR" show="false" value="&quot;-&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="COLUMN_CASE_TYPE" show="false" value="L"/>
-    <elementParameter field="CHECK" name="SHOW_HELP" show="false" value="false"/>
-    <elementParameter field="LABEL" name="HELP_CONTENT" show="false" value=" &#10;    Syntax              Equivalent Regex                Description   &#10;    9                        [0-9]                                     adigit       &#10;    a                        [a-z]                                     a lowercased ascii letter    &#10;    A                       [A-Z]                                    an uppercased ascii letter   &#10;    w                       [a-z]+                                  one or more lowercased ascii letters &#10;    W                      [A-Z]+                                  one or more uppercased ascii letters&#10;    ?                        .                                            any character which valid in the email address&#10;    *                        .*                                          any string which valid in the email address&#10;    .                        \.                                           the period symbol &#10;    [-_+]                 [-_+]                                    any of the symbols listed between brackets   &#10;    &lt;pattern&gt;        pattern                                any standard regex can be placed inside angle brackets&#10;    "/>
-    <elementParameter field="CHECK" name="CHECK_TLDS" value="true"/>
-    <elementParameter field="TABLE" name="ADDITIONAL_TLDS"/>
-    <elementParameter field="RADIO" name="CHECK_BLACK_DOMAINS" value="true"/>
-    <elementParameter field="RADIO" name="CHECK_WHITE_DOMAINS" value="false"/>
-    <elementParameter field="TABLE" name="DOMAINS_LIST"/>
-    <elementParameter field="CHECK" name="CALL_BACK" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tVerifyEmail_1">
-      <column comment="" key="false" length="50" name="email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="31" name="SuggestedEmail" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="email"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="VerificationLevel"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SuggestedEmail"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" key="false" length="50" name="email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
-      <column key="false" length="31" name="VerificationLevel" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="31" name="SuggestedEmail" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tRunJob_2">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
@@ -281,14 +198,6 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_2" offsetLabelX="0" offsetLabelY="0" source="tRunJob_2" target="tRunJob_3">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
-  </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tVerifyEmail_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tVerifyEmail_1" offsetLabelX="0" offsetLabelY="0" source="tVerifyEmail_1" target="tLogRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_1"/>
@@ -305,18 +214,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4cb398a6-1082-4430-9377-9d83a46956ca"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NkJk3lKYiB8ElV4ZCviYmvr+arF9E5MKYYKIqWH7bjMoqz/Qu+mmGTBzAQ8wKvrZgmoEoRMDz69f
-uVdJ8qmghA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_960378c3-7feb-419b-b324-74f75dd6b21d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lJaZeBXfsIqvaxHAVvuRosRE+SrqIK7KNRnHqNXS5YJvpmDHtP/whcQHoeOor5mMD7koHi5XzUVS
-ejl+DbNarA==</DigestValue></Reference></SignedInfo><SignatureValue>HlqCfuaOv4w9V4wIrSpabtqMc0V2RtTK5cUYX8qJWF5bMX2aE2Tycuc3tVdhL1CFUqxTxynAtm1D
-MGATH9zxIUuXG4pv/xk9zWE8N0aZJf0J5DovslT6OorUgoprAwSF/1z8cXfUSrfrsTDebxN2xERe
-C18m2RjJJcJsZIEsA9DRJSMH1isTLoqajhrslHxbOFjSsXOw9pAIhG31lqr9VOtkgh5nQcP7DxGu
-5JQ3zf353DPmwjKHg2r9rDs7VpOBSu0hAOmdIP6bbxU6qLiKKEcXDUmIOPEz8+Ind7PEblRkL4ZY
-hoIX9O4fTEbgt13tYFfneKeqRstCnlUl7VeTWg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a6edacaf-4fdb-42bc-a02f-7072ff59c9a1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pm2sa6HJMJd2Qq4XgD69AOgTvQtp52ryGgcD9yzfSoZS5QF4Ac+qs2sY4o9BCbA3bXRaARnVcBbX
+7Ej1pY+fpA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0fec8017-3fdf-45ca-bdb4-eff0797c1015"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mrJ72rxaDewyWYudBUFvA3/DjzIvpb+DJ3DL+zLcajIDajVFxlkdj78UJH4kuO0BCuaQbApGMf+L
+bk+6OamYhw==</DigestValue></Reference></SignedInfo><SignatureValue>Mjqwf9FBCPhTuGeu93SFG3FMGPOhMzdq/1r0HkKyWd0pLcaAzCZ54sUKms7sktbN3pJqK5YxTvyy
+DYc516KRPr9mM0PV2fJlpHOxtm+x1629X+x5dBwUXMwzicIvuoHaA5wb49xAQSBOvhvqi8fAwgwf
+FVZl09SbvvSVlfjRfaTYzNX4KnQMTojlrJI5i2ISnp3P1YbdVj+77rPjjwIfeeHn417Yhmt2y/st
+echUQnE9oHDMBkzc5GZ1KLLngOxWBS/usrQxYRvACDVTaQzkfTAToi6CuF+jvWtgFMtoTFXxuabP
+JnIhhgHwt0F6/AjiapnqpvKiNUKVs8aD+eA52g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -338,4 +242,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_960378c3-7feb-419b-b324-74f75dd6b21d" Target="#_4cb398a6-1082-4430-9377-9d83a46956ca"><Timestamp>2020-11-27 17:05:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0fec8017-3fdf-45ca-bdb4-eff0797c1015" Target="#_a6edacaf-4fdb-42bc-a02f-7072ff59c9a1"><Timestamp>2020-11-27 21:44:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
