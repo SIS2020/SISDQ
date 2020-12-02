@@ -9,22 +9,22 @@
     <relativePath>../../../../../</relativePath>
   </parent>
   <groupId>org.example.sissandbox.job</groupId>
-  <artifactId>Main_Domestic_Student_Address</artifactId>
-  <version>0.1.0</version>
-  <name>SISSANDBOX Main_Domestic_Student_Address-0.1.0 (0.1,Job Designs)</name>
+  <artifactId>SIS_DQ0046</artifactId>
+  <version>1.0.0</version>
+  <name>SISSANDBOX SIS_DQ0046-1.0.0 (1.0,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
-    <talend.job.version>0.1</talend.job.version>
+    <talend.job.version>1.0</talend.job.version>
     <talend.project.name.lowercase>sissandbox</talend.project.name.lowercase>
     <talend.job.path>sissandbox</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>SISSANDBOX</talend.project.name>
     <talend.product.version>7.3.1.20200219_1130</talend.product.version>
-    <talend.job.finalName>main_domestic_student_address_0_1</talend.job.finalName>
+    <talend.job.finalName>sis_dq0046_1_0</talend.job.finalName>
     <talend.pigudf.groupid>org.example.sissandbox.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.sissandbox.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -33,8 +33,8 @@
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.job.name>Main_Domestic_Student_Address</talend.job.name>
-    <talend.job.id>_Hn748CT0EeuQkK3tMiPtOQ</talend.job.id>
+    <talend.job.name>SIS_DQ0046</talend.job.name>
+    <talend.job.id>_0xEgoCTzEeuQkK3tMiPtOQ</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <talend.job.folder>dataqualitymetrics/domestic_student_address/</talend.job.folder>
     <talend.job.framework></talend.job.framework>
@@ -93,6 +93,11 @@
       <version>2.2.1</version>
     </dependency>
     <dependency>
+      <groupId>net.sourceforge.jtds</groupId>
+      <artifactId>jtds</artifactId>
+      <version>1.3.1-patch-20190523</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-api</artifactId>
       <version>2.12.1</version>
@@ -123,6 +128,16 @@
       <version>1.7.25</version>
     </dependency>
     <dependency>
+      <groupId>org.talend.components.lib</groupId>
+      <artifactId>talend_DB_mssqlUtil</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>talend_DB_mssqlUtil-1.3-20190523</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>talend_file_enhanced_20070724</artifactId>
       <version>6.0.0</version>
@@ -133,59 +148,10 @@
       <version>7.3.1</version>
     </dependency>
     <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0041</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0048</artifactId>
+      <groupId>org.example.sissandbox.joblet</groupId>
+      <artifactId>ExportToExcelJoblet_Domestic_Address</artifactId>
       <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0039</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0042</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0044</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0046</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0040</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0049</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0047</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0043</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.example.sissandbox.job</groupId>
-      <artifactId>SIS_DQ0037</artifactId>
-      <version>1.0.0</version>
+      <type>pom</type>
     </dependency>
   </dependencies>
   <build>
