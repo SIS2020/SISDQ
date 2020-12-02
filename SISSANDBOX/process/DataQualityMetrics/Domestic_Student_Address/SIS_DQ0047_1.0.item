@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="DataQualityRule" prompt="DataQualityRule?" promptNeeded="false" type="id_String" value="jobName"/>
+    <contextParameter comment="" name="Description" prompt="Description?" promptNeeded="false" type="id_String" value="valid area code ?"/>
+    <contextParameter comment="" name="ValidRowNum" prompt="ValidRowNum?" promptNeeded="false" type="id_Integer" value="0"/>
+    <contextParameter comment="" name="InvalidRowNum" prompt="InvalidRowNum?" promptNeeded="false" type="id_Integer" value="0"/>
+    <contextParameter comment="" name="RecordCountNum" prompt="RecordCountNum?" promptNeeded="false" type="id_Integer" value="0"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;C:/Users/hossiei/workspaceDQ/in.csv&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:9ZinSFNzF2l8GxKsMJ4IEhJvThyAw3EXoHob7xlI"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="true"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/hossiei/workspaceDQ/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:nqaN+uKZYOKrzVOl7JLrFpQPE+RENlQHpV+YwrwT"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_bl0qQApGEeuQj8iTNBbh7Q" name="DQTechnical"/>
+    <routinesParameter id="_blUT8ApGEeuQj8iTNBbh7Q" name="DataMasking"/>
+    <routinesParameter id="_bi6gMApGEeuQj8iTNBbh7Q" name="DataOperation"/>
+    <routinesParameter id="_bljkgApGEeuQj8iTNBbh7Q" name="DataQualityDependencies"/>
+    <routinesParameter id="_blcPwApGEeuQj8iTNBbh7Q" name="DataQuality"/>
+    <routinesParameter id="_blq5QApGEeuQj8iTNBbh7Q" name="DqStringHandling"/>
+    <routinesParameter id="_bkAFUApGEeuQj8iTNBbh7Q" name="Mathematical"/>
+    <routinesParameter id="_bkJPQApGEeuQj8iTNBbh7Q" name="Numeric"/>
+    <routinesParameter id="_bkSZMApGEeuQj8iTNBbh7Q" name="Relational"/>
+    <routinesParameter id="_blMYIApGEeuQj8iTNBbh7Q" name="SQLike"/>
+    <routinesParameter id="_bka8EApGEeuQj8iTNBbh7Q" name="StringHandling"/>
+    <routinesParameter id="_bkkGAApGEeuQj8iTNBbh7Q" name="TalendDataGenerator"/>
+    <routinesParameter id="_bkso4ApGEeuQj8iTNBbh7Q" name="TalendDate"/>
+    <routinesParameter id="_blCnIApGEeuQj8iTNBbh7Q" name="TalendStringUtil"/>
+    <routinesParameter id="_bk6EQApGEeuQj8iTNBbh7Q" name="TalendString"/>
+  </parameters>
+  <node componentName="tMSSqlValidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBValidRows_1"/>
+    <elementParameter field="CLOSED_LIST" name="VALIDATION_TYPE" value="DQ_RULE"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-INBOUND&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;sisdba&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:HZV/6ltk/LY8SxGRXIdUom7AVpmGIptHLaSg7fEXK63PTigMkspHo5nC"/>
+    <elementParameter field="DBTABLE" name="TABLE" show="false" value="&quot;student&quot;"/>
+    <elementParameter field="TEXT" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DQRULES_LIST" show="false" value="SIS-DQ0001"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;select &#13;&#10;&#9;&#9;&#9;count(*)&#13;&#10;from &#13;&#10;&#9;&#9;&#9;(&#13;&#10;&#9;&#9;&#9;&#9;select * from sisdba.student_address &#13;&#10;&#9;&#9;&#9;&#9;where country in &#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;('Canada','CAN','Canadá','Canada      ]','United States','U.S.A.','U.S.','US','USA'     )&#13;&#10;&#9;&#9;&#9;) sa &#13;&#10;&#9;&#9;&#9;left join &#13;&#10;&#9;&#9;&#9;(&#13;&#10;&#9;&#9;&#9;&#9;select code from dq.dbo.AreaCodesUSCanada where InUse=1&#13;&#10;&#9;&#9;&#9;) ac on ac.code=sa.area_code&#13;&#10;where &#13;&#10;&#9;&#9;&#9;ac.code is not null &#13;&#10;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="COLUMN_LIST" name="ANALYZED_COLUMN" show="false" value="ValidRowCount"/>
+    <elementParameter field="CHECK" name="CUSTOM_PATTERN" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PATTERN_LIST" show="false" value=""/>
+    <elementParameter field="TEXT" name="DQ_PATTERN" show="false" value="&quot;'[A-Z0-9._%-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,4}'&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="student" name="tDBValidRows_1">
+      <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;context.ValidRowNum = input_row.ValidRowCount;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="student" name="tJavaRow_1">
+      <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_vkTxwOfzEeqob_JMQxXZxQ"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-INBOUND&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:MMuxwRVrG/cUZSh2AMFVf75kSH0pdUj8P43bzSHpaydvUrl0FKg5KjaE"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value="_vkTxwOfzEeqob_JMQxXZxQ - qry_SIS_DQ001_RowCount"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;select &#13;&#10;&#9;&#9;&#9;count(*)&#13;&#10;from &#13;&#10;&#9;&#9;&#9;(&#13;&#10;&#9;&#9;&#9;&#9;select * from sisdba.student_address &#13;&#10;&#9;&#9;&#9;&#9;where country in &#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;('Canada','CAN','Canadá','Canada      ]','United States','U.S.A.','U.S.','US','USA'     )&#13;&#10;&#9;&#9;&#9;) sa &#13;&#10;&#9;&#9;&#9;left join &#13;&#10;&#9;&#9;&#9;(&#13;&#10;&#9;&#9;&#9;&#9;select code from dq.dbo.AreaCodesUSCanada where InUse=1&#13;&#10;&#9;&#9;&#9;) ac on ac.code=sa.area_code&#13;&#10;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" defaultValue="" key="false" length="10" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_3"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;context.RecordCountNum = input_row.RecordCount;&#10;context.DataQualityRule=jobName;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="student" name="tJavaRow_3">
+      <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInvalidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInvalidRows_2"/>
+    <elementParameter field="CLOSED_LIST" name="VALIDATION_TYPE" value="DQ_RULE"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-INBOUND&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;sisdba&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:VLf/vesfmQ6el+CwolKi60GeL0Owc40K1o6W/MGwjg5PQf+Hgidzymqz"/>
+    <elementParameter field="DBTABLE" name="TABLE" show="false" value="&quot;student&quot;"/>
+    <elementParameter field="TEXT" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DQRULES_LIST" show="false" value="SIS-DQ0001"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;select &#13;&#10;&#9;&#9;&#9;count(*)&#13;&#10;from &#13;&#10;&#9;&#9;&#9;(&#13;&#10;&#9;&#9;&#9;&#9;select * from sisdba.student_address &#13;&#10;&#9;&#9;&#9;&#9;where country in &#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;('Canada','CAN','Canadá','Canada      ]','United States','U.S.A.','U.S.','US','USA'     )&#13;&#10;&#9;&#9;&#9;) sa &#13;&#10;&#9;&#9;&#9;left join &#13;&#10;&#9;&#9;&#9;(&#13;&#10;&#9;&#9;&#9;&#9;select code from dq.dbo.AreaCodesUSCanada where InUse=1&#13;&#10;&#9;&#9;&#9;) ac on ac.code=sa.area_code&#13;&#10;where &#13;&#10;&#9;&#9;&#9;ac.code is null &#13;&#10;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="COLUMN_LIST" name="ANALYZED_COLUMN" show="false" value="ValidRowCount"/>
+    <elementParameter field="CHECK" name="CUSTOM_PATTERN" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PATTERN_LIST" show="false" value=""/>
+    <elementParameter field="TEXT" name="DQ_PATTERN" show="false" value="&quot;'[A-Z0-9._%-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,4}'&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="student" name="tDBInvalidRows_2">
+      <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_2"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;context.InvalidRowNum = input_row.ValidRowCount;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="student" name="tJavaRow_2">
+      <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+      <elementValue elementRef="VALUE" value="context.DataQualityRule"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
+      <elementValue elementRef="VALUE" value="context.Description"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
+      <elementValue elementRef="VALUE" value="context.ValidRowNum"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InvalidRowCount"/>
+      <elementValue elementRef="VALUE" value="context.InvalidRowNum"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
+      <elementValue elementRef="VALUE" value="context.RecordCountNum"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InvalidRowCount"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;results&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;DQ&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:mEm3EQkU1STVX9iHMXG5N1aWWmr6aVWO09jJC8DMq+1H+IyrQdpgEJBS"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;DataQualityMetrics&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="RecordCount"/>
+    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Description"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ValidRowCount"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InvalidRowCount"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RecordCount"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_1">
+      <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="Description" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="InvalidRowCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="RecordCount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Code"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InUse"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TerritoryOrUse"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="205,1,&quot;Alabama (Birmingham; Tuscaloosa, and parts of western and central Alabama)&quot;&#13;&#10;659,1,&quot;Alabama (Birmingham; Tuscaloosa, and parts of western and central Alabama)&quot;&#13;&#10;938,1,&quot;Alabama (Huntsville, Anniston, Cullman, Decatur, Florence, Fort Payne, Gadsden, Madison, Sheffield, Tuscumbia)&quot;&#13;&#10;256,1,&quot;Alabama (Huntsville, Decatur, Cullman, Gadsden, Madison, Florence, Sheffield, Tuscumbia, Fort Payne, Scottsboro, and most of northern Alabama)&quot;&#13;&#10;251,1,&quot;Alabama (Mobile County, Baldwin County, Bay Minette, Jackson, Brewton, Citronelle, and part of southwestern Alabama)&quot;&#13;&#10;334,1,&quot;Alabama (Montgomery, Auburn, Dothan, Enterprise, Eufaula, Opelika, Phenix City, Selma, Tuskegee and most of southeastern Alabama)&quot;&#13;&#10;403,1,&quot;Alberta (Calgary, Banff, Red Deer, Medicine Hat, Lethbridge, Brooks, and most of southern Alberta)&quot;&#13;&#10;368,1,&quot;Alberta (Calgary, Edmonton)&quot;&#13;&#10;587,1,&quot;Alberta (Calgary, Edmonton)&quot;&#13;&#10;825,1,&quot;Alberta (Calgary, Edmonton)&quot;&#13;&#10;211,0,&quot;Not an area code—used to reach community services, or the local/regional information service&quot;&#13;&#10;780,1,&quot;Alberta (Edmonton, Jasper, Grande Prairie, Peace River, and all of northern Alberta)&quot;&#13;&#10;907,1,all of Alaska excluding the lone border town of Hyder&#13;&#10;684,1,American Samoa (the former country code for this possession and unorganized territory of the United States)&#13;&#10;264,1,Anguilla (all)&#13;&#10;268,1,Antigua and Barbuda (all)&#13;&#10;928,1,&quot;Arizona (Flagstaff, Kingman, Lake Havasu City, Page, Payson, Prescott, Tuba City, Williams, Winslow, Window Rock, Yuma, and most of northern and western Arizona, including the Grand Canyon National Park, the Lower Colorado River Valley, and the Navajo Nation)&quot;&#13;&#10;480,1,&quot;Arizona (Mesa, Scottsdale, Chandler, Tempe, and the eastern Phoenix metropolitan area)&quot;&#13;&#10;623,1,&quot;Arizona (part of Maricopa County, including Glendale, Buckeye, Goodyear, Peoria, Sun City, and the western half of Phoenix)&quot;&#13;&#10;602,1,Arizona (Phoenix)&#13;&#10;221,0,not in use&#13;&#10;222,0,not in use&#13;&#10;520,1,&quot;Arizona (Tucson, Nogales, Fort Huachuca, and most of southeastern Arizona)&quot;&#13;&#10;479,1,&quot;Arkansas (Fort Smith, Fayetteville, Rogers, and most of northwestern Arkansas)&quot;&#13;&#10;501,1,&quot;Arkansas (Little Rock, Hot Springs, and much of central Arkansas, but not Pine Bluff)&quot;&#13;&#10;870,1,&quot;Arkansas (Texarkana, Jonesboro, Pine Bluff; southern, eastern, and northeastern Arkansas)&quot;&#13;&#10;227,0,&quot;a proposed overlay of 240 and 301 (Maryland), but no date has been scheduled for this to go into effect&quot;&#13;&#10;246,1,Barbados (all)&#13;&#10;441,1,Bermuda (all)&#13;&#10;230,0,not in use&#13;&#10;236,1,British Columbia&#13;&#10;232,0,not in use&#13;&#10;233,0,not in use&#13;&#10;672,1,British Columbia&#13;&#10;235,0,not in use&#13;&#10;778,1,British Columbia&#13;&#10;604,1,&quot;British Columbia (Metro Vancouver Regional District, Whistler, and the remaining portion of 604 not part of an overlay complex)&quot;&#13;&#10;250,1,&quot;British Columbia (Victoria, Prince George, Prince Rupert, Kelowna, all areas except for Vancouver); also for Hyder, Alaska&quot;&#13;&#10;241,0,not in use&#13;&#10;669,1,California (San Jose)&#13;&#10;243,0,not in use&#13;&#10;244,0,not in use&#13;&#10;245,0,not in use&#13;&#10;341,1,&quot;California (coastal regions of the East Bay—Oakland, Fremont, Hayward, Richmond, Berkeley and Alameda)&quot;&#13;&#10;247,0,not in use&#13;&#10;510,1,&quot;California (coastal regions of the East Bay—Oakland, Fremont, Hayward, Richmond, Berkeley and Alameda)&quot;&#13;&#10;650,1,&quot;California (Daly City, South San Francisco, Palo Alto, Redwood City, Menlo Park, Mountain View, San Mateo, Santa Clara)&quot;&#13;&#10;562,1,&quot;California (Downey, Long Beach, Whittier, Norwalk, La Habra, Lakewood, Pico Rivera, and most of southeastern Los Angeles County)&quot;&#13;&#10;559,1,&quot;California (Fresno, Hanford, Madera, Tulare, Visalia, and parts of the San Joaquin Valley&quot;&#13;&#10;925,1,&quot;California (inland regions of the East Bay—Livermore, Concord, Pleasant Hill, Walnut Creek, Martinez, Pleasanton and Dublin, just east of the hills that ring San Francisco Bay)&quot;&#13;&#10;831,1,&quot;California (Monterey County, including Salinas and Monterey); San Benito County (including Hollister); and Santa Cruz County (including Santa Cruz and Watsonville)&quot;&#13;&#10;442,1,&quot;California (most of the desert and mountain portions of the southeastern two-thirds of California: Bishop, Barstow and Death Valley; eastern portions of San Bernardino County and Riverside County, including Victorville, Joshua Tree, 29 Palms, Palm Springs, Palm Desert, and Indio; all of Imperial County, including El Centro; and parts of northern and eastern San Diego County, including Oceanside, Carlsbad and Escondido)&quot;&#13;&#10;255,0,not in use&#13;&#10;760,1,&quot;California (most of the desert and mountain portions of the southeastern two-thirds of California: Bishop, Barstow and Death Valley; eastern portions of San Bernardino County and Riverside County, including Victorville, Joshua Tree, 29 Palms, Palm Springs, Palm Desert, and Indio; all of Imperial County, including El Centro; and parts of northern and eastern San Diego County, including Oceanside, Carlsbad and Escondido)&quot;&#13;&#10;257,0,not in use&#13;&#10;213,1,&quot;California (nearly the entire city of Los Angeles outside of the San Fernando Valley, including Hollywood, plus a number of smaller cities and unincorporated areas of Los Angeles County immediately to the south and/or east)&quot;&#13;&#10;261,0,not in use&#13;&#10;323,1,&quot;California (nearly the entire city of Los Angeles outside of the San Fernando Valley, including Hollywood, plus a number of smaller cities and unincorporated areas of Los Angeles County immediately to the south and/or east)&quot;&#13;&#10;530,1,&quot;California (Redding, Auburn, Chico, Davis, the California shore of Lake Tahoe, Placerville, Susanville, Truckee, Yreka, and most of northeastern California)&quot;&#13;&#10;619,1,California (San Diego and suburbs)&#13;&#10;265,0,not in use&#13;&#10;266,0,not in use&#13;&#10;858,1,California (San Diego and suburbs)&#13;&#10;628,1,California (San Francisco) and Marin County&#13;&#10;415,1,&quot;California (San Francisco, Daly City, Brisbane, and most of Marin County)&quot;&#13;&#10;626,1,&quot;California (San Gabriel Valley communities including Alhambra, Arcadia, Azusa, Baldwin Park, Covina, Duarte, El Monte, Glendora, Irwindale, La Puente, Monrovia, Pasadena, Rosemead, San Gabriel, Temple City and West Covina)&quot;&#13;&#10;271,0,not in use&#13;&#10;408,1,&quot;California (San Jose, Cupertino, Los Gatos, Milpitas, Mountain View, Santa Clara, Sunnyvale, and Silicon Valley)&quot;&#13;&#10;273,0,not in use&#13;&#10;274,0,&quot;proposed overlay of 920 (Wisconsin), but no date has been scheduled for this to go into effect&quot;&#13;&#10;275,0,not in use&#13;&#10;424,1,&quot;California (southwestern coastal and coastal-adjacent areas of Los Angeles County, including Beverly Hills, Brentwood, Malibu, Pacific Palisades, Redondo Beach, Santa Monica and Torrance, as well as Santa Catalina Island)&quot;&#13;&#10;277,0,not in use&#13;&#10;310,1,&quot;California (southwestern coastal and coastal-adjacent areas of Los Angeles County, including Beverly Hills, Brentwood, Malibu, Pacific Palisades, Redondo Beach, Santa Monica and Torrance, as well as Santa Catalina Island)&quot;&#13;&#10;840,1,&quot;California (southwestern San Bernardino County and a small portion of Los Angeles and Riverside Counties, including Fontana, Pomona, Chino Hills, Claremont, Chino, Ontario, Redlands)&quot;&#13;&#10;280,0,not in use&#13;&#10;909,1,&quot;California (southwestern San Bernardino County and a small portion of Los Angeles and Riverside Counties, including Fontana, Pomona, Chino Hills, Claremont, Chino, Ontario, Redlands)&quot;&#13;&#10;282,0,not in use&#13;&#10;283,0,&quot;proposed overlay of 513 (southwest Ohio), but no date has been scheduled for this to go into effect (ten-thousands blocks have been assigned to a switch in Cincinnati, Ohio)[3]&quot;&#13;&#10;209,1,&quot;California (Stockton, Modesto, Merced, Tracy, San Andreas, and part of central California extending into central Yosemite National Park)&quot;&#13;&#10;288,0,not in use&#13;&#10;279,1,California (the Sacramento Metropolitan Area)&#13;&#10;300,0,not in use&#13;&#10;916,1,California (the Sacramento Metropolitan Area)&#13;&#10;747,1,&quot;California (the San Fernando Valley portion of Los Angeles County, including Burbank, Canoga Park, Encino, Glendale, North Hollywood, Northridge, Panorama City, Reseda, San Fernando, Sylmar, Tarzana, Van Nuys, and Woodland Hills)&quot;&#13;&#10;818,1,&quot;California (the San Fernando Valley portion of Los Angeles County, including Burbank, Canoga Park, Encino, Glendale, North Hollywood, Northridge, Panorama City, Reseda, San Fernando, Sylmar, Tarzana, Van Nuys, and Woodland Hills)&quot;&#13;&#10;707,1,&quot;California (Vallejo, Crescent City, Eureka, Redwoods National Park, Santa Rosa, Ukiah, and most of northwestern California)&quot;&#13;&#10;805,1,&quot;California (Ventura, San Luis Obispo and Santa Barbara Counties)&quot;&#13;&#10;820,1,&quot;California (Ventura, San Luis Obispo and Santa Barbara Counties)&quot;&#13;&#10;951,1,&quot;California (western Riverside County, including Riverside, Corona, Lake Elsinore, Mira Loma, Moreno Valley, Sun City, Temecula, Winchester, Lakeview, etc.)&quot;&#13;&#10;661,1,&quot;California: Northern Los Angeles County (incl. Lancaster, Palmdale and Santa Clarita) and most of Kern County (incl. Bakersfield, Mojave and Edwards Air Force Base)&quot;&#13;&#10;657,1,&quot;California: Northern Orange County (Anaheim, Fullerton, Garden Grove, Huntington Beach, Orange, Santa Ana, and portions Newport Beach and Costa Mesa)&quot;&#13;&#10;714,1,&quot;California: Northern Orange County (Anaheim, Fullerton, Garden Grove, Huntington Beach, Orange, Santa Ana, and portions Newport Beach and Costa Mesa)&quot;&#13;&#10;311,0,&quot;Not an area code—used for non-emergency calls to local government, or to reach the city or county hall in some localities&quot;&#13;&#10;949,1,&quot;California: Southern Orange County (Irvine, Lake Forest, Mission Viejo, Corona del Mar, San Clemente, Laguna Beach, Dana Point, San Juan Capistrano, Rancho Santa Marguerita and parts of Newport Beach and Costa Mesa)&quot;&#13;&#10;622,1,Canadian non-geographic&#13;&#10;600,1,&quot;Canadian non-geographic, teleprinter, caller-pays mobile&quot;&#13;&#10;719,1,&quot;Colorado (Colorado Springs, Pueblo, Florence, Leadville, Limon, Trinidad, La Junta, and most of southeastern Colorado)&quot;&#13;&#10;720,1,&quot;Colorado (Denver, Boulder, Longmont, Aurora, Golden, Limon, Centennial; central Colorado)&quot;&#13;&#10;303,1,&quot;Colorado (Denver, Boulder, Longmont, Aurora, Golden, Limon, Littleton, Centennial; central Colorado)&quot;&#13;&#10;970,1,&quot;Colorado (Grand Junction, Aspen, Durango, Estes Park, Fort Collins, Frisco, Glenwood Springs, Greeley, Purgatory, Steamboat Springs, Telluride, Vail, Rocky Mountain National Park, Dinosaur National Monument, and most of north-central, south-central, and western Colorado)&quot;&#13;&#10;767,1,Commonwealth of Dominica (all)&#13;&#10;475,1,Connecticut&#13;&#10;959,1,Connecticut&#13;&#10;322,0,not in use&#13;&#10;203,1,&quot;Connecticut (Bridgeport, Danbury, New Haven, Waterbury, and southwestern Connecticut)&quot;&#13;&#10;324,0,not in use&#13;&#10;860,1,&quot;Connecticut (Hartford, Bristol, Norwich; and northern and eastern Connecticut)&quot;&#13;&#10;302,1,Delaware (all)&#13;&#10;327,0,&quot;a proposed overlay of 870, but no date has been scheduled for this to go into effect&quot;&#13;&#10;809,1,Dominican Republic&#13;&#10;829,1,Dominican Republic&#13;&#10;849,1,Dominican Republic&#13;&#10;333,0,not in use&#13;&#10;754,1,Florida&#13;&#10;335,0,not in use&#13;&#10;689,1,&quot;Florida (Orlando, Sanford, St. Cloud, Kissimmee, and part of east-central Florida)&quot;&#13;&#10;954,1,&quot;Florida (all of Broward County: Fort Lauderdale, Hollywood, Coral Springs, etc.)&quot;&#13;&#10;338,0,not in use&#13;&#10;813,1,&quot;Florida (all of Hillsborough County, including Tampa and its suburbs, MacDill Air Force Base, and Plant City; and also the inland areas of Pasco County), Overlays with 656&quot;&#13;&#10;656,1,&quot;Florida (all of Hillsborough County, including Tampa and its suburbs, MacDill Air Force Base, and Plant City; and also the inland areas of Pasco County), Overlays with 813&quot;&#13;&#10;305,1,Florida (all of Miami-Dade County and the Florida Keys)&#13;&#10;342,0,not in use&#13;&#10;727,1,&quot;Florida (all of Pinellas County including St. Petersburg, Clearwater, Dunedin, Palm Harbor, Tarpon Springs, and the coastal parts of Pasco County)&quot;&#13;&#10;344,0,not in use&#13;&#10;386,1,&quot;Florida (Daytona Beach, Lake City, Live Oak, Crescent City, and parts of northeastern Florida)&quot;&#13;&#10;772,1,&quot;Florida (Fort Pierce, Port Saint Lucie, Sebastian, Stuart, and Vero Beach, and all of Indian River County and Martin County)&quot;&#13;&#10;352,1,&quot;Florida (Gainesville, Ocala, Inverness, Dunnellon, and part of central Florida)&quot;&#13;&#10;941,1,&quot;Florida (Gulf Coast immediately south of Tampa Bay: all of Manatee County, Sarasota County, and Charlotte County; includes Bradenton, Port Charlotte, Sarasota, and Punta Gorda)&quot;&#13;&#10;904,1,&quot;Florida (Jacksonville, St. Augustine, Starke, and most of northeastern Florida)&quot;&#13;&#10;353,0,not in use&#13;&#10;863,1,&quot;Florida (Lakeland, Bartow, Sebring, Winter Haven in south-central Florida)&quot;&#13;&#10;355,0,not in use&#13;&#10;786,1,Florida (Miami-Dade County and the Florida Keys)&#13;&#10;321,1,&quot;Florida (Orlando, Cocoa, Melbourne, Rockledge, Titusville, St Cloud, and east-central Florida). 321 partially overlays 407; 321 is the exclusive code for the Space Coast (Cape Canaveral, Titusville, Cocoa, Cocoa Beach, Satellite Beach, Melbourne, Merritt Island, Palm Bay)&quot;&#13;&#10;407,1,&quot;Florida (Orlando, Sanford, St. Cloud, Kissimmee, and part of east-central Florida)&quot;&#13;&#10;927,1,&quot;Florida (Orlando, Sanford, St. Cloud, Kissimmee, and part of east-central Florida)&quot;&#13;&#10;366,0,not in use&#13;&#10;561,1,&quot;Florida (Palm Beach County, including Palm Beach, West Palm Beach, Boca Raton, Boynton Beach, etc.)&quot;&#13;&#10;239,1,&quot;Florida (southwest coast: all of Lee County, Collier County, the mainland part of Monroe County, including Cape Coral, Fort Myers, Naples, and Everglades)&quot;&#13;&#10;369,0,&quot;assigned for numbering relief for 707 (northwest California), but this has been suspended indefinitely&quot;&#13;&#10;762,1,Georgia&#13;&#10;381,0,not in use&#13;&#10;229,1,&quot;Georgia (Albany, Valdosta, Bainbridge, Americus, Fitzgerald, and most of southwestern Georgia)&quot;&#13;&#10;706,1,&quot;Georgia (Athens, Augusta, Columbus, Calhoun, Dalton, Rome, and much of northwestern, northeastern and eastern Georgia, with an exclave in midwestern Georgia)&quot;&#13;&#10;478,1,&quot;Georgia (Macon, Warner Robins, Swainsboro, Milledgeville, Perry, and part of central Georgia)&quot;&#13;&#10;770,1,&quot;Georgia (Marietta, Carrollton, Gainesville, Jonesboro, Lawrenceville, Roswell, Stone Mountain, Snellville, Cartersville, and much of north-central Georgia outside of Atlanta's Interstate 285 Perimeter Highway)&quot;&#13;&#10;388,0,not in use&#13;&#10;389,0,not in use&#13;&#10;400,0,not in use&#13;&#10;470,1,Georgia (metro Atlanta)&#13;&#10;678,1,Georgia (metro Atlanta)&#13;&#10;912,1,&quot;Georgia (Savannah, Statesboro, Vidalia, Waycross, Brunswick, Douglas, and southeastern Georgia)&quot;&#13;&#10;404,1,Georgia: Atlanta and the Atlanta metropolitan area inside of the Interstate 285 perimeter highway&#13;&#10;473,1,Grenada (all)&#13;&#10;671,1,Guam (the former country code for this possession and unorganized territory of the United States that includes Andersen Air Force Base)&#13;&#10;808,1,&quot;Hawaii (covers all of the Hawaiian Islands to Midway Atoll, and major Hawaiian cities including Honolulu, Kailua, Mililani, Haleiwa, Hilo, Kahului, Lihue, etc. Area code also includes Wake Island)&quot;&#13;&#10;208,1,Idaho&#13;&#10;986,1,Idaho&#13;&#10;779,1,Illinois&#13;&#10;411,0,Not an area code—used as an information number for directory assistance&#13;&#10;872,1,Illinois&#13;&#10;331,1,&quot;Illinois (Aurora, Naperville, Oswego; western suburbs of Chicago)&quot;&#13;&#10;618,1,&quot;Illinois (Carbondale, Alton, Belleville, Cahokia, Centralia, Edwardsville, Marion, Metropolis, Vandalia, and most of southern Illinois)&quot;&#13;&#10;773,1,&quot;Illinois (City of Chicago, excluding downtown)&quot;&#13;&#10;312,1,Illinois (downtown Chicago)&#13;&#10;815,1,&quot;Illinois (much of northern Illinois outside Chicago &amp; its immediate surrounding suburbs. Includes Rockford and its suburbs, Belvidere, La Salle, Peru, DeKalb, Sycamore, Freeport, Dixon, Sterling, Rock Falls, Ottawa, Morris, Princeton, Mendota, Rochelle, Sandwich, Streator, Pontiac, Kankakee, and some outlying Chicago suburbs such as Harvard, McHenry, Crystal Lake, Woodstock, Plainfield, Joliet, Romeoville, Lockport, New Lenox, Frankfort, Minooka, Channahon, and Shorewood)&quot;&#13;&#10;847,1,&quot;Illinois (North and northwest suburbs of Chicago, including Lake, northern Cook, northern Kane, and extreme southeastern McHenry counties. Includes Evanston, Skokie, Niles, Park Ridge, Des Plaines, and Mount Prospect.)&quot;&#13;&#10;224,1,&quot;Illinois (North and northwest suburbs of Chicago, including Lake, northern Cook, northern Kane, and extreme southeastern McHenry Counties. Includes Evanston, Skokie, Niles, Park Ridge, Des Plaines, Mount Prospect, Arlington Heights, Palatine, Wheeling, Buffalo Grove, Barrington, Elk Grove Village, Schaumburg, Hoffman Estates, Elgin, Carpentersville, Algonquin, Lake in the Hills, Huntley, Hampshire, Cary, Lake Zurich, Fox Lake, Round Lake Beach, Antioch, Gurnee, Waukegan, Zion, Lake Forest, Vernon Hills, Libertyville, Mundelein, Northbrook, Glenview, Deerfield, Highland Park, Wilmette, Winnetka)&quot;&#13;&#10;422,0,not in use&#13;&#10;309,1,&quot;Illinois (Peoria, Bloomington, Moline, Rock Island, Galesburg; west-central Illinois)&quot;&#13;&#10;217,1,&quot;Illinois (Springfield, Champaign, Decatur, Urbana, Lincoln, and parts of central Illinois)&quot;&#13;&#10;708,1,&quot;Illinois (Western and southern portions of suburban Cook County and far eastern sections of Will County. Includes Beecher, Berwyn, Brookfield, Bridgeview, Burbank, Calumet City, Chicago Heights, Cicero, Dolton, Elmwood Park, Evergreen Park, Franklin Park, Harvey, Harwood Heights, Hazel Crest, Homer Glen, Homewood, La Grange, Lansing, Matteson, Maywood, Melrose Park, Mokena, Monee, Norridge, Oak Forest, Oak Park, Orland Park, Palos Hills, Park Forest, Peotone, Tinley Park, University Park, and other southern and near western suburbs of Chicago)&quot;&#13;&#10;630,1,&quot;Illinois (western suburbs of Chicago, including DuPage, central and southern Kane, northern Kendall, far northern Will, and small portions of Cook counties)&quot;&#13;&#10;429,0,not in use&#13;&#10;260,1,&quot;Indiana (Fort Wayne, New Haven, Decatur, Angola, Huntington, Wabash, and most of northeastern Indiana)&quot;&#13;&#10;219,1,&quot;Indiana (Gary, Chesterton, Crown Point, East Chicago, Hammond, Hobart, Merrillville, Michigan City, Portage, Valparaiso)&quot;&#13;&#10;317,1,&quot;Indiana (Indianapolis and immediate metro area including Carmel, Fishers, Noblesville, Westfield, Greenwood, Mooresville, Beech Grove, Plainfield, Avon, Brownsburg, and Zionsville)&quot;&#13;&#10;433,0,not in use&#13;&#10;463,1,&quot;Indiana (Indianapolis and immediate metro area including Carmel, Fishers, Noblesville, Westfield, Greenwood, Mooresville, Beech Grove, Plainfield, Avon, Brownsburg, and Zionsville). Mnemonic: INDiana&quot;&#13;&#10;765,1,&quot;Indiana (Kokomo, Lafayette, Marion, Muncie, Richmond, West Lafayette, and most of central Indiana excluding Indianapolis and immediate suburbs)&quot;&#13;&#10;436,0,not in use&#13;&#10;574,1,&quot;Indiana (South Bend, Elkhart, Goshen, and most of north-central Indiana)&quot;&#13;&#10;812,1,&quot;Indiana (Southern Indiana, including Bloomington, Evansville, Terre Haute, Columbus, Jeffersonville, Lawrenceburg, Madison, and New Albany)&quot;&#13;&#10;439,0,not in use&#13;&#10;930,1,&quot;Indiana (Southern Indiana, including Bloomington, Evansville, Terre Haute, Columbus, Jeffersonville, Lawrenceburg, Madison, and New Albany)&quot;&#13;&#10;319,1,&quot;Iowa (Cedar Rapids, Waterloo, Burlington, Iowa City; parts of eastern Iowa)&quot;&#13;&#10;563,1,&quot;Iowa (Davenport, Dubuque, Clinton, Bettendorf, and most of eastern and northeastern Iowa)&quot;&#13;&#10;515,1,&quot;Iowa (Des Moines, Ames, Fort Dodge, Jefferson, Indianola and most of north-central Iowa)&quot;&#13;&#10;444,0,not in use&#13;&#10;641,1,&quot;Iowa (Mason City, Oskaloosa, Creston, Pella, Ottumwa, Britt, Clear Lake, Fairfield, and parts of central Iowa)&quot;&#13;&#10;446,0,not in use&#13;&#10;447,0,a proposed overlay of 217 (Illinois)&#13;&#10;712,1,&quot;Iowa (Sioux City, Council Bluffs, Denison, and most of western Iowa)&quot;&#13;&#10;449,0,not in use&#13;&#10;658,1,Jamaica&#13;&#10;455,0,not in use&#13;&#10;456,0,originally reserved for inbound international calls for carrier-specific services&#13;&#10;457,0,not in use&#13;&#10;876,1,Jamaica&#13;&#10;459,0,not in use&#13;&#10;460,0,not in use&#13;&#10;913,1,&quot;Kansas (Kansas City, Kansas, Overland Park, Olathe, Lenexa, Leavenworth, Bonner Springs, De Soto, parts of eastern Kansas)&quot;&#13;&#10;464,0,a proposed overlay of 708 (Illinois)&#13;&#10;465,0,not in use&#13;&#10;466,0,not in use&#13;&#10;467,0,not in use&#13;&#10;620,1,Kansas (southern Kansas not including the Wichita Metropolitan Area and Hutchison)&#13;&#10;785,1,&quot;Kansas (Topeka, Salina, Colby, Lawrence, Manhattan, and all of northern and central Kansas not including the Kansas City Metropolitan Area)&quot;&#13;&#10;316,1,&quot;Kansas (Wichita metropolitan area, McConnell Air Force Base, Augusta, El Dorado, Mulvane, and Hutchinson)&quot;&#13;&#10;606,1,&quot;Kentucky (Ashland, Pikeville, Hazard, Somerset, London, Corbin, Maysville, and much of eastern Kentucky)&quot;&#13;&#10;859,1,&quot;Kentucky (Lexington, Richmond, Danville, Covington, Florence, and northernmost Kentucky)&quot;&#13;&#10;502,1,&quot;Kentucky (Louisville, Frankfort, Shelbyville, Bardstown, and most of north-central Kentucky)&quot;&#13;&#10;476,0,not in use&#13;&#10;477,0,not in use&#13;&#10;270,1,&quot;Kentucky (Owensboro, Paducah, Bowling Green, Hopkinsville, Henderson, Elizabethtown, and most of western Kentucky)&quot;&#13;&#10;364,1,&quot;Kentucky (Owensboro, Paducah, Bowling Green, Hopkinsville, Henderson, Elizabethtown, and most of western Kentucky)&quot;&#13;&#10;225,1,&quot;Louisiana (Baton Rouge, Donaldsonville, New Roads, White Castle, and east-central Louisiana)&quot;&#13;&#10;985,1,&quot;Louisiana (Houma, Slidell, and southeastern Louisiana excluding New Orleans)&quot;&#13;&#10;485,0,not in use&#13;&#10;486,0,not in use&#13;&#10;487,0,not in use&#13;&#10;488,0,not in use&#13;&#10;489,0,not in use&#13;&#10;500,0,reserved for personal communications services&#13;&#10;337,1,&quot;Louisiana (Lafayette, Lake Charles, Leesville, New Iberia, Opelousas, and most of southwestern Louisiana)&quot;&#13;&#10;504,1,Louisiana (New Orleans metropolitan area)&#13;&#10;318,1,&quot;Louisiana (Shreveport–Bossier City, Monroe, Alexandria, Fisher, Tallulah, and most of northern Louisiana)&quot;&#13;&#10;207,1,Maine (all except Estcourt Station)&#13;&#10;204,1,Manitoba&#13;&#10;431,1,Manitoba&#13;&#10;584,1,Manitoba&#13;&#10;443,1,Maryland&#13;&#10;667,1,Maryland&#13;&#10;410,1,&quot;Maryland (except for St. Mary's County, all counties and cities which touch the Chesapeake Bay, the Atlantic Ocean, or Delaware, including Annapolis, metropolitan Baltimore, Berlin, Cambridge, Ocean City, Princess Anne, and Salisbury) as well as Howard County (Columbia) and Carroll County (Westminster)&quot;&#13;&#10;511,0,&quot;Not an area code—used as a local information number for transportation and road conditions, and/or local police non-emergency services&quot;&#13;&#10;301,1,&quot;Maryland (Silver Spring, Washington, D.C., suburbs, all counties which touch the Potomac River; Hagerstown, Frederick, Rockville, Cumberland, and land line telephones in western Maryland)&quot;&#13;&#10;240,1,Maryland (southern and western parts)&#13;&#10;774,1,Massachusetts&#13;&#10;857,1,&quot;Massachusetts (Boston, Cambridge, Quincy, Newton, Everett, and nearby suburbs)&quot;&#13;&#10;617,1,&quot;Massachusetts (Boston, Cambridge, Quincy, Newton, Everett, and the nearby suburbs)&quot;&#13;&#10;339,1,&quot;Massachusetts (Boston, South Shore)&quot;&#13;&#10;978,1,&quot;Massachusetts (Fitchburg, Lowell, Lawrence, Peabody, and northeastern Massachusetts)&quot;&#13;&#10;351,1,Massachusetts (northeastern)&#13;&#10;781,1,&quot;Massachusetts (Saugus, Norwood, Waltham Woburn, and other suburbs of Boston along Route 128)&quot;&#13;&#10;521,0,Personal communications services&#13;&#10;522,0,Personal communications services&#13;&#10;523,0,Personal communications services&#13;&#10;524,0,Personal communications services&#13;&#10;525,0,Personal communications services&#13;&#10;413,1,&quot;Massachusetts (Springfield, Pittsfield, Holyoke, Greenfield, and most of Western Massachusetts)&quot;&#13;&#10;508,1,&quot;Massachusetts (Worcester, New Bedford, Fall River, Cape Cod, and most of southeastern Massachusetts)&quot;&#13;&#10;532,0,reserved for personal communications services&#13;&#10;533,0,reserved for personal communications services&#13;&#10;989,1,&quot;Michigan (Alpena, Mt. Pleasant, Bay City, Saginaw, Midland, Owosso, and part of central Michigan)&quot;&#13;&#10;535,0,reserved for personal communications services&#13;&#10;536,0,not in use&#13;&#10;537,0,not in use&#13;&#10;538,0,reserved for personal communications services&#13;&#10;734,1,&quot;Michigan (Ann Arbor, Hell, Monroe, Plymouth, Romulus, Wayne, Ypsilanti, and the southwestern suburbs of Detroit)&quot;&#13;&#10;269,1,&quot;Michigan (Battle Creek, Kalamazoo, Benton Harbor, Allegan, Hastings, St. Joseph, and most of southwestern Michigan)&quot;&#13;&#10;313,1,&quot;Michigan (Dearborn, the Grosse Pointes; Detroit and its enclaves of Hamtramck and Highland Park)&quot;&#13;&#10;544,0,reserved for personal communications services&#13;&#10;545,0,reserved for personal communications services&#13;&#10;546,0,reserved for personal communications services&#13;&#10;547,0,reserved for personal communications services&#13;&#10;616,1,&quot;Michigan (Grand Rapids, Greenville, Holland, Ionia, Zeeland, and most of southwestern Michigan)&quot;&#13;&#10;549,0,reserved for personal communications services&#13;&#10;550,0,reserved for personal communications services&#13;&#10;517,1,&quot;Michigan (Lansing, Jackson, Charlotte, Deerfield, Addison, and most of south-central Michigan)&quot;&#13;&#10;555,0,&quot;reserved for directory assistance applications, or not in use&quot;&#13;&#10;556,0,reserved for personal communications services&#13;&#10;557,0,&quot;Missouri: a planned overlay for 314, but this has been suspended indefinitely&quot;&#13;&#10;558,0,reserved for personal communications services&#13;&#10;586,1,Michigan (Macomb County)&#13;&#10;560,0,not in use&#13;&#10;231,1,&quot;Michigan (Muskegon, Traverse City, Ludington, Petoskey, and part of northwestern Michigan)&quot;&#13;&#10;248,1,Michigan (Oakland County)&#13;&#10;947,1,Michigan (Oakland County)&#13;&#10;810,1,&quot;Michigan (Port Huron, Flint, Lapeer, and Michigan &quot;&quot;Thumb&quot;&quot;)&quot;&#13;&#10;565,0,not in use&#13;&#10;566,0,reserved for personal communications services&#13;&#10;906,1,&quot;Michigan: Upper Peninsula (Sault Ste. Marie, Escanaba, Houghton, Iron Mountain, Marquette, Menominee, etc.)&quot;&#13;&#10;568,0,not in use&#13;&#10;569,0,reserved for personal communications services&#13;&#10;952,1,&quot;Minnesota (Bloomington, Eden Prairie, Edina, Minnetonka, Chaska, and the southwest suburban Minneapolis area)&quot;&#13;&#10;763,1,&quot;Minnesota (Brooklyn Park, Plymouth, Maple Grove, Monticello, Elk River, Fridley, Blaine, and the northwest suburban area of Minneapolis)&quot;&#13;&#10;218,1,&quot;Minnesota (Duluth, Moorhead, Thief River Falls, Bemidji, Brainerd, International Falls, and most of northern Minnesota)&quot;&#13;&#10;612,1,&quot;Minnesota (Minneapolis, Fort Snelling, St. Anthony, and Richfield)&quot;&#13;&#10;507,1,&quot;Minnesota (Rochester, Mankato, Austin, Marshall, Winona and most of southern Minnesota)&quot;&#13;&#10;320,1,&quot;Minnesota (St. Cloud, Alexandria, Morris, Hutchinson, Sandstone, Appleton, Willmar; central Minnesota)&quot;&#13;&#10;576,0,not in use&#13;&#10;577,0,reserved for personal communications services&#13;&#10;578,0,reserved for personal communications services&#13;&#10;651,1,&quot;Minnesota (St. Paul, Eagan, Lindstrom, Red Wing, Hastings, Stillwater and part of east-central Minnesota)&quot;&#13;&#10;769,1,Mississippi&#13;&#10;228,1,&quot;Mississippi (Gulfport, Biloxi, Pascagoula, Bay St. Louis, and southmost Mississippi)&quot;&#13;&#10;601,1,&quot;Mississippi (Jackson, Hattiesburg, Meridian, Natchez, Vicksburg, and most of central Mississippi)&quot;&#13;&#10;583,0,not in use&#13;&#10;662,1,&quot;Mississippi (Tupelo, Columbus, Corinth, Greenville, Greenwood, Starkville, and most of northern Mississippi)&quot;&#13;&#10;573,1,&quot;Missouri (Columbia, Jefferson City, Hannibal, Cape Girardeau, Farmington, Lake of the Ozarks, Poplar Bluff, and most of eastern Missouri excluding St. Louis County and the City of St. Louis)&quot;&#13;&#10;816,1,&quot;Missouri (Kansas City, St Joseph, Independence, Harrisonville, and parts of west-central Missouri)&quot;&#13;&#10;660,1,&quot;Missouri (Sedalia, Kirksville, Maryville, Mexico, Whiteman Air Force Base, and part of north-central Missouri)&quot;&#13;&#10;588,0,&quot;since 2015, reserved for personal communications services&quot;&#13;&#10;589,0,&quot;since 2011, reserved for personal communications services&quot;&#13;&#10;417,1,&quot;Missouri (Springfield, Joplin, Branson, Lamar, Lebanon, and most of southwestern Missouri)&quot;&#13;&#10;636,1,&quot;Missouri (St. Charles, Chesterfield, Union, Troy, and parts of east-central Missouri)&quot;&#13;&#10;314,1,&quot;Missouri (St. Louis, St. Louis County, Florissant, Crestwood, Hazelwood, Kirkwood, and surrounding suburbs of St. Louis)&quot;&#13;&#10;406,1,Montana (all)&#13;&#10;664,1,Montserrat (all)&#13;&#10;308,1,&quot;Nebraska (North Platte, Scottsbluff, McCook, Kearney, Grand Island; western Nebraska)&quot;&#13;&#10;402,1,&quot;Nebraska (Omaha, Lincoln, Norfolk, Superior, and most of eastern Nebraska)&quot;&#13;&#10;531,1,&quot;Nebraska (Omaha, Lincoln, Norfolk, Superior, and most of eastern Nebraska)&quot;&#13;&#10;702,1,&quot;Nevada (almost all of Clark County, including all of the Las Vegas Valley, including Henderson and Boulder City)&quot;&#13;&#10;725,1,&quot;Nevada (almost all of Clark County, including all of the Las Vegas Valley, including Henderson and Boulder City)&quot;&#13;&#10;775,1,&quot;Nevada (Carson City, Reno, Elko, Ely, Sparks, Winnemucca, Great Basin National Park, Naval Air Station Fallon, and all of Nevada except for most of Clark County in southernmost Nevada)&quot;&#13;&#10;611,0,&quot;Not an area code—used to reach the repair service for land-line telephones, or the customer service for most wireless carriers&quot;&#13;&#10;428,1,New Brunswick&#13;&#10;506,1,New Brunswick (all)&#13;&#10;603,1,New Hampshire (all)&#13;&#10;862,1,New Jersey&#13;&#10;908,1,&quot;New Jersey (Alpha, Washington, Elizabeth, Warren, Plainfield, and west-central New Jersey)&quot;&#13;&#10;201,1,New Jersey (Bergen County and Hudson County)&#13;&#10;551,1,New Jersey (Bergen County and Hudson County)&#13;&#10;856,1,&quot;New Jersey (Cherry Hill, Camden, Millville, Vineland, and most of southwestern New Jersey)&quot;&#13;&#10;732,1,&quot;New Jersey (New Brunswick, Lakewood, Neptune, Fort Dix, and most of east-central New Jersey)&quot;&#13;&#10;621,0,not in use&#13;&#10;848,1,&quot;New Jersey (New Brunswick, Lakewood, Neptune, Fort Dix, and most of east-central New Jersey)&quot;&#13;&#10;973,1,&quot;New Jersey (Newark, Paterson, and most of northeastern New Jersey)&quot;&#13;&#10;609,1,&quot;New Jersey (Trenton, Atlantic City, Princeton, and most of central &amp; southeastern New Jersey)&quot;&#13;&#10;640,1,&quot;New Jersey (Trenton, Atlantic City, Princeton, and most of central &amp; southeastern New Jersey)&quot;&#13;&#10;505,1,&quot;New Mexico (Albuquerque, Santa Fe, Farmington, Gallup, and all of northwestern New Mexico, and part of central New Mexico)&quot;&#13;&#10;575,1,&quot;New Mexico (Las Cruces, Roswell, Carlsbad Caverns National Park, Socorro, Taos, Truth or Consequences; excludes central (Albuquerque and its suburbs) and northwestern New Mexico)&quot;&#13;&#10;518,1,&quot;New York (Albany, Schenectady, Plattsburgh, Saranac Lake, Lake George, Westport, and most of northeastern New York)&quot;&#13;&#10;838,1,&quot;New York (Albany, Schenectady, Plattsburgh, Saranac Lake, Lake George, Westport, and most of northeastern New York)&quot;&#13;&#10;632,0,not in use&#13;&#10;607,1,&quot;New York (Binghamton, Elmira, Cortland, Norwich, Ithaca, and most of south-central New York)&quot;&#13;&#10;716,1,&quot;New York (Buffalo, Niagara Falls, Olean, and parts of western New York)&quot;&#13;&#10;845,1,&quot;New York (Dutchess, Orange, Putnam, Rockland, Sullivan, and Ulster counties)&quot;&#13;&#10;516,1,&quot;New York (Nassau County, including Hempstead and Mineola)&quot;&#13;&#10;917,1,New York (New York City: Mainly cell phones)&#13;&#10;212,1,&quot;New York (New York City: Manhattan only, except for Marble Hill)&quot;&#13;&#10;645,0,not in use&#13;&#10;332,1,&quot;New York (New York City: Manhattan only, except for Marble Hill)&quot;&#13;&#10;646,1,&quot;New York (New York City: Manhattan only, except for Marble Hill)&quot;&#13;&#10;648,0,not in use&#13;&#10;347,1,&quot;New York (New York City: The Bronx, Brooklyn, Queens, Staten Island, and Marble Hill)&quot;&#13;&#10;718,1,&quot;New York (New York City: The Bronx, Brooklyn, Queens, Staten Island, and Marble Hill)&quot;&#13;&#10;929,1,&quot;New York (New York City: The Bronx, Brooklyn, Queens, Staten Island, and Marble Hill)&quot;&#13;&#10;585,1,&quot;New York (Rochester, Batavia, and much of western New York)&quot;&#13;&#10;631,1,New York (Suffolk County on Long Island)&#13;&#10;934,1,New York (Suffolk County on Long Island)&#13;&#10;680,1,&quot;New York (Syracuse, Utica, Watertown, and north-central New York)&quot;&#13;&#10;315,1,&quot;New York (Syracuse, Utica, Watertown; north-central New York)&quot;&#13;&#10;914,1,New York (Westchester County)&#13;&#10;709,1,Newfoundland and Labrador (all)&#13;&#10;879,1,Newfoundland (all)&#13;&#10;663,0,not in use&#13;&#10;633,1,&quot;nominally reserved to overlay 600, a rarely used Canadian non-geographic code&quot;&#13;&#10;665,0,not in use&#13;&#10;666,0,not in use&#13;&#10;644,1,&quot;nominally reserved to overlay 600, a rarely used Canadian non-geographic code&quot;&#13;&#10;668,0,not in use&#13;&#10;655,1,&quot;nominally reserved to overlay 600, a rarely used Canadian non-geographic code&quot;&#13;&#10;677,1,&quot;nominally reserved to overlay 600, a rarely used Canadian non-geographic code&quot;&#13;&#10;688,1,&quot;nominally reserved to overlay 600, a rarely used Canadian non-geographic code&quot;&#13;&#10;743,1,North Carolina&#13;&#10;980,1,North Carolina&#13;&#10;984,1,North Carolina&#13;&#10;679,0,&quot;assigned for numbering relief to 313 (Michigan), but no date has been scheduled for this to go into effect&quot;&#13;&#10;828,1,&quot;North Carolina (Asheville, Franklin, Hickory, Murphy, Waynesville, and parts of western North Carolina)&quot;&#13;&#10;704,1,&quot;North Carolina (Charlotte, Concord, Gastonia, Salisbury, and much of south-central North Carolina)&quot;&#13;&#10;910,1,&quot;North Carolina (Fayetteville, Wilmington, Fort Bragg, Seymour Johnson Air Force Base, Jacksonville, Lumberton and much of southeastern North Carolina)&quot;&#13;&#10;252,1,&quot;North Carolina (Greenville, New Bern, Elizabeth City, Kinston, Outer Banks, Rocky Mount)&quot;&#13;&#10;336,1,&quot;North Carolina (the Piedmont Triad, Wilkesboro, Roxboro, and most of northwestern North Carolina)&quot;&#13;&#10;919,1,&quot;North Carolina (the Research Triangle—including Raleigh, the state capital city; Durham, Cary, and Chapel Hill—plus Goldsboro and other parts of north-central North Carolina)&quot;&#13;&#10;701,1,North Dakota (all)&#13;&#10;700,0,&quot;Long-distance carrier use for pre-subscribing phone numbers, 1-700-555-4141 most often gives a recorded message indicating the default carrier on a line. In theory, an interexchange carrier may assign any number in this area code to any carrier-specific service, but this use is rare.&quot;&#13;&#10;670,1,&quot;Northern Mariana Islands (the former country code for this present Commonwealth of the United States that includes Saipan, Tinian, and Rota)&quot;&#13;&#10;850,1,&quot;northwestern Florida (Appalachicola, Pensacola, Tallahassee, Quincy, Panama City, Naval Air Station Pensacola, Eglin Air Force Base, and all of the Florida Panhandle)&quot;&#13;&#10;782,1,Nova Scotia and Prince Edward Island&#13;&#10;902,1,Nova Scotia and Prince Edward Island&#13;&#10;234,1,&quot;Ohio (Akron, Canton, Youngstown, Warren, and most of northeastern Ohio)&quot;&#13;&#10;330,1,&quot;Ohio (Akron, Canton, Youngstown, Warren, and most of northeastern Ohio)&quot;&#13;&#10;513,1,&quot;Ohio (Cincinnati, Middletown, Hamilton, Lebanon, and parts of southern and southwestern Ohio. This area code used to also include Dayton)&quot;&#13;&#10;216,1,Ohio (Cleveland area)&#13;&#10;380,1,Ohio (Columbus and Franklin County)&#13;&#10;710,0,U.S. Government Special Services&#13;&#10;711,0,Not an area code—used for telecommunications device for the deaf&#13;&#10;614,1,Ohio (Columbus and Franklin County)&#13;&#10;326,1,&quot;Ohio (Dayton, Springfield, and southwestern Ohio north and east of the Cincinnati metropolitan area)&quot;&#13;&#10;937,1,&quot;Ohio (Dayton, Springfield, and southwestern Ohio north and east of the Cincinnati metropolitan area)&quot;&#13;&#10;567,1,Ohio (Northwest)&#13;&#10;220,1,&quot;Ohio (Suburban Columbus, central Ohio outside of Franklin County, excluding the Marysville area, together with southeastern Ohio: Athens, Lancaster, Cambridge, Delaware, Ironton, Marietta, Mt. Vernon, Newark, Portsmouth, Steubenville, Washington Court House, and Zanesville)&quot;&#13;&#10;740,1,&quot;Ohio (Suburban Columbus, central Ohio outside of Franklin County, excluding the Marysville area, together with southeastern Ohio: Athens, Lancaster, Cambridge, Delaware, Ironton, Marietta, Mt. Vernon, Newark, Portsmouth, Steubenville, Washington Court House, and Zanesville)&quot;&#13;&#10;440,1,&quot;Ohio (surrounding Cleveland on three sides, including: Elyria, Lorain, Oberlin, Ashtabula, and most of north-central Ohio)&quot;&#13;&#10;419,1,&quot;Ohio (Toledo, Sylvania, Mansfield, Lima, Findlay, Sandusky, Bowling Green, and most of northwestern Ohio)&quot;&#13;&#10;405,1,&quot;Oklahoma (Oklahoma City, Stillwater, Edmond, Norman, Shawnee, and most of central Oklahoma)&quot;&#13;&#10;572,1,&quot;Oklahoma (Oklahoma City, Stillwater, Edmond, Norman, Shawnee, and most of central Oklahoma)&quot;&#13;&#10;722,0,not in use&#13;&#10;723,0,not in use&#13;&#10;580,1,&quot;Oklahoma (Ponca City, Ada, Ardmore, Enid, Lawton, Elk City, and most of southern and western Oklahoma)&quot;&#13;&#10;539,1,&quot;Oklahoma (Tulsa, Bartlesville, McAlester, Muskogee, Henryetta and northeastern Oklahoma)&quot;&#13;&#10;918,1,&quot;Oklahoma (Tulsa, Bartlesville, McAlester, Muskogee, Henryetta and northeastern Oklahoma)&quot;&#13;&#10;226,1,&quot;Ontario (London, Windsor, Kitchener-Waterloo, Cambridge, and most of southwestern Ontario)&quot;&#13;&#10;730,0,a proposed overlay of 618 (Illinois)&#13;&#10;382,1,&quot;Ontario (London, Windsor, Kitchener-Waterloo, Cambridge, and most of southwestern Ontario)&quot;&#13;&#10;548,1,&quot;Ontario (London, Windsor, Kitchener-Waterloo, Cambridge, and most of southwestern Ontario)&quot;&#13;&#10;733,0,not in use&#13;&#10;519,1,&quot;Ontario (London, Windsor, Kitchener-Waterloo, Cambridge, Brantford, Guelph and most of southwestern Ontario)&quot;&#13;&#10;905,1,&quot;Ontario (Niagara Falls Region (including St. Catharines), Hamilton, and Greater Toronto Area except for the City of Toronto)&quot;&#13;&#10;742,1,&quot;Ontario (Niagara Falls Region, Hamilton, St. Catharines, suburbs of the Greater Toronto Area, and southeastern Ontario)&quot;&#13;&#10;741,0,not in use&#13;&#10;249,1,&quot;Ontario (Northeastern Ontario and Central Ontario: Greater Sudbury, Sault Ste. Marie, North Bay, etc.)&quot;&#13;&#10;807,1,&quot;Ontario (Northwestern Ontario: Thunder Bay, Kenora, Dryden, Greenstone)&quot;&#13;&#10;744,0,not in use&#13;&#10;289,1,&quot;Ontario (Oshawa-Hamilton and Golden Horseshoe, excluding Toronto 416 but including its adjacent suburbs)&quot;&#13;&#10;752,0,not in use&#13;&#10;365,1,&quot;Ontario (Oshawa-Hamilton and the Golden Horseshoe, excluding Toronto's 416 but including its adjacent suburbs)&quot;&#13;&#10;613,1,Ontario (Ottawa metropolitan area and southeastern Ontario)&#13;&#10;755,0,not in use&#13;&#10;756,0,not in use&#13;&#10;753,1,Ontario (Ottawa metropolitan area and southeastern Ontario)&#13;&#10;416,1,Ontario (the City of Toronto)&#13;&#10;759,0,not in use&#13;&#10;647,1,Ontario (Toronto)&#13;&#10;761,0,not in use&#13;&#10;683,1,&quot;Ontario: (Northeastern Ontario and Central Ontario: Greater Sudbury, Sault Ste. Marie, North Bay, etc.)&quot;&#13;&#10;705,1,&quot;Ontario: (Northeastern Ontario and Central Ontario: Greater Sudbury, Sault Ste. Marie, North Bay, etc.)&quot;&#13;&#10;764,0,&quot;had been assigned for numbering relief to 650 (western San Francisco Bay, including San Mateo County), but this has been suspended indefinitely&quot;&#13;&#10;343,1,Ontario: (Ottawa metropolitan area and southeastern Ontario)&#13;&#10;766,0,not in use&#13;&#10;387,1,Ontario: Toronto metropolitan area&#13;&#10;768,0,not in use&#13;&#10;437,1,Ontario: Toronto metropolitan area&#13;&#10;541,1,&quot;Oregon (Eugene, Bend, Corvallis, Medford, Pendleton, and all of Oregon except metropolitan northwestern Oregon, including Portland, Salem, Astoria, etc.)&quot;&#13;&#10;771,0,&quot;area code 771 is reserved as a second code for the District of Columbia, to be phased in around 2022&quot;&#13;&#10;458,1,&quot;Oregon (Eugene, Medford, Bend, Pendleton, Corvallis, Ontario, Burns; excludes the Portland metropolitan area)&quot;&#13;&#10;971,1,&quot;Oregon (Portland, Salem, Hillsboro, Beaverton, and most of northwestern Oregon)&quot;&#13;&#10;503,1,&quot;Oregon (Portland, Salem, Hillsboro, Beaverton, St. Helens, Tillamook, Astoria and most of northwestern Oregon)&quot;&#13;&#10;445,1,&quot;overlay of 215 and 267 (Philadelphia, Pennsylvania)&quot;&#13;&#10;776,0,not in use&#13;&#10;777,0,not in use&#13;&#10;484,1,Pennsylvania&#13;&#10;878,1,Pennsylvania&#13;&#10;582,1,&quot;Pennsylvania (Erie, State College, Altoona, Bradford, Clearfield, Emporium, Johnsonburg, Johnstown, Meyersdale, Ridgway, Somerset, and most of northwestern and parts of central Pennsylvania)&quot;&#13;&#10;610,1,&quot;Pennsylvania (Chester, Lehigh Valley, Norristown, Reading; parts of southeastern Pennsylvania)&quot;&#13;&#10;814,1,&quot;Pennsylvania (Erie, State College, Altoona, Clearfield, Emporium, Johnsonburg, Johnstown, Meyersdale, Ridgway, Somerset, and most of northwestern and parts of central Pennsylvania)&quot;&#13;&#10;783,0,not in use&#13;&#10;223,1,&quot;Pennsylvania (Harrisburg, Gettysburg, Lancaster, York and most of south-central Pennsylvania)&quot;&#13;&#10;717,1,&quot;Pennsylvania (Harrisburg, Gettysburg, Lancaster, York and most of south-central Pennsylvania)&quot;&#13;&#10;272,1,Pennsylvania (northeastern)&#13;&#10;267,1,Pennsylvania (Philadelphia and surrounding suburban area)&#13;&#10;788,0,not in use&#13;&#10;789,0,not in use&#13;&#10;800,0,toll-free telephone service&#13;&#10;215,1,&quot;Pennsylvania (Philadelphia area, including all of Philadelphia and its suburbs in eastern Montgomery County and most of Bucks County as well as a very small portion of Berks County around the Hereford area, which is served by the Pennsburg 679 exchange)&quot;&#13;&#10;412,1,&quot;Pennsylvania (Pittsburgh region, including McKeesport, Monroeville, Bethel Park, Penn Hills, and Ross; the area code encompasses the majority of Allegheny County and portions of Westmoreland County)&quot;&#13;&#10;570,1,&quot;Pennsylvania (the Wyoming Valley, including Scranton and Wilkes-Barre; Bloomsburg; Danville; Nanticoke; Williamsport; and most of northeastern Pennsylvania)&quot;&#13;&#10;724,1,&quot;Pennsylvania (Washington, Greensburg, Indiana, New Castle, Uniontown, Butler, and the majority of Southwestern Pennsylvania outside of Pittsburgh's Allegheny County)&quot;&#13;&#10;787,1,Puerto Rico&#13;&#10;939,1,Puerto Rico&#13;&#10;354,1,Quebec (central southern Quebec; surrounding City of Montreal)&#13;&#10;450,1,Quebec (central southern Quebec; surrounds City of Montreal)&#13;&#10;579,1,Quebec (central southern Quebec; surrounds City of Montreal)&#13;&#10;367,1,&quot;Quebec (Quebec City, Saguenay, the Gaspé Peninsula, Côte-Nord, Chibougamau, St-Georges), Maine (Estcourt Station)&quot;&#13;&#10;811,0,&quot;Not an area code—used as a regional information number, with usage varying by country&quot;&#13;&#10;418,1,&quot;Quebec (Quebec City, Saguenay, the Gaspé Peninsula, Côte-Nord, Chibougamau, St-Georges), Maine (Estcourt Station)&quot;&#13;&#10;581,1,&quot;Quebec (Quebec City, Saguenay, the Gaspé Peninsula, Côte-Nord, Chibougamau, St-Georges), Maine (Estcourt Station)&quot;&#13;&#10;468,1,&quot;Quebec (Western Québec except Montréal 514 and surrounding area 450. A large area including Abitibi-Témiscamingue, Estrie, Mauricie, Outaouais, Sherbrooke, and Trois-Rivieres)&quot;&#13;&#10;819,1,&quot;Quebec (Western Québec except Montréal 514 and surrounding area 450. A large area including Abitibi-Témiscamingue, Estrie, Mauricie, Outaouais, Sherbrooke, and Trois-Rivieres)&quot;&#13;&#10;873,1,&quot;Quebec (Western Québec except Montréal 514 and surrounding area 450. A large area including Abitibi-Témiscamingue, Estrie, Mauricie, Outaouais, Sherbrooke, and Trois-Rivieres)&quot;&#13;&#10;263,1,Quebec: Montreal metropolitan area&#13;&#10;438,1,Quebec: Montreal metropolitan area&#13;&#10;514,1,Quebec: Montreal metropolitan area&#13;&#10;401,1,Rhode Island (all)&#13;&#10;821,0,not in use&#13;&#10;822,0,Not in use—reserved for future toll-free expansion&#13;&#10;869,1,Saint Kitts and Nevis (all)&#13;&#10;758,1,Saint Lucia (all)&#13;&#10;827,0,not in use&#13;&#10;784,1,Saint Vincent and the Grenadines (all)&#13;&#10;306,1,Saskatchewan&#13;&#10;474,1,Saskatchewan&#13;&#10;639,1,Saskatchewan&#13;&#10;721,1,Sint Maarten (all)&#13;&#10;833,0,toll-free telephone service&#13;&#10;834,0,not in use&#13;&#10;835,0,&quot;assigned for numbering relief to 610 and 484 (Pennsylvania), but this has been suspended indefinitely&quot;&#13;&#10;839,1,South Carolina&#13;&#10;843,1,&quot;South Carolina (Charleston, Florence, Hilton Head Island, Myrtle Beach, Charleston Air Force Base, and most of southeastern South Carolina)&quot;&#13;&#10;854,1,&quot;South Carolina (Charleston, Florence, Hilton Head Island, Myrtle Beach, Charleston Air Force Base, and most of southeastern South Carolina)&quot;&#13;&#10;803,1,&quot;South Carolina (Columbia, Rock Hill, Sumter, Aiken, and most of central South Carolina)&quot;&#13;&#10;844,0,toll-free telephone service&#13;&#10;864,1,&quot;South Carolina (The Upstate, including Greenville, Spartanburg, Anderson, Clemson, and most of northwestern South Carolina)&quot;&#13;&#10;846,0,not in use&#13;&#10;605,1,South Dakota (all)&#13;&#10;865,1,&quot;Tennessee (Knoxville, Alcoa, Athens, Clinton, Crossville, Dayton, Gatlinburg, Loudon, Maryville, Newport, Oak Ridge, Oliver Springs, Pigeon Forge, Rockwood, Sweetwater, etc., in east Tennessee)&quot;&#13;&#10;901,1,&quot;Tennessee (Memphis, Covington, Germantown, Somerville, and extreme southwestern Tennessee, mostly in Shelby County)&quot;&#13;&#10;931,1,&quot;Tennessee (Middle Tennessee, excluding the Nashville Metropolitan Area, which is in 615: Clarksville, Manchester, Columbia, Cookeville, Sparta)&quot;&#13;&#10;851,0,not in use&#13;&#10;629,1,&quot;Tennessee (Middle Tennessee, including Nashville and surrounding area)&quot;&#13;&#10;855,0,toll-free telephone service&#13;&#10;731,1,&quot;Tennessee (most of West Tennessee—excluding Metropolitan Memphis and Shelby County (area code 901)—but including Dyersburg, Jackson, Martin, Paris, Union City, and Crockett County)&quot;&#13;&#10;615,1,&quot;Tennessee (Nashville, Lebanon, Murfreesboro, Smyrna, Springfield, and other parts of Middle Tennessee around the Nashville Metropolitan Area[13])&quot;&#13;&#10;423,1,&quot;Tennessee (two discontiguous portions of East Tennessee: Bristol, Johnson City, Kingsport, etc., in the northeast; and Chattanooga, Cleveland, Philadelphia, and McMinnville in the southeast&quot;&#13;&#10;430,1,Texas&#13;&#10;682,1,Texas&#13;&#10;861,0,not in use&#13;&#10;832,1,Texas&#13;&#10;325,1,&quot;Texas (Abilene, San Angelo, Sweetwater, Snyder)&quot;&#13;&#10;915,1,Texas (all of El Paso County and portions of Hudspeth County)&#13;&#10;737,1,Texas (Austin and suburbs).&#13;&#10;866,0,toll-free telephone service&#13;&#10;512,1,&quot;Texas (Austin, San Marcos, and parts of central Texas)&quot;&#13;&#10;409,1,&quot;Texas (Beaumont, Galveston, Orange, Port Arthur, and Texas City&quot;&#13;&#10;361,1,&quot;Texas (Corpus Christi, Victoria, George West, and much of south Texas)&quot;&#13;&#10;214,1,Texas (Dallas metropolitan area)&#13;&#10;871,0,not in use&#13;&#10;469,1,Texas (Dallas metropolitan area)&#13;&#10;972,1,Texas (Dallas metropolitan area)&#13;&#10;830,1,&quot;Texas (Del Rio, Kerrville, Eagle Pass, Fredericksburg, New Braunfels, and part of the Rio Grande Valley)&quot;&#13;&#10;877,0,toll-free telephone service&#13;&#10;817,1,&quot;Texas (Fort Worth, Arlington, Grand Prairie, Grandview, Weatherford)&quot;&#13;&#10;281,1,Texas (Houston area)&#13;&#10;888,0,toll-free telephone service&#13;&#10;889,0,Not in use—reserved for future toll-free expansion&#13;&#10;900,0,premium-rate telephone numbers&#13;&#10;346,1,&quot;Texas (Houston area) The 346 area code overlays existing area codes 713, 281 and 832 in Harris, Fort Bend, Waller, Austin, Montgomery, San Jacinto, Liberty, Chambers, Galveston and Brazoria counties.[7]&quot;&#13;&#10;713,1,&quot;Texas (Houston area)—overlays with 281, 346 and 832&quot;&#13;&#10;956,1,&quot;Texas (Laredo, Harlingen, Brownsville, McAllen, and southmost Texas)&quot;&#13;&#10;806,1,&quot;Texas (Lubbock, Amarillo, Canadian, Canyon, Dalhart, and the entire Texas Panhandle)&quot;&#13;&#10;936,1,&quot;Texas (Nacogdoches, Lufkin, Conroe, Huntsville, Center, and Southeast Texas)&quot;&#13;&#10;210,1,Texas (San Antonio metropolitan area)&#13;&#10;726,1,Texas (San Antonio metropolitan area)&#13;&#10;940,1,&quot;Texas (Texas immediately north of the Dallas–Fort Worth metroplex: Denton, Wichita Falls, Decatur, Gainesville, Vernon, etc.)&quot;&#13;&#10;903,1,&quot;Texas (Tyler, Sherman, Longview, Marshall, Palestine, Jacksonville, Carthage, and Northeast Texas)&quot;&#13;&#10;254,1,&quot;Texas (Waco, Killeen, Temple, Belton, and Stephenville)&quot;&#13;&#10;911,0,Not available as an area code—used as an emergency telephone number in all geographic and non-geographic areas&#13;&#10;979,1,&quot;Texas (Wharton, Bryan, Bay City, College Station, Lake Jackson, La Grange, and southeastern Texas)&quot;&#13;&#10;945,1,Texas Dallas–Fort Worth metroplex&#13;&#10;242,1,The Bahamas (all)&#13;&#10;284,1,the British Virgin Islands (all)&#13;&#10;867,1,&quot;The Canadian Territories: Yukon, Northwest Territories, and Nunavut&quot;&#13;&#10;345,1,the Cayman Islands (all)&#13;&#10;448,1,The Florida Panhandle&#13;&#10;649,1,the Turks and Caicos Islands (all)&#13;&#10;340,1,the U.S. Virgin Islands (all)&#13;&#10;921,0,not in use&#13;&#10;922,0,not in use&#13;&#10;868,1,Trinidad and Tobago (all)&#13;&#10;926,0,not in use&#13;&#10;435,1,&quot;Utah (Cedar City, Logan, Moab, Park City, Price, St. George, Tooele, Vernal and all the rest of Utah, excluding the counties of Davis, Morgan, Salt Lake, Utah, and Weber)&quot;&#13;&#10;385,1,&quot;Utah (Counties of Davis, Morgan, Salt Lake, Utah, and Weber along the Wasatch Front, including the cities of Salt Lake City, Ogden, and Provo)&quot;&#13;&#10;801,1,&quot;Utah (Counties of Davis, Morgan, Salt Lake, Utah, and Weber along the Wasatch Front, including the cities of Salt Lake City, Ogden, and Provo)&quot;&#13;&#10;802,1,Vermont (all)&#13;&#10;571,1,Virginia&#13;&#10;932,0,&quot;once reserved as a third area code for West Virginia, but it was replaced by a 304-932 exchange area code in Charleston&quot;&#13;&#10;933,0,not in use&#13;&#10;276,1,&quot;Virginia (Bristol, Abingdon, Wytheville, Martinsville, Bluefield, Big Stone Gap, and the remainder of southwestern Virginia)&quot;&#13;&#10;935,0,&quot;assigned for numbering relief to 619 (San Diego, California), but this has been suspended indefinitely&quot;&#13;&#10;434,1,&quot;Virginia (Charlottesville, Lynchburg, Danville, and south-central Virginia)&quot;&#13;&#10;540,1,&quot;Virginia (Fredericksburg, Roanoke, Blacksburg, Harrisonburg, Lexington, Staunton, Winchester, and parts of north-central Virginia)&quot;&#13;&#10;826,1,&quot;Virginia (Fredericksburg, Roanoke, Blacksburg, Harrisonburg, Lexington, Staunton, Winchester, and parts of north-central Virginia)&quot;&#13;&#10;703,1,&quot;Virginia (Northern Virginia: mostly the suburbs of Washington, D.C., including Alexandria, Arlington County, Fairfax County, Prince William County, and eastern Loudoun County)&quot;&#13;&#10;757,1,Virginia (Part of Hampton Roads and the Eastern Shore of Virginia)&#13;&#10;948,1,Virginia (Part of Hampton Roads and the Eastern Shore of Virginia)&#13;&#10;942,0,not in use&#13;&#10;943,0,not in use&#13;&#10;944,0,not in use&#13;&#10;804,1,&quot;Virginia (the Richmond Metropolitan Area, including Petersburg; also the Northern Neck and Middle Peninsula)&quot;&#13;&#10;946,0,not in use&#13;&#10;278,0,&quot;was a planned overlay for Michigan's 734, but this has been canceled&quot;&#13;&#10;627,0,&quot;was assigned for numbering relief to area code 707 (the northern California coast), but this has been suspended indefinitely&quot;&#13;&#10;509,1,&quot;Washington (all of eastern Washington, including Spokane, Ellensburg, Pullman, the Tri-Cities area, Walla Walla, Wenatchee, and Yakima)&quot;&#13;&#10;950,0,&quot;Not an area code. The prefix 950 was originally used to access competing interexchange carriers: a subscriber would call 950-XXXX to reach a specific carrier, then dial the long-distance destination number. This feature group 'B' has been rendered obsolete by 1010xxx &quot;&quot;dial-around&quot;&quot; feature group 'D', but the exchange remains reserved in each individual area code.&quot;&#13;&#10;564,1,&quot;Washington (Olympia, Vancouver, Bellingham, Bremerton, Port Angeles, Aberdeen, and all of western Washington)&quot;&#13;&#10;360,1,&quot;Washington (Olympia, Vancouver, Bellingham, Bremerton, Port Angeles, Aberdeen, and most of western Washington except the Seattle metropolitan area)&quot;&#13;&#10;953,0,not in use&#13;&#10;206,1,&quot;Washington (Seattle, all of Bainbridge, Mercer, and Vashon islands, Burien, Des Moines, Lake Forest Park, Normandy Park, Sea-Tac, Shoreline, Tukwila, and some small unincorporated areas adjacent to these. Also, parts of Woodway and Edmonds)&quot;&#13;&#10;955,0,not in use&#13;&#10;253,1,&quot;Washington (Tacoma, Lakewood, Auburn, Puyallup, Enumclaw, Spanaway, and the southern suburbs of Seattle)&quot;&#13;&#10;425,1,&quot;Washington (the northern and eastern suburbs of Seattle: Bellevue, Everett, Edmonds, Kirkland, Redmond, Renton, Sammamish, Issaquah, and Lynnwood)&quot;&#13;&#10;202,1,&quot;Washington, D.C. (all)&quot;&#13;&#10;304,1,West Virginia&#13;&#10;681,1,West Virginia&#13;&#10;432,1,&quot;western Texas (West Texas: Midland, Odessa, Big Spring, Alpine, Fort Stockton)&quot;&#13;&#10;974,0,not in use&#13;&#10;975,0,&quot;assigned for numbering relief to 816 (Missouri), but suspended indefinitely&quot;&#13;&#10;976,0,not in use&#13;&#10;977,0,not in use&#13;&#10;534,1,Wisconsin&#13;&#10;920,1,&quot;Wisconsin (Appleton, Sheboygan, Oshkosh, Green Bay, Manitowoc, Marquette, Fond du Lac, and parts of eastern Wisconsin—but not Milwaukee County)&quot;&#13;&#10;608,1,&quot;Wisconsin (Madison, La Crosse, Platteville, Beloit, and most of southwestern Wisconsin)&quot;&#13;&#10;414,1,&quot;Wisconsin (Milwaukee County includes cities of Milwaukee, West Allis, Oak Creek, and others.&quot;&#13;&#10;262,1,&quot;Wisconsin (Racine, Kenosha, Menomonee Falls, Waukesha, and most of southeastern Wisconsin excluding Milwaukee County)&quot;&#13;&#10;715,1,&quot;Wisconsin (Wausau, Eau Claire, Rhinelander, and most of northern Wisconsin)&quot;&#13;&#10;987,0,not in use&#13;&#10;988,0,not in use&#13;&#10;307,1,Wyoming (all)&#13;&#10;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_2">
+      <column comment="" key="false" length="4" name="Code" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="InUse" nullable="true" originalLength="25" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="175" name="TerritoryOrUse" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Code"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InUse"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TerritoryOrUse"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_2">
+      <column comment="" key="false" length="4" name="Code" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="InUse" nullable="true" originalLength="25" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="175" name="TerritoryOrUse" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;DQ&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:of+PHrbdeXpLH90VB5cToeJUraiUgGw5nwKEudRPKEdHNytyuMjRjOP6"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;AreaCodesUSCanada&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="Code"/>
+    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Code"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="InUse"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TerritoryOrUse"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_2">
+      <column comment="" key="false" length="4" name="Code" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="InUse" nullable="true" originalLength="25" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="175" name="TerritoryOrUse" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="4" name="Code" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="InUse" nullable="true" originalLength="25" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="175" name="TerritoryOrUse" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_vkTxwOfzEeqob_JMQxXZxQ"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-INBOUND&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:O3WqHbPtlH7kgXjng1avr4gVLYYHqyd95zjG7oCh5ZJGPNzyDCXMzFdp"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value="_vkTxwOfzEeqob_JMQxXZxQ - qry_SIS_DQ001_RowCount"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#13;&#10;&#13;&#10;Select   &#9;'&quot; + jobName + &quot;' as DataQualityRule&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.std_no&#13;&#10;&#9;&#9;&#9;&#9;, &#9;sa.home_local&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.no_and_street&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.city&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.prov_state_code&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.country&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.postal_zip_code&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.incor_address&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.area_code&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.phone_no&#13;&#10;&#9;&#9;&#9;&#9;,&#9;sa.fax_no&#13;&#10;from &#13;&#10;&#9;&#9;&#9;(&#13;&#10;&#9;&#9;&#9;&#9;select * from sisdba.student_address &#13;&#10;&#9;&#9;&#9;&#9;where country in &#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;('Canada','CAN','Canadá','Canada      ]','United States','U.S.A.','U.S.','US','USA'     )&#13;&#10;&#9;&#9;&#9;) sa &#13;&#10;&#9;&#9;&#9;left join &#13;&#10;&#9;&#9;&#9;(&#13;&#10;&#9;&#9;&#9;&#9;select code from dq.dbo.AreaCodesUSCanada where InUse=1&#13;&#10;&#9;&#9;&#9;) ac on ac.code=sa.area_code&#13;&#10;where &#13;&#10;&#9;&#9;&#9;ac.code is null &#13;&#10;&#13;&#10;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="std_no"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="home_local"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="no_and_street"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="prov_state_code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postal_zip_code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="incor_address"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="area_code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone_no"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="fax_no"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="home_local" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="no_and_street" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="city" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="prov_state_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="postal_zip_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="incor_address" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="area_code" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="phone_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="fax_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;results&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;DQ&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/GlJcYB/lx9eSCkmumOCCqyJj6g5noj+NXqzI6Ft+CBqyUTLtv1K9HGt"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Student_Domestic_Address_InvalidRows&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="std_no"/>
+    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataQualityRule"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="std_no"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="home_local"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="no_and_street"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="prov_state_code"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postal_zip_code"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="incor_address"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="area_code"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone_no"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="fax_no"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_3">
+      <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="home_local" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="no_and_street" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="city" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="prov_state_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="postal_zip_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="incor_address" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="area_code" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="phone_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="fax_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="50" name="DataQualityRule" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="home_local" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="no_and_street" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="city" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="prov_state_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="country" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="postal_zip_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="incor_address" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="area_code" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="phone_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="fax_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="ExportToExcelJoblet_Domestic_Address" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="ExportToExcelJoblet_Domestic_Address_1"/>
+    <elementParameter field="TEXT" name="FAMILY" value="Joblets"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="CLOSED_LIST" name="TRIGGER_INPUT_1" value="SUBJOB_OK"/>
+    <elementParameter field="COMPONENT_LIST" name="TRIGGER_INPUT_1:COMPONENT_LIST" value="tDBInput_2"/>
+    <elementParameter field="TEXT" name="LABEL" value="ExportToExcelJoblet_Domestic_Address"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;System.out.println((String)globalMap.get(&quot;tDBInput_2_QUERY&quot;));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBValidRows_1" offsetLabelX="0" offsetLabelY="0" source="tDBValidRows_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBValidRows_1" offsetLabelX="0" offsetLabelY="0" source="tDBValidRows_1" target="tDBInvalidRows_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tJavaRow_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDBInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInvalidRows_2" offsetLabelX="0" offsetLabelY="0" source="tDBInvalidRows_2" target="tJavaRow_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInvalidRows_2" offsetLabelX="0" offsetLabelY="0" source="tDBInvalidRows_2" target="tDBInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tLogRow_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="InUse"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TerritoryOrUse"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NumericCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="InternetCCTLD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Alpha2Code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Alpha3Code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="SubdivisionCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tDBOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDBOutput_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="no_and_street"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="country"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="phone_no"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="home_local"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="city"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="area_code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="incor_address"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="prov_state_code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postal_zip_code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fax_no"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="ExportToExcelJoblet_Domestic_Address_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <connection connectorName="TRIGGER_OUTPUT_1" label="OnSubjobOk (TRIGGER_OUTPUT_1)" lineStyle="1" metaname="ExportToExcelJoblet_Domestic_Address_1" offsetLabelX="0" offsetLabelY="0" source="ExportToExcelJoblet_Domestic_Address_1" target="tFixedFlowInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBValidRows_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInvalidRows_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Valid N.A area codes"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;128;64"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ExportToExcelJoblet_Domestic_Address_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_418dc3d8-c34a-4b20-8dee-69a5c9a2eec8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>46GgKFV5HACc+kIUr3H3x93OKViDDzMtqgYNIv8gMfpd43yd/qETu/h1NJR06IIIW+i66k0nJFQK
+6gIy6sB9qA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_440f2008-456a-4228-87fd-20b4582d2b2a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Z/wpGBouORe9RQyZl2BW8ztLf1nK15u/bv0K54ASbVk+yL5dx5K5FoczavdaxnmMJ8tw/9/jm9GQ
+YpuS177U7A==</DigestValue></Reference></SignedInfo><SignatureValue>OiwhrqNQFWWS1M8ktNfEgc7MkcSpbuuz9pfZA1BpllizZM27/UsF9FlYW0/iDjpgi71M6fCSpSnx
+AxkUCz3VXxlpKWn6VpswCD5efDBgO5JhKUshCwIqJ+7Rq4roengY5vQzZUQT/+ULP4kopEBLD39a
+LyiK7w8I6RiycuwA1TnqfDeUQsxwJRW+QOHIHKWQn4E330BdrCG/4x+34EDVh5Fx3nYbsQJ91zj4
+wbPlf2GCtVqfvJapgHi4O7SnsAwDQNTrEfFJPVy0WX2q0ra9kygrf/hldqBL5UHP4M9e+sb4XXJH
+GXnlcIsCyrmRq8K6dAJQrcREUoZ8166XqZnSxQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_440f2008-456a-4228-87fd-20b4582d2b2a" Target="#_418dc3d8-c34a-4b20-8dee-69a5c9a2eec8"><Timestamp>2020-12-02 21:28:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
