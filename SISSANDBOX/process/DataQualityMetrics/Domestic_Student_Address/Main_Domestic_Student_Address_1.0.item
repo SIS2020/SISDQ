@@ -48,7 +48,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:HQDXAS924mQTN72JreNRF+4VA2FshIO3VankwIQx"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:Xx1EcToygfGX/BTwZVk4aH+wEbiNEoBmBxSgOVHb"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -83,7 +83,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:WPXCkIXRPl9hiiIX0Robpf5EzMmm6nZ6C8wL93CK"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:0Nef8x9AUqNrv1osSd9SC6EyuY+B7jAQQCwM+9Uz"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -438,16 +438,16 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
       <elementValue elementRef="VALUE" value=""/>
     </elementParameter>
-    <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
-    <elementParameter field="TABLE" name="INTABLE">
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false">
       <elementValue elementRef="newColumn" value="&quot;Bob&quot;"/>
       <elementValue elementRef="newColumn" value="&quot;Rob&quot;"/>
       <elementValue elementRef="newColumn" value="&quot;Mob&quot;"/>
     </elementParameter>
-    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
-    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="SIS-DQ0037;&#13;&#10;SIS-DQ0039;&#13;&#10;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_1">
       <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -620,13 +620,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d3bacda0-3451-432d-8032-e3617248b911"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H1zrvES0UOBlmwimsN5aL9p89y/k6VgADUXi3ZM4Z2O8VQ4ttnVSaRl/IBE+D7Szie7qwKAsTAF/
-b/j5LzTacA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8dd1bfa8-5c8b-4f1c-a5c6-4903452b2f08"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>11DRs+Ab1/ncxf+IJOBGwoLwWp4JqRfqiNeRbFJCCO2/NohCHJY7D+6bwDQyVrK/A/tHzoIOe09p
-eCizXpQlUw==</DigestValue></Reference></SignedInfo><SignatureValue>U1hQGGHiGQJ4HQV6Y3MujLBPxSmDggEGw6lpceCBE0+lyQa+QK3cPOZmcCDRXQl3s+xYeYDq6KOk
-tpRAi8fGDwoVa6c7rK/lLcjpsLJcUB3KcOw8T25AC2+qUVt9AxbWHASCdL3Rqx6KvqghC7oAreEa
-6czYnk2QqzWTHl6+CIaNRa0sO8F5ETT7kUmnGKsYu8JaG8uL42zpFoeys2mH0+5JteOobr+KD23J
-Z3J7idae3MH6l8cAwH6OQZYwy9ObQ5yzz3XA33XaIy2KvUoPa2eQyOLS5sxs1eRM6xTbntIDd6+E
-OgLZdk4AiKONAJPBJ0pU3hTdqmL6Jh3F0L285g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_142e9211-52d9-40cc-b7b0-7d71a2faff97"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>J1zReCB3jZGgdEr9dh53MndWkPuiQd1Z7VzgzC02cDcYaNUeNTRIFIPdBIEo5D5PYUvA2/9xvUq9
+65G8B+m0FA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d283f8ab-7c3c-4dd9-886d-3cbc75cbc7f6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fZGFzsdN8kelKfqjpxL+8XmBzRairB49ybMDbXuMBYpoKFXN0IdjpouuuUVRQmdVP5o4Np7NhSoc
+dCkMpjAxNw==</DigestValue></Reference></SignedInfo><SignatureValue>eHNNHPmTlzlnwL1u8v68owxgGjvcaiImirDHf/s+93QQZ3MJAPiSnouk9h9sFMTsh8J2rYAQ2KLT
+cABLVVc1+bHHAutqlPS0CUZ057H2iNeOqSfVrJCQJdtlt/cYqYZ+BbReGZw04Ly/zuIElnFV5+FR
+g5dI97B5R2EXjlMo+pVU464NvedrML+RAu2idKtG2EZXcmtenmPMBG8GcQcKYaO/kHMnQ5S+CIrh
+KuG1tWJN9gHI8RDwmZy/U2tazpwquFFQi0EzAxjPoCL6fMyk1ltsSJ5gMqNomCBaujo2iXRFTwZA
+zBdxrUFM713Kq1mRxgRM0a2LKqrkMS8Pr01u7g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -648,4 +648,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8dd1bfa8-5c8b-4f1c-a5c6-4903452b2f08" Target="#_d3bacda0-3451-432d-8032-e3617248b911"><Timestamp>2020-12-03 21:20:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d283f8ab-7c3c-4dd9-886d-3cbc75cbc7f6" Target="#_142e9211-52d9-40cc-b7b0-7d71a2faff97"><Timestamp>2020-12-03 21:21:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
