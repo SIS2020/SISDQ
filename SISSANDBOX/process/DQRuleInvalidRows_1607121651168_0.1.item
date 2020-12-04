@@ -42,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:iQrO7AQoBS9Es7Kur/AfNE/nV8FAj7aS7u3wcRV3"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:PZ1j4550jJ5yG8ja2r1GBtTZ8FHL3tfqK1CXNNFU"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -77,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:jldSAaH49I8lntBY8b3HTA97LjJ8xyHdsaGEwta0"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:PHUl9o/sVNy1MFx/dgrjTCVlNiq02rzaXLfsr1Tv"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -112,7 +112,7 @@
     <routinesParameter id="_blCnIApGEeuQj8iTNBbh7Q" name="TalendStringUtil"/>
     <routinesParameter id="_bk6EQApGEeuQj8iTNBbh7Q" name="TalendString"/>
   </parameters>
-  <node componentName="tMSSqlInvalidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
+  <node componentName="tMSSqlInvalidRows" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInvalidRows_1"/>
     <elementParameter field="CLOSED_LIST" name="VALIDATION_TYPE" value="DQ_RULE"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -120,18 +120,18 @@
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;SDWDEV-1&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;EDW-INBOUND&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;sisdba&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;DQ&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;hossiei&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:LvUpgS9AggWwFNwDL/GMn+Ez/oTrbqWLaxoztRaZWwC9a1u/ixYFjCZA"/>
-    <elementParameter field="DBTABLE" name="TABLE" show="false" value="&quot;student&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DQRULES_LIST" show="false" value="est"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1dX0glouOpG7NHhEkCzrFq1XLLacV4v4qKMqOIz2pKpybIdWXgtYoNnt"/>
+    <elementParameter field="DBTABLE" name="TABLE" show="false" value="&quot;vSIS-DQ0002&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DQRULES_LIST" show="false" value="SIS-DQ0002"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT \&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;std_no\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;surname\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;first_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;second_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;pref_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;prev_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;title\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;gender\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;date_of_birth\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;over_19\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;stat_in_canada\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;mother_tongue\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;pref_lang\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;citizen_code\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;aboriginal_status\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;minority_group\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;bsid_code\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;ont_educ_no\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;hs_cert\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;deceased\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;correspondence\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;encumb_flag\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;basis_for_admis\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;ossd_issue_date\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;ossd_to_be_rec\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;add_acad_info\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;admis_trans_stat\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;add_acad_info_to_follow\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;current_sec_sch_std\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;date_std_no_assig\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;mobil_challenged\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;addr_pref\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;gender_hist\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;trans_hist\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;u_surname\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;u_first_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;u_second_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;last_regd_prg_code\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;visa_expiry_date\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;visa_doc_on_file\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;ossc_issue_date\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;ossc_to_be_rec\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;country_of_birth\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;first_gen_std_ind\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;oen_valid_code\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;oen_valid_date\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;legal_first_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;legal_second_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;u_legal_first_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;u_legal_second_name\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;national_id\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;aborig_pers_ind\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;aborig_pers_status\&quot;,&#10;&#9;&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot;.\&quot;alternate_name\&quot;&#10;FROM&#9;\&quot;EDW-INBOUND\&quot;.\&quot;sisdba\&quot;.\&quot;student\&quot; &#10;  WHERE (NOT ( std_no &lt; 900000 ))&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;std_no\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;surname\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;first_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;second_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;pref_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;prev_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;title\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;gender\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;date_of_birth\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;over_19\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;stat_in_canada\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;mother_tongue\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;pref_lang\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;citizen_code\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;aboriginal_status\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;minority_group\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;bsid_code\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;ont_educ_no\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;hs_cert\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;deceased\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;correspondence\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;encumb_flag\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;basis_for_admis\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;ossd_issue_date\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;ossd_to_be_rec\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;add_acad_info\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;admis_trans_stat\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;add_acad_info_to_follow\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;current_sec_sch_std\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;date_std_no_assig\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;mobil_challenged\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;addr_pref\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;gender_hist\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;trans_hist\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;u_surname\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;u_first_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;u_second_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;last_regd_prg_code\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;visa_expiry_date\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;visa_doc_on_file\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;ossc_issue_date\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;ossc_to_be_rec\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;country_of_birth\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;first_gen_std_ind\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;oen_valid_code\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;oen_valid_date\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;legal_first_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;legal_second_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;u_legal_first_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;u_legal_second_name\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;national_id\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;aborig_pers_ind\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;aborig_pers_status\&quot;,&#10;    \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot;.\&quot;alternate_name\&quot;    &#10;  FROM \&quot;DQ\&quot;.\&quot;dbo\&quot;.\&quot;vSIS-DQ0002\&quot; &#10;  WHERE (NOT ( ConcatPK is null ))&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="COLUMN_LIST" name="ANALYZED_COLUMN" show="false" value="std_no"/>
     <elementParameter field="CHECK" name="CUSTOM_PATTERN" show="false" value="false"/>
@@ -253,172 +253,64 @@
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="student" name="tDBInvalidRows_1">
-      <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="surname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="pref_name" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="prev_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="title" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="gender" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="date_of_birth" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="over_19" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="stat_in_canada" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="3" name="mother_tongue" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="pref_lang" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="citizen_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="4" name="aboriginal_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="minority_group" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="bsid_code" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="ont_educ_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="hs_cert" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="deceased" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="correspondence" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="encumb_flag" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="basis_for_admis" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="ossd_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="ossd_to_be_rec" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="add_acad_info" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="admis_trans_stat" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="add_acad_info_to_follow" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="current_sec_sch_std" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="date_std_no_assig" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="mobil_challenged" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="addr_pref" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="gender_hist" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="trans_hist" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="u_surname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="u_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="u_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="6" name="last_regd_prg_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="visa_expiry_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="visa_doc_on_file" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="ossc_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="ossc_to_be_rec" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="country_of_birth" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="first_gen_std_ind" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2" name="oen_valid_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="8" name="oen_valid_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="legal_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="legal_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="u_legal_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="u_legal_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="national_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="aborig_pers_ind" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="aborig_pers_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="alternate_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
+    <metadata connector="FLOW" name="tDBInvalidRows_1">
+      <column comment="" defaultValue="" key="false" length="10" name="std_no" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;std_no&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="surname" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;surname&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="first_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;first_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="second_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;second_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="pref_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;pref_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="prev_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;prev_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="title" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;title&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="gender" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;gender&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="date_of_birth" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;date_of_birth&quot;" originalLength="-1" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="over_19" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;over_19&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="stat_in_canada" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;stat_in_canada&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="mother_tongue" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;mother_tongue&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="pref_lang" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;pref_lang&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="citizen_code" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;citizen_code&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="aboriginal_status" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;aboriginal_status&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="minority_group" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;minority_group&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="bsid_code" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;bsid_code&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="ont_educ_no" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ont_educ_no&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="hs_cert" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;hs_cert&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="deceased" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;deceased&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="correspondence" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;correspondence&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="encumb_flag" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;encumb_flag&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="basis_for_admis" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;basis_for_admis&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="ossd_issue_date" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ossd_issue_date&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ossd_to_be_rec" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ossd_to_be_rec&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="add_acad_info" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;add_acad_info&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="admis_trans_stat" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;admis_trans_stat&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="add_acad_info_to_follow" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;add_acad_info_to_follow&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="current_sec_sch_std" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;current_sec_sch_std&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="date_std_no_assig" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;date_std_no_assig&quot;" originalLength="-1" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="mobil_challenged" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;mobil_challenged&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="addr_pref" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;addr_pref&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="gender_hist" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;gender_hist&quot;" originalLength="-1" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="trans_hist" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;trans_hist&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="u_surname" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_surname&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="u_first_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_first_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="u_second_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_second_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="last_regd_prg_code" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;last_regd_prg_code&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="visa_expiry_date" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;visa_expiry_date&quot;" originalLength="-1" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="visa_doc_on_file" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;visa_doc_on_file&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="ossc_issue_date" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ossc_issue_date&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ossc_to_be_rec" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ossc_to_be_rec&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="country_of_birth" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;country_of_birth&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="first_gen_std_ind" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;first_gen_std_ind&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="oen_valid_code" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;oen_valid_code&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="oen_valid_date" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;oen_valid_date&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="legal_first_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;legal_first_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="legal_second_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;legal_second_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="u_legal_first_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_legal_first_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="u_legal_second_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_legal_second_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="national_id" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;national_id&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="aborig_pers_ind" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;aborig_pers_ind&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="aborig_pers_status" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;aborig_pers_status&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="alternate_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;alternate_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
@@ -448,169 +340,61 @@
     <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="student" name="tFileOutputDelimited_1">
-      <column comment="" key="false" length="10" name="std_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="surname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="pref_name" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="prev_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="title" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="gender" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="date_of_birth" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="over_19" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="stat_in_canada" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="3" name="mother_tongue" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="pref_lang" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="citizen_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="4" name="aboriginal_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="minority_group" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="bsid_code" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="ont_educ_no" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="hs_cert" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="deceased" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="correspondence" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="encumb_flag" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="basis_for_admis" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="ossd_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="ossd_to_be_rec" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="add_acad_info" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="admis_trans_stat" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="add_acad_info_to_follow" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="current_sec_sch_std" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="date_std_no_assig" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="mobil_challenged" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="addr_pref" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="gender_hist" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="trans_hist" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="u_surname" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="u_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="15" name="u_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="6" name="last_regd_prg_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="23" name="visa_expiry_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="visa_doc_on_file" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="ossc_issue_date" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="ossc_to_be_rec" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="5" name="country_of_birth" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="first_gen_std_ind" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="2" name="oen_valid_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="8" name="oen_valid_date" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="legal_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="legal_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="u_legal_first_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="u_legal_second_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="20" name="national_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="1" name="aborig_pers_ind" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="aborig_pers_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="alternate_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
+    <metadata connector="FLOW" name="tFileOutputDelimited_1">
+      <column comment="" defaultValue="" key="false" length="10" name="std_no" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;std_no&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="surname" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;surname&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="first_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;first_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="second_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;second_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="pref_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;pref_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="prev_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;prev_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="title" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;title&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="gender" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;gender&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="date_of_birth" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;date_of_birth&quot;" originalLength="-1" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="over_19" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;over_19&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="stat_in_canada" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;stat_in_canada&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="mother_tongue" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;mother_tongue&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="pref_lang" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;pref_lang&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="citizen_code" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;citizen_code&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="aboriginal_status" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;aboriginal_status&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="minority_group" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;minority_group&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="bsid_code" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;bsid_code&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="ont_educ_no" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ont_educ_no&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="hs_cert" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;hs_cert&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="deceased" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;deceased&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="correspondence" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;correspondence&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="encumb_flag" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;encumb_flag&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="basis_for_admis" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;basis_for_admis&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="ossd_issue_date" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ossd_issue_date&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ossd_to_be_rec" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ossd_to_be_rec&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="add_acad_info" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;add_acad_info&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="admis_trans_stat" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;admis_trans_stat&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="add_acad_info_to_follow" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;add_acad_info_to_follow&quot;" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="current_sec_sch_std" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;current_sec_sch_std&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="date_std_no_assig" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;date_std_no_assig&quot;" originalLength="-1" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="mobil_challenged" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;mobil_challenged&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="addr_pref" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;addr_pref&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="gender_hist" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;gender_hist&quot;" originalLength="-1" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="trans_hist" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;trans_hist&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="u_surname" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_surname&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="u_first_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_first_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="u_second_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_second_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="last_regd_prg_code" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;last_regd_prg_code&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="visa_expiry_date" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;visa_expiry_date&quot;" originalLength="-1" pattern="" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="visa_doc_on_file" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;visa_doc_on_file&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="ossc_issue_date" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ossc_issue_date&quot;" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="ossc_to_be_rec" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;ossc_to_be_rec&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="country_of_birth" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;country_of_birth&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="first_gen_std_ind" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;first_gen_std_ind&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="oen_valid_code" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;oen_valid_code&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="8" name="oen_valid_date" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;oen_valid_date&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="legal_first_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;legal_first_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="legal_second_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;legal_second_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="u_legal_first_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_legal_first_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="u_legal_second_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;u_legal_second_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="national_id" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;national_id&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="aborig_pers_ind" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;aborig_pers_ind&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="aborig_pers_status" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;aborig_pers_status&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="alternate_name" nullable="true" originalDbColumnName="&quot;DQ&quot;.&quot;dbo&quot;.&quot;vSIS-DQ0002&quot;.&quot;alternate_name&quot;" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInvalidRows_1" offsetLabelX="0" offsetLabelY="0" source="tDBInvalidRows_1" target="tFileOutputDelimited_1">
@@ -622,13 +406,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b2caa71a-763d-4dd8-a8fd-b359470ee55d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CpTja38soG+crINYy03BAUI4lN4PVvlm8E0KPvBL9cWvNMlWjFpgntc1GXEYmgU7f+WyP+pThUaH
-U3pR+AlyYQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b3ceb601-6861-421c-b14e-70673a6231f4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H77YWQUhK8veoY37JVmlOXE2+rqpjUEp4kpA5vvGBrX+n1x8XXRIWezOVn4vcoBtSY/VfrRSZNAG
-1IrJ1WXdgA==</DigestValue></Reference></SignedInfo><SignatureValue>OVZlcZSM/Mv4PVLKuR/q0yHp5omEX/6RWfg6J8m23USiWLYe2VydSkuknJh01LTDotq4bWYFbIP0
-Xif8M2NomkmVtwkIOn765N8BxN9COfai8il14QUwpKu96vYpW0u5t2NnOoeDPmG/mCgA0AhEVWDE
-X6Ny1F9mhZzGms9E1HGEzj5osnTQ3MXLkay3xyXFDgt/5+wxGJQWtEU/PcE3PSEb34D/RZXZa9n5
-2Tzg5RBxgQ5m8dMCkvfcNAxfM1+nxfFNmqknnZ5BRPO++e9zfCshUu4mvgg1aUBNt/E6FRAjy6uH
-kUS7m5gXjdujz8aRlmBnH7j7JW04UVPnkXvVkg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_80a30cd5-098b-43a7-adce-aee5098a7a89"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KfsG9iqyuz8peWFxk9H3brQVl8qgHkKUiZT8HIeaWjPIEg7dHbkGztUDK4z99PcwDCVt11KUCobj
+xuRXQdnHYQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4b7e2a8e-f480-4288-a352-1e0782ce3d32"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>o4u5NFNnoUDrZ8STAWldn9qllAlINXqXWKOOxiT5B4kcZ4r5zdnHdm2itvuUqDvRPWSLEMUXl1G7
+CGiLeJ7+9Q==</DigestValue></Reference></SignedInfo><SignatureValue>WTWzUAlqzDMhfFic7WfCFlTQYHHXhzLEsnjEuMU7xTcWvejpNll//OYeKuDS25XDmFup1JLlJsqg
+ATIelqBQ9qjgpx/ECiEFkUHdxceruvUTw/n+uXnJYvFdHZ9AxVwc+lJd8ukdyPf6gPiA2F0GOSxr
+ltZqq5PZAIVhXHA+ci3ig0H/fXtYEfd2+2LvgHrQQ3hMdVs5i5YHPcNds4gvLESxUZIwYrfbMJzf
+nQ+9T8xDCGBT3fW3XUv5xQlhbOuEXMtTLA2rd5pVIIXRgfzT1QPG23hx3+7YCTXdD7iFseN5O5Lu
+pr8O4J74WY0lriKxWHLTyHJLXSZiIeDHQqmukQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -650,4 +434,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b3ceb601-6861-421c-b14e-70673a6231f4" Target="#_b2caa71a-763d-4dd8-a8fd-b359470ee55d"><Timestamp>2020-12-04 22:40:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4b7e2a8e-f480-4288-a352-1e0782ce3d32" Target="#_80a30cd5-098b-43a7-adce-aee5098a7a89"><Timestamp>2020-12-04 22:43:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
