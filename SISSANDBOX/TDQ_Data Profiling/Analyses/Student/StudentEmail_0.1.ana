@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_fYPb4SLEEeuYIM18Y9_V8A" name="StudentEmail" creationDate="2020-11-04T20:18:06.090-0500" defaultContext="Default">
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/est_0.1.rules#_MURHsCOgEeuu94OjwV8eSQ"/>
+    <clientDependency href="../../../metadata/connections/AlgonquinConn_0.1.item#_yNq61OuPEeqjHKKnAhbeAA"/>
     <taggedValue xmi:id="_fYPb4iLEEeuYIM18Y9_V8A" tag="Status" value="development"/>
     <taggedValue xmi:id="_fYPb4yLEEeuYIM18Y9_V8A" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_fYPb5CLEEeuYIM18Y9_V8A" tag="Purpose" value="DQ Profiling"/>
@@ -8,9 +10,36 @@
     <taggedValue xmi:id="_fYPb5iLEEeuYIM18Y9_V8A" tag="Version" value="0.1"/>
     <taggedValue xmi:id="_fYPb5yLEEeuYIM18Y9_V8A" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_fYPb6CLEEeuYIM18Y9_V8A" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
-    <context xmi:id="_fYPb6SLEEeuYIM18Y9_V8A"/>
+    <context xmi:id="_fYPb6SLEEeuYIM18Y9_V8A">
+      <connection href="../../../metadata/connections/AlgonquinConn_0.1.item#_nqx-0Of1Eeqob_JMQxXZxQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgSOPEeuaYvKeg9gs_A"/>
+    </context>
     <results xmi:id="_fYPb6iLEEeuYIM18Y9_V8A">
-      <resultMetadata xmi:id="_fYPb6yLEEeuYIM18Y9_V8A" executionDate="2020-11-09T15:18:35.971-0500" executionDuration="1182" message="Query not executed for indicator: &quot;SIS-DQ0050&quot; SQL query: SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student_email&quot;  se  JOIN  &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;  s  ON (se.&quot;std_no&quot;=s.&quot;std_no&quot;)  WHERE (std_no in (select std_no from sisdba.student)). Exception: Ambiguous column name 'std_no'." executionNumber="9" lastExecutionNumberOk="8"/>
+      <resultMetadata xmi:id="_fYPb6yLEEeuYIM18Y9_V8A" executionDate="2020-12-04T17:40:41.776-0500" executionDuration="402" message="" executionNumber="10" lastRunOk="true" lastExecutionNumberOk="9"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_vA28cDaBEeuoYolDXr5RYQ" count="1292311" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgSOPEeuaYvKeg9gs_A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_vTHKEDaBEeuoYolDXr5RYQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_vR9TgDaBEeuoYolDXr5RYQ" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_vR9TgTaBEeuoYolDXr5RYQ" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_vR9TgjaBEeuoYolDXr5RYQ" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_vR9TgzaBEeuoYolDXr5RYQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_vA28cTaBEeuoYolDXr5RYQ" count="1292311" computed="true" userCount="27781">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/AlgonquinConn_0.1.item#_KD1mgSOPEeuaYvKeg9gs_A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Student_And_OCAS/est_0.1.rules#_Yjq5QSOfEeuu94OjwV8eSQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_vTHKETaBEeuoYolDXr5RYQ" body="SELECT COUNT(*) FROM &quot;EDW-INBOUND&quot;.&quot;sisdba&quot;.&quot;student&quot;   WHERE (std_no &lt; 900000)" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_vSDaIDaBEeuoYolDXr5RYQ" name="est" criticalityLevel="1" whereExpression="std_no &lt; 900000">
+          <taggedValue xmi:id="_vSDaITaBEeuoYolDXr5RYQ" tag="Status" value="development"/>
+          <taggedValue xmi:id="_vSDaIjaBEeuoYolDXr5RYQ" tag="Author" value="hossiei@algonquincollege.com"/>
+          <taggedValue xmi:id="_vSDaIzaBEeuoYolDXr5RYQ" tag="Purpose" value="DQ Profiling"/>
+          <taggedValue xmi:id="_vSDaJDaBEeuoYolDXr5RYQ" tag="Description" value="Each student has a Unique Student Number."/>
+          <taggedValue xmi:id="_vSDaJTaBEeuoYolDXr5RYQ" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_vSDaJjaBEeuoYolDXr5RYQ" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_vSDaJzaBEeuoYolDXr5RYQ" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
     </results>
     <parameters xmi:id="_fYPcQiLEEeuYIM18Y9_V8A" dataFilter="_fYPcRCLEEeuYIM18Y9_V8A" analysisType="Table Analysis"/>
     <contextType xmi:id="_fYPcQyLEEeuYIM18Y9_V8A" confirmationNeeded="false" name="Default"/>
