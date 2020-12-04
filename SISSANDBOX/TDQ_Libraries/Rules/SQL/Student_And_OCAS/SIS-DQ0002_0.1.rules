@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_PQL7ERLdEeuzBt1AHG1VvA" name="SIS-DQ0002" supplierDependency="_bI2FoDaAEeuoYolDXr5RYQ" criticalityLevel="1" whereExpression="ConcatPK is null">
+  <dataquality.rules:WhereRule xmi:id="_PQL7ERLdEeuzBt1AHG1VvA" name="SIS-DQ0002" supplierDependency="_ysGUkDaAEeuoYolDXr5RYQ" criticalityLevel="1" whereExpression="ConcatPK is null">
     <taggedValue xmi:id="_PQL7EhLdEeuzBt1AHG1VvA" tag="Status" value="development"/>
     <taggedValue xmi:id="_PQL7ExLdEeuzBt1AHG1VvA" tag="Author" value="hossiei@algonquincollege.com"/>
     <taggedValue xmi:id="_PQL7FBLdEeuzBt1AHG1VvA" tag="Purpose" value="DQ Profiling "/>
@@ -14,14 +14,12 @@
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentEmail_0.1.ana#_fYPb4SLEEeuYIM18Y9_V8A"/>
   </orgomg.cwm.objectmodel.core:Dependency>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_Z3mzAB-REeudbvAJU1jpDQ" kind="Usage">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummaryDQ_0.1.ana#_FVc9kB-REeudbvAJU1jpDQ"/>
-  </orgomg.cwm.objectmodel.core:Dependency>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_Z3mzAB-REeudbvAJU1jpDQ" kind="Usage"/>
   <orgomg.cwm.objectmodel.core:Dependency xmi:id="_qWTaEB-REeudbvAJU1jpDQ" kind="Usage">
-    <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummaryDQ_0.1.ana#_FVc9kB-REeudbvAJU1jpDQ"/>
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/StudentSummary_0.1.ana#_wg9gkR8EEeukpM_ACLlX9g"/>
   </orgomg.cwm.objectmodel.core:Dependency>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_bI2FoDaAEeuoYolDXr5RYQ" kind="Usage" supplier="_PQL7ERLdEeuzBt1AHG1VvA">
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_bI2FoDaAEeuoYolDXr5RYQ" kind="Usage"/>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_ysGUkDaAEeuoYolDXr5RYQ" kind="Usage" supplier="_PQL7ERLdEeuzBt1AHG1VvA">
     <client xsi:type="dataquality.analysis:Analysis" href="../../../../TDQ_Data Profiling/Analyses/Student/Copy_of_StudentSummary_0.1.ana#_0ErYcDZ9EeuoYolDXr5RYQ"/>
   </orgomg.cwm.objectmodel.core:Dependency>
 </xmi:XMI>
